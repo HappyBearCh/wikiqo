@@ -1,26 +1,378 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 :root {
+  /* Full pride-rainbow palette, site-wide. Near-black (#111111) text on white
+     surfaces, with a vivid magenta accent for links and controls. The --rb-*
+     tokens carry the classic six-stripe pride spectrum (red → violet) and feed
+     every gradient, glow, and category accent across the site. */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111111;
+  --surface: #ffffff;
+  --surface-hover: #fbf3fa;
+  --border: #ececec;
+  --accent: #b5179e; /* vivid magenta */
+  --accent-hover: #7b0d6b;
+  --accent-foreground: #ffffff;
+  --accent-soft: #fbeaf7;
+  --muted: #5f5f5f;
+
+  /* Six-stripe pride spectrum. Amber is lifted off pure yellow so it stays
+     legible on white. */
+  --rb-1: #e40303; /* red    */
+  --rb-2: #ff8c00; /* orange */
+  --rb-3: #ffb800; /* amber  */
+  --rb-4: #008026; /* green  */
+  --rb-5: #004dff; /* blue   */
+  --rb-6: #750787; /* violet */
+
+  /* Signature brand gradient: the full rainbow, red → violet. */
+  --rainbow: linear-gradient(
+    135deg,
+    #e40303 0%,
+    #ff8c00 18%,
+    #ffb800 36%,
+    #008026 56%,
+    #004dff 78%,
+    #750787 100%
+  );
+
+  /* Library blue — a sweep through shades of blue, used for the brand logo,
+     the wordmark, and primary buttons. Deep navy → royal → sky. */
+  --library-blue: linear-gradient(
+    135deg,
+    #1e3a8a 0%,
+    #1d4ed8 50%,
+    #3b82f6 100%
+  );
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-soft: var(--accent-soft);
+  --color-muted: var(--muted);
+  --color-rb-1: var(--rb-1);
+  --color-rb-2: var(--rb-2);
+  --color-rb-3: var(--rb-3);
+  --color-rb-4: var(--rb-4);
+  --color-rb-5: var(--rb-5);
+  --color-rb-6: var(--rb-6);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-source-serif), Georgia, "Times New Roman", serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0c0a12;
+    --foreground: #f0eaf4;
+    --surface: #161121;
+    --surface-hover: #221831;
+    --border: #2c2140;
+    --accent: #ff7ad9; /* bright magenta */
+    --accent-hover: #ffa6e6;
+    --accent-foreground: #0c0a12;
+    --accent-soft: #2a1430;
+    --muted: #b3a8c4;
+
+    /* Same pride spectrum, brightened so it sings on a dark canvas. */
+    --rb-1: #ff5a5a; /* red    */
+    --rb-2: #ffae42; /* orange */
+    --rb-3: #ffd24a; /* amber  */
+    --rb-4: #36c46a; /* green  */
+    --rb-5: #5b8cff; /* blue   */
+    --rb-6: #b56cff; /* violet */
+
+    /* Same rainbow sweep, brightened for dark surfaces. */
+    --rainbow: linear-gradient(
+      135deg,
+      #ff5a5a 0%,
+      #ffae42 18%,
+      #ffd24a 36%,
+      #36c46a 56%,
+      #5b8cff 78%,
+      #b56cff 100%
+    );
+
+    /* Library blue, brightened so it sings on a dark canvas. */
+    --library-blue: linear-gradient(
+      135deg,
+      #3b82f6 0%,
+      #60a5fa 50%,
+      #93c5fd 100%
+    );
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  /* Soft rainbow wash anchored to the top of the page — each blob a different
+     stripe of the spectrum, kept faint so text stays readable. */
+  background-image:
+    radial-gradient(48rem 34rem at 4% -10%, color-mix(in srgb, var(--rb-1) 14%, transparent), transparent 60%),
+    radial-gradient(46rem 32rem at 28% -8%, color-mix(in srgb, var(--rb-2) 12%, transparent), transparent 60%),
+    radial-gradient(46rem 32rem at 50% -6%, color-mix(in srgb, var(--rb-4) 11%, transparent), transparent 60%),
+    radial-gradient(46rem 32rem at 72% -8%, color-mix(in srgb, var(--rb-5) 12%, transparent), transparent 60%),
+    radial-gradient(48rem 34rem at 96% -10%, color-mix(in srgb, var(--rb-6) 14%, transparent), transparent 60%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+a {
+  color: var(--accent);
+}
+
+/* ---- Modern utilities -------------------------------------------------- */
+
+/* Animated rainbow text fill. */
+.text-rainbow {
+  background: var(--rainbow);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-pan 6s linear infinite;
+}
+
+/* Animated library-blue text fill, mirroring .text-rainbow. */
+.text-library-blue {
+  background: var(--library-blue);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow-pan 6s linear infinite;
+}
+
+/* Rainbow gradient border via masked padding-box, so the inside stays solid. */
+.rainbow-border {
+  position: relative;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    var(--rainbow) border-box;
+  background-size: 100% 100%, 200% auto;
+}
+.rainbow-border:hover {
+  animation: rainbow-pan 4s linear infinite;
+}
+
+/* Frosted-glass panel. */
+.glass {
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
+}
+
+.shadow-glow {
+  box-shadow: 0 10px 40px -12px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+
+/* Image hover reaction (mirrors bosniakstudies.org associate cards): the image
+   zooms in slightly on hover. Put `.img-zoom` on the overflow-hidden wrapper
+   and `.img-zoom__media` on the <img>/<Image>. */
+.img-zoom__media {
+  transition: transform 0.3s ease;
+}
+.img-zoom:hover .img-zoom__media {
+  transform: scale(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .img-zoom__media {
+    transition: none;
+  }
+  .img-zoom:hover .img-zoom__media {
+    transform: none;
+  }
+}
+
+@keyframes rainbow-pan {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes float-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  animation: float-up 0.5s cubic-bezier(0.21, 1, 0.4, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-rainbow,
+  .text-library-blue,
+  .rainbow-border:hover,
+  .animate-in {
+    animation: none;
+  }
+}
+
+/* Site-wide page container. Uses the full viewport with comfortable padding
+   on small screens, then opens up to 80% of the viewport (capped so lines
+   don't get absurdly wide on ultra-wide monitors) once there's room to
+   spare, so the chrome and wide layouts (sidebars, grids) can make real use
+   of large screens. */
+.shell {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .shell {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .shell {
+    width: 80%;
+    max-width: 1680px;
+    padding-inline: 0;
+  }
+}
+
+/* Wikipedia article body styling, scoped so it doesn't leak into the rest
+   of the site. Pairs with the @tailwindcss/typography `prose` classes
+   applied in the article template. */
+.wiki-content {
+  font-family: var(--font-serif);
+  line-height: 1.7;
+}
+
+.wiki-content a {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  text-underline-offset: 2px;
+}
+
+/* Inline content links cycle through the six pride-spectrum tokens, so each
+   consecutive link reads in a different color (assigned in document order
+   during sanitization — see lib/sanitize.ts). The matching tokens shift for
+   dark mode automatically, so contrast holds on both canvases. */
+.wiki-content a.wlink-1 {
+  color: var(--rb-1);
+  text-decoration-color: color-mix(in srgb, var(--rb-1) 40%, transparent);
+}
+.wiki-content a.wlink-2 {
+  color: var(--rb-2);
+  text-decoration-color: color-mix(in srgb, var(--rb-2) 40%, transparent);
+}
+.wiki-content a.wlink-3 {
+  color: var(--rb-3);
+  text-decoration-color: color-mix(in srgb, var(--rb-3) 40%, transparent);
+}
+.wiki-content a.wlink-4 {
+  color: var(--rb-4);
+  text-decoration-color: color-mix(in srgb, var(--rb-4) 40%, transparent);
+}
+.wiki-content a.wlink-5 {
+  color: var(--rb-5);
+  text-decoration-color: color-mix(in srgb, var(--rb-5) 40%, transparent);
+}
+.wiki-content a.wlink-6 {
+  color: var(--rb-6);
+  text-decoration-color: color-mix(in srgb, var(--rb-6) 40%, transparent);
+}
+
+.wiki-content table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  font-size: 0.9em;
+}
+
+.wiki-content .infobox,
+.wiki-content table.infobox {
+  display: table;
+  width: auto;
+  max-width: 100%;
+  margin: 0 0 1.5rem 0;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--surface);
+  font-size: 0.85em;
+  float: none;
+}
+
+.wiki-content figure {
+  margin: 1.5rem 0;
+}
+
+.wiki-content img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.wiki-content a:hover img,
+.wiki-content img:hover {
+  transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wiki-content img {
+    transition: none;
+  }
+  .wiki-content a:hover img,
+  .wiki-content img:hover {
+    transform: none;
+  }
+}
+
+/* Leave room beneath the sticky header when jumping to a section from the
+   D3 article-structure map, and briefly flash the heading on arrival. */
+.wiki-content :is(h2, h3, h4) {
+  scroll-margin-top: 5rem;
+}
+
+.structure-target-flash {
+  animation: structure-flash 1.2s ease-out;
+  border-radius: 0.375rem;
+}
+
+@keyframes structure-flash {
+  0% {
+    background-color: color-mix(in srgb, var(--accent) 22%, transparent);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .structure-target-flash {
+    animation: none;
+  }
+}
+
+.wiki-content .mw-editsection,
+.wiki-content .mw-cite-backlink,
+.wiki-content sup.noprint,
+.wiki-content .reference-text .mw-cite-backlink {
+  display: none;
+}
+
+.wiki-content .reflist,
+.wiki-content .references {
+  font-size: 0.85em;
 }
