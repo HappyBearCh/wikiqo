@@ -1,5 +1,5 @@
 import "server-only";
-import type { FileInfo, OpenSearchSuggestion, SearchResult, WikiSummary } from "@/lib/types";
+import type { FileInfo, SearchResult, WikiSummary } from "@/lib/types";
 
 const REST_BASE = "https://en.wikipedia.org/api/rest_v1";
 const ACTION_BASE = "https://en.wikipedia.org/w/api.php";
@@ -203,39 +203,4 @@ export async function searchArticles(query: string, limit = 20): Promise<SearchR
 
   const data = (await res.json()) as { query?: { search?: SearchResult[] } };
   return data.query?.search ?? [];
-}
-
-/**
- * Autocomplete suggestions via the `action=opensearch` module.
- * Cached for 1h — suggestion lists for a given prefix barely change.
- */
-export async function openSearch(query: string, limit = 8): Promise<OpenSearchSuggestion[]> {
-  const url = new URL(ACTION_BASE);
-  url.searchParams.set("action", "opensearch");
-  url.searchParams.set("search", query);
-  url.searchParams.set("limit", String(limit));
-  url.searchParams.set("namespace", "0");
-  url.searchParams.set("format", "json");
-
-  const res = await fetch(url, {
-    headers: { "User-Agent": USER_AGENT, Accept: "application/json" },
-    next: { revalidate: 3600 },
-  });
-
-  if (!res.ok) {
-    throw new Error(`Wikipedia opensearch request failed: ${res.status} ${res.statusText}`);
-  }
-
-  const [, titles, descriptions, urls] = (await res.json()) as [
-    string,
-    string[],
-    string[],
-    string[],
-  ];
-
-  return titles.map((title, i) => ({
-    title,
-    description: descriptions[i] ?? "",
-    url: urls[i] ?? "",
-  }));
 }
