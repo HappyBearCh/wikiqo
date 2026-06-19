@@ -10,6 +10,13 @@ const PAGEVIEWS_TOP_BASE =
 // just the calling site, per https://meta.wikimedia.org/wiki/User-Agent_policy
 const USER_AGENT = "wikiqo.com/1.0 (https://wikiqo.com; Next.js Wikipedia reader)";
 
+// Cache Wikipedia content for a year. Article bodies/summaries change slowly and
+// staleness is acceptable for a reader mirror, so a long window keeps the ISR
+// cache warm: each slug is rendered (and re-fetched from Wikipedia) at most once
+// a year instead of daily, slashing function invocations, ISR writes, and origin
+// transfer. Content can still be refreshed on demand via revalidatePath/Tag.
+const ONE_YEAR = 31_536_000;
+
 /** Normalizes a page title or URL slug into Wikipedia's underscore-separated form. */
 function normalizeTitle(title: string): string {
   return title.trim().replace(/\s+/g, "_");
@@ -27,13 +34,13 @@ export function wikipediaUrlFor(title: string): string {
 
 /**
  * Fetches the lead summary for an article from the REST API.
- * Cached at the edge/CDN for 24h since article summaries change infrequently.
+ * Cached for a year (see ONE_YEAR) since article summaries change infrequently.
  * Returns null if the page doesn't exist (404) or is a redirect-less miss.
  */
 export async function getSummary(title: string): Promise<WikiSummary | null> {
   const res = await fetch(`${REST_BASE}/page/summary/${encodeTitle(title)}?redirect=true`, {
     headers: { "User-Agent": USER_AGENT, Accept: "application/json" },
-    next: { revalidate: 86400 },
+    next: { revalidate: ONE_YEAR },
   });
 
   if (res.status === 404) return null;
@@ -46,13 +53,13 @@ export async function getSummary(title: string): Promise<WikiSummary | null> {
 
 /**
  * Fetches the full rendered article body as HTML (Parsoid output) from the REST API.
- * Cached for 24h, matching the summary endpoint's freshness window.
+ * Cached for a year, matching the summary endpoint's freshness window.
  * Returns null if the page doesn't exist.
  */
 export async function getArticleHtml(title: string): Promise<string | null> {
   const res = await fetch(`${REST_BASE}/page/html/${encodeTitle(title)}?redirect=true`, {
     headers: { "User-Agent": USER_AGENT, Accept: "text/html" },
-    next: { revalidate: 86400 },
+    next: { revalidate: ONE_YEAR },
   });
 
   if (res.status === 404) return null;
@@ -69,7 +76,7 @@ export async function getArticleHtml(title: string): Promise<string | null> {
  * Used to populate the sitemap with the pages most worth crawling — listing
  * all ~7M articles is neither feasible at request time nor desirable (every
  * article canonical-points to Wikipedia). Each day's top-1000 list is
- * immutable history, so it's cached for a week; namespace pages (Special:,
+ * immutable history, so it's cached for a year; namespace pages (Special:,
  * File:, etc.) and the main page are dropped so only real articles remain.
  *
  * Pageviews data lags ~1–2 days, so the window starts two days back to avoid
@@ -89,7 +96,7 @@ export async function getPopularArticleTitles(limit = 20000, days = 30): Promise
     dates.map(async (date) => {
       const res = await fetch(`${PAGEVIEWS_TOP_BASE}/${date}`, {
         headers: { "User-Agent": USER_AGENT, Accept: "application/json" },
-        next: { revalidate: 604800 }, // 1 week — historical data is immutable
+        next: { revalidate: ONE_YEAR }, // historical data is immutable
       });
       if (!res.ok) return [] as string[];
       const data = (await res.json()) as {
@@ -124,7 +131,7 @@ function metaValue(field?: { value?: string }): string | undefined {
 /**
  * Resolves a File:/Image: title to its underlying media via the Action API's
  * `prop=imageinfo` module, returning the upload.wikimedia.org URL plus a
- * display-sized thumbnail and attribution metadata. Cached for 24h, matching
+ * display-sized thumbnail and attribution metadata. Cached for a year, matching
  * the article endpoints. Returns null if the file doesn't exist.
  */
 export async function getFileInfo(title: string, thumbWidth = 1600): Promise<FileInfo | null> {
@@ -139,7 +146,7 @@ export async function getFileInfo(title: string, thumbWidth = 1600): Promise<Fil
 
   const res = await fetch(url, {
     headers: { "User-Agent": USER_AGENT, Accept: "application/json" },
-    next: { revalidate: 86400 },
+    next: { revalidate: ONE_YEAR },
   });
 
   if (!res.ok) {
