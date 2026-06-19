@@ -8,12 +8,20 @@ import TextBanner from "@/components/TextBanner";
 import FeaturedGrid from "@/components/FeaturedGrid";
 import { keywordsFromHtml } from "@/lib/keywords";
 
-export const metadata: Metadata = {
-  title: "Search",
-};
-
 interface SearchPageProps {
   searchParams: Promise<{ q?: string }>;
+}
+
+export async function generateMetadata({ searchParams }: SearchPageProps): Promise<Metadata> {
+  const { q } = await searchParams;
+  // Result pages live in an unbounded ?q=… URL space — a classic crawler trap.
+  // noindex them so search engines don't expand/index every query variation
+  // (each is an uncached function call). The bare /search landing page, which is
+  // in the sitemap, stays indexable.
+  return {
+    title: "Search",
+    robots: q?.trim() ? { index: false, follow: true } : undefined,
+  };
 }
 
 export default async function SearchPage({ searchParams }: SearchPageProps) {

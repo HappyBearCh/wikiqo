@@ -189,7 +189,9 @@ export async function getFileInfo(title: string, thumbWidth = 1600): Promise<Fil
 
 /**
  * Full-text search via the MediaWiki Action API (`list=search`).
- * Always fetched fresh — search results should never be cached/stale.
+ * Cached for an hour: results for a given query barely shift hour-to-hour, and
+ * caching dedupes repeated/identical searches so they don't each spend a fresh
+ * external call + render. Distinct queries still miss, as expected.
  */
 export async function searchArticles(query: string, limit = 20): Promise<SearchResult[]> {
   const url = new URL(ACTION_BASE);
@@ -201,7 +203,7 @@ export async function searchArticles(query: string, limit = 20): Promise<SearchR
 
   const res = await fetch(url, {
     headers: { "User-Agent": USER_AGENT, Accept: "application/json" },
-    cache: "no-store",
+    next: { revalidate: 3600 },
   });
 
   if (!res.ok) {
