@@ -114,6 +114,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                 height={image.height}
                 className="img-zoom__media w-full object-cover"
                 priority
+                unoptimized
               />
             </div>
           )}
@@ -180,6 +181,7 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
                   height={image.height}
                   className="img-zoom__media w-full object-cover"
                   priority
+                  unoptimized
                 />
               </div>
             )}
