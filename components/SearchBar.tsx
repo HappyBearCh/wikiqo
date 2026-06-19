@@ -5,6 +5,42 @@ import { useRouter } from "next/navigation";
 import type { OpenSearchSuggestion } from "@/lib/types";
 import { articleHref } from "@/lib/links";
 
+// Autocomplete calls Wikipedia's opensearch API directly from the browser
+// (CORS-enabled via origin=*) rather than proxying through a Vercel Function.
+// This is exactly what Wikipedia's own search box does, and it keeps per-
+// keystroke traffic entirely off our compute — no function invocations, no
+// observability events for the typeahead.
+const OPENSEARCH_ENDPOINT = "https://en.wikipedia.org/w/api.php";
+
+async function fetchSuggestions(
+  query: string,
+  signal: AbortSignal,
+): Promise<OpenSearchSuggestion[]> {
+  const url = new URL(OPENSEARCH_ENDPOINT);
+  url.searchParams.set("action", "opensearch");
+  url.searchParams.set("search", query);
+  url.searchParams.set("limit", "8");
+  url.searchParams.set("namespace", "0");
+  url.searchParams.set("format", "json");
+  url.searchParams.set("origin", "*"); // CORS: anonymous cross-origin request
+
+  const res = await fetch(url, { signal });
+  if (!res.ok) return [];
+
+  const [, titles, descriptions, urls] = (await res.json()) as [
+    string,
+    string[],
+    string[],
+    string[],
+  ];
+
+  return titles.map((title, i) => ({
+    title,
+    description: descriptions[i] ?? "",
+    url: urls[i] ?? "",
+  }));
+}
+
 export default function SearchBar() {
   const router = useRouter();
   const listboxId = useId();
@@ -36,7 +72,9 @@ export default function SearchBar() {
     abortRef.current?.abort();
 
     const trimmed = value.trim();
-    if (!trimmed) {
+    // Single characters return near-useless suggestions; requiring two cuts the
+    // request volume without hurting the experience.
+    if (trimmed.length < 2) {
       setSuggestions([]);
       setOpen(false);
       return;
@@ -46,13 +84,9 @@ export default function SearchBar() {
       const controller = new AbortController();
       abortRef.current = controller;
       try {
-        const res = await fetch(`/api/autocomplete?q=${encodeURIComponent(trimmed)}`, {
-          signal: controller.signal,
-        });
-        if (!res.ok) return;
-        const data = (await res.json()) as { suggestions: OpenSearchSuggestion[] };
-        setSuggestions(data.suggestions);
-        setOpen(data.suggestions.length > 0);
+        const suggestions = await fetchSuggestions(trimmed, controller.signal);
+        setSuggestions(suggestions);
+        setOpen(suggestions.length > 0);
       } catch {
         // aborted or network hiccup — ignore, user is likely still typing
       }

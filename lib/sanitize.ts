@@ -79,6 +79,13 @@ function transformAnchor(tagName: string, attribs: sanitizeHtml.Attributes) {
 
   if (href.startsWith("./")) {
     attribs.href = `/wiki/${href.slice(2)}`;
+    // nofollow on internal article links: every article is a non-canonical
+    // mirror (canonical points at Wikipedia), so there's no SEO value in
+    // crawlers traversing the ~7M-page Wikipedia link graph through us — only
+    // cost (each unique slug is a cold function invocation). nofollow stops
+    // compliant crawlers from walking the graph; only the curated sitemap set
+    // is meant to be crawled.
+    attribs.rel = "nofollow";
     isContentLink = true;
   } else if (href.startsWith("//")) {
     attribs.href = `https:${href}`;
