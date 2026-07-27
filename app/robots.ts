@@ -33,8 +33,9 @@ const AI_CRAWLERS = [
 /**
  * Allow general search engines to crawl pages (excluding the JSON API), but
  * deny dedicated AI scrapers entirely. The sitemap pointer lets crawlers
- * discover /sitemap.xml — the handful of pages wikiqo actually owns — without
- * manual submission. Inline article links carry rel="nofollow" (see
+ * discover /sitemap.xml — the wikiqo routes plus the curated set of popular
+ * articles — without manual submission. Inline article links carry
+ * rel="nofollow" (see
  * lib/sanitize.ts) so even allowed crawlers don't traverse the full Wikipedia
  * link graph through us.
  */
