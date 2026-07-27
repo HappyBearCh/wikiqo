@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
-
-const BASE_URL = "https://wikiqo.com";
+import { SITE_URL } from "@/lib/site";
 
 // High-volume AI/training crawlers. Each article is a non-canonical Wikipedia
 // mirror, so letting these walk our copy of the link graph is pure cost (a cold
@@ -34,10 +33,10 @@ const AI_CRAWLERS = [
 /**
  * Allow general search engines to crawl pages (excluding the JSON API), but
  * deny dedicated AI scrapers entirely. The sitemap pointer lets crawlers
- * discover /sitemap.xml — the curated set of popular articles that are actually
- * worth indexing — without manual submission. Inline article links carry
- * rel="nofollow" (see lib/sanitize.ts) so even allowed crawlers don't traverse
- * the full Wikipedia link graph through us.
+ * discover /sitemap.xml — the handful of pages wikiqo actually owns — without
+ * manual submission. Inline article links carry rel="nofollow" (see
+ * lib/sanitize.ts) so even allowed crawlers don't traverse the full Wikipedia
+ * link graph through us.
  */
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -52,7 +51,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: "/",
       })),
     ],
-    sitemap: `${BASE_URL}/sitemap.xml`,
-    host: BASE_URL,
+    sitemap: `${SITE_URL}/sitemap.xml`,
+    host: SITE_URL,
   };
 }

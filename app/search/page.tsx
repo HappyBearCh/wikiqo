@@ -3,6 +3,7 @@ import Link from "next/link";
 import { searchArticles } from "@/lib/wikipedia";
 import { sanitizeWikiHtml } from "@/lib/sanitize";
 import { articleHref } from "@/lib/links";
+import { OG_BASE } from "@/lib/site";
 import WordCountChartLazy from "@/components/WordCountChartLazy";
 import TextBanner from "@/components/TextBanner";
 import FeaturedGrid from "@/components/FeaturedGrid";
@@ -12,15 +13,36 @@ interface SearchPageProps {
   searchParams: Promise<{ q?: string }>;
 }
 
+const DESCRIPTION =
+  "Search Wikipedia on wikiqo. Type a title or a phrase and read the matching articles in a clean, uncluttered reading column.";
+
 export async function generateMetadata({ searchParams }: SearchPageProps): Promise<Metadata> {
   const { q } = await searchParams;
+  const query = q?.trim();
+
   // Result pages live in an unbounded ?q=… URL space — a classic crawler trap.
   // noindex them so search engines don't expand/index every query variation
   // (each is an uncached function call). The bare /search landing page, which is
-  // in the sitemap, stays indexable.
+  // in the sitemap, stays indexable. Both point their canonical at bare /search
+  // so any result URL that does get crawled consolidates onto the one page
+  // that's actually worth indexing.
   return {
-    title: "Search",
-    robots: q?.trim() ? { index: false, follow: true } : undefined,
+    title: query ? `Search results for “${query}”` : "Search Wikipedia",
+    description: query
+      ? `Wikipedia articles matching “${query}”, read on wikiqo.`
+      : DESCRIPTION,
+    alternates: { canonical: "/search" },
+    // Spread conditionally: setting `robots: undefined` would *replace* the
+    // layout's directives rather than inherit them, silently dropping
+    // max-image-preview/max-snippet from the bare landing page.
+    ...(query ? { robots: { index: false, follow: true } } : {}),
+    openGraph: {
+      ...OG_BASE,
+      type: "website",
+      url: "/search",
+      title: query ? `Search results for “${query}”` : "Search Wikipedia",
+      description: DESCRIPTION,
+    },
   };
 }
 

@@ -1,36 +1,19 @@
 import type { MetadataRoute } from "next";
-import { getPopularArticleTitles } from "@/lib/wikipedia";
-import { articleHref } from "@/lib/links";
-
-const BASE_URL = "https://wikiqo.com";
-
-// Regenerated daily: the popular-article set shifts slowly and the pageviews
-// source it's built from updates roughly once per day.
-export const revalidate = 86400;
+import { SITE_URL } from "@/lib/site";
 
 /**
- * Site sitemap. Lists the real wikiqo routes plus the most-viewed Wikipedia
- * articles (see getPopularArticleTitles). We deliberately do not enumerate all
- * ~7M articles: it isn't feasible to generate at request time, and every
- * article page canonical-points to Wikipedia, so listing them wholesale would
- * just be non-canonical mirror URLs. The popular set stays well under the
- * 50,000-URL per-file limit, so a single sitemap suffices.
+ * Site sitemap. Lists only the pages wikiqo actually owns.
+ *
+ * Article pages are deliberately absent. Every /wiki/ page sets rel=canonical
+ * to en.wikipedia.org (see wiki/[slug]/generateMetadata), so listing them would
+ * ask crawlers to spend budget — and one cold function invocation per slug — on
+ * URLs that can never be indexed under that canonical. They stay fully
+ * reachable and shareable; they just aren't advertised for crawling.
  */
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const staticEntries: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/`, changeFrequency: "daily", priority: 1 },
-    { url: `${BASE_URL}/search`, changeFrequency: "weekly", priority: 0.6 },
-    { url: `${BASE_URL}/about`, changeFrequency: "monthly", priority: 0.5 },
+export default function sitemap(): MetadataRoute.Sitemap {
+  return [
+    { url: `${SITE_URL}/`, changeFrequency: "daily", priority: 1 },
+    { url: `${SITE_URL}/search`, changeFrequency: "weekly", priority: 0.6 },
+    { url: `${SITE_URL}/about`, changeFrequency: "monthly", priority: 0.5 },
   ];
-
-  const titles = await getPopularArticleTitles();
-  const lastModified = new Date();
-  const articleEntries: MetadataRoute.Sitemap = titles.map((title) => ({
-    url: `${BASE_URL}${articleHref(title)}`,
-    lastModified,
-    changeFrequency: "weekly",
-    priority: 0.7,
-  }));
-
-  return [...staticEntries, ...articleEntries];
 }

@@ -1,4 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+// Without this the 404 inherits the site title and reads as a real page in any
+// tool that only looks at the markup. The `robots` override matters too: Next
+// emits its own noindex here, and without this the layout's "index, follow"
+// would sit alongside it as a contradictory second robots tag.
+export const metadata: Metadata = {
+  title: "Page not found",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (

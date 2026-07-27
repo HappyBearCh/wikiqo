@@ -3,8 +3,6 @@ import type { FileInfo, SearchResult, WikiSummary } from "@/lib/types";
 
 const REST_BASE = "https://en.wikipedia.org/api/rest_v1";
 const ACTION_BASE = "https://en.wikipedia.org/w/api.php";
-const PAGEVIEWS_TOP_BASE =
-  "https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access";
 
 // Wikimedia asks API consumers to identify themselves. No personal data here,
 // just the calling site, per https://meta.wikimedia.org/wiki/User-Agent_policy
@@ -68,58 +66,6 @@ export async function getArticleHtml(title: string): Promise<string | null> {
   }
 
   return await res.text();
-}
-
-/**
- * Returns the most-viewed article titles over a recent window, via the
- * Wikimedia pageviews "top" API, deduped and ranked by recency of popularity.
- * Used to populate the sitemap with the pages most worth crawling — listing
- * all ~7M articles is neither feasible at request time nor desirable (every
- * article canonical-points to Wikipedia). Each day's top-1000 list is
- * immutable history, so it's cached for a year; namespace pages (Special:,
- * File:, etc.) and the main page are dropped so only real articles remain.
- *
- * Pageviews data lags ~1–2 days, so the window starts two days back to avoid
- * 404s on not-yet-published days.
- */
-export async function getPopularArticleTitles(limit = 20000, days = 30): Promise<string[]> {
-  const dates: string[] = [];
-  for (let i = 2; i < days + 2; i++) {
-    const d = new Date();
-    d.setUTCDate(d.getUTCDate() - i);
-    const month = String(d.getUTCMonth() + 1).padStart(2, "0");
-    const day = String(d.getUTCDate()).padStart(2, "0");
-    dates.push(`${d.getUTCFullYear()}/${month}/${day}`);
-  }
-
-  const lists = await Promise.all(
-    dates.map(async (date) => {
-      const res = await fetch(`${PAGEVIEWS_TOP_BASE}/${date}`, {
-        headers: { "User-Agent": USER_AGENT, Accept: "application/json" },
-        next: { revalidate: ONE_YEAR }, // historical data is immutable
-      });
-      if (!res.ok) return [] as string[];
-      const data = (await res.json()) as {
-        items?: Array<{ articles?: Array<{ article: string }> }>;
-      };
-      return data.items?.[0]?.articles?.map((a) => a.article) ?? [];
-    }),
-  );
-
-  const seen = new Set<string>();
-  const titles: string[] = [];
-  for (const list of lists) {
-    for (const article of list) {
-      // Skip the main page and any namespaced page (contains a colon, e.g.
-      // Special:Search, File:…, Wikipedia:…) — the sitemap lists articles only.
-      if (article === "Main_Page" || article.includes(":")) continue;
-      if (seen.has(article)) continue;
-      seen.add(article);
-      titles.push(article);
-      if (titles.length >= limit) return titles;
-    }
-  }
-  return titles;
 }
 
 /** Strips an extmetadata HTML value down to a trimmed string, or undefined. */

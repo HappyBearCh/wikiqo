@@ -3,7 +3,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getArticleHtml, getFileInfo, getSummary, wikipediaUrlFor } from "@/lib/wikipedia";
 import { sanitizeWikiHtml } from "@/lib/sanitize";
-import { isFileNamespace, titleFromSlug } from "@/lib/links";
+import { articleHref, isFileNamespace, titleFromSlug } from "@/lib/links";
+import { OG_BASE } from "@/lib/site";
 import { parseArticleStructure } from "@/lib/structure";
 import { keywordsFromHtml } from "@/lib/keywords";
 import ArticleStructureLazy from "@/components/ArticleStructureLazy";
@@ -20,16 +21,22 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   // File:/Image:/Media: pages have no REST summary — describe them directly and
   // point search engines at the original Wikipedia file page.
   if (isFileNamespace(title)) {
+    const name = title.replace(/^(File|Image|Media)\s*:/i, "");
+    const description = `${name} — a media file from Wikimedia Commons, with its description, author, and licence.`;
     return {
       title,
+      description,
       alternates: { canonical: wikipediaUrlFor(title) },
+      openGraph: { ...OG_BASE, type: "article", title, description },
     };
   }
 
   const summary = await getSummary(title);
 
+  // The page then calls notFound(); the head tags actually come from
+  // not-found.tsx in this segment.
   if (!summary) {
-    return { title: "Article not found" };
+    return { title: "Article not found", robots: { index: false, follow: true } };
   }
 
   const description = summary.description ?? summary.extract?.slice(0, 200);
@@ -45,11 +52,23 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
       canonical: wikipediaUrlFor(summary.title),
     },
     openGraph: {
+      // Spread first: Next replaces the layout's openGraph wholesale here, so
+      // without this the shared siteName/locale/image would be lost on every
+      // article. The lead image then overrides the generic card — but only when
+      // the article actually has one, hence the conditional spread.
+      ...OG_BASE,
+      ...(image ? { images: [{ url: image, alt: summary.title }] } : {}),
+      type: "article",
+      url: articleHref(summary.title),
       title: summary.title,
       description,
-      type: "article",
-      images: image ? [{ url: image }] : undefined,
+      // Wikipedia's last-edit timestamp for this revision.
+      modifiedTime: summary.timestamp,
     },
+    // Wikipedia lead images are portrait as often as not; a small square card
+    // crops them far better than a wide one. Title/description/image all fall
+    // back to the og: tags above.
+    twitter: { card: image ? "summary_large_image" : "summary" },
   };
 }
 

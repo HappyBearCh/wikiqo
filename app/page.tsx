@@ -1,8 +1,34 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import TextBanner from "@/components/TextBanner";
 import FeaturedGrid from "@/components/FeaturedGrid";
 import { FEATURED } from "@/lib/featured";
 import { keywordsFromText } from "@/lib/keywords";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
+
+export const metadata: Metadata = {
+  // `title.absolute` so the home page reads "wikiqo — a clean reader for
+  // Wikipedia" rather than running through the "%s | wikiqo" template.
+  title: { absolute: SITE_TITLE },
+  description: SITE_DESCRIPTION,
+  // Self-referencing canonical, so tracking params (?utm_source=…, ?ref=…)
+  // consolidate onto the bare URL instead of splitting signals.
+  alternates: { canonical: "/" },
+};
+
+/**
+ * Tells search engines the site's official name and preferred URL, so results
+ * show "wikiqo" rather than a guess derived from the <title>.
+ */
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: SITE_NAME,
+  alternateName: SITE_TITLE,
+  url: SITE_URL,
+  description: SITE_DESCRIPTION,
+  inLanguage: "en",
+};
 
 export default function Home() {
   // Salient terms drawn from the featured cards, for the text-viz banner.
@@ -12,6 +38,11 @@ export default function Home() {
 
   return (
     <div className="shell py-16 sm:py-24">
+      <script
+        type="application/ld+json"
+        // Static, developer-authored object — no user input reaches it.
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
       <TextBanner words={words} title="wikiqo" initial="title" />
 
       <section className="animate-in mx-auto flex max-w-3xl flex-col items-center text-center">

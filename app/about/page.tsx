@@ -1,10 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { OG_BASE } from "@/lib/site";
+
+const DESCRIPTION =
+  "About wikiqo — an independent, open-knowledge reader for Wikipedia, run with the rigour of a research library and the colours of a pride parade.";
 
 export const metadata: Metadata = {
   title: "About",
-  description:
-    "About wikiqo — an independent, open-knowledge reader for Wikipedia, run with the rigour of a research library and the colours of a pride parade.",
+  description: DESCRIPTION,
+  alternates: { canonical: "/about" },
+  openGraph: {
+    ...OG_BASE,
+    type: "article",
+    url: "/about",
+    title: "About wikiqo",
+    description: DESCRIPTION,
+  },
 };
 
 // The site now wears the full rainbow everywhere (see globals.css), so this page

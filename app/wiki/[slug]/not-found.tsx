@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+// This boundary — not the page's generateMetadata — supplies the head tags once
+// notFound() fires, so the title and robots directive have to live here.
+export const metadata: Metadata = {
+  title: "Article not found",
+  robots: { index: false, follow: true },
+};
 
 export default function ArticleNotFound() {
   return (
