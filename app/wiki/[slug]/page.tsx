@@ -3,7 +3,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getArticleHtml, getFileInfo, getSummary, wikipediaUrlFor } from "@/lib/wikipedia";
 import { sanitizeWikiHtml } from "@/lib/sanitize";
-import { articleHref, isFileNamespace, titleFromSlug } from "@/lib/links";
+import { articleHref, isFileNamespace, isNonArticleNamespace, titleFromSlug } from "@/lib/links";
 import { OG_BASE } from "@/lib/site";
 import { parseArticleStructure } from "@/lib/structure";
 import { keywordsFromHtml } from "@/lib/keywords";
@@ -63,6 +63,12 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     };
   }
 
+  // Non-article namespaces resolve to nothing renderable, so skip the summary
+  // fetch entirely and go straight to the not-found head tags.
+  if (isNonArticleNamespace(title)) {
+    return { title: "Article not found", robots: { index: false, follow: true } };
+  }
+
   const summary = await getSummary(title);
 
   // The page then calls notFound(); the head tags actually come from
@@ -113,6 +119,14 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   // iframe rather than 404 on a missing summary.
   if (isFileNamespace(title)) {
     return <FileView title={title} />;
+  }
+
+  // Talk:, Template talk:, Category:, Portal: and friends have no article body.
+  // Bail before the fetches rather than paying two Wikipedia round-trips to
+  // learn there's nothing to render — the crawl hitting this route walks
+  // thousands of them.
+  if (isNonArticleNamespace(title)) {
+    notFound();
   }
 
   const [summary, html] = await Promise.all([getSummary(title), getArticleHtml(title)]);
