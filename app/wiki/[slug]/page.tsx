@@ -10,6 +10,38 @@ import { keywordsFromHtml } from "@/lib/keywords";
 import ArticleStructureLazy from "@/components/ArticleStructureLazy";
 import TextBanner from "@/components/TextBanner";
 
+// Cache the *rendered page*, not just the upstream data. Without this the route
+// is `ƒ (Dynamic)` — server-rendered on demand — so every view of every article
+// costs a fresh function invocation: re-sanitizing ~2 MB of Parsoid HTML (CPU)
+// and shipping the ~700 KB gzipped result from the function to the CDN (origin
+// transfer). The year-long `revalidate` on the fetches in lib/wikipedia.ts only
+// caches Wikipedia's response; it does nothing for the render itself.
+//
+// With a route-level revalidate the first request for a slug renders once and
+// is stored, and every later request is served straight from the CDN — no
+// invocation, no origin transfer. The window matches the fetch-level ONE_YEAR
+// in lib/wikipedia.ts: regenerating more often than the data can change would
+// just re-spend CPU to produce byte-identical HTML. Must be a literal, as Next
+// requires the value to be statically analyzable.
+export const revalidate = 31_536_000;
+
+/**
+ * Empty on purpose: nothing is prerendered at build time (we can't enumerate
+ * ~7M Wikipedia articles, and wouldn't want to), but every slug is statically
+ * rendered and cached the first time it's actually visited.
+ *
+ * The empty array is load-bearing, not a no-op. Next only registers a dynamic
+ * route for runtime ISR if generateStaticParams is present — "you must return
+ * an empty array from generateStaticParams … in order to revalidate (ISR) paths
+ * at runtime … otherwise, the route will be dynamically rendered". Exporting
+ * `revalidate` on its own leaves the route as `ƒ (Dynamic)` and changes nothing.
+ * `dynamicParams` stays at its default of true, so uncached slugs render on
+ * demand rather than 404ing.
+ */
+export async function generateStaticParams() {
+  return [];
+}
+
 interface ArticlePageProps {
   params: Promise<{ slug: string }>;
 }

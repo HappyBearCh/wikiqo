@@ -51,9 +51,13 @@ const ALLOWED_TAGS = [
 // any `on*` event handler, so sanitize-html strips inline JS by construction.
 // Inline `style` and `class` are kept for Wikipedia's infobox/table styling;
 // `data-*`/`aria-*` globs preserve Parsoid metadata and accessibility hooks.
+// `data-*` is deliberately absent. Parsoid decorates almost every element with
+// its own bookkeeping data attributes, which nothing in this app reads (no CSS
+// selector, no component) — they were ~800 KB of dead weight on a long article,
+// paid for twice in the response (see the note on auto-ids below).
 const COMMON_ATTRS = [
   "id", "class", "style", "title", "lang", "dir", "role", "translate",
-  "data-*", "aria-*",
+  "aria-*",
   // tables
   "colspan", "rowspan", "headers", "scope", "span", "abbr",
   // lists
@@ -109,6 +113,28 @@ function transformAnchor(tagName: string, attribs: sanitizeHtml.Attributes) {
   return { tagName, attribs };
 }
 
+// Parsoid's own node identifiers: the literal "mw" followed by a few base64-ish
+// characters (mwAQ, mwBA, mwCg, …). They exist so Parsoid can round-trip an
+// edit back to wikitext, and are meaningless to a read-only mirror.
+//
+// Deliberately narrow, so it can't swallow a real anchor. Every id a reader
+// actually needs is longer and human-readable — heading anchors
+// ("Early_life_and_career"), citation targets ("cite_note-42", "cite_ref-…"),
+// and Wikipedia's own hooks ("mw-content-text", too long to match). Verified
+// against long articles: ~10,000 of the ~12,700 ids on a page are these, and
+// zero in-page href="#…" anchors point at one.
+const PARSOID_AUTO_ID = /^mw[A-Za-z0-9_-]{1,4}$/;
+
+/**
+ * Drops Parsoid's auto-generated element ids from every tag. Applied via the
+ * "*" transform, which sanitize-html runs *in addition to* (and after) any
+ * tag-specific transform, so the anchor/media rewrites below still apply.
+ */
+function stripAutoIds(tagName: string, attribs: sanitizeHtml.Attributes) {
+  if (attribs.id && PARSOID_AUTO_ID.test(attribs.id)) delete attribs.id;
+  return { tagName, attribs };
+}
+
 /** Upgrades protocol-relative Wikimedia media URLs ("//upload…") to https. */
 function transformMedia(tagName: string, attribs: sanitizeHtml.Attributes) {
   if (attribs.src?.startsWith("//")) attribs.src = `https:${attribs.src}`;
@@ -134,6 +160,7 @@ const OPTIONS: sanitizeHtml.IOptions = {
     a: transformAnchor,
     img: transformMedia,
     source: transformMedia,
+    "*": stripAutoIds,
   },
 };
 
