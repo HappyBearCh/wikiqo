@@ -83,7 +83,17 @@ function transformAnchor(tagName: string, attribs: sanitizeHtml.Attributes) {
   // than an in-page anchor like a "[1]" citation jump (href "#...").
   let isContentLink = false;
 
-  if (href.startsWith("./")) {
+  // Parsoid writes internal wiki links in two shapes: relative ("./Some_Page")
+  // throughout prose, and absolute-local ("/wiki/File:Foo.oga") around some
+  // media. Both have to be caught — an article that rewrites only the first
+  // still leaves on-site links behind for a crawler to follow.
+  const wikiPath = href.startsWith("./")
+    ? href.slice(2)
+    : href.startsWith("/wiki/")
+      ? href.slice("/wiki/".length)
+      : null;
+
+  if (wikiPath !== null) {
     // Point in-article links at Wikipedia rather than back into this site.
     //
     // These used to become "/wiki/…", which made every rendered article hand
@@ -102,7 +112,9 @@ function transformAnchor(tagName: string, attribs: sanitizeHtml.Attributes) {
     //
     // Entry points into this site are unaffected — the featured shelf and
     // search results build their hrefs with articleHref(), not from Parsoid.
-    attribs.href = `${WIKIPEDIA_ARTICLE_BASE}${href.slice(2)}`;
+    // Only Wikipedia's own markup reaches this sanitizer, so rewriting the
+    // "/wiki/…" shape here can't catch a link this app generated.
+    attribs.href = `${WIKIPEDIA_ARTICLE_BASE}${wikiPath}`;
     attribs.target = "_blank";
     attribs.rel = "noopener noreferrer external";
     isContentLink = true;
