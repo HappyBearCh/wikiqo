@@ -10,37 +10,31 @@ import { keywordsFromHtml } from "@/lib/keywords";
 import ArticleStructureLazy from "@/components/ArticleStructureLazy";
 import TextBanner from "@/components/TextBanner";
 
-// Cache the *rendered page*, not just the upstream data. Without this the route
-// is `ƒ (Dynamic)` — server-rendered on demand — so every view of every article
-// costs a fresh function invocation: re-sanitizing ~2 MB of Parsoid HTML (CPU)
-// and shipping the ~700 KB gzipped result from the function to the CDN (origin
-// transfer). The year-long `revalidate` on the fetches in lib/wikipedia.ts only
-// caches Wikipedia's response; it does nothing for the render itself.
+// This route is deliberately left `ƒ (Dynamic)` — do not add a route-level
+// `revalidate` + empty `generateStaticParams` here. That was tried, measured,
+// and reverted.
 //
-// With a route-level revalidate the first request for a slug renders once and
-// is stored, and every later request is served straight from the CDN — no
-// invocation, no origin transfer. The window matches the fetch-level ONE_YEAR
-// in lib/wikipedia.ts: regenerating more often than the data can change would
-// just re-spend CPU to produce byte-identical HTML. Must be a literal, as Next
-// requires the value to be statically analyzable.
-export const revalidate = 31_536_000;
-
-/**
- * Empty on purpose: nothing is prerendered at build time (we can't enumerate
- * ~7M Wikipedia articles, and wouldn't want to), but every slug is statically
- * rendered and cached the first time it's actually visited.
- *
- * The empty array is load-bearing, not a no-op. Next only registers a dynamic
- * route for runtime ISR if generateStaticParams is present — "you must return
- * an empty array from generateStaticParams … in order to revalidate (ISR) paths
- * at runtime … otherwise, the route will be dynamically rendered". Exporting
- * `revalidate` on its own leaves the route as `ƒ (Dynamic)` and changes nothing.
- * `dynamicParams` stays at its default of true, so uncached slugs render on
- * demand rather than 404ing.
- */
-export async function generateStaticParams() {
-  return [];
-}
+// ISR pays off when a bounded set of pages is read repeatedly. This route is
+// the opposite: the traffic hitting it is a crawler enumerating Wikipedia's
+// title space, and 95% of the paths it requests are seen exactly once and never
+// again. Caching a page that is never re-read is pure cost — the write is spent
+// and the read never comes.
+//
+// Measured over the 19 hours the route-level revalidate was live: 698,070 ISR
+// writes against 11,320 ISR reads, with every production log line still showing
+// `cache=MISS`. Next writes ~13 cache entries per render here (page HTML, RSC
+// payload, and the per-segment entries), so the crawl's ~2,700 renders/hour
+// turned into ~36,000 writes/hour — about $100/month of ISR writes to serve a
+// hit rate near zero. Function invocations did not move: 65,106 in 24h, against
+// 67,111 before the change.
+//
+// The fetch-level `revalidate: ONE_YEAR` in lib/wikipedia.ts stays. That caches
+// Wikipedia's responses rather than our renders, and the Parsoid bodies are
+// large enough that most of them fall out of the Data Cache anyway.
+//
+// If the crawl is ever bounded (see the sitemap's popular-title set), caching
+// this route becomes correct again — but only together with
+// `dynamicParams: false`, so the cached set stays finite.
 
 interface ArticlePageProps {
   params: Promise<{ slug: string }>;

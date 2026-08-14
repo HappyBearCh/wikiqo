@@ -143,17 +143,15 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
               <li key={result.pageid}>
                 <Link
                   href={articleHref(result.title)}
-                  // Next prefetches links as they scroll into view, and each
-                  // prefetch of an uncached slug is a full article render:
-                  // fetching ~2 MB of Parsoid HTML and sanitizing it. A single
-                  // search would render all 20 results, nearly all of which the
-                  // reader never opens. Unlike the featured shelf — a fixed set
-                  // of 9 that stays warm in the ISR cache — result slugs are
-                  // unbounded, so these prefetches are cold far more often than
-                  // not. They also count against the firewall's per-IP article
-                  // budget. Navigation still feels fine: the article route is
-                  // statically cached, so a click is a CDN hit for anything
-                  // already rendered.
+                  // Next prefetches links as they scroll into view, and the
+                  // article route renders on demand — so a prefetch here is a
+                  // full render: ~2 MB of Parsoid HTML fetched and sanitized.
+                  // A single search would render all 20 results, nearly all of
+                  // which the reader never opens. Unlike the featured shelf, a
+                  // fixed set of 9 behind a page almost nobody loads, result
+                  // slugs are unbounded, so this scales with every query typed.
+                  // They also count against the firewall's per-IP article
+                  // budget.
                   prefetch={false}
                   className="group relative flex gap-4 overflow-hidden rounded-2xl border border-transparent px-4 py-4 transition-colors hover:border-border hover:bg-surface"
                 >
