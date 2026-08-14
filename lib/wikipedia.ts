@@ -27,9 +27,17 @@ function encodeTitle(title: string): string {
   return encodeURIComponent(normalizeTitle(title));
 }
 
+/**
+ * Origin + path prefix for an article on Wikipedia itself. Exported because
+ * lib/sanitize.ts points in-article links here, and it takes Parsoid's own
+ * already-encoded href rather than a title, so it can't go through
+ * wikipediaUrlFor.
+ */
+export const WIKIPEDIA_ARTICLE_BASE = "https://en.wikipedia.org/wiki/";
+
 /** Builds the canonical en.wikipedia.org URL for a given title, for attribution links. */
 export function wikipediaUrlFor(title: string): string {
-  return `https://en.wikipedia.org/wiki/${encodeTitle(title)}`;
+  return `${WIKIPEDIA_ARTICLE_BASE}${encodeTitle(title)}`;
 }
 
 /**

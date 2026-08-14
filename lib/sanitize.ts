@@ -1,5 +1,6 @@
 import "server-only";
 import sanitizeHtml from "sanitize-html";
+import { WIKIPEDIA_ARTICLE_BASE } from "@/lib/wikipedia";
 
 // We sanitize with sanitize-html (a parser-based, pure-JS sanitizer) rather than
 // DOMPurify. DOMPurify needs a server DOM, and the only backend that sanitizes
@@ -72,8 +73,9 @@ const COMMON_ATTRS = [
 
 /**
  * Rewrites links during sanitization: Parsoid's relative wiki links ("./Some_Page")
- * become our own /wiki/[slug] route; external and protocol-relative links open in
- * a new tab; and each inline content link gets a cycling rainbow color class.
+ * become absolute links to Wikipedia; those, external, and protocol-relative
+ * links all open in a new tab; and each inline content link gets a cycling
+ * rainbow color class.
  */
 function transformAnchor(tagName: string, attribs: sanitizeHtml.Attributes) {
   const href = attribs.href ?? "";
@@ -82,14 +84,27 @@ function transformAnchor(tagName: string, attribs: sanitizeHtml.Attributes) {
   let isContentLink = false;
 
   if (href.startsWith("./")) {
-    attribs.href = `/wiki/${href.slice(2)}`;
-    // nofollow on internal article links: every article is a non-canonical
-    // mirror (canonical points at Wikipedia), so there's no SEO value in
-    // crawlers traversing the ~7M-page Wikipedia link graph through us — only
-    // cost (each unique slug is a cold function invocation). nofollow stops
-    // compliant crawlers from walking the graph; only the curated sitemap set
-    // is meant to be crawled.
-    attribs.rel = "nofollow";
+    // Point in-article links at Wikipedia rather than back into this site.
+    //
+    // These used to become "/wiki/…", which made every rendered article hand
+    // out ~300 fresh URLs on our own domain. Against a ~7M-article corpus that
+    // is a link graph which never exhausts, and a crawler walking it generated
+    // ~65,000 article renders a day — effectively the entire hosting bill. It
+    // ignored both robots.txt and the rel="nofollow" that used to sit here
+    // (it was requesting Portal: and Template_talk: pages, which robots.txt
+    // disallows), so nothing advisory was going to stop it. Sending the graph
+    // off-site ends the recursion at the source: wikiqo renders an article
+    // when someone asks for one, and stops manufacturing the next request.
+    //
+    // Wikipedia's own encoding is preserved by prefixing the origin onto
+    // Parsoid's href as-is. Round-tripping it through a title decoder would
+    // mangle fragments ("./Page#Section") and escaped characters.
+    //
+    // Entry points into this site are unaffected — the featured shelf and
+    // search results build their hrefs with articleHref(), not from Parsoid.
+    attribs.href = `${WIKIPEDIA_ARTICLE_BASE}${href.slice(2)}`;
+    attribs.target = "_blank";
+    attribs.rel = "noopener noreferrer external";
     isContentLink = true;
   } else if (href.startsWith("//")) {
     attribs.href = `https:${href}`;
@@ -153,8 +168,8 @@ const OPTIONS: sanitizeHtml.IOptions = {
     video: [...COMMON_ATTRS, "src", "controls", "preload", "poster", "loop", "muted", "playsinline"],
     track: [...COMMON_ATTRS, "src", "kind", "srclang", "label", "default"],
   },
-  // Relative ("/wiki/…") and fragment ("#cite_note…") hrefs carry no scheme and
-  // are allowed; only these explicit schemes pass for absolute URLs.
+  // Fragment ("#cite_note…") hrefs carry no scheme and are allowed; only these
+  // explicit schemes pass for absolute URLs.
   allowedSchemes: ["http", "https", "mailto", "tel"],
   transformTags: {
     a: transformAnchor,
