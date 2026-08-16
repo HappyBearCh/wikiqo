@@ -22,6 +22,13 @@ import { alanTuring } from "./alan-turing";
 import { theInternet } from "./the-internet";
 import { printingPress } from "./printing-press";
 import { silkRoad } from "./silk-road";
+import { consciousness } from "./consciousness";
+import { gutMicrobiome } from "./gut-microbiome";
+import { pain } from "./pain";
+import { infinity } from "./infinity";
+import { incompleteness } from "./incompleteness";
+import { originOfLife } from "./origin-of-life";
+import { iceAges } from "./ice-ages";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -51,7 +58,13 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
     blurb:
       "Two men who each took a small inconsistency seriously enough to rebuild a discipline around it, a field that keeps redefining intelligence as whatever it has not managed yet, and the network all of it now runs on.",
     hue: "var(--rb-6)",
-    articles: [albertEinstein, alanTuring, artificialIntelligence, theInternet],
+    articles: [
+      albertEinstein,
+      alanTuring,
+      artificialIntelligence,
+      theInternet,
+      consciousness,
+    ],
   },
   {
     id: "ages-and-inventions",
@@ -65,25 +78,25 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
     id: "the-body-and-its-enemies",
     title: "The body and its enemies",
     blurb:
-      "An arms race we joined several hundred million years late, a technology whose success erases its own evidence, and the thing you spend a third of your life doing for reasons nobody can fully explain.",
+      "An arms race we joined several hundred million years late, a technology whose success erases its own evidence, the organ you were not born with, a sensation that is not a measurement, and the thing you spend a third of your life doing for reasons nobody can fully explain.",
     hue: "var(--rb-1)",
-    articles: [antibioticResistance, vaccines, sleep],
+    articles: [antibioticResistance, vaccines, gutMicrobiome, pain, sleep],
   },
   {
     id: "numbers-and-abstractions",
     title: "Numbers and abstractions",
     blurb:
-      "The digit Europe banned, the secrecy that rests on unproven assumptions, and the mathematics of not knowing — three ideas that look obvious only in hindsight.",
+      "The digit Europe banned, the proof that some infinities outsize others, the theorem that ended mathematics' most ambitious project, the mathematics of not knowing, and the secrecy that rests on unproven assumptions.",
     hue: "var(--rb-3)",
-    articles: [zero, cryptography, probability],
+    articles: [zero, infinity, incompleteness, probability, cryptography],
   },
   {
     id: "deep-time",
     title: "Deep time",
     blurb:
-      "Three subjects that only make sense on timescales the mind refuses to hold: moving continents, an algorithm four billion years into its run, and the worst afternoon in the history of life.",
+      "Subjects that only make sense on timescales the mind refuses to hold: chemistry crossing into biology, moving continents, an algorithm four billion years into its run, the worst afternoon in the history of life, and a planet that keeps changing its mind on a schedule.",
     hue: "var(--rb-4)",
-    articles: [plateTectonics, evolution, kpgExtinction],
+    articles: [originOfLife, plateTectonics, evolution, kpgExtinction, iceAges],
   },
 ];
 
