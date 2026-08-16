@@ -44,6 +44,11 @@ import { broadStreetPump } from "./broad-street-pump";
 import { electricalGrid } from "./electrical-grid";
 import { inducedDemand } from "./induced-demand";
 import { zoning } from "./zoning";
+import { theMoon } from "./the-moon";
+import { theSun } from "./the-sun";
+import { telescopes } from "./telescopes";
+import { exoplanets } from "./exoplanets";
+import { theCalendar } from "./the-calendar";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -155,6 +160,14 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       zoning,
     ],
   },
+  {
+    id: "the-sky",
+    title: "The sky",
+    blurb:
+      "The two objects everyone has looked at without examining, the instruments that made looking into a science, the worlds that broke the theory of how worlds form, and the arithmetic of keeping track of it all.",
+    hue: "var(--rb-5)",
+    articles: [theMoon, theSun, telescopes, exoplanets, theCalendar],
+  },
 ];
 
 /** Flat list of every rewritten article, in shelf order. */
@@ -174,9 +187,42 @@ export function getSectionForSlug(slug: string): WikiqorgiSection | undefined {
   );
 }
 
+/** Looks up a section by its URL id. */
+export function getSection(id: string): WikiqorgiSection | undefined {
+  return WIKIQORGI_SECTIONS.find((section) => section.id === id);
+}
+
 /** Builds the internal /wikiqorgi/[slug] path for a rewritten article. */
 export function rewrittenHref(slug: string): string {
   return `/wikiqorgi/${slug}`;
+}
+
+/** Builds the internal /wikiqorgi/[slug] path for a section's own page. */
+export function sectionHref(id: string): string {
+  return `/wikiqorgi/${id}`;
+}
+
+/**
+ * Section pages and article pages share the /wikiqorgi/[slug] segment — a
+ * section id and an article slug are looked up from the same URL, so the two
+ * namespaces must never collide. Nothing enforces that in the types, so assert
+ * it here: this runs when the module is first imported, which during `next
+ * build` means the build fails rather than a section silently shadowing an
+ * article (or the reverse) in production.
+ */
+const ALL_WIKIQORGI_SLUGS = [
+  ...WIKIQORGI_SECTIONS.map((section) => section.id),
+  ...WIKIQORGI_ARTICLES.map((article) => article.slug),
+];
+
+const DUPLICATE_SLUGS = ALL_WIKIQORGI_SLUGS.filter(
+  (slug, i) => ALL_WIKIQORGI_SLUGS.indexOf(slug) !== i,
+);
+
+if (DUPLICATE_SLUGS.length > 0) {
+  throw new Error(
+    `wikiqorgi: section ids and article slugs share one URL namespace, but these are used twice: ${DUPLICATE_SLUGS.join(", ")}`,
+  );
 }
 
 export type { RewrittenArticle, WikiqorgiSection };

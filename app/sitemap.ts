@@ -1,7 +1,12 @@
 import type { MetadataRoute } from "next";
 import { getPopularArticleTitles } from "@/lib/wikipedia";
 import { articleHref } from "@/lib/links";
-import { WIKIQORGI_ARTICLES, rewrittenHref } from "@/content/wikiqorgi";
+import {
+  WIKIQORGI_ARTICLES,
+  WIKIQORGI_SECTIONS,
+  rewrittenHref,
+  sectionHref,
+} from "@/content/wikiqorgi";
 import { SITE_URL } from "@/lib/site";
 
 // Regenerated daily: the popular-article set shifts slowly and the pageviews
@@ -25,6 +30,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/search`, changeFrequency: "weekly", priority: 0.6 },
     { url: `${SITE_URL}/about`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE_URL}/wikiqorgi`, changeFrequency: "monthly", priority: 0.9 },
+    ...WIKIQORGI_SECTIONS.map((section) => ({
+      url: `${SITE_URL}${sectionHref(section.id)}`,
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
     // Unlike the mirrored article entries below, these are original writing
     // that canonicals to wikiqo itself — the only pages here worth indexing on
     // their own merits, hence the high priority.

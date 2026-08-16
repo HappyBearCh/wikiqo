@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { WIKIQORGI_ARTICLES, WIKIQORGI_SECTIONS, rewrittenHref } from "@/content/wikiqorgi";
+import {
+  WIKIQORGI_ARTICLES,
+  WIKIQORGI_SECTIONS,
+  sectionHref,
+} from "@/content/wikiqorgi";
 import { OG_BASE, SITE_NAME, SITE_URL } from "@/lib/site";
 
 const DESCRIPTION =
@@ -20,14 +24,17 @@ export const metadata: Metadata = {
 };
 
 /**
- * Every page under /wikiqorgi is authored in-repo (see content/wikiqorgi), so
+ * The shelf's front page lists sections only — ten cards, no article titles.
+ * Each section's own page (see wikiqorgi/[slug]) carries its five articles.
+ *
+ * Everything under /wikiqorgi is authored in-repo (see content/wikiqorgi), so
  * there is nothing request-specific to wait for and Next prerenders this route
  * to static HTML at build time. No fetch, no cache, no database.
  */
 
 /**
  * Lists the shelf as a schema.org Collection so search engines see one curated
- * body of original writing rather than eight unrelated pages.
+ * body of original writing rather than a set of unrelated pages.
  */
 const collectionJsonLd = {
   "@context": "https://schema.org",
@@ -37,16 +44,17 @@ const collectionJsonLd = {
   description: DESCRIPTION,
   inLanguage: "en",
   isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL },
-  hasPart: WIKIQORGI_ARTICLES.map((article) => ({
-    "@type": "Article",
-    headline: article.title,
-    description: article.dek,
-    url: `${SITE_URL}${rewrittenHref(article.slug)}`,
+  hasPart: WIKIQORGI_SECTIONS.map((section) => ({
+    "@type": "CollectionPage",
+    name: section.title,
+    description: section.blurb,
+    url: `${SITE_URL}${sectionHref(section.id)}`,
   })),
 };
 
 export default function WikiqorgiPage() {
   const articleCount = WIKIQORGI_ARTICLES.length;
+  const sectionCount = WIKIQORGI_SECTIONS.length;
 
   return (
     <div className="shell py-14 sm:py-20">
@@ -71,6 +79,9 @@ export default function WikiqorgiPage() {
           prose, built to be read from top to bottom rather than skimmed for a
           date.
         </p>
+        <p className="mt-4 text-sm text-muted">
+          {sectionCount} sections · {articleCount} articles
+        </p>
         <div
           aria-hidden
           className="mx-auto mt-8 h-1.5 w-44 rounded-full shadow-glow"
@@ -78,84 +89,47 @@ export default function WikiqorgiPage() {
         />
       </section>
 
-      {/* ---- Section jump list --------------------------------------------- */}
-      <nav aria-label="Sections" className="mx-auto mt-12 max-w-3xl">
-        <ul className="flex flex-wrap justify-center gap-2">
-          {WIKIQORGI_SECTIONS.map((section) => (
-            <li key={section.id}>
-              <a
-                href={`#${section.id}`}
-                className="inline-block rounded-full border border-border bg-surface px-4 py-1.5 text-sm font-medium text-muted transition-colors hover:border-accent hover:text-accent"
-              >
-                {section.title}
-                <span className="ml-2 text-xs opacity-70">
-                  {section.articles.length}
-                </span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      {/* ---- The shelf ----------------------------------------------------- */}
-      <div className="mx-auto mt-16 max-w-5xl space-y-16">
+      {/* ---- The shelf: one card per section -------------------------------- */}
+      <ul className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-2">
         {WIKIQORGI_SECTIONS.map((section) => (
-          <section key={section.id} id={section.id} className="scroll-mt-24">
-            <header className="border-b border-border pb-5">
+          <li key={section.id}>
+            <Link
+              href={sectionHref(section.id)}
+              className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5"
+            >
+              {/* Colour wash that blooms in on hover. */}
               <span
                 aria-hidden
-                className="block h-1.5 w-12 rounded-full"
+                className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.07]"
                 style={{ background: section.hue }}
               />
-              <h2 className="mt-4 font-serif text-3xl font-bold tracking-tight text-foreground">
+              <span
+                aria-hidden
+                className="h-1.5 w-12 rounded-full transition-all duration-300 group-hover:w-20"
+                style={{ background: section.hue }}
+              />
+              <h2 className="mt-4 font-serif text-2xl font-semibold tracking-tight text-foreground">
                 {section.title}
               </h2>
-              <p className="mt-2 max-w-2xl text-base leading-relaxed text-muted">
+              <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted">
                 {section.blurb}
               </p>
-            </header>
-
-            <ul className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-              {section.articles.map((article) => (
-                <li key={article.slug}>
-                  <Link
-                    href={rewrittenHref(article.slug)}
-                    className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5"
-                  >
-                    {/* Colour wash that blooms in on hover. */}
-                    <span
-                      aria-hidden
-                      className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.07]"
-                      style={{ background: section.hue }}
-                    />
-                    <span className="font-mono text-[11px] uppercase tracking-widest text-muted">
-                      Rewritten from &ldquo;{article.sourceTitle}&rdquo;
-                    </span>
-                    <h3 className="mt-2 font-serif text-xl font-semibold leading-snug tracking-tight text-foreground">
-                      {article.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted">
-                      {article.dek}
-                    </p>
-                    <span className="mt-4 flex items-center gap-2 text-sm font-semibold text-accent">
-                      Read it here
-                      <span
-                        aria-hidden
-                        className="transition-transform duration-300 group-hover:translate-x-1"
-                      >
-                        &rarr;
-                      </span>
-                      <span className="ml-auto text-xs font-normal text-muted">
-                        {article.readingMinutes} min
-                      </span>
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
+              <span className="mt-5 flex items-center gap-2 text-sm font-semibold text-accent">
+                Browse the section
+                <span
+                  aria-hidden
+                  className="transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  &rarr;
+                </span>
+                <span className="ml-auto font-mono text-[11px] font-normal uppercase tracking-widest text-muted">
+                  {section.articles.length} articles
+                </span>
+              </span>
+            </Link>
+          </li>
         ))}
-      </div>
+      </ul>
 
       {/* ---- House rules --------------------------------------------------- */}
       <section className="mx-auto mt-20 max-w-3xl rounded-2xl border border-border bg-surface p-6">
