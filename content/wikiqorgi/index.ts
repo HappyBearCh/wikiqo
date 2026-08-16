@@ -29,6 +29,13 @@ import { infinity } from "./infinity";
 import { incompleteness } from "./incompleteness";
 import { originOfLife } from "./origin-of-life";
 import { iceAges } from "./ice-ages";
+import { writingSystems } from "./writing-systems";
+import { protoIndoEuropean } from "./proto-indo-european";
+import { translation } from "./translation";
+import { signLanguage } from "./sign-language";
+import { dictionaries } from "./dictionaries";
+import { money } from "./money";
+import { inflation } from "./inflation";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -97,6 +104,28 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "Subjects that only make sense on timescales the mind refuses to hold: chemistry crossing into biology, moving continents, an algorithm four billion years into its run, the worst afternoon in the history of life, and a planet that keeps changing its mind on a schedule.",
     hue: "var(--rb-4)",
     articles: [originOfLife, plateTectonics, evolution, kpgExtinction, iceAges],
+  },
+  {
+    id: "language-and-writing",
+    title: "Language and writing",
+    blurb:
+      "A technology invented by accountants, a language reconstructed without a single surviving text, the impossible job of moving meaning between tongues, proof that language needs no sound, and the book everyone mistakes for a rulebook.",
+    hue: "var(--rb-6)",
+    articles: [
+      writingSystems,
+      protoIndoEuropean,
+      signLanguage,
+      translation,
+      dictionaries,
+    ],
+  },
+  {
+    id: "money-and-markets",
+    title: "Money and markets",
+    blurb:
+      "The machinery underneath ordinary economic life, starting with the two things almost everyone misunderstands: where money came from, and what the inflation figure actually measures.",
+    hue: "var(--rb-3)",
+    articles: [money, inflation],
   },
 ];
 
