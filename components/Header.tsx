@@ -22,12 +22,20 @@ export default function Header() {
         <div className="ml-auto w-full sm:ml-0 sm:w-auto sm:flex-1">
           <SearchBar />
         </div>
-        <Link
-          href="/about"
-          className="text-sm font-semibold text-muted transition-colors hover:text-accent"
-        >
-          About
-        </Link>
+        <nav className="flex items-center gap-5">
+          <Link
+            href="/wikiqorgi"
+            className="text-sm font-semibold text-muted transition-colors hover:text-accent"
+          >
+            wikiqorgi
+          </Link>
+          <Link
+            href="/about"
+            className="text-sm font-semibold text-muted transition-colors hover:text-accent"
+          >
+            About
+          </Link>
+        </nav>
       </div>
     </header>
   );

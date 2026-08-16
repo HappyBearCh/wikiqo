@@ -1,0 +1,40 @@
+import type { RewrittenArticle } from "./types";
+
+export const mountEverest: RewrittenArticle = {
+  slug: "mount-everest",
+  title: "Everest: a mountain that is still growing, and a queue that keeps getting longer",
+  sourceTitle: "Mount Everest",
+  dek: "The highest point on Earth is a collision zone, a wind tunnel, an economy, and a graveyard — usually in that order.",
+  standfirst:
+    "Everest is not the hardest mountain to climb, nor the most beautiful, nor even the farthest point from the centre of the Earth. It is simply the highest, and that single superlative has shaped everything that has happened on it — the surveying, the nationalism, the record-chasing, and the traffic jam at 8,700 metres.",
+  readingMinutes: 8,
+  html: `
+<h2 id="How_a_seabed_ended_up_in_the_sky">How a seabed ended up in the sky</h2>
+<p>The limestone at the summit of Everest contains marine fossils. That is not a curiosity but the whole explanation: the rock at the top of the world was laid down on the floor of an ocean called the Tethys, and the mountain exists because that ocean was destroyed.</p>
+<p>Around 50 million years ago the Indian plate — having crossed thousands of kilometres of ocean at an unusually brisk pace — ran into Asia. Neither plate would sink beneath the other; both are continental crust, too buoyant to subduct. So the collision had nowhere to go but up and sideways, crumpling the intervening seafloor into the Himalaya and thickening the crust beneath Tibet to roughly double its normal depth.</p>
+<p>India has not stopped. It continues to push north at about 4 to 5 centimetres per year, and Everest continues to rise by a few millimetres annually — offset, though not fully, by erosion and by the occasional violent correction. The 2015 Gorkha earthquake dropped the summit by a couple of centimetres in seconds and killed nineteen people at Base Camp in an avalanche. The mountain is not a monument. It is an ongoing event.</p>
+
+<h2 id="The_argument_about_its_height">The argument about its height</h2>
+<p>Everest's height has been contested for as long as anyone has bothered to measure it. The Great Trigonometrical Survey of India computed 29,002 feet in 1856 — a figure widely believed to have been nudged from a suspiciously round 29,000 so that it would not look like an estimate. The mountain was named for George Everest, a former Surveyor General who objected to the honour, partly because his own rule was to use local names and partly because Nepalis could neither pronounce nor write it. He lost the argument. Local names existed all along: <em>Sagarmāthā</em> in Nepali, <em>Chomolungma</em> in Tibetan.</p>
+<p>The modern number, 8,848.86 metres, was agreed jointly by Nepal and China in 2020 after each had spent decades publishing its own. The dispute was not petty: China had measured the rock beneath the summit snowcap and Nepal the snow on top of it, a difference of several metres and considerable national feeling. The joint survey settled on the snow height, and settled the argument.</p>
+<p>Two footnotes worth keeping. Measured from base to peak, Mauna Kea is taller — most of it is simply underwater. And because the Earth bulges at the equator, the summit of Ecuador's Chimborazo sits farther from the planet's centre than Everest does. Everest wins only on the metric that happens to matter to weather, lungs, and reputations: height above sea level.</p>
+
+<h2 id="Why_the_top_is_lethal">Why the top is lethal</h2>
+<p>Air at the summit holds about a third of the oxygen available at sea level. Nothing about the mountain's temperature or terrain is as dangerous as that number. Above roughly 8,000 metres — the so-called death zone — the human body cannot acclimatise. It does not adapt; it deteriorates. Muscle is consumed, judgement thins, fluid can accumulate in the lungs or the brain, and blood thickens toward clotting. The clock starts as soon as you enter and does not pause for weather.</p>
+<p>Cold and wind sharpen everything. Summit temperatures run to around −35 °C, and the peak stands high enough to intersect the jet stream, which can deliver sustained winds strong enough to remove a person from the mountain. The climbing season exists because that stream briefly moves: for a few weeks in May, and more rarely in autumn, the monsoon shoves the jet north and the summit falls quiet. Every expedition on the mountain is waiting for the same window, which is precisely why the photographs of queues exist.</p>
+
+<h2 id="A_short_history_of_getting_up_it">A short history of getting up it</h2>
+<p>Nepal and Tibet were both closed to foreigners for most of the early twentieth century, so the first attempts came through whichever door happened to be open. British expeditions approached from Tibet in the 1920s; George Mallory and Andrew Irvine disappeared high on the north ridge in 1924, and whether they reached the top before dying is a question that has sustained a small industry ever since. Mallory's body was found in 1999. The camera that might answer it has not been.</p>
+<p>The first undisputed ascent came on 29 May 1953, when Edmund Hillary and Tenzing Norgay reached the summit via the South Col — a route opened by Nepal's decision to admit foreigners a few years earlier. The two men declined for the rest of their lives to say which of them stepped up first, an act of discretion that has aged far better than most of the era's mountaineering.</p>
+<p>What followed was a steady dismantling of assumptions about what was possible. Reinhold Messner and Peter Habeler climbed it without supplemental oxygen in 1978, which physiologists had confidently declared fatal; Messner returned in 1980 to do it alone, from the Tibetan side, during the monsoon. Since then the mountain has been skied, snowboarded, and climbed by people from eight to eighty. Kami Rita Sherpa has now reached the summit more than thirty times.</p>
+
+<h2 id="The_industry">The industry</h2>
+<p>Commercial guiding arrived in force in the 1990s and changed the mountain's character completely. Everest is now a substantial part of Nepal's tourism economy: permits alone cost tens of thousands of dollars, a guided ascent runs from roughly $45,000 into six figures, and several hundred people summit in a good season.</p>
+<p>Whether this constitutes democratisation or degradation is argued endlessly and mostly beside the point. The concrete consequences are clearer. Fixed ropes on the standard routes create bottlenecks — the Hillary Step, the Second Step — where dozens of climbers can be stalled in the death zone burning oxygen they cannot replace. The 1996 storm that killed eight people in a day, and the images of stationary queues on the summit ridge in 2019, both come back to the same arithmetic: a narrow weather window, a fixed-width route, and more clients than either can absorb.</p>
+<p>Almost none of this would function without Sherpa labour. Sherpas fix the ropes, ferry the loads, rebuild the ladder route through the shifting Khumbu Icefall each season, and take on a fatality risk far above their clients'. The 2014 icefall avalanche killed sixteen Nepali workers and prompted the first serious strike in the mountain's history, over insurance and compensation. Reforms followed, though the fundamental asymmetry has not moved much.</p>
+
+<h2 id="What_gets_left_behind">What gets left behind</h2>
+<p>Everest accumulates. Discarded oxygen cylinders, tents, rope and human waste have built up over seventy years of expeditions, and the cost of retrieving anything from high on the mountain means most of it stays. Nepal now requires climbers to bring down a fixed weight of rubbish and has begun mandating waste bags, with mixed compliance.</p>
+<p>More than 300 people have died on the mountain, and many of the bodies remain where they fell — too heavy, too high, too dangerous to recover. Warming has begun to expose some of them as glacier ice retreats, along with the accelerating loss of the Khumbu Glacier itself. The mountain that took fifty million years to build is now changing on a timescale short enough for a single climber to notice between visits.</p>
+`,
+};
