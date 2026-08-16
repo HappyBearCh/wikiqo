@@ -49,6 +49,16 @@ import { theSun } from "./the-sun";
 import { telescopes } from "./telescopes";
 import { exoplanets } from "./exoplanets";
 import { theCalendar } from "./the-calendar";
+import { oceanCirculation } from "./ocean-circulation";
+import { coralReefs } from "./coral-reefs";
+import { whales } from "./whales";
+import { fisheries } from "./fisheries";
+import { deepSea } from "./deep-sea";
+import { steel } from "./steel";
+import { concrete } from "./concrete";
+import { glass } from "./glass";
+import { plastics } from "./plastics";
+import { semiconductors } from "./semiconductors";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -57,11 +67,14 @@ import { theCalendar } from "./the-calendar";
  * Everything below is a compile-time constant. No database, no API, no fetch —
  * the index and every article page prerender to static HTML at build time.
  *
- * Target shape: 50 articles across 10 sections of 5. Deliberately capped there.
- * The shelf's whole claim is that each piece is written rather than generated in
- * bulk, and that claim does not survive being scaled — nor would the domain,
- * since a large number of pages appearing at once is exactly the pattern search
- * engines treat as scaled content abuse. Add articles in small batches.
+ * Target shape: 100 articles across 20 sections of 5 (raised from an original
+ * 50 once the first ten sections were complete).
+ *
+ * Add them in small batches, and space the batches out. The shelf's claim is
+ * that each piece is written rather than generated in bulk, which is a claim
+ * about the writing — but publishing a large number of pages in a short window
+ * is the pattern search engines treat as scaled content abuse regardless of how
+ * the pages were produced. Pace matters here independently of quality.
  */
 export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
   {
@@ -167,6 +180,22 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "The two objects everyone has looked at without examining, the instruments that made looking into a science, the worlds that broke the theory of how worlds form, and the arithmetic of keeping track of it all.",
     hue: "var(--rb-5)",
     articles: [theMoon, theSun, telescopes, exoplanets, theCalendar],
+  },
+  {
+    id: "the-ocean",
+    title: "The ocean",
+    blurb:
+      "A conveyor belt driven by salt and cold, a city built by animals farming plants inside their cells, the largest creatures that have ever lived, a resource that collapses because it recovers, and the biggest habitat on the planet.",
+    hue: "var(--rb-5)",
+    articles: [oceanCirculation, deepSea, coralReefs, whales, fisheries],
+  },
+  {
+    id: "materials",
+    title: "Materials",
+    blurb:
+      "Five substances the built world runs on, each defined by a property that looks like a footnote: a trace of carbon, a lost Roman recipe, a liquid that forgot to crystallise, chains too durable to rot, and contamination measured in parts per billion.",
+    hue: "var(--rb-2)",
+    articles: [steel, concrete, glass, plastics, semiconductors],
   },
 ];
 
