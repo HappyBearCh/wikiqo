@@ -36,6 +36,14 @@ import { signLanguage } from "./sign-language";
 import { dictionaries } from "./dictionaries";
 import { money } from "./money";
 import { inflation } from "./inflation";
+import { insurance } from "./insurance";
+import { jointStockCompany } from "./joint-stock-company";
+import { greatDepression } from "./great-depression";
+import { sanitation } from "./sanitation";
+import { broadStreetPump } from "./broad-street-pump";
+import { electricalGrid } from "./electrical-grid";
+import { inducedDemand } from "./induced-demand";
+import { zoning } from "./zoning";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -123,9 +131,29 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
     id: "money-and-markets",
     title: "Money and markets",
     blurb:
-      "The machinery underneath ordinary economic life, starting with the two things almost everyone misunderstands: where money came from, and what the inflation figure actually measures.",
+      "The machinery underneath ordinary economic life, and the things almost everyone misunderstands about it: where money came from, what the inflation figure measures, how disasters get shared out, what a company legally is, and how a crash became a decade.",
     hue: "var(--rb-3)",
-    articles: [money, inflation],
+    articles: [
+      money,
+      inflation,
+      insurance,
+      jointStockCompany,
+      greatDepression,
+    ],
+  },
+  {
+    id: "cities-and-how-they-work",
+    title: "Cities and how they work",
+    blurb:
+      "The systems a city runs on and the arguments it has about them — the engineering that outperformed medicine, the map that proved it, the machine with no storage, the road that fills up, and the rulebook deciding who gets to live there.",
+    hue: "var(--rb-1)",
+    articles: [
+      sanitation,
+      broadStreetPump,
+      electricalGrid,
+      inducedDemand,
+      zoning,
+    ],
   },
 ];
 
