@@ -7,6 +7,21 @@ import { artificialIntelligence } from "./artificial-intelligence";
 import { romanEmpire } from "./roman-empire";
 import { renaissance } from "./renaissance";
 import { jazz } from "./jazz";
+import { antibioticResistance } from "./antibiotic-resistance";
+import { vaccines } from "./vaccines";
+import { sleep } from "./sleep";
+import { zero } from "./zero";
+import { cryptography } from "./cryptography";
+import { probability } from "./probability";
+import { plateTectonics } from "./plate-tectonics";
+import { evolution } from "./evolution";
+import { kpgExtinction } from "./kpg-extinction";
+import { light } from "./light";
+import { water } from "./water";
+import { alanTuring } from "./alan-turing";
+import { theInternet } from "./the-internet";
+import { printingPress } from "./printing-press";
+import { silkRoad } from "./silk-road";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -14,31 +29,61 @@ import { jazz } from "./jazz";
  *
  * Everything below is a compile-time constant. No database, no API, no fetch —
  * the index and every article page prerender to static HTML at build time.
+ *
+ * Target shape: 50 articles across 10 sections of 5. Deliberately capped there.
+ * The shelf's whole claim is that each piece is written rather than generated in
+ * bulk, and that claim does not survive being scaled — nor would the domain,
+ * since a large number of pages appearing at once is exactly the pattern search
+ * engines treat as scaled content abuse. Add articles in small batches.
  */
 export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
   {
     id: "the-physical-world",
     title: "The physical world",
     blurb:
-      "Three subjects that textbooks flatten into a summary sentence, opened back up: what a black hole actually is, what a leaf actually does, and what a mountain is actually made of.",
+      "Subjects that textbooks flatten into a summary sentence, opened back up: what a black hole actually is, what a leaf actually does, what a mountain is made of, and why the two most ordinary substances in your life — light and water — are the two that behave most strangely.",
     hue: "var(--rb-5)",
-    articles: [blackHole, photosynthesis, mountEverest],
+    articles: [blackHole, photosynthesis, mountEverest, light, water],
   },
   {
     id: "minds-and-machines",
     title: "Minds and machines",
     blurb:
-      "One physicist who took a small inconsistency seriously, and one field that keeps redefining intelligence as whatever it has not managed yet.",
+      "Two men who each took a small inconsistency seriously enough to rebuild a discipline around it, a field that keeps redefining intelligence as whatever it has not managed yet, and the network all of it now runs on.",
     hue: "var(--rb-6)",
-    articles: [albertEinstein, artificialIntelligence],
+    articles: [albertEinstein, alanTuring, artificialIntelligence, theInternet],
   },
   {
     id: "ages-and-inventions",
     title: "Ages and inventions",
     blurb:
-      "An empire that never admitted it had become one, an age that wrote its own origin myth, and a music built out of everything that was in the room.",
+      "A trade route that was never a road, an empire that never admitted it had become one, an age that wrote its own origin myth, a machine whose consequences nobody wanted, and a music built out of everything that was in the room.",
     hue: "var(--rb-2)",
-    articles: [romanEmpire, renaissance, jazz],
+    articles: [silkRoad, romanEmpire, renaissance, printingPress, jazz],
+  },
+  {
+    id: "the-body-and-its-enemies",
+    title: "The body and its enemies",
+    blurb:
+      "An arms race we joined several hundred million years late, a technology whose success erases its own evidence, and the thing you spend a third of your life doing for reasons nobody can fully explain.",
+    hue: "var(--rb-1)",
+    articles: [antibioticResistance, vaccines, sleep],
+  },
+  {
+    id: "numbers-and-abstractions",
+    title: "Numbers and abstractions",
+    blurb:
+      "The digit Europe banned, the secrecy that rests on unproven assumptions, and the mathematics of not knowing — three ideas that look obvious only in hindsight.",
+    hue: "var(--rb-3)",
+    articles: [zero, cryptography, probability],
+  },
+  {
+    id: "deep-time",
+    title: "Deep time",
+    blurb:
+      "Three subjects that only make sense on timescales the mind refuses to hold: moving continents, an algorithm four billion years into its run, and the worst afternoon in the history of life.",
+    hue: "var(--rb-4)",
+    articles: [plateTectonics, evolution, kpgExtinction],
   },
 ];
 

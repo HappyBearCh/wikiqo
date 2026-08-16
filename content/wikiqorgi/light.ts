@@ -1,0 +1,42 @@
+import type { RewrittenArticle } from "./types";
+
+export const light: RewrittenArticle = {
+  slug: "light",
+  title: "Light: the argument that took three hundred years to stop",
+  sourceTitle: "Light",
+  dek: "Wave or particle was the wrong question, and finding that out cost physics its confidence in ordinary objects.",
+  standfirst:
+    "The history of light is a sequence of experiments each of which settled the matter permanently, until the next one. Newton established it was particles. Young established it was waves. Maxwell explained what kind of wave. Einstein established it was particles again. The resolution, when it came, was not a compromise — it was an admission that the categories were ours rather than nature's.",
+  readingMinutes: 8,
+  html: `
+<h2 id="Two_men_and_a_slit">Two men and a slit</h2>
+<p>Newton argued light was a stream of corpuscles, and had good reasons: light travels in straight lines, casts sharp shadows, and bounces off mirrors exactly as a ball would. His authority held the question closed for a century.</p>
+<p>Thomas Young reopened it in 1801 with an experiment simple enough to reproduce with a laser pointer and a piece of card. Shine light through two narrow parallel slits and the far wall shows not two bright bands but many, alternating with dark ones. That pattern has no particle explanation and an immediate wave explanation: crests arriving together reinforce, a crest meeting a trough cancels. Interference is the signature of waves, and there it was.</p>
+<p>The dark bands are the damning part. Two sources of light, combined, producing darkness — you cannot get that by adding particles together. Young was ridiculed for contradicting Newton and was eventually vindicated when Fresnel developed the mathematics, including a prediction so counterintuitive that a critic offered it as a reductio: a wave theory implies a bright spot at the exact centre of a circular object's shadow. Someone checked. The spot is there.</p>
+
+<h2 id="A_wave_of_what">A wave of what</h2>
+<p>Waves in water are water moving; sound is air moving. A wave needs something to wave, so physicists proposed the luminiferous aether — an invisible medium filling all space, rigid enough to carry light's enormous speed yet offering no resistance to planets. The awkwardness was noted at the time.</p>
+<p>James Clerk Maxwell removed the need for it, though not immediately. In the 1860s he assembled the known laws of electricity and magnetism into four equations and found they permitted a self-sustaining disturbance: a changing electric field generates a magnetic one, which generates an electric one, propagating indefinitely. He calculated its speed from quantities measured in laboratory experiments on wires and magnets, and got the measured speed of light. Nothing in the derivation was about light. It fell out of electricity.</p>
+<p>That is one of the great unifications in physics — optics turned out to be a branch of electromagnetism — and it implied a whole spectrum beyond the visible. Radio waves, discovered by Hertz two decades later, are the same phenomenon at longer wavelength; so are microwaves, infrared, ultraviolet, X-rays and gamma rays. Visible light is the narrow band our eyes evolved to detect, which is unsurprising given it is the band the Sun emits most strongly and that passes through water and air.</p>
+<p>The aether survived until Michelson and Morley tried to measure Earth's motion through it in 1887 by comparing light's speed along and across the direction of orbit. They found no difference. The null result was the sharpest experimental fact available when Einstein built special relativity on the assumption that light's speed is the same for every observer — a proposition that sounds modest and requires abandoning absolute time.</p>
+
+<h2 id="The_particle_comes_back">The particle comes back</h2>
+<p>Just as the wave picture became complete, an unremarkable experiment broke it. Shine light on metal and electrons are ejected. The wave theory predicts that brighter light delivers more energy and therefore faster electrons, and that dim light of any colour will eventually work if you wait.</p>
+<p>Neither happens. Below a threshold frequency nothing is emitted no matter how intense the light or how long you wait; above it, electrons appear instantly even from a feeble source, and their energy depends on the colour, not the brightness. Brightness only changes how many.</p>
+<p>Einstein's 1905 explanation was that light arrives in discrete packets whose energy is set by frequency. One packet, one electron, and a packet too small cannot do the job however many arrive. This is the work that won him the Nobel Prize, and it reintroduced the particle after a century of exile — without disposing of the interference pattern, which remained as real as ever.</p>
+
+<h2 id="Neither,_and_both">Neither, and both</h2>
+<p>The modern resolution is not that light is secretly one thing. It is that light is not the kind of object our vocabulary was built for, and the two models are each accurate within their domain.</p>
+<p>The double-slit experiment, run with single photons emitted one at a time, makes the strangeness concrete. Each photon lands at a single point on the detector — particle behaviour, unambiguously. Let thousands accumulate and the interference pattern builds up out of individual dots. Each photon apparently had its landing probability shaped by both slits. Close one slit and the pattern vanishes. Install a detector to determine which slit each photon passes through, and the pattern vanishes again: the act of acquiring that information destroys the interference.</p>
+<p>Quantum electrodynamics describes all of this correctly and makes predictions matching experiment to a dozen decimal places, the most precisely verified theory in science. What it does not do is tell you what a photon is doing between emission and detection, and the consensus position is that the question may not have an answer in the terms it is asked.</p>
+
+<h2 id="The_speed,_and_what_it_costs">The speed, and what it costs</h2>
+<p>Light in vacuum travels at 299,792,458 metres per second — exactly, because since 1983 the metre has been <em>defined</em> by that number. The speed is no longer measured; it is a fixed constant, and length is derived from it.</p>
+<p>Its significance is not that it is fast but that it is a limit. Nothing carrying information or energy exceeds it, which converts distance into delay and makes simultaneity across space an incoherent notion. It also makes every telescope a time machine: the Sun is eight minutes in the past, the nearest star four years, and the most distant galaxies observed are seen as they were when the universe was a few hundred million years old.</p>
+<p>Light does slow in matter — to about three-quarters of its vacuum speed in water, less in glass — and the slowing is what makes lenses, prisms and rainbows work, since different wavelengths slow by different amounts. The popular description of this as photons being absorbed and re-emitted is wrong; it is the interference of the original wave with the response of the material's electrons. Under laboratory conditions light has been slowed to walking pace and briefly stopped altogether.</p>
+
+<h2 id="What_we_do_with_it">What we do with it</h2>
+<p>Almost everything we know about the universe beyond the solar system arrived as light, which is why so much of astronomy is really spectroscopy. Atoms absorb and emit at frequencies unique to each element, so starlight carries a barcode identifying what the star is made of. Shifts in those lines toward the red reveal recession, which is how the expansion of the universe was discovered and how planets around other stars are detected by the wobble they impose on their host.</p>
+<p>The applications are equally direct. Optical fibre carries the internet as pulses of infrared trapped by total internal reflection, and the practical bandwidth of glass is why intercontinental data is cheap. Lasers exploit stimulated emission, predicted by Einstein in 1917 and unbuilt for forty years, to produce light of a single frequency marching in step — now in every barcode scanner, surgical theatre and manufacturing line. And photovoltaic panels run on the photoelectric effect, meaning the experiment that broke the wave theory is now a substantial part of the world's electricity supply.</p>
+`,
+};
