@@ -69,6 +69,16 @@ import { theCell } from "./the-cell";
 import { dna } from "./dna";
 import { viruses } from "./viruses";
 import { quantumMechanics } from "./quantum-mechanics";
+import { property } from "./property";
+import { copyright } from "./copyright";
+import { theJury } from "./the-jury";
+import { habeasCorpus } from "./habeas-corpus";
+import { internationalLaw } from "./international-law";
+import { theScientificMethod } from "./the-scientific-method";
+import { peerReview } from "./peer-review";
+import { randomisedTrials } from "./randomised-trials";
+import { replicationCrisis } from "./replication-crisis";
+import { cognitiveBias } from "./cognitive-bias";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -222,6 +232,28 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "Five levels down from ordinary objects, where the rules stop matching intuition: an atom that is mostly nothing, a cell that is a merger of two lineages, a molecule whose shape gives away its function, instructions that may not be alive, and a theory nobody can agree on the meaning of.",
     hue: "var(--rb-6)",
     articles: [theAtom, theCell, dna, viruses, quantumMechanics],
+  },
+  {
+    id: "law-and-its-fictions",
+    title: "Law and its fictions",
+    blurb:
+      "Legal institutions are made things, and each of these was built for a purpose quite unlike the one it now serves: ownership as a bundle of claims against strangers, a printers' cartel recast as an author's right, a panel of witnesses turned into a panel of the ignorant, a demand that a jailer explain himself, and rules with no police force behind them.",
+    hue: "var(--rb-2)",
+    articles: [property, copyright, theJury, habeasCorpus, internationalLaw],
+  },
+  {
+    id: "how-we-know-things",
+    title: "How we know things",
+    blurb:
+      "The machinery of evidence, examined rather than assumed: a method nobody follows, a filter weaker than its reputation, the one design that establishes cause, an audit that found half the findings missing, and the systematic errors everyone makes in the same direction.",
+    hue: "var(--rb-3)",
+    articles: [
+      theScientificMethod,
+      peerReview,
+      randomisedTrials,
+      replicationCrisis,
+      cognitiveBias,
+    ],
   },
 ];
 

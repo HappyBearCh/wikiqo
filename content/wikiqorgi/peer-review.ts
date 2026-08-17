@@ -1,0 +1,47 @@
+import type { RewrittenArticle } from "./types";
+
+export const peerReview: RewrittenArticle = {
+  slug: "peer-review",
+  title: "Peer review: newer than you think, worse than advertised, hard to replace",
+  sourceTitle: "Peer review",
+  dek: "Two or three anonymous strangers read a paper for free and guess whether it is right. This became universal only in the second half of the twentieth century.",
+  standfirst:
+    "Peer review is treated as the boundary between knowledge and noise, and it is routinely invoked as though a reviewed paper had been verified. It has not. Reviewers do not repeat experiments, rarely see the data, and cannot detect competent fraud. It became standard practice recently, for partly administrative reasons, and the evidence on how well it performs is considerably less flattering than its status suggests.",
+  readingMinutes: 7,
+  html: `
+<h2 id="It_is_recent">It is much newer than its reputation</h2>
+<p>The impression that peer review is ancient comes from the age of the journals rather than the practice. The Royal Society's <em>Philosophical Transactions</em> began in 1665, and for most of its history papers were selected by the editor, sometimes with a colleague consulted informally.</p>
+<p>External refereeing as a systematic requirement spread only after the Second World War, and <em>Nature</em> did not use a formal review process consistently until 1973. Some of the most consequential papers of the twentieth century were never externally refereed at all — including Watson and Crick on DNA, which the editor accepted on his own judgment.</p>
+<p>Einstein's reaction is the emblematic story. When a paper he submitted to an American journal in 1936 was sent to a referee who returned critical comments, he withdrew it in indignation, having never encountered the practice at the German journals he was used to, and objected to his work being shown to a stranger before publication. The referee was right, as it happens, and Einstein eventually corrected the error elsewhere without acknowledging the source.</p>
+<p>What drove adoption was partly the growth in submissions after the war and partly the needs of funding agencies, which required a defensible basis for distributing public money. The practice was then imported into publishing from grant assessment, and its authority grew rather faster than any evidence that it worked.</p>
+
+<h2 id="What_it_can_and_cannot_do">What a reviewer is actually able to check</h2>
+<p>A reviewer receives a manuscript, spends somewhere between two and eight hours on it, and is unpaid. They do not have the data in most cases, do not have the code, and do not repeat any experiment. They can therefore assess only what is visible on the page.</p>
+<p>They can, and do, catch real things: methodological errors, statistical misuse, unsupported conclusions, missing controls, ignored prior work, and unclear description. This is genuine value, and papers are commonly improved by the process in ways authors acknowledge.</p>
+<p>They cannot detect fabricated data that is internally consistent. They cannot detect selective reporting of experiments that were run and discarded. They cannot tell whether the analysis presented is the first one attempted or the twentieth. And they generally cannot catch errors that require re-running the work, which is most of the errors that matter.</p>
+<p>Studies that deliberately insert errors into manuscripts and send them to reviewers consistently find that a majority are missed. A widely discussed one found reviewers identified roughly a quarter of introduced major errors. Fraud is almost always exposed by whistleblowers, by failed replication, or by image forensics applied after publication — essentially never by review.</p>
+
+<h2 id="Reliability">Reviewers disagree with each other</h2>
+<p>The most uncomfortable body of evidence concerns agreement between reviewers, which is repeatedly found to be barely above chance.</p>
+<p>Studies of conference and journal review find inter-reviewer agreement on accept-or-reject decisions that would be considered unusable for any other measurement instrument. The most cited demonstration is the 2014 experiment at a major machine learning conference, where a portion of submissions was reviewed independently by two separate committees: of the papers accepted by one committee, roughly half were rejected by the other. The experiment was repeated in 2021 with substantially the same result.</p>
+<p>An older study resubmitted already-published papers to the journals that had printed them, with the authors' names and institutions changed to fictional ones at unprestigious addresses. Most were not recognised as duplicates, and most of those were rejected on methodological grounds — the same methods the journal had accepted a few years earlier.</p>
+<p>The implication is not that review is worthless, since improving a manuscript is a different function from ranking it. It is that the accept-reject decision carries far less information than the system's users assume, and that the gap between a paper in a top journal and a similar paper in a middling one is substantially noise.</p>
+
+<h2 id="Bias">Who gets a fair hearing</h2>
+<p>Single-blind review, where reviewers know the authors but not the reverse, is still common and is the arrangement most vulnerable to prestige effects. Identical papers attributed to well-known authors or elite institutions fare better, and the effect has been demonstrated experimentally more than once.</p>
+<p>Double-blind review removes author identity and measurably changes outcomes. The natural experiment usually cited is a journal that switched to double-blind and saw the proportion of papers with female first authors rise, though the finding has been contested and the literature is not unanimous. Anonymity is also imperfect: in a narrow subfield, the topic, the method and the self-citations often identify the group.</p>
+<p>There is a conservatism problem that is harder to measure and probably more important. Reviewers are established members of a field evaluating work that may undermine their own, and the incentive is not neutral. Several papers that later won Nobel Prizes were rejected on first submission, and while survivorship bias makes anecdotes weak evidence, the structural point stands: a system in which incumbents gatekeep is a system with a predictable direction of error.</p>
+<p>Reviewers can also delay a competitor's work by requesting extensive additional experiments, and there is no mechanism for detecting this.</p>
+
+<h2 id="The_economics">The economics are peculiar</h2>
+<p>Researchers write papers, funded largely by public money. They review other researchers' papers without payment. They serve as editors, often unpaid. Publishers then sell access back to the institutions that funded all of it, at margins that in the largest cases have exceeded those of most industries.</p>
+<p>Open access was intended to fix this and has partly relocated the problem. Article processing charges shift payment from readers to authors, which removes the paywall and introduces a different distortion — a publisher's revenue now rises with the number of papers accepted. Predatory journals exploit this directly, collecting fees and performing no review whatsoever, and they exist in the thousands.</p>
+<p>Meanwhile the volume has become unmanageable. Submissions grow faster than the pool of qualified reviewers, editors struggle to find anyone willing, and the same overburdened people are asked repeatedly. Review quality is a function of reviewer time, and reviewer time is the resource nobody is paying for.</p>
+
+<h2 id="Alternatives">What could replace it</h2>
+<p>Preprint servers, long standard in physics and mathematics and now widespread in biology and medicine, decouple dissemination from review. Work is public immediately and is reviewed afterwards, formally or otherwise. This is faster and more open, and it moves the filtering burden onto readers — which was tested severely during the recent pandemic, when unreviewed preprints reached mass media directly and some of them were badly wrong.</p>
+<p>Post-publication review sites, comment threads, and image-integrity sleuths have found far more serious problems than pre-publication review ever has, including the misconduct behind several high-profile retractions. This suggests the filtering works better after publication than before, with the substantial caveat that it depends on volunteers doing unpaid forensic work and absorbing the legal risk.</p>
+<p>Registered reports are the most promising structural change. A journal reviews the question and the method before any data is collected, and commits to publishing the result whichever way it comes out. This removes the incentive to produce a positive finding, prevents analysis being chosen after the fact, and eliminates publication bias for those papers. Studies comparing registered reports with conventional papers find dramatically lower rates of positive results — which is the point, and is a fairly direct measurement of how much the ordinary system distorts.</p>
+<p>The realistic conclusion is not abolition. It is that peer review should be understood as a rough filter and a manuscript-improvement service performed by two tired volunteers, and that treating it as certification is the error — one made most often not by scientists, who know exactly how it works, but by everyone quoting them.</p>
+`,
+};

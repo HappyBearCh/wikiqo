@@ -1,0 +1,41 @@
+import type { RewrittenArticle } from "./types";
+
+export const habeasCorpus: RewrittenArticle = {
+  slug: "habeas-corpus",
+  title: "Habeas corpus: a demand that the jailer explain himself",
+  sourceTitle: "Habeas corpus",
+  dek: "It does not ask whether a prisoner is guilty. It asks the far narrower and more dangerous question of what legal authority is being relied on.",
+  standfirst:
+    "Habeas corpus is a procedural device of almost brutal simplicity: produce the person you are holding and state the lawful basis for holding them. It makes no claim about innocence and offers no opinion on the merits. Its power is that it forces detention to be justified to someone other than the person doing the detaining — and the entire history of the writ is a history of governments finding ways around exactly that.",
+  readingMinutes: 7,
+  html: `
+<h2 id="What_it_does">The mechanism</h2>
+<p>The name is the opening of the Latin writ: <em>habeas corpus ad subjiciendum</em>, "that you have the body to submit". It is an order directed not at the prisoner but at whoever holds them — a governor, a commanding officer, a minister — requiring them to bring the detainee before a court and state the authority for the detention.</p>
+<p>The court then examines one question only: is this detention authorised by law? Not whether the prisoner committed the offence, not whether the detention is wise, not whether the sentence is just. If the answer is no, the prisoner is released immediately. If yes, the detention continues regardless of how sympathetic the case.</p>
+<p>Three features give it its force. It is directed at the custodian personally, which makes ignoring it a contempt by a named official rather than an abstract failure of the state. It requires the body to be produced, which forecloses the response that the prisoner does not exist or cannot be located. And it is heard urgently, ahead of ordinary business, because the harm it addresses continues every hour it is not addressed.</p>
+<p>Anyone may apply on the prisoner's behalf, which matters enormously — a person held incommunicado cannot file anything, and the whole device would be useless if the detainee had to bring it themselves.</p>
+
+<h2 id="Where_it_came_from">Origins, which are unglamorous</h2>
+<p>The writ was not conceived as a liberty. It began in the twelfth and thirteenth centuries as an administrative instrument by which royal courts compelled the production of a person, often to assert their own jurisdiction against rival courts. Its original function was institutional turf, not individual freedom.</p>
+<p>It acquired its modern character through use against the Crown. The decisive confrontation was the Five Knights' Case of 1627, in which men imprisoned for refusing a forced loan sought release and the King's answer was that they were held by his special command, no further reason given. The court accepted this, and the resulting outrage produced the Petition of Right in 1628, which insisted that a cause be shown.</p>
+<p>Even then enforcement was erratic — jailers stalled, returned incomplete answers, or moved prisoners beyond the court's reach. The Habeas Corpus Act 1679 closed the gaps procedurally: deadlines for producing the prisoner, penalties on officials who delayed, and a prohibition on shipping prisoners overseas to jurisdictions where the writ did not run. It is one of the few statutes whose importance lies almost entirely in its administrative detail.</p>
+<p>The most striking single use came in 1772, when James Somerset, an enslaved man in England, was brought before Lord Mansfield on the writ. Mansfield held that no positive law in England supported holding a person as property and ordered his release. The judgment did not abolish slavery in the empire and was narrower than it is often described as being, but it established that the writ ran on behalf of a person whose legal status was itself the thing in dispute.</p>
+
+<h2 id="Suspension">Suspension</h2>
+<p>Habeas corpus is the one great liberty explicitly designed to be switchable off, and every constitutional system that has it also specifies when it may be suspended.</p>
+<p>The American constitution places the power in the article dealing with Congress and limits it to cases of rebellion or invasion where the public safety requires it. This was tested almost immediately: Lincoln suspended the writ unilaterally in 1861, was told by the Chief Justice that the power was Congress's and not his, and effectively ignored the ruling. Congress ratified the suspension two years later, which resolved the practical question and left the constitutional one open.</p>
+<p>The pattern recurs. The writ is suspended, or its effect is nullified by other means, at precisely the moments when detention is most likely to be arbitrary — wartime, emergency, insurrection, terrorism. A protection that yields whenever it is most needed is a real protection only to the extent that the definition of emergency is policed, and it usually is not.</p>
+<p>Internment without trial in wartime Britain and the mass detention of Japanese Americans both proceeded with courts declining to intervene, in judgments that have not aged well and in one famous case were formally repudiated decades later.</p>
+
+<h2 id="Geography">The offshore problem</h2>
+<p>Because the writ runs against a custodian within a court's jurisdiction, the recurring evasion has been to detain people somewhere the court's writ does not reach. The 1679 Act legislated against exactly this, which tells you how old the tactic is.</p>
+<p>The modern version was the detention of prisoners at Guantánamo Bay, chosen substantially because it was argued to be outside the reach of American courts while remaining under complete American control. The litigation ran for years. In <em>Rasul</em> in 2004 the Supreme Court held the statutory writ reached the base; Congress legislated to remove that jurisdiction; and in <em>Boumediene</em> in 2008 the Court held that the constitutional guarantee itself extended there and that Congress could not strip it without a valid suspension. The reasoning turned on practical control rather than formal sovereignty, which is the only test that closes the loophole.</p>
+<p>Extraordinary rendition — moving detainees to states willing to hold them without process — is the same manoeuvre executed in a form no court has effective purchase on, and it is the reason the writ's territorial reach remains a live question rather than a settled one.</p>
+
+<h2 id="Modern_use">What it is actually used for now</h2>
+<p>Most habeas applications today are not dramatic. In the United States it is the principal route by which a state prisoner raises a federal constitutional challenge to a conviction, and Congress has narrowed it substantially — a one-year deadline, strict limits on second applications, and a requirement that a state court's decision be not merely wrong but unreasonable. Success rates are very low.</p>
+<p>Its most active contemporary use in many countries is immigration detention, where people are held administratively rather than under criminal sentence, sometimes for long periods, and where the question the writ asks — under what authority, and for how long — is exactly the right one.</p>
+<p>It has also been extended in directions its drafters would not have anticipated. Courts in several jurisdictions have entertained applications on behalf of animals in captivity, on the argument that the writ's question is about the lawfulness of detention rather than the legal personality of the detainee. Most have failed; a small number have not, and the Argentine and Colombian decisions concerning great apes are the ones usually cited.</p>
+<p>The Latin American innovation is worth noting on its own terms. The <em>amparo</em>, and specifically <em>habeas corpus</em> as adapted there, was developed in response to disappearances — detentions the state simply denied. Against a government that will not admit it holds someone, the demand to produce the body is the only remedy shaped correctly for the problem, and it is why the phrase became a political slogan across the continent rather than a lawyer's term of art.</p>
+`,
+};
