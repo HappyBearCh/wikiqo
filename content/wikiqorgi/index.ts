@@ -59,6 +59,16 @@ import { concrete } from "./concrete";
 import { glass } from "./glass";
 import { plastics } from "./plastics";
 import { semiconductors } from "./semiconductors";
+import { fermentation } from "./fermentation";
+import { haberBosch } from "./haber-bosch";
+import { greenRevolution } from "./green-revolution";
+import { refrigeration } from "./refrigeration";
+import { coffee } from "./coffee";
+import { theAtom } from "./the-atom";
+import { theCell } from "./the-cell";
+import { dna } from "./dna";
+import { viruses } from "./viruses";
+import { quantumMechanics } from "./quantum-mechanics";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -196,6 +206,22 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "Five substances the built world runs on, each defined by a property that looks like a footnote: a trace of carbon, a lost Roman recipe, a liquid that forgot to crystallise, chains too durable to rot, and contamination measured in parts per billion.",
     hue: "var(--rb-2)",
     articles: [steel, concrete, glass, plastics, semiconductors],
+  },
+  {
+    id: "food-and-farming",
+    title: "Food and farming",
+    blurb:
+      "How eating became reliable: microbes domesticated before anyone knew they existed, nitrogen pulled out of the air, a plant breeding programme that outran a famine forecast, heat pumped out of a box, and a seed that reorganised the tropics.",
+    hue: "var(--rb-4)",
+    articles: [fermentation, haberBosch, greenRevolution, refrigeration, coffee],
+  },
+  {
+    id: "the-very-small",
+    title: "The very small",
+    blurb:
+      "Five levels down from ordinary objects, where the rules stop matching intuition: an atom that is mostly nothing, a cell that is a merger of two lineages, a molecule whose shape gives away its function, instructions that may not be alive, and a theory nobody can agree on the meaning of.",
+    hue: "var(--rb-6)",
+    articles: [theAtom, theCell, dna, viruses, quantumMechanics],
   },
 ];
 
