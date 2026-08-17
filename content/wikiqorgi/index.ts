@@ -109,6 +109,16 @@ import { germTheory } from "./germ-theory";
 import { bloodTransfusion } from "./blood-transfusion";
 import { insulin } from "./insulin";
 import { medicalImaging } from "./medical-imaging";
+import { animalMigration } from "./animal-migration";
+import { camouflage } from "./camouflage";
+import { eusocialInsects } from "./eusocial-insects";
+import { venom } from "./venom";
+import { cephalopods } from "./cephalopods";
+import { theFactory } from "./the-factory";
+import { theAssemblyLine } from "./the-assembly-line";
+import { bureaucracy } from "./bureaucracy";
+import { tradeUnions } from "./trade-unions";
+import { theEightHourDay } from "./the-eight-hour-day";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -117,7 +127,7 @@ import { medicalImaging } from "./medical-imaging";
  * Everything below is a compile-time constant. No database, no API, no fetch —
  * the index and every article page prerender to static HTML at build time.
  *
- * Shape: sections of 5 articles each, currently 22. The target has been raised
+ * Shape: sections of 5 articles each, currently 24. The target has been raised
  * twice — 50, then 100 at twenty sections, and the shelf is now open-ended and
  * grows a section or two at a time.
  *
@@ -337,6 +347,22 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "Five moments where medicine stopped being mostly useless, each of them resisted at the time: gases that sat unused for fifty years, a handwashing rule that ended a career, four blood groups that explained 250 years of deaths, a patent sold for a dollar, and a way of seeing inside people that finds too much.",
     hue: "var(--rb-1)",
     articles: [anaesthesia, germTheory, bloodTransfusion, insulin, medicalImaging],
+  },
+  {
+    id: "animal-strategies",
+    title: "Animal strategies",
+    blurb:
+      "Five solutions arrived at without anyone designing them: a magnetic sense nobody can locate, concealment that works by breaking an outline rather than matching a background, sterile workers that broke Darwin's theory, a chemical weapon that keeps becoming medicine, and a mind built a second time from a mollusc.",
+    hue: "var(--rb-4)",
+    articles: [animalMigration, camouflage, eusocialInsects, venom, cephalopods],
+  },
+  {
+    id: "work-and-its-organisation",
+    title: "Work and its organisation",
+    blurb:
+      "How labour got arranged, and who set the pace: a building where workers could be watched, a line that moved the work past them, rules applied impersonally to stop something worse, combination as a criminal offence, and a working week that fell for a century and then stopped.",
+    hue: "var(--rb-2)",
+    articles: [theFactory, theAssemblyLine, bureaucracy, tradeUnions, theEightHourDay],
   },
 ];
 
