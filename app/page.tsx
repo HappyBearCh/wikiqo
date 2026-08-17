@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import TextBanner from "@/components/TextBanner";
 import FeaturedGrid from "@/components/FeaturedGrid";
+import PromotedShelf, { PromotedShelfFooter } from "@/components/wikiqorgi/PromotedShelf";
 import { FEATURED } from "@/lib/featured";
 import { keywordsFromText } from "@/lib/keywords";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
@@ -15,6 +16,16 @@ export const metadata: Metadata = {
   // consolidate onto the bare URL instead of splitting signals.
   alternates: { canonical: "/" },
 };
+
+// Regenerated daily so the wikiqorgi shelf below rolls forward on its own
+// (see content/wikiqorgi/schedule.ts). Without this the page is prerendered
+// once at build time and the promotion dates never advance.
+//
+// This is one revalidation per day for one fixed path, which is the case ISR is
+// actually for — the same trade sitemap.ts already makes. It is not the pattern
+// warned against in wiki/[slug]/page.tsx: that route is an unbounded title
+// space where nearly every cached path is read once and never again.
+export const revalidate = 86400;
 
 /**
  * Tells search engines the site's official name and preferred URL, so results
@@ -35,6 +46,10 @@ export default function Home() {
   const words = keywordsFromText(
     FEATURED.map((f) => `${f.title} ${f.blurb}`).join(" "),
   );
+
+  // Read the clock once and pass it down, so the shelf and its footer can't
+  // disagree about which articles are promoted if the render straddles midnight.
+  const now = new Date();
 
   return (
     <div className="shell py-16 sm:py-24">
@@ -63,6 +78,20 @@ export default function Home() {
         >
           Start searching
         </Link>
+      </section>
+
+      <section className="mt-20">
+        <h2 className="text-center text-sm font-semibold uppercase tracking-wide text-muted">
+          New on wikiqorgi
+        </h2>
+        <p className="mx-auto mt-3 max-w-xl text-center text-sm leading-relaxed text-muted">
+          Subjects the rest of the site mirrors from Wikipedia, reported and rewritten
+          from scratch in our own words.
+        </p>
+        <div className="mt-8">
+          <PromotedShelf now={now} />
+        </div>
+        <PromotedShelfFooter now={now} />
       </section>
 
       <section className="mt-20">
