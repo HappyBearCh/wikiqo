@@ -89,6 +89,16 @@ import { shippingContainers } from "./shipping-containers";
 import { railways } from "./railways";
 import { longitude } from "./longitude";
 import { theBicycle } from "./the-bicycle";
+import { fire } from "./fire";
+import { theSteamEngine } from "./the-steam-engine";
+import { entropy } from "./entropy";
+import { batteries } from "./batteries";
+import { nuclearPower } from "./nuclear-power";
+import { votingSystems } from "./voting-systems";
+import { gameTheory } from "./game-theory";
+import { collectiveAction } from "./collective-action";
+import { crowds } from "./crowds";
+import { propaganda } from "./propaganda";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -98,7 +108,8 @@ import { theBicycle } from "./the-bicycle";
  * the index and every article page prerender to static HTML at build time.
  *
  * Target shape: 100 articles across 20 sections of 5 (raised from an original
- * 50 once the first ten sections were complete).
+ * 50 once the first ten sections were complete). The twentieth section closes
+ * it; anything beyond this is a new target, not a continuation of this one.
  *
  * Add them in small batches, and space the batches out. The shelf's claim is
  * that each piece is written rather than generated in bulk, which is a claim
@@ -280,6 +291,22 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "Movement is a problem of surfaces, standards and friction. A wheel that needed a road, a steel box everyone agreed on, a machine that forced the world to share a clock, a position fix that was really a clock problem, and the most efficient way ever found to move a body.",
     hue: "var(--rb-4)",
     articles: [theWheel, shippingContainers, railways, longitude, theBicycle],
+  },
+  {
+    id: "heat-and-power",
+    title: "Heat and power",
+    blurb:
+      "Energy, from the reaction that rebuilt the human body to the one nobody trusts: fire as external digestion, a pump that burned the coal it was draining, the quantity that gives time a direction, a corrosion made to do work, and the safest generator with the worst reputation.",
+    hue: "var(--rb-1)",
+    articles: [fire, theSteamEngine, entropy, batteries, nuclearPower],
+  },
+  {
+    id: "crowds-and-choices",
+    title: "Crowds and choices",
+    blurb:
+      "What happens when decisions have to be made by more than one person: a proof that no voting system is fair, rational choices that ruin everyone, groups that cannot act on their own interest, crowds that do not panic, and persuasion that mostly tells the truth.",
+    hue: "var(--rb-6)",
+    articles: [votingSystems, gameTheory, collectiveAction, crowds, propaganda],
   },
 ];
 
