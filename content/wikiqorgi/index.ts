@@ -79,6 +79,16 @@ import { peerReview } from "./peer-review";
 import { randomisedTrials } from "./randomised-trials";
 import { replicationCrisis } from "./replication-crisis";
 import { cognitiveBias } from "./cognitive-bias";
+import { photography } from "./photography";
+import { maps } from "./maps";
+import { encyclopedias } from "./encyclopedias";
+import { soundRecording } from "./sound-recording";
+import { theCensus } from "./the-census";
+import { theWheel } from "./the-wheel";
+import { shippingContainers } from "./shipping-containers";
+import { railways } from "./railways";
+import { longitude } from "./longitude";
+import { theBicycle } from "./the-bicycle";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -254,6 +264,22 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       replicationCrisis,
       cognitiveBias,
     ],
+  },
+  {
+    id: "recording-the-world",
+    title: "Recording the world",
+    blurb:
+      "Five technologies for making the world hold still, each of which turned out to shape what it recorded: an image that had to be stopped from fading, a flat map of a curved planet, a book that tried to contain everything, the first machine that let the dead speak, and a count that decides who exists.",
+    hue: "var(--rb-5)",
+    articles: [photography, maps, encyclopedias, soundRecording, theCensus],
+  },
+  {
+    id: "getting-around",
+    title: "Getting around",
+    blurb:
+      "Movement is a problem of surfaces, standards and friction. A wheel that needed a road, a steel box everyone agreed on, a machine that forced the world to share a clock, a position fix that was really a clock problem, and the most efficient way ever found to move a body.",
+    hue: "var(--rb-4)",
+    articles: [theWheel, shippingContainers, railways, longitude, theBicycle],
   },
 ];
 
