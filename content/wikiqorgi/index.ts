@@ -99,6 +99,16 @@ import { gameTheory } from "./game-theory";
 import { collectiveAction } from "./collective-action";
 import { crowds } from "./crowds";
 import { propaganda } from "./propaganda";
+import { weatherForecasting } from "./weather-forecasting";
+import { hurricanes } from "./hurricanes";
+import { clouds } from "./clouds";
+import { lightning } from "./lightning";
+import { theMonsoon } from "./the-monsoon";
+import { anaesthesia } from "./anaesthesia";
+import { germTheory } from "./germ-theory";
+import { bloodTransfusion } from "./blood-transfusion";
+import { insulin } from "./insulin";
+import { medicalImaging } from "./medical-imaging";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -107,9 +117,13 @@ import { propaganda } from "./propaganda";
  * Everything below is a compile-time constant. No database, no API, no fetch —
  * the index and every article page prerender to static HTML at build time.
  *
- * Target shape: 100 articles across 20 sections of 5 (raised from an original
- * 50 once the first ten sections were complete). The twentieth section closes
- * it; anything beyond this is a new target, not a continuation of this one.
+ * Shape: sections of 5 articles each, currently 22. The target has been raised
+ * twice — 50, then 100 at twenty sections, and the shelf is now open-ended and
+ * grows a section or two at a time.
+ *
+ * Sections are append-only. Never insert one in the middle or reorder them:
+ * the front-page promotion schedule derives its dates from a section's position
+ * here, so reordering re-dates published articles. See ./schedule.ts.
  *
  * Add them in small batches, and space the batches out. The shelf's claim is
  * that each piece is written rather than generated in bulk, which is a claim
@@ -307,6 +321,22 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "What happens when decisions have to be made by more than one person: a proof that no voting system is fair, rational choices that ruin everyone, groups that cannot act on their own interest, crowds that do not panic, and persuasion that mostly tells the truth.",
     hue: "var(--rb-6)",
     articles: [votingSystems, gameTheory, collectiveAction, crowds, propaganda],
+  },
+  {
+    id: "weather",
+    title: "Weather",
+    blurb:
+      "The atmosphere as a machine with known equations and unknowable starting conditions: a forecast limited by a rounding error, a storm that cannot form at the equator, water that will not condense without help, a discharge nobody can fully explain, and a sea breeze the size of a continent.",
+    hue: "var(--rb-5)",
+    articles: [weatherForecasting, hurricanes, clouds, lightning, theMonsoon],
+  },
+  {
+    id: "medicines-turning-points",
+    title: "Medicine's turning points",
+    blurb:
+      "Five moments where medicine stopped being mostly useless, each of them resisted at the time: gases that sat unused for fifty years, a handwashing rule that ended a career, four blood groups that explained 250 years of deaths, a patent sold for a dollar, and a way of seeing inside people that finds too much.",
+    hue: "var(--rb-1)",
+    articles: [anaesthesia, germTheory, bloodTransfusion, insulin, medicalImaging],
   },
 ];
 
