@@ -35,25 +35,47 @@ const LAUNCH_SET = 4;
 const MS_PER_DAY = 86_400_000;
 
 /**
- * The order articles are promoted in: one from each section in turn, then back
- * to the start for each section's second article, and so on.
+ * Sections per rotation wave. Round-robin runs *within* a wave, not across the
+ * whole shelf, and this is what keeps promotion dates stable as content is
+ * added — see rotationOrder.
+ */
+const SECTIONS_PER_WAVE = 20;
+
+/**
+ * The order articles are promoted in: one from each section in the wave, then
+ * back to the start for each section's second article, and so on.
  *
  * Promoting in shelf order would put five consecutive physics pieces on the
- * front page, then five on law. Round-robin means the first twenty promotions
- * are twenty different subjects, and any given week's cards look nothing like
- * each other — which is the point of a front page.
+ * front page, then five on law. Round-robin means consecutive promotions are
+ * different subjects and any given week's cards look nothing like each other,
+ * which is the point of a front page.
+ *
+ * The wave is the part that matters for correctness. Interleaving across every
+ * section would mean appending a new section renumbers the whole rotation —
+ * each existing article slides later, its promotion date moves with it, and
+ * articles already shown on the front page would quietly drop off it again.
+ * Chunking into fixed-size waves means wave 0 always yields rotation indices
+ * 0–99 no matter what is added afterwards, so published dates never move.
+ *
+ * The rule this imposes: append sections, never insert or reorder them, and
+ * treat a wave's makeup as settled once that wave starts promoting. A wave is
+ * only reorderable while it is still entirely in the future.
  *
  * Sections are currently all five articles long. The `if (article)` guard is
  * there so an uneven section later doesn't leave a hole in the rotation.
  */
 function rotationOrder(sections: WikiqorgiSection[]): RewrittenArticle[] {
-  const longest = Math.max(...sections.map((section) => section.articles.length));
   const order: RewrittenArticle[] = [];
 
-  for (let position = 0; position < longest; position++) {
-    for (const section of sections) {
-      const article = section.articles[position];
-      if (article) order.push(article);
+  for (let start = 0; start < sections.length; start += SECTIONS_PER_WAVE) {
+    const wave = sections.slice(start, start + SECTIONS_PER_WAVE);
+    const longest = Math.max(...wave.map((section) => section.articles.length));
+
+    for (let position = 0; position < longest; position++) {
+      for (const section of wave) {
+        const article = section.articles[position];
+        if (article) order.push(article);
+      }
     }
   }
 
