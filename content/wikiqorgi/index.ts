@@ -119,6 +119,16 @@ import { theAssemblyLine } from "./the-assembly-line";
 import { bureaucracy } from "./bureaucracy";
 import { tradeUnions } from "./trade-unions";
 import { theEightHourDay } from "./the-eight-hour-day";
+import { grasses } from "./grasses";
+import { trees } from "./trees";
+import { seeds } from "./seeds";
+import { pollination } from "./pollination";
+import { floweringPlants } from "./flowering-plants";
+import { thePassport } from "./the-passport";
+import { nationalism } from "./nationalism";
+import { borders } from "./borders";
+import { refugees } from "./refugees";
+import { citizenship } from "./citizenship";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -127,7 +137,7 @@ import { theEightHourDay } from "./the-eight-hour-day";
  * Everything below is a compile-time constant. No database, no API, no fetch —
  * the index and every article page prerender to static HTML at build time.
  *
- * Shape: sections of 5 articles each, currently 24. The target has been raised
+ * Shape: sections of 5 articles each, currently 26. The target has been raised
  * twice — 50, then 100 at twenty sections, and the shelf is now open-ended and
  * grows a section or two at a time.
  *
@@ -363,6 +373,22 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "How labour got arranged, and who set the pace: a building where workers could be watched, a line that moved the work past them, rules applied impersonally to stop something worse, combination as a criminal offence, and a working week that fell for a century and then stopped.",
     hue: "var(--rb-2)",
     articles: [theFactory, theAssemblyLine, bureaucracy, tradeUnions, theEightHourDay],
+  },
+  {
+    id: "plants",
+    title: "Plants",
+    blurb:
+      "Five things plants do that animals cannot: grow from the bottom so being eaten does not matter, lift water a hundred metres with no pump, pause for centuries and resume, pay couriers to carry their gametes, and take over the world so fast it troubled Darwin.",
+    hue: "var(--rb-3)",
+    articles: [grasses, trees, seeds, pollination, floweringPlants],
+  },
+  {
+    id: "borders-and-states",
+    title: "Borders and states",
+    blurb:
+      "How the world got divided and people got sorted into the pieces: a wartime document that never expired, nations built after the nationalism that claimed them, lines drawn by people who had never been there, a definition written for 1951, and belonging allocated at birth.",
+    hue: "var(--rb-6)",
+    articles: [thePassport, nationalism, borders, refugees, citizenship],
   },
 ];
 
