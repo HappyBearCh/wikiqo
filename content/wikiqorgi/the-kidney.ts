@@ -1,0 +1,39 @@
+import type { RewrittenArticle } from "./types";
+
+export const theKidney: RewrittenArticle = {
+  slug: "the-kidney",
+  title: "The kidney: it throws away 180 litres a day and takes almost all of it back",
+  sourceTitle: "Kidney",
+  dek: "Filtering everything indiscriminately and then reclaiming what you want looks absurd. It is also the only design that lets one organ regulate a dozen quantities at once.",
+  standfirst:
+    "Human kidneys filter roughly 180 litres of fluid a day and excrete around one and a half. Every gram of glucose, nearly all the sodium, and almost all the water is pushed out and then pulled back in. The apparent waste is the point: by discarding the blood's contents wholesale and then adjusting recovery substance by substance, the kidney can control volume, sodium, potassium, acidity, calcium and several hormones with one mechanism.",
+  readingMinutes: 7,
+  html: `
+<h2 id="Filter_first">Filter everything, then decide</h2>
+<p>A nephron begins with a glomerulus, a tuft of capillaries under pressure inside a capsule. Blood pressure forces fluid across the capillary wall, and the wall's structure determines what goes: water, ions, glucose, amino acids, urea and small molecules pass freely; cells and most proteins do not, being excluded by size and by a strong negative charge on the barrier.</p>
+<p>Across two kidneys this produces about 125 millilitres of filtrate a minute, which is the glomerular filtration rate — the standard measure of kidney function, and the number reported on a routine blood test, estimated from creatinine because creatinine is produced at a steady rate and is filtered without much handling afterwards.</p>
+<p>The rest of the nephron is a recovery line. The proximal tubule reclaims about two-thirds of the filtered sodium and water and essentially all the glucose and amino acids. The loop of Henle establishes a concentration gradient in the tissue around it. The distal tubule and collecting duct make the fine adjustments, and these are the hormonally controlled segments where the actual regulation happens.</p>
+<p>Why not simply secrete waste directly, without the filtration step? Because a system that only removed known substances could only remove known substances. Filtering indiscriminately and reabsorbing selectively means anything the body has no transporter for — including compounds it has never encountered — leaves automatically. The design is a default of disposal, with retention as the exception, and it handles novel molecules without needing to recognise them.</p>
+
+<h2 id="Countercurrent">The trick that concentrates urine</h2>
+<p>Producing urine more concentrated than blood requires a gradient, and the kidney builds one with a countercurrent arrangement in the medulla.</p>
+<p>The loop of Henle descends into the medulla and comes back up. The ascending limb pumps sodium out but is impermeable to water; the descending limb is permeable to water but not to salt. Each segment makes only a small difference in concentration between the tubule and the surrounding tissue, but because the flow runs in opposite directions in the two limbs, that small difference is multiplied along the length of the loop into a steep gradient — dilute at the outer edge of the medulla, several times the concentration of plasma at the tip.</p>
+<p>The collecting duct then runs back down through that gradient. If its walls are permeable to water, water leaves by osmosis and the urine ends up concentrated; if not, dilute urine passes straight through.</p>
+<p>Permeability is controlled by a single hormone. Antidiuretic hormone, released by the pituitary when blood becomes concentrated or volume falls, causes water channels to be inserted into the collecting duct membrane. Its absence produces diabetes insipidus, in which a person passes many litres of dilute urine a day and is perpetually thirsty.</p>
+<p>The length of the loop sets the achievable concentration, which is why desert rodents with very long loops produce urine several times more concentrated than humans can and can survive without drinking, and why beavers barely concentrate at all. Human capacity is middling: it is the reason a person can survive on limited water and the reason drinking seawater is fatal, since seawater is saltier than the most concentrated urine we can produce, so excreting its salt costs more water than the seawater supplied.</p>
+
+<h2 id="Regulation">The jobs that are not excretion</h2>
+<p>Calling the kidney an organ of waste disposal understates it considerably.</p>
+<p>It sets blood volume, and therefore blood pressure, by deciding how much sodium to retain, since water follows sodium. The renin-angiotensin-aldosterone system is the control loop: reduced perfusion at the kidney triggers renin release, which leads to angiotensin II — a potent vasoconstrictor — and aldosterone, which drives sodium retention. A very large proportion of antihypertensive drugs act somewhere on this pathway, which is a statement about where blood pressure is actually determined.</p>
+<p>It controls acid-base balance, alongside the lungs. The lungs adjust carbon dioxide within minutes; the kidney handles the fixed acid load from metabolism, over hours to days, by excreting hydrogen ions and regenerating bicarbonate.</p>
+<p>It produces erythropoietin, which drives red cell production in the marrow, and the cells that make it are positioned to sense oxygen delivery — so a fall in oxygen carrying capacity is detected at the kidney and answered by making more red cells. The anaemia of chronic kidney disease follows directly, and its treatment with synthetic erythropoietin was one of the first commercially significant products of recombinant biotechnology.</p>
+<p>It performs the final activation step for vitamin D, which is why kidney failure produces bone disease, and it regulates calcium and phosphate alongside the parathyroid glands.</p>
+
+<h2 id="Failure">What failure looks like, and why it is quiet</h2>
+<p>Chronic kidney disease is largely asymptomatic until function is severely reduced, because the surviving nephrons compensate by filtering harder. A person can lose a substantial share of function and feel nothing, which is why the disease is usually found on a blood test rather than by symptoms.</p>
+<p>The compensation carries its own cost. Remaining nephrons under increased pressure are damaged by it, so the loss becomes self-propagating past a certain point — which is the rationale for drugs that reduce glomerular pressure, and the reason those drugs cause a small immediate fall in measured filtration that is a sign they are working rather than a sign of harm.</p>
+<p>Diabetes and hypertension are the leading causes worldwide, and both operate on the glomerulus over decades. The presence of protein in the urine is the early marker, because it indicates the filtration barrier is leaking, and it is the single most useful prognostic measurement in the field.</p>
+<p>When function falls far enough, the options are dialysis or transplant. Haemodialysis pumps blood past a semipermeable membrane against a fluid of chosen composition, removing solutes by diffusion and water by pressure. It works and it is a poor substitute: it is intermittent, typically three sessions a week, whereas kidneys work continuously, so patients cycle between overloaded and depleted. It replaces filtration and not the endocrine functions, so erythropoietin and vitamin D must be given separately. Life expectancy on long-term dialysis is substantially reduced.</p>
+<p>Transplantation is markedly better on survival and quality of life and is limited by supply. That living donation is possible at all reflects an unusual margin: a healthy person can give one kidney and retain adequate function, because the remaining organ enlarges and increases its filtration. The same margin is why the organ can lose so much capacity before anyone notices.</p>
+`,
+};

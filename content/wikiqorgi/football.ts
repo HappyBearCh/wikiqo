@@ -1,0 +1,45 @@
+import type { RewrittenArticle } from "./types";
+
+export const football: RewrittenArticle = {
+  slug: "football",
+  title: "Football: the world's most popular game is also the one most decided by luck",
+  sourceTitle: "Association football",
+  dek: "Roughly two and a half goals a match means the better side loses often. That is not a flaw in the sport — it is the reason anyone watches.",
+  standfirst:
+    "Association football was codified in a London pub in 1863 by men arguing about whether you could pick the ball up, and the compromise they reached produced a game with very few scoring events. Low scoring makes outcomes noisy: the stronger team wins a smaller share of matches than in almost any other major sport. Everything distinctive about football's competitive structure — the leagues, the cup upsets, the global audience — follows from that.",
+  readingMinutes: 7,
+  html: `
+<h2 id="Codification">The schism of 1863</h2>
+<p>Before codification there was no single game. English public schools each had their own football, shaped by the space available: Eton's field game grew on open ground and restricted handling; Rugby's grew in an environment where carrying the ball was accepted. Boys who had learned incompatible games arrived at university unable to play together, which is the practical problem that produced the rules.</p>
+<p>The Football Association was formed in October 1863 and spent six meetings arguing, mainly over two provisions: whether a player could run with the ball in hand, and whether hacking — kicking an opponent in the shins — was permissible. The Blackheath representative withdrew when both were rejected, and the handling game continued separately, formalising as rugby football in 1871.</p>
+<p>So the two codes are not distant relatives. They are the two halves of a single argument, and every subsequent difference follows from the handling ban.</p>
+<p>The rest of the modern game arrived piecemeal: the crossbar in the 1870s, the penalty kick in 1891, which was controversial because it presumed a gentleman might foul deliberately, and the goal net in the same period. The offside rule was liberalised in 1925 from three defenders to two, and scoring rose immediately, which is the clearest natural experiment the sport has ever run on itself.</p>
+
+<h2 id="Offside">The rule that holds the game up</h2>
+<p>Offside is the game's load-bearing rule and the one casual viewers most often think is arbitrary. It is neither.</p>
+<p>Without it, a forward would simply stand next to the opposing goalkeeper and wait for a long ball. The game would become a contest of kicking distance, and the midfield would empty. Every football code has some version of the restriction, and rugby's is more severe: the ball may not be passed forward at all.</p>
+<p>What offside actually does is compress the playing area. It forces the attacking side to advance behind the ball, which keeps the two defensive lines close together and concentrates twenty-two players into a band of perhaps forty metres. The tactical density that makes the sport interesting is a direct product of that compression.</p>
+<p>It is also why defensive lines push up. A back four that steps forward in unison shrinks the space behind midfield and leaves attackers stranded, a technique developed to a high degree in the 1980s and 1990s and now universal, which in turn made offside decisions marginal by design.</p>
+<p>Video review has exposed the cost. Deciding offside to the centimetre, from a frozen frame whose timing is itself uncertain, produces decisions that are technically correct and widely felt to be unjust, because the rule was written to stop goal-hanging and is being applied to a shoulder. The semi-automated systems now deployed resolve the accuracy problem and leave the underlying mismatch exactly where it was.</p>
+
+<h2 id="Randomness">The mathematics of two and a half goals</h2>
+<p>The single most consequential fact about football is that it is low-scoring. A typical top-division match produces somewhere around two and a half to three goals in total.</p>
+<p>Goals arrive at roughly a constant rate through a match and are reasonably well described by a Poisson process, which means the distribution of outcomes is wide relative to the mean. When a side that is genuinely better creates, say, three good chances to their opponent's two, the outcome is close to a coin toss.</p>
+<p>Comparative work on major sports consistently ranks football among the most upset-prone. In basketball, where scoring events number in the dozens, the better team wins a large majority of the time and the sampling noise averages out within a single game. In football it does not average out within a game, or within a short series.</p>
+<p>This is why football's competitive structures look the way they do. Leagues run to thirty-eight matches because a shorter season would not distinguish the teams — and even thirty-eight is a small sample by the standards of what the noise requires. Knockout cups are known to be lotteries, and are valued for it; the giant-killing result is a feature the format is designed to generate. Penalty shoot-outs, widely disliked, are an admission that the game itself frequently cannot separate two sides in the time available.</p>
+<p>The analytical response has been to stop measuring goals. Expected goals, which assigns each shot a scoring probability from the characteristics of the chance, is an attempt to recover the underlying quality of play from a scoreline too sparse to carry it. It became publicly visible in the late 2010s and is now standard in broadcast, and the reason it works is precisely that it has a larger sample than the scoreline does: twenty-five shots rather than two goals.</p>
+
+<h2 id="Global">How it became everyone's game</h2>
+<p>Football's global spread was not planned and had little to do with the sport's merits.</p>
+<p>It travelled with British commercial activity in the late nineteenth century — railway engineers, port workers, mining companies, banks and schools — which is why so many old clubs across Europe and South America have English names or English founding stories, and why the sport took root along trade routes rather than through colonial administration. In parts of the formal empire, where British administrators favoured cricket and rugby, football often arrived later and by a different path.</p>
+<p>The equipment requirement is the other half of it. A ball and any open surface suffices, goals can be improvised, and the number of players is negotiable. This matters enormously for adoption in places without facilities, and it is the standard explanation for why football rather than any of the alternatives became the game of the world's poorest cities.</p>
+<p>FIFA was founded in 1904 by seven European associations, notably without the English, who joined the following year and left again more than once. The World Cup began in 1930. The sport's international governance has since attracted repeated and well-documented corruption findings, culminating in the 2015 indictments and the collapse of the incumbent leadership, and the pattern — a body with a monopoly over a valuable global event, minimal external oversight and enormous sponsorship flows — is a structural condition rather than an accident of personnel.</p>
+
+<h2 id="Money">The economic problem the sport cannot solve</h2>
+<p>Football's finances have an unusual property: clubs compete for position rather than profit, and position is bought with wages.</p>
+<p>Because a club's objective is to finish higher than its rivals, any additional revenue is converted almost immediately into player wages, and across the sport wages absorb a very large share of turnover. Spending more is rational for each club individually and produces no aggregate advantage, which is a classic arms race, and clubs regularly run at a loss doing it.</p>
+<p>Promotion and relegation intensify this. A club at risk of dropping a division faces a revenue cliff and will spend beyond its means to avoid it, which is why insolvency events cluster among recently relegated clubs. Closed leagues without relegation, as in North American sport, do not generate this dynamic and generate a different one instead: a structural disincentive to win.</p>
+<p>The regulatory responses — financial fair play from 2011, subsequent squad-cost ratio rules, various national licensing regimes — attempt to tie spending to revenue. Their consistent criticism is that tying spending to revenue entrenches the clubs that already have revenue, converting a spending contest into a fixed hierarchy, and the competitive concentration in Europe's major leagues over the period is at least consistent with that.</p>
+<p>The 2021 European Super League attempt, and its collapse within about forty-eight hours under supporter opposition, was the moment the tension became explicit: the economics point toward a closed elite competition, and the sport's own audience does not want one.</p>
+`,
+};

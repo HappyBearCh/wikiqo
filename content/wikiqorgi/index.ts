@@ -129,6 +129,16 @@ import { nationalism } from "./nationalism";
 import { borders } from "./borders";
 import { refugees } from "./refugees";
 import { citizenship } from "./citizenship";
+import { chess } from "./chess";
+import { playingCards } from "./playing-cards";
+import { goGame } from "./go-game";
+import { football } from "./football";
+import { play } from "./play";
+import { immuneSystem } from "./immune-system";
+import { theHeart } from "./the-heart";
+import { theKidney } from "./the-kidney";
+import { theLiver } from "./the-liver";
+import { theNervousSystem } from "./the-nervous-system";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -137,7 +147,7 @@ import { citizenship } from "./citizenship";
  * Everything below is a compile-time constant. No database, no API, no fetch —
  * the index and every article page prerender to static HTML at build time.
  *
- * Shape: sections of 5 articles each, currently 26. The target has been raised
+ * Shape: sections of 5 articles each, currently 28. The target has been raised
  * twice — 50, then 100 at twenty sections, and the shelf is now open-ended and
  * grows a section or two at a time.
  *
@@ -389,6 +399,22 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "How the world got divided and people got sorted into the pieces: a wartime document that never expired, nations built after the nationalism that claimed them, lines drawn by people who had never been there, a definition written for 1951, and belonging allocated at birth.",
     hue: "var(--rb-6)",
     articles: [thePassport, nationalism, borders, refugees, citizenship],
+  },
+  {
+    id: "games-and-play",
+    title: "Games and play",
+    blurb:
+      "Rules people agree to be bound by for no reason: a game rewritten in 1475 to make it faster, a deck that is a Mamluk artefact with French marketing, two rules that beat computers for twenty years, a sport whose scoreline barely carries the play, and the thing animals risk their lives doing for nothing.",
+    hue: "var(--rb-4)",
+    articles: [chess, playingCards, goGame, football, play],
+  },
+  {
+    id: "the-bodys-systems",
+    title: "The body's systems",
+    blurb:
+      "Five organs and the problem each one solves: an immune system whose hard job is restraint, a pump proved by arithmetic, a filter that discards everything and takes almost all of it back, a chemical plant that decides your dose, and a signalling network slower than a car.",
+    hue: "var(--rb-1)",
+    articles: [immuneSystem, theHeart, theKidney, theLiver, theNervousSystem],
   },
 ];
 
