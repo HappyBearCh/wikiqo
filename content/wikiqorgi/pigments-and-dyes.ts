@@ -1,0 +1,45 @@
+import type { RewrittenArticle } from "./types";
+
+export const pigmentsAndDyes: RewrittenArticle = {
+  slug: "pigments-and-dyes",
+  title: "Pigments and dyes: some colours cost more than gold, and one was made from snails",
+  sourceTitle: "Pigment",
+  dek: "Ultramarine was ground from a stone mined in one Afghan valley. Tyrian purple took thousands of molluscs per garment. Then in 1856 a student made a colour by accident.",
+  standfirst:
+    "For most of history colour was a commodity with a supply chain, and the price of a pigment determined where it appeared in a painting and who was permitted to wear it. The economics were transformed twice: once by chemistry in the nineteenth century, which made every colour cheap and founded the modern chemical industry as a side effect, and once by the discovery that several of the most beautiful pigments were quietly poisoning the people who used them.",
+  readingMinutes: 7,
+  html: `
+<h2 id="Expensive">Colours you had to buy</h2>
+<p>A pigment is an insoluble particle suspended in a medium; a dye is soluble and binds to a fibre. Both were, until recently, extracted rather than made, and their cost followed directly from how much material had to be processed.</p>
+<p><strong>Ultramarine</strong> was ground from lapis lazuli, which in the medieval European supply came essentially from one region of what is now Afghanistan. The stone is mostly not blue, and extracting the pigment required a laborious process of kneading the powdered rock in wax to separate the useful fraction. The result cost more by weight than gold, and contracts of the period specify it explicitly: patrons stipulated how much ultramarine was to be used and where, which is why the Virgin's robe is blue in so much Renaissance painting. The colour was a statement about expenditure before it was a statement about anything else.</p>
+<p><strong>Tyrian purple</strong> came from the hypobranchial gland of certain marine snails, and the yield was minute — accounts of the ratio vary but all agree that a single garment required thousands of animals. The dye was produced on an industrial scale at Tyre and Sidon, leaving mounds of crushed shells, and it was famously foul-smelling in production. Its expense made it a legal instrument: Roman sumptuary rules restricted its use, and by the later empire certain shades were reserved to the imperial household, which is the origin of purple as the colour of authority.</p>
+<p><strong>Carmine</strong>, a deep red, is extracted from cochineal insects farmed on cactus in Mesoamerica. After the Spanish conquest it became one of the most valuable exports of the Americas after silver, and Spain guarded its biological origin as a commercial secret for two centuries while Europe speculated about whether it was a seed or a berry.</p>
+
+<h2 id="Mauve">The accident that ended all that</h2>
+<p>In 1856 William Henry Perkin, an eighteen-year-old student working in a home laboratory during an Easter holiday, was attempting to synthesise quinine from coal-tar derivatives. The attempt failed and left a dark residue; washing the flask with alcohol produced an intense purple solution.</p>
+<p>Perkin recognised that it dyed silk, that the colour was fast, and that the starting material was a waste product of the gas industry available in quantity. He patented it, left his studies against his supervisor's advice, and with his family's money built a factory. Mauveine reached the market within two years and became a fashion, helped by Queen Victoria and the Empress Eugénie wearing it.</p>
+<p>The significance is not the colour. It is that a valuable substance had been made from coal tar by design, which established that synthetic organic chemistry was a business. The German dye industry took the lesson furthest, and the firms that grew from it — BASF, Bayer, Hoechst — became the core of the world chemical and pharmaceutical industry. Aspirin was a dye company's product.</p>
+<p>Synthetic dyes also drove the science that consumed them. Bacterial staining, and Paul Ehrlich's observation that certain dyes bound selectively to certain tissues and organisms, led directly to the idea of a chemical that could attack a pathogen without harming the host — the founding idea of chemotherapy, arrived at by way of a textile industry.</p>
+<p>Within a few decades natural dyes had collapsed as commodities. Synthetic indigo destroyed the Indian indigo trade; alizarin destroyed the European madder crop. Colours that had structured trade routes became cheap in a single generation.</p>
+
+<h2 id="Poison">The beautiful poisons</h2>
+<p>A striking number of historically important pigments are toxic, and in several cases the toxicity was the point of the chemistry that made them bright.</p>
+<p><strong>Lead white</strong> was the only good opaque white available to European painters for two millennia, made by exposing lead to vinegar fumes. It was also used as a cosmetic, and the resulting poisoning is documented across centuries.</p>
+<p><strong>Vermilion</strong> is mercury sulfide. <strong>Naples yellow</strong> is a lead antimonate. <strong>Chrome yellow</strong>, the intense yellow of some of Van Gogh's sunflowers, is lead chromate, and it darkens over time — several of those paintings are not the colour he laid down.</p>
+<p><strong>Scheele's green</strong> and its successor emerald green are copper arsenites, developed in the late eighteenth century and used with enthusiasm in wallpaper, fabric, artificial flowers and confectionery. Damp rooms with arsenical wallpaper can generate volatile arsenic compounds through fungal action, and the resulting illnesses were reported through the nineteenth century. The suggestion that this contributed to Napoleon's decline on Saint Helena rests on arsenic found in his hair and remains unresolved, since arsenic was ubiquitous in the period.</p>
+<p><strong>Uranium glass</strong> and <strong>radium paint</strong> extend the pattern into the twentieth century. The luminous dial painters of the 1920s, who shaped their brushes with their lips, produced one of the defining occupational health cases in legal history.</p>
+<p>Regulation removed most of these from consumer use through the twentieth century. Cadmium pigments remain in artists' materials under restriction, and lead white is still manufactured in small quantities for conservation work, because a substitute that behaves identically under a restorer's brush does not exist.</p>
+
+<h2 id="Structural">Colour without pigment</h2>
+<p>Not all colour comes from absorption. Structural colour arises from physical features on the scale of the wavelength of light — layers, ridges, or lattices that interfere with reflected light and cancel some wavelengths while reinforcing others.</p>
+<p>The blue of a morpho butterfly's wing contains no blue pigment. Its scales carry a ridged lattice that reflects blue by interference, which is why the colour shifts with viewing angle and why it does not fade — there is no molecule to degrade. Peacock feathers, beetle shells, and the iridescent inner surface of a shell work the same way. Almost every blue in the animal world is structural, because blue pigments are chemically difficult and rare.</p>
+<p>The same physics produces the sky's colour by scattering, the colours of an oil film, and the play of light in opal.</p>
+<p>Industry has been slow to exploit it and is now trying, because structural colour needs no pigment and does not fade. Manufactured examples exist in cosmetics, in anti-counterfeiting features and in some textiles, and the obstacle is that producing controlled nanostructures over large areas cheaply remains harder than mixing in a dye.</p>
+
+<h2 id="New">New colours are still rare</h2>
+<p>It is easy to assume the palette is finished, and it is not, though additions are infrequent.</p>
+<p>YInMn blue was found in 2009 at Oregon State University, in a manganese oxide sample heated during unrelated research into electronic materials. It is an intense, stable, non-toxic blue — a genuinely useful combination, since the alternatives are either toxic like cobalt or historically expensive like ultramarine. It reached commercial artists' paints in 2020, and its price reflects the scarcity of yttrium and indium.</p>
+<p>The other direction of development is extreme absorption rather than colour. Vantablack and its successors, forests of vertical carbon nanotubes that trap essentially all incident light, appear as absences rather than surfaces, and their exclusive licensing to a single artist produced a long-running dispute that says more about the art world than about materials science.</p>
+<p>The persistent difficulty is durability. Many bright organic pigments are fugitive under ultraviolet light, and lightfastness is measured and rated because a colour that fades in a decade is not a colour that can be sold to a painter. The pigments still in use after five hundred years — the earths, the ochres, carbon black — are unglamorous and permanent, which is the trade that has always governed the palette.</p>
+`,
+};

@@ -149,6 +149,16 @@ import { domes } from "./domes";
 import { skyscrapers } from "./skyscrapers";
 import { bridges } from "./bridges";
 import { earthquakeEngineering } from "./earthquake-engineering";
+import { theEye } from "./the-eye";
+import { colourVision } from "./colour-vision";
+import { pigmentsAndDyes } from "./pigments-and-dyes";
+import { spectacles } from "./spectacles";
+import { opticalIllusions } from "./optical-illusions";
+import { fungi } from "./fungi";
+import { lichens } from "./lichens";
+import { mycorrhizalNetworks } from "./mycorrhizal-networks";
+import { moulds } from "./moulds";
+import { spores } from "./spores";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -157,7 +167,7 @@ import { earthquakeEngineering } from "./earthquake-engineering";
  * Everything below is a compile-time constant. No database, no API, no fetch —
  * the index and every article page prerender to static HTML at build time.
  *
- * Shape: sections of 5 articles each, currently 30. The target has been raised
+ * Shape: sections of 5 articles each, currently 32. The target has been raised
  * twice — 50, then 100 at twenty sections, and the shelf is now open-ended and
  * grows a section or two at a time.
  *
@@ -441,6 +451,22 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "Five structural problems and their answers: stone that cannot be stretched, a dome that tears itself open at the base, towers limited by wind and lifts rather than weight, bridges sorted by where the tension goes, and buildings designed to be wrecked without falling.",
     hue: "var(--rb-2)",
     articles: [theArch, domes, skyscrapers, bridges, earthquakeEngineering],
+  },
+  {
+    id: "colour-and-seeing",
+    title: "Colour and seeing",
+    blurb:
+      "An eye wired backwards with a hole in the sensor, three samples standing in for a whole spectrum, colours that once cost more than gold, the lenses that gave craftsmen back twenty years of work, and the places where you can watch the visual system guess.",
+    hue: "var(--rb-6)",
+    articles: [theEye, colourVision, pigmentsAndDyes, spectacles, opticalIllusions],
+  },
+  {
+    id: "fungal-life",
+    title: "Fungi",
+    blurb:
+      "A kingdom nearer to animals than to plants: organisms that are mostly underground network, an association that turned out to have a third partner, the fungal trade nine in ten plants depend on, the moulds that set how long food lasts, and spores launched by the trillion.",
+    hue: "var(--rb-3)",
+    articles: [fungi, lichens, mycorrhizalNetworks, moulds, spores],
   },
 ];
 

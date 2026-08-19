@@ -1,0 +1,43 @@
+import type { RewrittenArticle } from "./types";
+
+export const colourVision: RewrittenArticle = {
+  slug: "colour-vision",
+  title: "Colour vision: there is no colour in the light, only wavelengths and a verdict",
+  sourceTitle: "Color vision",
+  dek: "Three receptor types cannot measure a spectrum. They take three samples and the brain reports a conclusion, which is why two different lights can look identical.",
+  standfirst:
+    "Light arriving at the eye carries a continuous distribution of wavelengths, and the eye samples it at three points. That is a catastrophic loss of information, and it means an unlimited number of physically different spectra produce identical sensations. Colour is not a property being measured; it is a judgement the visual system reaches about surfaces, using assumptions about illumination that are usually right and occasionally, spectacularly, are not.",
+  readingMinutes: 7,
+  html: `
+<h2 id="Three_numbers">Three samples of a continuous signal</h2>
+<p>Human colour vision starts with three cone types, conventionally short, medium and long wavelength. Each responds over a broad range with a peak, and each returns a single number — how strongly it was stimulated. Any incoming light, however complex its spectrum, is reduced to three values.</p>
+<p>The immediate consequence is metamerism: different spectra that happen to produce the same three responses are indistinguishable. A yellow produced by a narrow band of yellow light and a yellow produced by mixing red and green light are physically nothing alike and look identical. Every colour screen ever built depends on this, because a display with three primaries cannot reproduce most real spectra and does not need to — it only has to fool three receptors.</p>
+<p>The same fact defeats colour matching under different lights. Two fabrics that match in daylight can differ under a shop's lighting, because the match was between the three-number summaries under one illuminant and not between the underlying reflectance curves.</p>
+<p>A single receptor type cannot see colour at all, because it cannot distinguish a dim light at its best wavelength from a bright light at a poor one. This is why rod-only night vision is monochromatic, and why colour requires comparison between at least two receptor types by necessity rather than by design choice.</p>
+
+<h2 id="Opponent">Two theories, both correct</h2>
+<p>The nineteenth century produced two rival accounts that argued past each other for decades.</p>
+<p>The trichromatic theory, from Thomas Young and Hermann von Helmholtz, held that three receptor types underlie colour, which is correct about the retina and was confirmed when cone pigments were measured directly in the 1960s.</p>
+<p>Ewald Hering objected that it fails to explain the phenomenology. Some colour combinations are describable and some are not: there are reddish blues and yellowish greens, but no reddish green or yellowish blue, and these are not merely unfamiliar but unimaginable. He proposed opposing pairs — red against green, blue against yellow, black against white — and this is also correct, one stage further along.</p>
+<p>The retina recombines cone signals into opponent channels almost immediately: a luminance channel, a red-green difference, and a blue-yellow difference. Both theories describe the same system at different depths, and the argument was resolved by discovering that it had two answers.</p>
+<p>Opponency explains afterimages directly. Stare at red, fatigue the red-green channel in that direction, look at white, and the channel reports green. It also explains why yellow feels like a pure colour despite having no dedicated receptor: it is the neutral point of one opponent channel.</p>
+
+<h2 id="Constancy">The assumption that makes colour useful</h2>
+<p>A surface reflects a fixed proportion of the light falling on it, but the light falling on it changes enormously — reddish at sunset, blue in shade, greenish under fluorescent tubes. The physical stimulus from a white shirt is drastically different in each case.</p>
+<p>The shirt looks white in all of them. Colour constancy is the visual system's estimate of the surface's reflectance, obtained by estimating the illumination and discounting it, using cues from the whole scene: the range of colours present, specular highlights, shadows and the assumption that the average of a scene is roughly neutral.</p>
+<p>This is an inference, and inferences can be wrong when the cues are removed. The photograph of a dress that circulated in 2015 divided viewers into those who saw white and gold and those who saw blue and black, and the explanation generally accepted is that the image was ambiguous about its illumination — cropped so that no reliable cue indicated whether the dress was in bluish shade or under warm artificial light. Observers unconsciously assumed one or the other and subtracted it, arriving at different answers with equal confidence. Studies afterwards found the split correlated modestly with chronotype, consistent with people habitually exposed to more daylight assuming daylight.</p>
+<p>The general point is more interesting than the dress. Colour perception is normally a solved problem whose working is invisible, and the only way to see the machinery is to find a case where two solutions fit the data.</p>
+
+<h2 id="Variation">Colour blindness, and seeing more</h2>
+<p>The medium and long wavelength cone pigments are encoded on the X chromosome, adjacent to each other and highly similar, which makes them prone to unequal recombination. That single fact explains the pattern of red-green colour deficiency: it is common, it affects around one in twelve men of northern European ancestry and under one in two hundred women, and it is the standard textbook example of X-linked inheritance.</p>
+<p>The commonest forms are not an absence of a cone type but a shift in one pigment's sensitivity, so the two remaining channels overlap heavily and the red-green comparison becomes weak. Blue-yellow deficiency is far rarer and is not sex-linked. Complete absence of colour vision is rarer still.</p>
+<p>The corresponding upward variation is tetrachromacy. A woman carrying different variants of the same cone gene on her two X chromosomes may express four distinct pigments, and a substantial minority of women are estimated to be tetrachromats genetically. Whether this yields richer colour experience requires the visual system to use the fourth channel independently, and rigorous testing has confirmed enhanced discrimination in very few individuals — the genetic condition is common and the functional outcome appears rare.</p>
+<p>Across animals the human arrangement is unremarkable. Most placental mammals are dichromats, having lost cone types during a long nocturnal period, and primate trichromacy is a re-acquisition. Birds, reptiles and many fish are tetrachromats with ultraviolet sensitivity, so flowers and plumage that appear plain to us carry patterns they can see. The mantis shrimp, frequently described as having the finest colour vision known, has around a dozen photoreceptor classes and performs poorly at discriminating similar colours in behavioural tests — the current interpretation is that it does not compare channels at all but reads them off directly, trading discrimination for speed.</p>
+
+<h2 id="Language">Naming it</h2>
+<p>Languages divide the spectrum differently, and the pattern of how they differ is unexpectedly regular.</p>
+<p>Brent Berlin and Paul Kay's survey in 1969 found that basic colour terms appear across languages in a constrained order: a language with two terms divides light from dark, a third adds red, then green or yellow, then blue, then brown, then the remainder. The claim of a universal sequence has been criticised on methodology and on sampling, and the strong version is not accepted, but the finding that colour naming is far from arbitrary has held up across larger and better datasets.</p>
+<p>Where languages draw boundaries does measurably affect discrimination. Russian has separate basic terms for lighter and darker blue, and Russian speakers are faster at discriminating across that boundary than within it, with the advantage disappearing under a verbal distraction task — which suggests language is being recruited during the judgement rather than having rewired the perception.</p>
+<p>The old claim that Homer's wine-dark sea shows the Greeks could not see blue is a persistent misreading. Ancient Greek colour vocabulary emphasised brightness and saturation over hue, which is a fact about the vocabulary rather than about the eyes, and the same people dyed fabrics in colours they had no dedicated word for.</p>
+`,
+};
