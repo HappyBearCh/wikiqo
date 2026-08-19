@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import { getArticleHtml, getFileInfo, getSummary, wikipediaUrlFor } from "@/lib/wikipedia";
 import { sanitizeWikiHtml } from "@/lib/sanitize";
 import { articleHref, isFileNamespace, isNonArticleNamespace, titleFromSlug } from "@/lib/links";
+import { isRenderableTitle } from "@/content/popular-titles";
 import { OG_BASE } from "@/lib/site";
 import { parseArticleStructure } from "@/lib/structure";
 import { keywordsFromHtml } from "@/lib/keywords";
@@ -40,6 +42,33 @@ interface ArticlePageProps {
   params: Promise<{ slug: string }>;
 }
 
+/**
+ * Whether this request is a navigation from somewhere else on wikiqo — in
+ * practice, a reader clicking a search result or an in-article link.
+ *
+ * This is the escape hatch on the renderable-title gate. Search returns any
+ * article Wikipedia has, so gating on the popular set alone would leave most
+ * search results dead. A same-origin Referer distinguishes "a person clicked
+ * this" from "something is walking the title space", because a crawler
+ * enumerating URLs has no page to have come from.
+ *
+ * It is a heuristic and it is spoofable, and it is worth what it costs: a
+ * crawler that starts forging same-origin Referers can be dealt with then. Note
+ * the failure mode is a 404 on an uncommon article opened without a referrer
+ * (a shared link, a new tab), not a wrong page.
+ */
+async function cameFromThisSite(): Promise<boolean> {
+  const h = await headers();
+  const referer = h.get("referer");
+  const host = h.get("host");
+  if (!referer || !host) return false;
+  try {
+    return new URL(referer).host === host;
+  } catch {
+    return false;
+  }
+}
+
 export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
   const { slug } = await params;
   const title = titleFromSlug(slug);
@@ -60,6 +89,15 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   // Non-article namespaces resolve to nothing renderable, so skip the summary
   // fetch entirely and go straight to the not-found head tags.
   if (isNonArticleNamespace(title)) {
+    return { title: "Article not found", robots: { index: false, follow: true } };
+  }
+
+  // Same short-circuit for titles outside the renderable set — bail before the
+  // summary fetch, so a rejected request never touches Wikipedia. The referer
+  // check has to match the one in the page component below, or a reader
+  // arriving from search would get a rendered article under a "not found"
+  // title. See content/popular-titles.ts for why this gate exists.
+  if (!isRenderableTitle(title) && !(await cameFromThisSite())) {
     return { title: "Article not found", robots: { index: false, follow: true } };
   }
 
@@ -120,6 +158,18 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   // learn there's nothing to render — the crawl hitting this route walks
   // thousands of them.
   if (isNonArticleNamespace(title)) {
+    notFound();
+  }
+
+  // The cost gate. Everything above this line is a string test; everything
+  // below it is two Wikipedia round-trips, a sanitize pass, a structure parse,
+  // a keyword pass and a full render. Automated traffic enumerating Wikipedia's
+  // title space lands outside the renderable set essentially always, so it is
+  // turned away here having cost an invocation and nothing more.
+  //
+  // See content/popular-titles.ts for the measurements behind this and for how
+  // to widen or remove it.
+  if (!isRenderableTitle(title) && !(await cameFromThisSite())) {
     notFound();
   }
 
