@@ -31,13 +31,33 @@ const AI_CRAWLERS = [
 ];
 
 /**
- * Allow general search engines to crawl pages (excluding the JSON API), but
- * deny dedicated AI scrapers entirely. The sitemap pointer lets crawlers
- * discover /sitemap.xml — the wikiqo routes plus the curated set of popular
- * articles — without manual submission. Inline article links carry
- * rel="nofollow" (see
- * lib/sanitize.ts) so even allowed crawlers don't traverse the full Wikipedia
- * link graph through us.
+ * Allow general search engines to crawl our own pages, but deny the mirrored
+ * Wikipedia routes to everyone and deny dedicated AI scrapers entirely.
+ *
+ * `/wiki/` is disallowed for `*` because those pages cannot earn anything back.
+ * They are `ƒ (Dynamic)` — one cold function invocation, two Wikipedia
+ * round-trips and a full Parsoid render per unique slug — and they carry a
+ * canonical pointing at en.wikipedia.org (see wiki/[slug]/generateMetadata), so
+ * a crawler that walks them indexes Wikipedia's copy rather than ours. Every
+ * such request was billed compute spent to rank someone else's page.
+ *
+ * That traffic was the entire hosting bill: 216.74K function invocations
+ * against 224.62K edge requests, i.e. ~96% of all traffic executing a function
+ * on a site that is otherwise fully prerendered. The AI-crawler denials and the
+ * WAF ruleset below were already in place; this closes the remaining hole,
+ * which was ordinary search crawlers doing exactly what they were permitted to.
+ *
+ * `/search` is disallowed for the same reason with an extra one: it is dynamic
+ * and its query space is unbounded, so it is an infinite crawl surface.
+ *
+ * What stays open is everything worth indexing: the home page, /about, and all
+ * of /wikiqorgi — original writing that canonicals to wikiqo itself and is
+ * prerendered static, so crawling it costs nothing per request.
+ *
+ * Reversing this is a one-line change if the mirror is ever given
+ * self-referencing canonicals and a bounded, cached page set.
+ *
+ * Inline article links additionally carry rel="nofollow" (see lib/sanitize.ts).
  */
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -45,7 +65,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: "/api/",
+        disallow: ["/api/", "/wiki/", "/search"],
       },
       ...AI_CRAWLERS.map((userAgent) => ({
         userAgent,

@@ -1,6 +1,4 @@
 import type { MetadataRoute } from "next";
-import { getPopularArticleTitles } from "@/lib/wikipedia";
-import { articleHref } from "@/lib/links";
 import {
   WIKIQORGI_ARTICLES,
   WIKIQORGI_SECTIONS,
@@ -9,25 +7,27 @@ import {
 } from "@/content/wikiqorgi";
 import { SITE_URL } from "@/lib/site";
 
-// Regenerated daily: the popular-article set shifts slowly and the pageviews
-// source it's built from updates roughly once per day.
-export const revalidate = 86400;
-
 /**
- * Site sitemap: the real wikiqo routes plus the most-viewed Wikipedia articles
- * (see getPopularArticleTitles). We deliberately do not enumerate all ~7M
- * articles — that isn't feasible to generate at request time. The popular set
- * stays well under the 50,000-URL per-file limit, so a single sitemap suffices.
+ * Site sitemap: wikiqo's own pages only.
  *
- * Note that article pages currently canonical-point at en.wikipedia.org (see
- * wiki/[slug]/generateMetadata), so search engines will crawl these URLs but
- * index Wikipedia's copy rather than ours. Dropping that canonical is what
- * would make these entries earn their crawl budget.
+ * The mirrored /wiki/ articles used to be listed here, seeded from
+ * getPopularArticleTitles(). They were removed along with the robots.txt change
+ * that disallows /wiki/ — advertising URLs in a sitemap that robots.txt forbids
+ * is a contradiction crawlers report as an error, so the two have to move
+ * together. The reason for both is in app/robots.ts: those pages are dynamic,
+ * cost a function invocation and two Wikipedia round-trips each, and canonical
+ * to en.wikipedia.org, so crawling them could never have indexed us.
+ *
+ * /search is gone for the same reason — disallowed, and an unbounded query
+ * space besides.
+ *
+ * Dropping the popular-titles fetch also makes this route fully static: there
+ * is no longer any request-time data here, so the daily `revalidate` that used
+ * to sit above went with it. The file is now prerendered once per deploy.
  */
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = [
     { url: `${SITE_URL}/`, changeFrequency: "daily", priority: 1 },
-    { url: `${SITE_URL}/search`, changeFrequency: "weekly", priority: 0.6 },
     { url: `${SITE_URL}/about`, changeFrequency: "monthly", priority: 0.5 },
     { url: `${SITE_URL}/wikiqorgi`, changeFrequency: "monthly", priority: 0.9 },
     ...WIKIQORGI_SECTIONS.map((section) => ({
@@ -45,14 +45,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
   ];
 
-  const titles = await getPopularArticleTitles();
-  const lastModified = new Date();
-  const articleEntries: MetadataRoute.Sitemap = titles.map((title) => ({
-    url: `${SITE_URL}${articleHref(title)}`,
-    lastModified,
-    changeFrequency: "weekly",
-    priority: 0.7,
-  }));
-
-  return [...staticEntries, ...articleEntries];
+  return staticEntries;
 }
