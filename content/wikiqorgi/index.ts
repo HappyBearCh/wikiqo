@@ -139,6 +139,16 @@ import { theHeart } from "./the-heart";
 import { theKidney } from "./the-kidney";
 import { theLiver } from "./the-liver";
 import { theNervousSystem } from "./the-nervous-system";
+import { clocks } from "./clocks";
+import { timeZones } from "./time-zones";
+import { leapSeconds } from "./leap-seconds";
+import { circadianRhythms } from "./circadian-rhythms";
+import { atomicClocks } from "./atomic-clocks";
+import { theArch } from "./the-arch";
+import { domes } from "./domes";
+import { skyscrapers } from "./skyscrapers";
+import { bridges } from "./bridges";
+import { earthquakeEngineering } from "./earthquake-engineering";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -147,7 +157,7 @@ import { theNervousSystem } from "./the-nervous-system";
  * Everything below is a compile-time constant. No database, no API, no fetch —
  * the index and every article page prerender to static HTML at build time.
  *
- * Shape: sections of 5 articles each, currently 28. The target has been raised
+ * Shape: sections of 5 articles each, currently 30. The target has been raised
  * twice — 50, then 100 at twenty sections, and the shelf is now open-ended and
  * grows a section or two at a time.
  *
@@ -415,6 +425,22 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "Five organs and the problem each one solves: an immune system whose hard job is restraint, a pump proved by arithmetic, a filter that discards everything and takes almost all of it back, a chemical plant that decides your dose, and a signalling network slower than a car.",
     hue: "var(--rb-1)",
     articles: [immuneSystem, theHeart, theKidney, theLiver, theNervousSystem],
+  },
+  {
+    id: "keeping-time",
+    title: "Keeping time",
+    blurb:
+      "How the hour stopped changing length, why the railways abolished local noon, the extra second inserted by hand since 1972, the clock in every cell that runs twelve minutes slow, and instruments precise enough that lifting one changes its rate.",
+    hue: "var(--rb-5)",
+    articles: [clocks, timeZones, leapSeconds, circadianRhythms, atomicClocks],
+  },
+  {
+    id: "how-buildings-stand-up",
+    title: "How buildings stand up",
+    blurb:
+      "Five structural problems and their answers: stone that cannot be stretched, a dome that tears itself open at the base, towers limited by wind and lifts rather than weight, bridges sorted by where the tension goes, and buildings designed to be wrecked without falling.",
+    hue: "var(--rb-2)",
+    articles: [theArch, domes, skyscrapers, bridges, earthquakeEngineering],
   },
 ];
 

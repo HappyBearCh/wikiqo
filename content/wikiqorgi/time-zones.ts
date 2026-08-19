@@ -1,0 +1,43 @@
+import type { RewrittenArticle } from "./types";
+
+export const timeZones: RewrittenArticle = {
+  slug: "time-zones",
+  title: "Time zones: the railways abolished local noon because timetables could not survive it",
+  sourceTitle: "Time zone",
+  dek: "Every town once set its clocks by its own sun, which meant a train crossing England passed through hundreds of slightly different times.",
+  standfirst:
+    "Before the 1840s, time was local everywhere and this caused nobody any trouble, because nothing moved fast enough for the differences to matter. The railway changed that in a decade: a timetable requires that everyone on the line agree what time it is, and a signalling system that prevents collisions requires it absolutely. The zones that resulted are not geometric divisions of the globe but political ones, and their boundaries record exactly whom each country wanted to be synchronised with.",
+  readingMinutes: 7,
+  html: `
+<h2 id="Local_time">When every town had its own time</h2>
+<p>Local mean time sets noon at the moment the sun is highest, which happens at a different instant at every meridian. Britain spans enough longitude for Bristol to run about ten minutes behind London; the United States spans several hours.</p>
+<p>This was invisible for as long as travel and communication were slow. A coach taking two days from London to Exeter loses time gradually against the clocks it passes, and nobody notices a discrepancy accumulating at walking pace. Local time was also authoritative in the strongest sense: it was determined by the sun, verifiable by anyone, and required no coordination.</p>
+<p>The railway broke this in two distinct ways. A published timetable listing departure times becomes ambiguous when every station keeps its own clock, and a passenger's watch becomes wrong the moment the train moves. More seriously, single-track railways prevented collisions by scheduling — a train had authority to occupy a section for a defined period — and if the two ends of that section disagreed about what time it was, the safety system was compromised.</p>
+<p>The Great Western Railway adopted London time across its network in 1840, and other British companies followed. For some years many towns ran two times at once, with station clocks on railway time and church clocks on local time, and a few public clocks were fitted with two minute hands to show both. Britain standardised in practice by the mid-1850s and only regularised it in statute in 1880, by which point the argument was long over.</p>
+
+<h2 id="Standardisation">Nineteen minutes and forty-two seconds</h2>
+<p>North America had the same problem at continental scale. By the 1880s American railroads were operating on dozens of different company times, and a large station might display half a dozen clocks.</p>
+<p>The railways solved it themselves, without legislation. On 18 November 1883 the North American railroads adopted five standard zones, an event reported at the time as the day of two noons, since clocks in the eastern part of each zone were set back and the hour was lived through twice. The United States government did not codify the arrangement until 1918.</p>
+<p>The international version was settled at the International Meridian Conference in Washington in October 1884, which chose Greenwich as the prime meridian, largely because a large majority of the world's shipping already used charts based on it. France abstained, continued to use the Paris meridian, and did not fully concede until 1911 — and then did so in a law that defined French time as Paris mean time delayed by nine minutes and twenty-one seconds, which is Greenwich by another name, a formulation that preserved the point while conceding the substance.</p>
+<p>Sandford Fleming, the Canadian engineer usually credited with promoting worldwide standard time, proposed a system of twenty-four hourly zones after, by his account, missing a train in Ireland because of a printed timetable ambiguity. His scheme was broadly what emerged, minus the universal day he also wanted.</p>
+
+<h2 id="Politics">The map is political, not geometric</h2>
+<p>A neat scheme would divide the globe into twenty-four bands of fifteen degrees each. The actual map is nothing like that, and every deviation is a decision about affiliation.</p>
+<p>China spans about five geographic hours and keeps one time, set to Beijing, so the sun in the far west rises hours after the clock says morning and the region operates on an informal parallel schedule. India uses a single half-hour offset for a country spanning nearly two hours. Spain sits on the meridian of Britain and keeps central European time, a legacy of a 1940 alignment with Germany that was never reversed, which is why Spanish daily life appears to run late by clock and is not late by the sun.</p>
+<p>Fractional offsets exist wherever a country wanted its own noon rather than a neighbour's: half-hour offsets in India, Iran, Afghanistan, Myanmar and parts of Australia, and forty-five-minute offsets in Nepal and in the Chatham Islands. Nepal's exists in relation to India's, which is the whole point of it.</p>
+<p>Zones also move for reasons of trade and politics. Samoa jumped the date line at the end of 2011, skipping 30 December entirely, to sit on the same side as Australia and New Zealand rather than the United States. North Korea created a half-hour offset in 2015 and abandoned it in 2018 during a diplomatic thaw. Russia has repeatedly altered its zone count.</p>
+<p>The date line itself is not a straight meridian but a line that swerves around territories that wish to keep their islands on one date, and it exists because a globe divided into zones has to have a seam somewhere.</p>
+
+<h2 id="DST">Daylight saving, which nobody can settle</h2>
+<p>Shifting clocks forward in summer was proposed in the early twentieth century and adopted widely during the First World War, on the argument that it saved fuel by reducing evening lighting demand.</p>
+<p>That argument was reasonable when lighting dominated household electricity use and is no longer clearly true. Modern studies find effects on energy consumption that are small and inconsistent in sign, because reduced evening lighting is offset by increased evening cooling in warm climates and increased morning heating in cold ones.</p>
+<p>What is better established is that the transitions themselves are costly. The spring change is associated with measurable short-term increases in road collisions, workplace injuries and cardiac events, and the effects are attributed to acute sleep loss and to the mismatch between social and biological timing.</p>
+<p>The political stalemate is instructive. Public opinion in many countries favours ending the twice-yearly change, and then divides evenly on which time to keep — permanent summer time gives light evenings and dark winter mornings, permanent standard time does the reverse, and sleep researchers generally favour permanent standard time on the grounds that morning light is what sets the body clock. The European Union voted in 2019 to abolish the change and has not implemented it, because member states could not agree which time to stop on.</p>
+
+<h2 id="Software">Why this is a computing problem</h2>
+<p>Time zones are one of the standard hard problems in software, and the reason is that they are a database of political decisions rather than a calculation.</p>
+<p>The IANA time zone database records every offset change, daylight saving rule and boundary alteration for every region, back to 1970 for practical purposes and further where known. It is updated many times a year because governments keep changing the rules, sometimes with days of notice, and every operating system, phone and server relies on it.</p>
+<p>Its maintenance has not been smooth. The project was hosted informally for decades, was threatened by a lawsuit in 2011 over material quoted in its historical comments, and moved under institutional shelter afterwards. A large share of the world's computing infrastructure depended on a file maintained largely by volunteers.</p>
+<p>The failure modes are constant and specific: times that do not exist, because the clock jumped over them in spring; times that occur twice, in autumn; historical timestamps whose offset differed from today's; and durations computed by subtracting local times, which are wrong across any transition. The standard advice — store instants in a fixed reference such as UTC, convert only for display, and never store a future appointment as an instant if a government might move the offset first — exists because each of those mistakes has caused real outages.</p>
+`,
+};
