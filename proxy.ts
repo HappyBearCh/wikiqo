@@ -16,9 +16,17 @@ import { WIKIPEDIA_ARTICLE_BASE, titleFromSlug } from "@/lib/links";
  * ~45,000 requests a day — a crawler walking Wikipedia's title space, one
  * distinct title per request, essentially never repeating.
  *
- * Proxy runs on the edge, before the render pipeline. A declined request costs
- * a set lookup and a 307 with an empty body, billed as an edge request rather
- * than as function compute.
+ * Proxy runs before the render pipeline, so a declined request costs a set
+ * lookup and a 307 with an empty body instead of the render.
+ *
+ * It does not make the request free. Vercel logs these as source=middleware,
+ * not as edge requests, so the invocation is still billed — measured on the
+ * first deployment of this file: 797 middleware entries, 779 redirects and 6
+ * function renders in 15 minutes, where before essentially every one of those
+ * would have been a render. What goes away is everything that made a render
+ * expensive: two Wikipedia round-trips, the sanitize/parse/keyword passes, and
+ * ~71KB of origin transfer per request. Invocation count is the floor, and
+ * only something ahead of the application — a WAF rule — can go below it.
  *
  * The route's own redirect is not a substitute, even though it returns the same
  * status and Location. redirect() thrown from a Server Component unwinds a
