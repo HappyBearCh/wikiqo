@@ -1,3 +1,4 @@
+import { isRenderableTitle } from "@/content/popular-titles";
 import type { RewrittenArticle, WikiqorgiSection } from "./types";
 import { blackHole } from "./black-hole";
 import { photosynthesis } from "./photosynthesis";
@@ -522,6 +523,31 @@ const DUPLICATE_SLUGS = ALL_WIKIQORGI_SLUGS.filter(
 if (DUPLICATE_SLUGS.length > 0) {
   throw new Error(
     `wikiqorgi: section ids and article slugs share one URL namespace, but these are used twice: ${DUPLICATE_SLUGS.join(", ")}`,
+  );
+}
+
+/**
+ * Every article links to its source on /wiki/, and /wiki/ only renders titles
+ * in content/popular-titles.ts — anything else is handed straight to Wikipedia
+ * (see app/wiki/[slug]/page.tsx). A wikiqorgi subject is chosen for being worth
+ * writing about rather than for trending, so most of them are not in the
+ * pageviews set and are listed explicitly in LINKED_TITLES instead.
+ *
+ * That list is maintained by hand, so assert here that it still covers the
+ * shelf. Like the slug check above this runs at import time, which during
+ * `next build` means adding an article without adding its source title fails
+ * the build — rather than shipping an article whose one outbound link quietly
+ * bounces the reader off the site.
+ */
+const UNRENDERABLE_SOURCES = WIKIQORGI_ARTICLES.filter(
+  (article) => !isRenderableTitle(article.sourceTitle),
+);
+
+if (UNRENDERABLE_SOURCES.length > 0) {
+  throw new Error(
+    "wikiqorgi: these articles' sourceTitles are missing from LINKED_TITLES in " +
+      "content/popular-titles.ts, so their source links would redirect to " +
+      `Wikipedia: ${UNRENDERABLE_SOURCES.map((a) => `${a.slug} (${a.sourceTitle})`).join(", ")}`,
   );
 }
 

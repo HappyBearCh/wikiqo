@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { headers } from "next/headers";
-import { notFound } from "next/navigation";
-import { getArticleHtml, getFileInfo, getSummary, wikipediaUrlFor } from "@/lib/wikipedia";
+import { notFound, redirect } from "next/navigation";
+import { getArticleHtml, getFileInfo, getSummary } from "@/lib/wikipedia";
 import { sanitizeWikiHtml } from "@/lib/sanitize";
-import { articleHref, isFileNamespace, isNonArticleNamespace, titleFromSlug } from "@/lib/links";
+import {
+  articleHref,
+  isFileNamespace,
+  isNonArticleNamespace,
+  titleFromSlug,
+  wikipediaUrlFor,
+} from "@/lib/links";
 import { isRenderableTitle } from "@/content/popular-titles";
 import { OG_BASE } from "@/lib/site";
 import { parseArticleStructure } from "@/lib/structure";
@@ -12,9 +17,16 @@ import { keywordsFromHtml } from "@/lib/keywords";
 import ArticleStructureLazy from "@/components/ArticleStructureLazy";
 import TextBanner from "@/components/TextBanner";
 
-// This route is deliberately left `ƒ (Dynamic)` — do not add a route-level
-// `revalidate` + empty `generateStaticParams` here. That was tried, measured,
-// and reverted.
+// Keep this route `ƒ (Dynamic)` — do not add a route-level `revalidate` +
+// empty `generateStaticParams` here. That was tried, measured, and reverted.
+//
+// `force-dynamic` below is what holds that now. It used to be implicit: the
+// route called headers() to read the Referer, and a dynamic API opts a segment
+// out of caching on its own. That call is gone (see the note above
+// generateMetadata), and without the export Next would derive the segment's
+// revalidate from the fetches in lib/wikipedia.ts — which ask for
+// `revalidate: ONE_YEAR` — and start caching every rendered path for a year.
+// That is precisely the failure measured here.
 //
 // ISR pays off when a bounded set of pages is read repeatedly. This route is
 // the opposite: the traffic hitting it is a crawler enumerating Wikipedia's
@@ -37,41 +49,65 @@ import TextBanner from "@/components/TextBanner";
 // If the crawl is ever bounded (see the sitemap's popular-title set), caching
 // this route becomes correct again — but only together with
 // `dynamicParams: false`, so the cached set stays finite.
+export const dynamic = "force-dynamic";
 
 interface ArticlePageProps {
   params: Promise<{ slug: string }>;
 }
 
 /**
- * Whether this request is a navigation from somewhere else on wikiqo — in
- * practice, a reader clicking a search result or an in-article link.
+ * There used to be an escape hatch here: a request carrying a same-origin
+ * `Referer` was rendered whatever its title, on the reasoning that a crawler
+ * enumerating URLs has no page to have come from and so could not produce one.
  *
- * This is the escape hatch on the renderable-title gate. Search returns any
- * article Wikipedia has, so gating on the popular set alone would leave most
- * search results dead. A same-origin Referer distinguishes "a person clicked
- * this" from "something is walking the title space", because a crawler
- * enumerating URLs has no page to have come from.
+ * It was measured, and it was the whole bill. In 24 hours the route took 54,164
+ * requests across 45,642 distinct titles and returned 200 to 40,415 of them —
+ * titles like `RMAS_Goosander` and `Paya_Rumput` that nothing on this site
+ * links to. So the client does send a same-origin Referer; it also clears the
+ * Vercel challenge page, so it is running a browser engine and can produce any
+ * header a check might ask for. Nothing request-shaped was going to separate it
+ * from a reader.
  *
- * It is a heuristic and it is spoofable, and it is worth what it costs: a
- * crawler that starts forging same-origin Referers can be dealt with then. Note
- * the failure mode is a 404 on an uncommon article opened without a referrer
- * (a shared link, a new tab), not a wrong page.
+ * The popular set is therefore the whole gate now, and a title outside it is
+ * handed to Wikipedia instead of rendered. proxy.ts makes the same decision one
+ * hop earlier, on the edge, so in the normal case a declined request never
+ * reaches this file. The checks below are what guarantee the behaviour; the
+ * proxy is what makes it cheap.
  */
-async function cameFromThisSite(): Promise<boolean> {
-  const h = await headers();
-  const referer = h.get("referer");
-  const host = h.get("host");
-  if (!referer || !host) return false;
+
+/**
+ * Fetches the two Wikipedia documents an article renders from, returning null
+ * if either is missing or Wikipedia declines to serve it.
+ *
+ * The decline case is not hypothetical: 9,337 requests in that same 24-hour
+ * window came back 429 Too Many Requests from Wikipedia — the crawl was costing
+ * them enough to be rate-limited — and each one threw, becoming a 500 rendered
+ * through error.tsx. That is the most expensive possible answer to a request we
+ * were never going to satisfy. Bounding the crawl is what stops them; degrading
+ * the rest to a redirect is both cheaper and more use to a reader than an error
+ * page.
+ */
+async function fetchArticle(title: string) {
   try {
-    return new URL(referer).host === host;
+    const [summary, html] = await Promise.all([getSummary(title), getArticleHtml(title)]);
+    return summary && html ? { summary, html } : null;
   } catch {
-    return false;
+    return null;
   }
 }
 
 export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
   const { slug } = await params;
   const title = titleFromSlug(slug);
+
+  // The gate, first thing and ahead of every other branch, so nothing below it
+  // runs for a title we aren't mirroring. It has to sit in the same place and
+  // read the same way as the one in the page component, or a reader would get a
+  // rendered article under "not found" head tags. proxy.ts normally redirects
+  // these before the route is entered at all.
+  if (!isRenderableTitle(title)) {
+    redirect(wikipediaUrlFor(title));
+  }
 
   // File:/Image:/Media: pages have no REST summary — describe them directly and
   // point search engines at the original Wikipedia file page.
@@ -87,24 +123,17 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   }
 
   // Non-article namespaces resolve to nothing renderable, so skip the summary
-  // fetch entirely and go straight to the not-found head tags.
+  // fetch entirely and go straight to the not-found head tags. Unreachable via
+  // the gate above (the popular set holds no namespaced titles), kept because
+  // the gate is a policy that can widen and this is a fact about the namespace.
   if (isNonArticleNamespace(title)) {
     return { title: "Article not found", robots: { index: false, follow: true } };
   }
 
-  // Same short-circuit for titles outside the renderable set — bail before the
-  // summary fetch, so a rejected request never touches Wikipedia. The referer
-  // check has to match the one in the page component below, or a reader
-  // arriving from search would get a rendered article under a "not found"
-  // title. See content/popular-titles.ts for why this gate exists.
-  if (!isRenderableTitle(title) && !(await cameFromThisSite())) {
-    return { title: "Article not found", robots: { index: false, follow: true } };
-  }
+  const summary = await getSummary(title).catch(() => null);
 
-  const summary = await getSummary(title);
-
-  // The page then calls notFound(); the head tags actually come from
-  // not-found.tsx in this segment.
+  // The page then redirects to Wikipedia; these head tags are only ever seen by
+  // a client that ignores the redirect.
   if (!summary) {
     return { title: "Article not found", robots: { index: false, follow: true } };
   }
@@ -146,38 +175,49 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const { slug } = await params;
   const title = titleFromSlug(slug);
 
+  // The cost gate, and now the only one. Everything above this line is a string
+  // test; everything below it is two Wikipedia round-trips, a sanitize pass, a
+  // structure parse, a keyword pass and a full render. A crawler enumerating
+  // Wikipedia's title space lands outside the renderable set essentially
+  // always, and is sent to the article it was after on Wikipedia itself, which
+  // is where this page's canonical points anyway.
+  //
+  // See content/popular-titles.ts for the measurements behind this and for how
+  // to widen or remove it.
+  if (!isRenderableTitle(title)) {
+    redirect(wikipediaUrlFor(title));
+  }
+
   // Media-namespace pages (File:/Image:/Media:) aren't articles — there's no
   // Parsoid body to fetch, so we embed the real Wikipedia file page in an
   // iframe rather than 404 on a missing summary.
+  //
+  // Reachable only if a File: title is added to the popular set by hand. The
+  // generated set holds no namespaced titles, and nothing here links to one any
+  // more — lib/sanitize.ts sends Wikipedia's own /wiki/File:… hrefs off-site
+  // along with the rest of the link graph.
   if (isFileNamespace(title)) {
     return <FileView title={title} />;
   }
 
   // Talk:, Template talk:, Category:, Portal: and friends have no article body.
-  // Bail before the fetches rather than paying two Wikipedia round-trips to
-  // learn there's nothing to render — the crawl hitting this route walks
-  // thousands of them.
+  // Same reachability note as above: the gate already turns these away, and
+  // this stays as a statement about the namespace rather than about the gate.
   if (isNonArticleNamespace(title)) {
     notFound();
   }
 
-  // The cost gate. Everything above this line is a string test; everything
-  // below it is two Wikipedia round-trips, a sanitize pass, a structure parse,
-  // a keyword pass and a full render. Automated traffic enumerating Wikipedia's
-  // title space lands outside the renderable set essentially always, so it is
-  // turned away here having cost an invocation and nothing more.
-  //
-  // See content/popular-titles.ts for the measurements behind this and for how
-  // to widen or remove it.
-  if (!isRenderableTitle(title) && !(await cameFromThisSite())) {
-    notFound();
+  const article = await fetchArticle(title);
+
+  // Missing on Wikipedia, or Wikipedia declined to serve it. Either way the
+  // reader is better off there than on an error page here, and we would rather
+  // pay for a redirect than for a render. Called outside fetchArticle's
+  // try/catch: redirect() signals by throwing.
+  if (!article) {
+    redirect(wikipediaUrlFor(title));
   }
 
-  const [summary, html] = await Promise.all([getSummary(title), getArticleHtml(title)]);
-
-  if (!summary || !html) {
-    notFound();
-  }
+  const { summary, html } = article;
 
   const sanitizedHtml = sanitizeWikiHtml(html);
   const sanitizedDisplayTitle = sanitizeWikiHtml(summary.displaytitle);

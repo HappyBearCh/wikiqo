@@ -1815,11 +1815,71 @@ const POPULAR_TITLES = new Set([
   "érik_lira", "étude", "évian-les-bains", "ögedei_khan", "ørjan_nyland", "şenol_güneş_sports_complex", "šenturška_gora", "željko_obradović",
 ]);
 
+/**
+ * Every Wikipedia title the wikiqorgi shelf links to, one per rewritten
+ * article (its `sourceTitle`). These are subjects wikiqo chose to write about,
+ * not subjects that happened to trend, so 149 of the 160 are absent from the
+ * pageviews set above — and without them every "read the source article" link
+ * on our own originals would bounce the reader to Wikipedia.
+ *
+ * Listed literally rather than imported from content/wikiqorgi so the article
+ * route doesn't pull the whole shelf's prose into its bundle. The list can
+ * therefore drift; content/wikiqorgi/index.ts asserts at import time that every
+ * sourceTitle appears here, so adding an article without updating this fails
+ * the build rather than quietly sending readers off-site.
+ *
+ * Regenerate with:
+ *   grep -h 'sourceTitle:' content/wikiqorgi/*.ts | sort -u
+ */
+const LINKED_TITLES = [
+  "0", "1854 Broad Street cholera outbreak", "Abiogenesis", "Alan Turing",
+  "Albert Einstein", "Anesthesia", "Animal migration", "Antimicrobial resistance",
+  "Arch", "Artificial intelligence", "Assembly line", "Association football",
+  "Atom", "Atomic clock", "Bicycle", "Black hole",
+  "Blood transfusion", "Border", "Bridge", "Bureaucracy",
+  "Calendar", "Camouflage", "Cartography", "Cell (biology)",
+  "Census", "Cephalopod intelligence", "Chess", "Circadian rhythm",
+  "Citizenship", "Clock", "Cloud", "Coffee",
+  "Cognitive bias", "Collective action problem", "Color vision", "Concrete",
+  "Consciousness", "Containerization", "Control of fire by early humans", "Copyright",
+  "Coral reef", "Cretaceous–Paleogene extinction event", "Crowd psychology", "Cryptography",
+  "Deep sea", "Dictionary", "DNA", "Dome",
+  "Earthquake engineering", "Eight-hour day", "Electoral system", "Electric battery",
+  "Electrical grid", "Encyclopedia", "Entropy", "Eusociality",
+  "Evolution", "Exoplanet", "Eye", "Factory",
+  "Fermentation in food processing", "Flowering plant", "Fungus", "Game theory",
+  "Germ theory of disease", "Glass", "Glasses", "Go (game)",
+  "Gödel's incompleteness theorems", "Great Depression", "Green Revolution", "Habeas corpus",
+  "Haber process", "Heart", "History of longitude", "History of writing",
+  "Human microbiome", "Ice age", "Immune system", "Induced demand",
+  "Infinity", "Inflation", "Insulin", "Insurance",
+  "International law", "Internet", "Jazz", "Joint-stock company",
+  "Jury", "Kidney", "Leap second", "Lichen",
+  "Light", "Lightning", "Liver", "Medical imaging",
+  "Mold", "Money", "Monsoon", "Moon",
+  "Mount Everest", "Mycorrhiza", "Nationalism", "Nervous system",
+  "Nuclear power", "Optical illusion", "Overfishing", "Pain",
+  "Passport", "Peer review", "Photography", "Photosynthesis",
+  "Pigment", "Plastic", "Plate tectonics", "Play (activity)",
+  "Playing card", "Poaceae", "Pollination", "Printing press",
+  "Probability theory", "Propaganda", "Property", "Proto-Indo-European language",
+  "Quantum mechanics", "Rail transport", "Randomized controlled trial", "Refrigeration",
+  "Refugee", "Renaissance", "Replication crisis", "Roman Empire",
+  "Sanitation", "Scientific method", "Seed", "Semiconductor",
+  "Sign language", "Silk Road", "Skyscraper", "Sleep",
+  "Sound recording and reproduction", "Spore", "Steam engine", "Steel",
+  "Sun", "Telescope", "Thermohaline circulation", "Time zone",
+  "Trade union", "Translation", "Tree", "Tropical cyclone",
+  "Vaccine", "Venom", "Virus", "Water",
+  "Weather forecasting", "Whale", "Wheel", "Zoning",
+];
+
 // The hand-picked shelf on the home page and the empty search page links
 // straight into /wiki/, so those titles have to be renderable no matter what
 // the pageviews API happened to return this quarter. Folding them in here keeps
-// that guarantee in one place rather than relying on them staying popular.
-for (const { title } of FEATURED) {
+// that guarantee in one place rather than relying on them staying popular. The
+// wikiqorgi source titles above are folded in for the same reason.
+for (const title of [...FEATURED.map((f) => f.title), ...LINKED_TITLES]) {
   POPULAR_TITLES.add(title.trim().replace(/\s+/g, "_").toLowerCase());
 }
 
