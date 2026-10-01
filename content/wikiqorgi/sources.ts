@@ -760,7 +760,7 @@ export const WIKIQORGI_SOURCES: Record<string, Source[]> = {
   "the-kidney": [
     { author: "Homer W. Smith", title: "From Fish to Philosopher", year: 1953, publication: "Little, Brown" },
     { author: "John P. Merrill, Joseph E. Murray, J. Hartwell Harrison and Warren R. Guild", title: "Successful homotransplantation of the human kidney between identical twins", year: 1956, publication: "JAMA" },
-    { author: "Willem J. Kolff", title: "The Artificial Kidney", year: 1946 },
+    { author: "Willem J. Kolff", title: "De kunstmatige nier (The Artificial Kidney)", year: 1946, publication: "Doctoral thesis, University of Groningen" },
   ],
   "the-liver": [
     { author: "G. M. Higgins and R. M. Anderson", title: "Experimental pathology of the liver. I. Restoration of the liver of the white rat following partial surgical removal", year: 1931, publication: "Archives of Pathology" },
