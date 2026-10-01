@@ -8,6 +8,7 @@ export const lightning: RewrittenArticle = {
   standfirst:
     "Lightning is the most familiar high-energy phenomenon on the planet and one of the least completely explained. The physics of the strike — the stepped leader, the return stroke, the thunder — has been photographed and measured in detail. The prior question of how a thundercloud manages to separate billions of coulombs of charge against the electrical force pulling them back together has a leading answer that is still not fully settled.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Charging">The part that is not settled</h2>
 <p>A thundercloud ends up with a negative charge in its middle and lower region and a positive charge near the top, with a smaller positive pocket at the base. Producing that arrangement requires work, because separating charge against its own attraction costs energy.</p>

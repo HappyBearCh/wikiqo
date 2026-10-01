@@ -9,6 +9,12 @@ import {
   sectionHref,
 } from "@/content/wikiqorgi";
 import { OG_BASE } from "@/lib/site";
+
+// OG_BASE minus its image. This segment has its own opengraph-image.tsx, and an
+// explicit openGraph.images here would override it: measured against `next
+// start`, the page kept pointing at the generic /opengraph-image until the
+// field was dropped.
+const OG_WITHOUT_IMAGE = { siteName: OG_BASE.siteName, locale: OG_BASE.locale };
 import ArticleView from "@/components/wikiqorgi/ArticleView";
 import SectionView from "@/components/wikiqorgi/SectionView";
 
@@ -51,7 +57,7 @@ export async function generateMetadata({
       description: section.blurb,
       alternates: { canonical: url },
       openGraph: {
-        ...OG_BASE,
+        ...OG_WITHOUT_IMAGE,
         type: "website",
         url,
         title,
@@ -73,7 +79,7 @@ export async function generateMetadata({
     // original writing, so wikiqo *is* the canonical source for it.
     alternates: { canonical: url },
     openGraph: {
-      ...OG_BASE,
+      ...OG_WITHOUT_IMAGE,
       type: "article",
       url,
       title: article.title,

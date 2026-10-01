@@ -8,6 +8,7 @@ export const cognitiveBias: RewrittenArticle = {
   standfirst:
     "If human judgment simply failed at random there would be nothing to study; errors would scatter and average out. What Kahneman and Tversky demonstrated is that judgment fails in predictable directions, that the deviations are large, and that they persist after they are explained to you. The reason is that the shortcuts producing them are usually the right shortcuts, and the failures are the price of a system that mostly works.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="Heuristics">Shortcuts that usually work</h2>
 <p>The framing that made the field productive was not that people are irrational. It was that people use heuristics — fast rules that substitute an easy question for a hard one — and that these are efficient and occasionally catastrophic in identifiable ways.</p>

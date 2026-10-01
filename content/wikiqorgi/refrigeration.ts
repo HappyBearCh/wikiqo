@@ -8,6 +8,7 @@ export const refrigeration: RewrittenArticle = {
   standfirst:
     "Cold is not a substance and cannot be added to anything. A refrigerator works by moving heat in the direction it does not want to go — out of a cold interior into a warmer room — which costs energy and requires a working fluid that boils at a convenient temperature. Getting that fluid right took a century and produced two of the largest environmental problems of the modern era.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="The_cycle">The cycle</h2>
 <p>The mechanism is a loop exploiting a simple fact: evaporating a liquid absorbs a lot of heat, and condensing a vapour releases it.</p>

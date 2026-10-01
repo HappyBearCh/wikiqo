@@ -8,6 +8,7 @@ export const signLanguage: RewrittenArticle = {
   standfirst:
     "For most of recorded history, signed languages were dismissed as crude gesture systems, and deaf children were forbidden to use them in the belief that it would stop them learning to speak. The linguistics arrived late and was unambiguous: these are complete natural languages, structurally independent of the spoken languages around them, and they demonstrate something no spoken language can — that the human capacity for language has nothing essential to do with the mouth.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="They_are_not_versions_of_anything">They are not versions of anything</h2>
 <p>The most persistent misconception is that a signed language is the local spoken language rendered with the hands. It is not, and the clearest evidence is genealogical.</p>

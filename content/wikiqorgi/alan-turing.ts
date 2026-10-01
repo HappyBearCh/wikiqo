@@ -8,6 +8,7 @@ export const alanTuring: RewrittenArticle = {
   standfirst:
     "Turing's most important paper was not about building anything. It was an attempt to settle a question in mathematical logic, and to settle it he had to define precisely what it means to follow a procedure. The definition he produced described a machine nobody had built, and every computer since has been an instance of it.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="A_question_about_the_limits_of_mathematics">A question about the limits of mathematics</h2>
 <p>The problem Turing set out to solve in 1936 came from David Hilbert, who had asked whether there exists a definite procedure that can determine, for any mathematical statement, whether it is provable. It was the last survivor of a programme aiming to place all of mathematics on complete, decidable foundations — a programme Gödel had already damaged in 1931 by showing that any sufficiently powerful formal system contains true statements it cannot prove.</p>

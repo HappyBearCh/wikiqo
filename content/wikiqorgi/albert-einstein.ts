@@ -8,6 +8,7 @@ export const albertEinstein: RewrittenArticle = {
   standfirst:
     "In 1905 a 26-year-old examiner in the Swiss patent office published four papers. One established that atoms are real. One founded quantum theory and later won him the Nobel Prize. One dismantled absolute time. The fourth, three pages long, contained E = mc². He had no university position, no laboratory, and no research group.",
   readingMinutes: 9,
+  published: "2026-08-16",
   html: `
 <h2 id="A_useful_failure">A useful failure</h2>
 <p>The story that Einstein failed mathematics is false, and he took pains to deny it — he had mastered calculus by fifteen. What is true is more interesting: he was a poor fit for the institution rather than for the subject. He disliked rote instruction and said so, cut lectures at the Zurich Polytechnic to read physics that was not on the syllabus, and irritated his professors enough that when he graduated in 1900 he was the only one in his cohort not offered an assistantship.</p>

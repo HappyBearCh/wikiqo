@@ -8,6 +8,7 @@ export const incompleteness: RewrittenArticle = {
   standfirst:
     "In 1931 Kurt Gödel published a result that terminated the most ambitious programme in the history of mathematics — not by finding an error in it, but by proving that its goal was unreachable in principle. The proof is constructive, exact, and turns on a single trick: getting a formal system to talk about itself.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="What_was_being_attempted">What was being attempted</h2>
 <p>By 1900 mathematics had been alarmed by its own foundations. Paradoxes had turned up in set theory, most famously Russell's — consider the set of all sets that do not contain themselves, and ask whether it contains itself; either answer is contradictory. If such trouble could appear in reasoning that looked obviously sound, what else was unsafe?</p>

@@ -8,6 +8,7 @@ export const whales: RewrittenArticle = {
   standfirst:
     "Whales are the most thorough return journey in evolutionary history. Their ancestors left the water for land, spent tens of millions of years as four-legged animals, and then went back — keeping the lungs, the warm blood and the milk, and rebuilding almost everything else. The fossil sequence documenting it is one of the best transitional records we have.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="The_return">The return</h2>
 <p>That whales are mammals was long obvious from their anatomy, and which mammals they came from was not. Molecular work in the 1990s produced a result that surprised nearly everyone: their closest living relatives are hippos, and the group sits inside the even-toed ungulates alongside cattle, pigs and deer.</p>

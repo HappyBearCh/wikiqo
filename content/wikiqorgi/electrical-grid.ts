@@ -8,6 +8,7 @@ export const electricalGrid: RewrittenArticle = {
   standfirst:
     "A power grid is usually pictured as a distribution network — electricity made somewhere, delivered to you. The more accurate picture is a single enormous machine whose every part is mechanically synchronised, in which generation must equal consumption continuously, because there is essentially nowhere for a surplus to go and nothing to draw a shortfall from.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="The_current_war,_and_why_it_was_won">The current war, and why it was won</h2>
 <p>Edison's first system, opened in Manhattan in 1882, used direct current, and it had a fatal limitation. Transmission losses rise with current, and at the low voltages DC could practically be generated and used at, the losses confined a station to serving perhaps a mile. Electrifying a city meant a power station every few blocks.</p>

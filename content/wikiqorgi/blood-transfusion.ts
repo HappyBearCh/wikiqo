@@ -8,6 +8,7 @@ export const bloodTransfusion: RewrittenArticle = {
   standfirst:
     "Transfusion was attempted from the seventeenth century and produced results so erratic that it was banned in several countries and abandoned as reckless. The pattern made no sense until 1901, when Karl Landsteiner mixed samples from his own laboratory staff and found that some combinations clumped and others did not. Everything about modern transfusion — the letters, the cards, the cross-matching — follows from that one observation.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Early_attempts">The lethal centuries</h2>
 <p>Once William Harvey established in 1628 that blood circulates rather than being consumed, the idea of replacing lost blood became conceivable.</p>

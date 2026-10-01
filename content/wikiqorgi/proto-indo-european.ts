@@ -8,6 +8,7 @@ export const protoIndoEuropean: RewrittenArticle = {
   standfirst:
     "Half the world speaks a descendant of a language that vanished before writing reached the people who spoke it. Nobody wrote a word of Proto-Indo-European. It has been reconstructed entirely by working backwards from its children — and the reconstruction has been tested by prediction and passed, which is why it is science rather than speculation.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="The_observation_that_started_it">The observation that started it</h2>
 <p>In 1786 William Jones, a judge in Calcutta who had learned Sanskrit, delivered a lecture containing the sentence that founded historical linguistics. Sanskrit, he observed, bore to Greek and Latin a resemblance in verb roots and grammar too strong to be accidental — stronger, indeed, than could have arisen by chance — and all three had probably sprung from some common source, which perhaps no longer existed.</p>

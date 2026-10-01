@@ -8,6 +8,7 @@ export const jazz: RewrittenArticle = {
   standfirst:
     "No definition of jazz has ever held. Improvisation is central until you reach the arranged big bands; swing is essential until it isn't; the blues underpins everything until the modal players thin it out. What actually persists is a posture — that a piece of music is a proposal, and the performer's job is to answer it.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="A_city_that_could_not_have_been_designed_better">A city that could not have been designed better</h2>
 <p>Jazz emerged in New Orleans around the turn of the twentieth century because almost nowhere else in America combined the right ingredients. The city had been French and then Spanish before it was American, leaving a Catholic Creole culture with a tradition of formal music education that Black musicians could access. It had Congo Square, where enslaved people had been permitted to gather and drum on Sundays — a rare surviving thread of West African rhythmic practice in North America. It had a port, and with it Caribbean music carrying the Cuban <em>habanera</em> rhythm that Jelly Roll Morton called the "Spanish tinge". It had brass bands, funeral processions, dance halls, and a surplus of military instruments after the Civil War.</p>

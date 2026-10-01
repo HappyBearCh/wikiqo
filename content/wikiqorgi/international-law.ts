@@ -8,6 +8,7 @@ export const internationalLaw: RewrittenArticle = {
   standfirst:
     "There is no world legislature, no compulsory court, and no police force. By the definition of law most people carry around — commands backed by sanctions from a sovereign — international law fails immediately and should be dismissed as etiquette. The awkward fact for that view is that the overwhelming majority of international obligations are complied with routinely and unremarkably, and that states which break them spend enormous effort arguing that they have not.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="Where_the_rules_come_from">Where the rules come from</h2>
 <p>With no legislature, the sources of obligation have to be assembled from what states actually do and say. Four are conventionally recognised.</p>

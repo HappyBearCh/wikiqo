@@ -8,6 +8,7 @@ export const thePassport: RewrittenArticle = {
   standfirst:
     "For most of the nineteenth century, travelling between European states required no papers, and attempts to impose them were abandoned as commercially damaging and administratively absurd. The modern passport regime dates from the First World War, was explicitly a security measure for the duration, and was retained afterwards because states discovered they liked knowing who was entering. It is now the single largest determinant of a person's freedom of movement, and it is allocated at birth.",
   readingMinutes: 7,
+  published: "2026-08-18",
   html: `
 <h2 id="Before">The century without papers</h2>
 <p>The word derives from permission to pass through a port or a gate, and documents of safe conduct are ancient — there is a reference in the Book of Nehemiah to letters requesting safe passage.</p>

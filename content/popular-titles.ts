@@ -1,4 +1,6 @@
 import { FEATURED } from "@/lib/featured";
+import { WIKIQORGI_CATALOG } from "@/content/wikiqorgi/catalog";
+import { renderableTitleKey } from "@/lib/links";
 
 /**
  * The set of Wikipedia titles /wiki/[slug] will render, as a compile-time
@@ -26,10 +28,16 @@ import { FEATURED } from "@/lib/featured";
  * the first letter, so lowercasing can only admit a request that would
  * otherwise be rejected; it cannot reject a valid one.
  *
- * The cost of the gate is coverage: an article outside this set now 404s. To
- * widen it, regenerate over a longer window. To remove the gate entirely, drop
- * the isRenderableTitle() calls in app/wiki/[slug]/page.tsx — nothing else
- * depends on this file.
+ * The cost of the gate is coverage: a title outside this set is not rendered
+ * here. proxy.ts sends it straight to the same article on en.wikipedia.org
+ * with a 307, and the article route does the same if a request gets past the
+ * proxy. The search page and the header search box mark those results as
+ * opening on Wikipedia, so a reader is not surprised by the hop.
+ *
+ * This is a snapshot and goes stale as interest moves. Regenerate it with
+ * `npm run gen:popular-titles` (scripts/generate-popular-titles.mjs); pass
+ * `-- --days=180` to widen it. To remove the gate entirely, drop the
+ * isRenderableTitle() calls in proxy.ts and app/wiki/[slug]/page.tsx.
  *
  * Generated 2026-08-19 — 14232 titles.
  */
@@ -1816,63 +1824,18 @@ const POPULAR_TITLES = new Set([
 ]);
 
 /**
- * Every Wikipedia title the wikiqorgi shelf links to, one per rewritten
- * article (its `sourceTitle`). These are subjects wikiqo chose to write about,
- * not subjects that happened to trend, so 149 of the 160 are absent from the
- * pageviews set above — and without them every "read the source article" link
- * on our own originals would bounce the reader to Wikipedia.
+ * Every wikiqorgi article links to the Wikipedia article it covers, in the
+ * wikiqo reader. A wikiqorgi subject is chosen for being worth writing about
+ * rather than for trending, so most of those titles are not in the pageviews
+ * set above — they are folded in here so that one link never bounces a reader
+ * off the site.
  *
- * Listed literally rather than imported from content/wikiqorgi so the article
- * route doesn't pull the whole shelf's prose into its bundle. The list can
- * therefore drift; content/wikiqorgi/index.ts asserts at import time that every
- * sourceTitle appears here, so adding an article without updating this fails
- * the build rather than quietly sending readers off-site.
- *
- * Regenerate with:
- *   grep -h 'sourceTitle:' content/wikiqorgi/*.ts | sort -u
+ * Read from the generated catalog rather than from content/wikiqorgi so the
+ * article route and the proxy don't pull the whole shelf's prose into their
+ * bundles. content/wikiqorgi/index.ts checks the catalog against the articles
+ * at build time, so this cannot drift.
  */
-const LINKED_TITLES = [
-  "0", "1854 Broad Street cholera outbreak", "Abiogenesis", "Alan Turing",
-  "Albert Einstein", "Anesthesia", "Animal migration", "Antimicrobial resistance",
-  "Arch", "Artificial intelligence", "Assembly line", "Association football",
-  "Atom", "Atomic clock", "Bicycle", "Black hole",
-  "Blood transfusion", "Border", "Bridge", "Bureaucracy",
-  "Calendar", "Camouflage", "Cartography", "Cell (biology)",
-  "Census", "Cephalopod intelligence", "Chess", "Circadian rhythm",
-  "Citizenship", "Clock", "Cloud", "Coffee",
-  "Cognitive bias", "Collective action problem", "Color vision", "Concrete",
-  "Consciousness", "Containerization", "Control of fire by early humans", "Copyright",
-  "Coral reef", "Cretaceous–Paleogene extinction event", "Crowd psychology", "Cryptography",
-  "Deep sea", "Dictionary", "DNA", "Dome",
-  "Earthquake engineering", "Eight-hour day", "Electoral system", "Electric battery",
-  "Electrical grid", "Encyclopedia", "Entropy", "Eusociality",
-  "Evolution", "Exoplanet", "Eye", "Factory",
-  "Fermentation in food processing", "Flowering plant", "Fungus", "Game theory",
-  "Germ theory of disease", "Glass", "Glasses", "Go (game)",
-  "Gödel's incompleteness theorems", "Great Depression", "Green Revolution", "Habeas corpus",
-  "Haber process", "Heart", "History of longitude", "History of writing",
-  "Human microbiome", "Ice age", "Immune system", "Induced demand",
-  "Infinity", "Inflation", "Insulin", "Insurance",
-  "International law", "Internet", "Jazz", "Joint-stock company",
-  "Jury", "Kidney", "Leap second", "Lichen",
-  "Light", "Lightning", "Liver", "Medical imaging",
-  "Mold", "Money", "Monsoon", "Moon",
-  "Mount Everest", "Mycorrhiza", "Nationalism", "Nervous system",
-  "Nuclear power", "Optical illusion", "Overfishing", "Pain",
-  "Passport", "Peer review", "Photography", "Photosynthesis",
-  "Pigment", "Plastic", "Plate tectonics", "Play (activity)",
-  "Playing card", "Poaceae", "Pollination", "Printing press",
-  "Probability theory", "Propaganda", "Property", "Proto-Indo-European language",
-  "Quantum mechanics", "Rail transport", "Randomized controlled trial", "Refrigeration",
-  "Refugee", "Renaissance", "Replication crisis", "Roman Empire",
-  "Sanitation", "Scientific method", "Seed", "Semiconductor",
-  "Sign language", "Silk Road", "Skyscraper", "Sleep",
-  "Sound recording and reproduction", "Spore", "Steam engine", "Steel",
-  "Sun", "Telescope", "Thermohaline circulation", "Time zone",
-  "Trade union", "Translation", "Tree", "Tropical cyclone",
-  "Vaccine", "Venom", "Virus", "Water",
-  "Weather forecasting", "Whale", "Wheel", "Zoning",
-];
+const LINKED_TITLES = WIKIQORGI_CATALOG.map((entry) => entry.sourceTitle);
 
 // The hand-picked shelf on the home page and the empty search page links
 // straight into /wiki/, so those titles have to be renderable no matter what
@@ -1880,7 +1843,7 @@ const LINKED_TITLES = [
 // that guarantee in one place rather than relying on them staying popular. The
 // wikiqorgi source titles above are folded in for the same reason.
 for (const title of [...FEATURED.map((f) => f.title), ...LINKED_TITLES]) {
-  POPULAR_TITLES.add(title.trim().replace(/\s+/g, "_").toLowerCase());
+  POPULAR_TITLES.add(renderableTitleKey(title));
 }
 
 /**
@@ -1888,5 +1851,14 @@ for (const title of [...FEATURED.map((f) => f.title), ...LINKED_TITLES]) {
  * (spaces, not underscores), as produced by titleFromSlug.
  */
 export function isRenderableTitle(title: string): boolean {
-  return POPULAR_TITLES.has(title.trim().replace(/\s+/g, "_").toLowerCase());
+  return POPULAR_TITLES.has(renderableTitleKey(title));
+}
+
+/**
+ * Every key in the set, for /search-index.json — the header search box uses it
+ * to mark suggestions that will open on Wikipedia rather than here. Checked in
+ * the browser with the same renderableTitleKey().
+ */
+export function renderableTitleKeys(): string[] {
+  return [...POPULAR_TITLES];
 }

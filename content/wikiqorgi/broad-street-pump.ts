@@ -8,6 +8,7 @@ export const broadStreetPump: RewrittenArticle = {
   standfirst:
     "The story is told as a triumph: a doctor plots deaths on a map, spots the cluster, removes the pump handle, and the outbreak ends. Almost every element of that is partly wrong — the outbreak was already fading, the map came after the conclusion, and Snow's argument was formally rejected by the authorities who reviewed it. What he actually did was better than the legend.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="What_cholera_does">What cholera does</h2>
 <p>Cholera arrived in Britain in the 1830s, having spread from Bengal along expanding trade routes, and it was terrifying in a way the endemic diseases were not. A healthy adult could be dead within a day, through catastrophic fluid loss — the intestinal lining stripped of its ability to retain water by a bacterial toxin, though none of that was known at the time.</p>

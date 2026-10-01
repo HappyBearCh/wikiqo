@@ -8,6 +8,7 @@ export const silkRoad: RewrittenArticle = {
   standfirst:
     "There was no Silk Road. The term was invented by a German geographer nineteen centuries after the trade began, and it describes something that was never a single route, rarely travelled end to end, and whose most important cargo was not goods at all. It is a useful label for a real phenomenon, provided you discard almost everything the name implies.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="Correcting_the_name">Correcting the name</h2>
 <p>Ferdinand von Richthofen coined <em>Seidenstraße</em> in 1877, and the phrase has shaped the popular image ever since: a caravan track running from China to the Mediterranean, carrying bales of silk.</p>

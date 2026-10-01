@@ -8,6 +8,7 @@ export const sleep: RewrittenArticle = {
   standfirst:
     "Sleep is the strongest evidence that the brain is doing something we do not understand. An animal that sleeps is immobile, insensible and defenceless for hours at a stretch, which is close to the worst survival strategy imaginable. Every animal examined closely does it anyway. Whatever sleep is for, the price of skipping it must be higher than being eaten.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="Not_the_absence_of_anything">Not the absence of anything</h2>
 <p>The intuition that sleep is the brain switching off survived until researchers put electrodes on a sleeping scalp in the 1920s and found the opposite. Sleep is an active, structured, tightly choreographed state — in some phases the brain consumes as much energy as it does awake, and produces patterns of activity that never occur during waking at all.</p>

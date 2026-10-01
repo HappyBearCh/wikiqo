@@ -8,6 +8,7 @@ export const tradeUnions: RewrittenArticle = {
   standfirst:
     "The legal history of trade unions is not a story of rights slowly extended but of a specific prohibition slowly dismantled. Combining to raise wages was treated as criminal conspiracy, and later as an illegal restraint of trade — the same doctrine used against price-fixing cartels, applied to workers. Almost everything unions are now credited with came after that prohibition was lifted, and the current decline has causes that are structural as well as political.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Illegal">Combination as a crime</h2>
 <p>The Combination Acts of 1799 and 1800 in Britain made it an offence for workers to combine to obtain better wages or conditions. Cases could be heard summarily by magistrates, who were frequently employers themselves, and conviction meant imprisonment.</p>

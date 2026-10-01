@@ -3,7 +3,7 @@ import Link from "next/link";
 import { OG_BASE } from "@/lib/site";
 
 const DESCRIPTION =
-  "About wikiqo — an independent, open-knowledge reader for Wikipedia, run with the rigour of a research library and the colours of a pride parade.";
+  "About wikiqo — original articles on the encyclopedia's best subjects, plus an uncluttered reader for Wikipedia, kept with the rigour of a research library and the colours of a pride parade.";
 
 export const metadata: Metadata = {
   title: "About",
@@ -32,12 +32,12 @@ const HUES = [
 
 // A library-catalog "record" for wikiqo itself — a nod to OPAC / ProQuest entries.
 const CATALOG = [
-  { field: "Title", value: "wikiqo — a clean reader for Wikipedia" },
-  { field: "Source", value: "Wikipedia, the free encyclopedia (REST API)" },
+  { field: "Title", value: "wikiqo — the encyclopedia's best subjects, rewritten" },
+  { field: "Source", value: "Original writing (wikiqorgi) · Wikipedia REST API" },
   { field: "Format", value: "Electronic resource · web · open access" },
   { field: "Language", value: "English" },
-  { field: "Rights", value: "Content CC BY-SA 4.0 · attributed to its authors" },
-  { field: "Holdings", value: "The whole encyclopedia, on demand" },
+  { field: "Rights", value: "Mirrored text CC BY-SA 4.0 · attributed to its authors" },
+  { field: "Holdings", value: "Original articles, plus Wikipedia's most-read" },
 ];
 
 const SUBJECTS = [
@@ -52,8 +52,8 @@ const SUBJECTS = [
 // One principle per stripe of the rainbow. Colour index lines up with HUES.
 const PRINCIPLES = [
   {
-    title: "Open by default",
-    body: "Knowledge wants to be read. Everything here rides on Wikipedia's open API and stays free to reach — no paywall, no account, no permission slip.",
+    title: "Written to be read",
+    body: "The wikiqorgi shelf takes the encyclopedia's best subjects and writes them again from scratch — same facts, new prose, built to be read from top to bottom.",
   },
   {
     title: "Clean reading",
@@ -65,7 +65,7 @@ const PRINCIPLES = [
   },
   {
     title: "Always attributed",
-    body: "Every article credits its authors and links straight back to the original on Wikipedia, under the same CC BY-SA licence the encyclopedia uses.",
+    body: "Every mirrored article credits its authors under the CC BY-SA licence Wikipedia uses. Every original lists its sources and links to Wikipedia's version of the subject.",
   },
   {
     title: "Built to be legible",
@@ -89,9 +89,9 @@ export default function AboutPage() {
           About wikiqo
         </h1>
         <p className="mt-5 text-lg leading-relaxed text-muted">
-          A reading room for the free encyclopedia — kept with the rigour of a
-          research library and painted in the colours of a pride parade.
-          Catalogue-clean on the outside, all of Wikipedia on the inside.
+          A reading room for the encyclopedia&rsquo;s best subjects — kept with
+          the rigour of a research library and painted in the colours of a
+          pride parade.
         </p>
         {/* Full spectrum as a stack of stripes. */}
         <div
@@ -153,17 +153,26 @@ export default function AboutPage() {
           <section className="prose prose-lg prose-neutral dark:prose-invert max-w-none font-serif">
             <h2 className="font-serif">What this is</h2>
             <p>
-              <strong>wikiqo</strong> is an independent reader for Wikipedia. It
-              borrows the best habit of a great research library — set the work in
-              front of you cleanly, cite it honestly, then step out of the way —
-              and pairs it with something libraries have always quietly kept: a
-              place for everyone, in every colour.
+              <strong>wikiqo</strong> is two things. The first is{" "}
+              <Link href="/wikiqorgi">wikiqorgi</Link>: the encyclopedia&rsquo;s
+              best subjects — black holes, money, the jury, fungi — researched
+              again and written from scratch, each one with its sources listed
+              at the foot of the page. Same facts as the encyclopedia, entirely
+              different prose, built to be read from start to finish.
             </p>
             <p>
-              Type a title and you get a catalogue-style result. Open it and the
-              article arrives in a calm reading column, figures intact, original
-              authorship credited and a single click away. No accounts, no
-              clutter, no gatekeeping — just the encyclopedia, served with care.
+              The second is a reader for Wikipedia itself. Its most-read articles
+              arrive in a calm reading column, figures intact, authorship
+              credited and a click away. Anything outside that set opens on
+              Wikipedia directly, and search tells you before it does. Where
+              wikiqorgi has its own article on a subject, the Wikipedia page says
+              so.
+            </p>
+            <p>
+              Both borrow the best habit of a great research library — set the
+              work in front of you cleanly, cite it honestly, then step out of
+              the way — and pair it with something libraries have always quietly
+              kept: a place for everyone, in every colour.
             </p>
             <h2 className="font-serif">Why the colours</h2>
             <p>
@@ -220,21 +229,22 @@ export default function AboutPage() {
                 Start in the stacks
               </h2>
               <p className="mt-1 text-sm text-muted">
-                Millions of articles, no library card required.
+                Original articles, no library card required.
               </p>
             </div>
             <Link
-              href="/search"
+              href="/wikiqorgi"
               className="shadow-glow shrink-0 rounded-full px-7 py-3 text-sm font-semibold text-white transition-transform hover:scale-105"
               style={{ background: "var(--library-blue)", backgroundSize: "200% auto", color: "#fff" }}
             >
-              Browse the catalogue
+              Browse wikiqorgi
             </Link>
           </section>
 
           <p className="mt-8 text-xs leading-relaxed text-muted">
-            wikiqo is not affiliated with the Wikimedia Foundation. Article text is
-            drawn live from the{" "}
+            wikiqo is not affiliated with the Wikimedia Foundation. wikiqorgi
+            articles are original writing. Mirrored article text is drawn from
+            the{" "}
             <a
               href="https://en.wikipedia.org/api/rest_v1/"
               target="_blank"

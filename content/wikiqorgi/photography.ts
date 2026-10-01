@@ -8,6 +8,7 @@ export const photography: RewrittenArticle = {
   standfirst:
     "A camera obscura projects a perfect image of the world onto a wall, and artists were tracing them in the sixteenth century. The problem was never getting the image; it was that the substances which darken in light keep darkening, so a picture continues exposing until it is a uniform black. Photography is the solution to that second problem, and everything the medium later became — evidence, memory, journalism, surveillance — followed from a fixing agent.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="Fixing">The actual invention</h2>
 <p>The optics were ancient. A small hole in the wall of a dark room projects an inverted image of what is outside, described in China in the fifth century BC and in the Arab world by Ibn al-Haytham around the year 1000. By the Renaissance the camera obscura was a portable drawing aid with a lens and a mirror, and there is a long-running argument about how many old master paintings were traced from one.</p>

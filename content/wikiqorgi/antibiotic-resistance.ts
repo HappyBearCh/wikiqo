@@ -8,6 +8,7 @@ export const antibioticResistance: RewrittenArticle = {
   standfirst:
     "The usual framing is that overuse of antibiotics created resistance. It didn't. Resistance genes are ancient, older than agriculture, older than us, recovered from permafrost sealed for thirty thousand years. What overuse did was hand an enormous evolutionary advantage to the organisms that already carried them, and then arrange for those organisms to meet each other.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="A_weapon_borrowed_from_the_soil">A weapon borrowed from the soil</h2>
 <p>Almost every antibiotic in clinical use descends from a molecule that some microorganism was already making. Penicillin came from a mould, streptomycin and tetracycline from soil bacteria, vancomycin from an organism collected in Borneo. These compounds exist because microbes have been competing chemically for hundreds of millions of years in the most crowded habitat on Earth — a gram of soil holds billions of cells belonging to thousands of species, all of them contesting the same carbon.</p>

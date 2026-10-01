@@ -8,6 +8,7 @@ export const evolution: RewrittenArticle = {
   standfirst:
     "Natural selection requires only three conditions: things vary, some of that variation is inherited, and some variants leave more descendants than others. Wherever those hold, the population changes, necessarily. That is close to a logical consequence rather than an empirical claim, which is what makes evolution both hard to argue with and easy to misunderstand.",
   readingMinutes: 9,
+  published: "2026-08-16",
   html: `
 <h2 id="What_Darwin_actually_contributed">What Darwin actually contributed</h2>
 <p>The idea that species change over time was not new in 1859 and Darwin never claimed it was. His grandfather had proposed a version; Lamarck had published a full theory decades earlier. What was missing was a mechanism that did not require organisms to strive toward improvement or a designer to supply direction.</p>

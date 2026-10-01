@@ -1,5 +1,7 @@
-import { isRenderableTitle } from "@/content/popular-titles";
-import type { RewrittenArticle, WikiqorgiSection } from "./types";
+import type { ShelfEntry } from "@/lib/shelf-search";
+import type { RewrittenArticle, Source, WikiqorgiSection } from "./types";
+import { WIKIQORGI_CATALOG } from "./catalog";
+import { WIKIQORGI_SOURCES } from "./sources";
 import { blackHole } from "./black-hole";
 import { photosynthesis } from "./photosynthesis";
 import { mountEverest } from "./mount-everest";
@@ -168,7 +170,7 @@ import { spores } from "./spores";
  * Everything below is a compile-time constant. No database, no API, no fetch —
  * the index and every article page prerender to static HTML at build time.
  *
- * Shape: sections of 5 articles each, currently 32. The target has been raised
+ * Shape: sections of 5 articles each, currently 32 (160 articles). The target has been raised
  * twice — 50, then 100 at twenty sections, and the shelf is now open-ended and
  * grows a section or two at a time.
  *
@@ -493,10 +495,9 @@ export function getSection(id: string): WikiqorgiSection | undefined {
   return WIKIQORGI_SECTIONS.find((section) => section.id === id);
 }
 
-/** Builds the internal /wikiqorgi/[slug] path for a rewritten article. */
-export function rewrittenHref(slug: string): string {
-  return `/wikiqorgi/${slug}`;
-}
+// Lives in lib/links.ts so client components can build article links without
+// importing the shelf; re-exported here where the rest of the shelf's helpers are.
+export { rewrittenHref } from "@/lib/links";
 
 /** Builds the internal /wikiqorgi/[slug] path for a section's own page. */
 export function sectionHref(id: string): string {
@@ -527,28 +528,52 @@ if (DUPLICATE_SLUGS.length > 0) {
 }
 
 /**
- * Every article links to its source on /wiki/, and /wiki/ only renders titles
- * in content/popular-titles.ts — anything else is handed straight to Wikipedia
- * (see app/wiki/[slug]/page.tsx). A wikiqorgi subject is chosen for being worth
- * writing about rather than for trending, so most of them are not in the
- * pageviews set and are listed explicitly in LINKED_TITLES instead.
- *
- * That list is maintained by hand, so assert here that it still covers the
- * shelf. Like the slug check above this runs at import time, which during
- * `next build` means adding an article without adding its source title fails
- * the build — rather than shipping an article whose one outbound link quietly
- * bounces the reader off the site.
+ * Every article has a Sources list (see ./sources.ts). Same import-time check
+ * as above: an article added without one fails the build, and so does a
+ * sources entry left behind for an article that no longer exists.
  */
-const UNRENDERABLE_SOURCES = WIKIQORGI_ARTICLES.filter(
-  (article) => !isRenderableTitle(article.sourceTitle),
+const MISSING_SOURCES = WIKIQORGI_ARTICLES.filter(
+  (article) => (WIKIQORGI_SOURCES[article.slug]?.length ?? 0) < 2,
+);
+const ORPHANED_SOURCES = Object.keys(WIKIQORGI_SOURCES).filter(
+  (slug) => !getRewrittenArticle(slug),
 );
 
-if (UNRENDERABLE_SOURCES.length > 0) {
+if (MISSING_SOURCES.length > 0 || ORPHANED_SOURCES.length > 0) {
   throw new Error(
-    "wikiqorgi: these articles' sourceTitles are missing from LINKED_TITLES in " +
-      "content/popular-titles.ts, so their source links would redirect to " +
-      `Wikipedia: ${UNRENDERABLE_SOURCES.map((a) => `${a.slug} (${a.sourceTitle})`).join(", ")}`,
+    "wikiqorgi: every article needs at least two entries in content/wikiqorgi/sources.ts. " +
+      `Missing: ${MISSING_SOURCES.map((a) => a.slug).join(", ") || "none"}. ` +
+      `No such article: ${ORPHANED_SOURCES.join(", ") || "none"}.`,
   );
 }
 
-export type { RewrittenArticle, WikiqorgiSection };
+/** The article's further-reading list, oldest work first. */
+export function getSources(slug: string): Source[] {
+  return [...(WIKIQORGI_SOURCES[slug] ?? [])].sort((a, b) => a.year - b.year);
+}
+
+/**
+ * content/wikiqorgi/catalog.ts is generated from these articles so the dynamic
+ * routes can know what is on the shelf without bundling its prose (see
+ * scripts/generate-wikiqorgi-catalog.mjs). Check it is still current: an
+ * article added, retitled or moved without regenerating fails the build here.
+ */
+const EXPECTED_CATALOG: ShelfEntry[] = WIKIQORGI_SECTIONS.flatMap((section) =>
+  section.articles.map((article) => ({
+    slug: article.slug,
+    title: article.title,
+    sourceTitle: article.sourceTitle,
+    dek: article.dek,
+    section: section.title,
+  })),
+);
+
+if (JSON.stringify(EXPECTED_CATALOG) !== JSON.stringify(WIKIQORGI_CATALOG)) {
+  throw new Error(
+    "wikiqorgi: content/wikiqorgi/catalog.ts is out of date with the articles. " +
+      "Run `npm run gen:catalog` and commit the result.",
+  );
+}
+
+export { WIKIQORGI_CATALOG };
+export type { RewrittenArticle, Source, WikiqorgiSection };

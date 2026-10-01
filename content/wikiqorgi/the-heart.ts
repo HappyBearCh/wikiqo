@@ -8,6 +8,7 @@ export const theHeart: RewrittenArticle = {
   standfirst:
     "William Harvey's demonstration in 1628 that blood circulates was not an anatomical discovery — the structures had been described before him. It was a quantitative argument, the first of its kind in physiology, and it was unanswerable: the heart moves so much blood that no source could supply it and no tissue could consume it, therefore the same blood returns. The medical establishment rejected it for a generation.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Galen">What the heart was thought to do</h2>
 <p>The system Harvey overturned was Galen's, and it had stood for roughly fourteen centuries. In it, blood was continuously manufactured in the liver from digested food, distributed outward through the veins, and consumed by the tissues. There was no circuit and no return.</p>

@@ -8,6 +8,7 @@ export const cryptography: RewrittenArticle = {
   standfirst:
     "The uncomfortable foundation of modern cryptography is that almost none of it is proven secure. It rests on mathematical problems that have resisted attack for decades and are widely believed to be hard — believed, not demonstrated. The entire edifice of online commerce is an enormous bet on the continued failure of clever people.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="Two_thousand_years_of_the_same_mistake">Two thousand years of the same mistake</h2>
 <p>Classical cryptography was a long sequence of schemes that felt secure to their inventors and were not. The Caesar shift, substitution ciphers, the Vigenère cipher advertised for three centuries as <em>le chiffre indéchiffrable</em> — each fell, and usually to the same insight: natural language is statistically lopsided. Letters, pairs and words appear at characteristic frequencies, and any cipher that preserves those patterns leaks its plaintext to anyone patient enough to count.</p>

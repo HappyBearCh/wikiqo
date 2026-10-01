@@ -8,6 +8,7 @@ export const theAssemblyLine: RewrittenArticle = {
   standfirst:
     "The moving assembly line is a single idea with two faces. Moving the work past stationary workers eliminates the time they spend walking, fetching and searching, which produces extraordinary gains in output. It also transfers control of the pace from the worker to the machinery, and the labour turnover that followed at Ford was so severe that the company had to hire hundreds of workers to retain a hundred.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Before">Interchangeable parts came first</h2>
 <p>An assembly line is impossible without parts that fit without adjustment, and that was the harder problem.</p>

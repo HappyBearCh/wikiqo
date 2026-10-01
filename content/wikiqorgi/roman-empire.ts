@@ -8,6 +8,7 @@ export const romanEmpire: RewrittenArticle = {
   standfirst:
     "Rome never had a coronation. It had a young man named Octavian who ended a civil war, handed his powers back to the Senate in a carefully staged ceremony, and received in return, piece by piece, everything that mattered. The Republic was not abolished. It was left standing, hollow, as a set of offices an emperor could hold all at once.",
   readingMinutes: 9,
+  published: "2026-08-16",
   html: `
 <h2 id="The_settlement_that_founded_an_empire">The settlement that founded an empire</h2>
 <p>The Republic did not fall to a foreign enemy. It was destroyed by its own success — a century of conquest that made individual generals richer than the state, gave them armies loyal to their paymaster rather than to Rome, and left constitutional machinery designed for a city-state trying to govern the Mediterranean.</p>

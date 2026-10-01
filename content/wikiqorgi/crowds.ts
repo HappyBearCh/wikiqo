@@ -8,6 +8,7 @@ export const crowds: RewrittenArticle = {
   standfirst:
     "The standard account of crowd disasters — that people panicked, stampeded, and trampled each other — has been examined repeatedly by researchers with access to footage, survivor accounts and structural data, and it is almost always wrong. What actually kills people is compressive asphyxia in densities produced by design failures, and what survivors overwhelmingly report is cooperation. The persistence of the panic story tells you something about who benefits from it.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Le_Bon">Where the myth comes from</h2>
 <p>Gustave Le Bon's <em>The Crowd</em>, published in 1895, is the source of nearly everything the public believes about crowd behaviour. His claims were that an individual in a crowd loses their personality, descends several rungs on the ladder of civilisation, becomes suggestible and irrational, and is swept along by a collective mind.</p>

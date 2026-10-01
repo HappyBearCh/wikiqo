@@ -8,6 +8,7 @@ export const inducedDemand: RewrittenArticle = {
   standfirst:
     "The intuition that congestion is a capacity problem is almost irresistible: too many cars, not enough road, therefore build road. Sixty years of evidence says otherwise. Expanded highways fill up, on a fairly predictable schedule, and the resulting traffic volume rises roughly in proportion to the capacity added. The mistake is treating travel demand as a fixed quantity rather than something the road itself creates.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="The_measurement">The measurement</h2>
 <p>The claim is not rhetorical; it has been quantified repeatedly. The best-known study, by Gilles Duranton and Matthew Turner using American data across decades, found an elasticity close to one: increase lane-kilometres in a metropolitan area by ten per cent and vehicle-kilometres travelled increase by about ten per cent. They called it the fundamental law of road congestion.</p>

@@ -8,6 +8,7 @@ export const eusocialInsects: RewrittenArticle = {
   standfirst:
     "Darwin called sterile castes the one special difficulty which at first appeared to me insuperable and actually fatal to my whole theory. An individual that leaves no offspring should have its traits removed from the population immediately, yet most ants, all termites and many bees and wasps consist mostly of non-reproducing workers. The resolution required rethinking what selection acts on, and the argument about the details is still live.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="The_problem">Why it is a problem</h2>
 <p>Selection works because individuals that reproduce more leave more copies of their traits. An individual that reproduces not at all leaves none, so any heritable tendency toward sterility should vanish within a generation.</p>

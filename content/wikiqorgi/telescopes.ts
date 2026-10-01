@@ -8,6 +8,7 @@ export const telescopes: RewrittenArticle = {
   standfirst:
     "The popular idea of a telescope is a device that makes things look bigger. Magnification is the least important thing it does and the easiest to obtain. What a telescope is actually for is collecting light: the more you gather, the fainter the object you can detect and the finer the detail you can resolve. Everything about their design follows from wanting a bigger bucket.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="What_aperture_buys">What aperture buys</h2>
 <p>Two quantities matter, and both depend on the diameter of the main lens or mirror.</p>

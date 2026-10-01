@@ -8,6 +8,7 @@ export const mycorrhizalNetworks: RewrittenArticle = {
   standfirst:
     "A root is bad at extracting phosphorus, because phosphate moves through soil very slowly and a root quickly exhausts the volume immediately around it. Fungal hyphae are far thinner, extend much further for the same investment, and are good at exactly this. The resulting trade — plant carbon for fungal minerals — is present in the earliest fossils of land plants, and the popular story built on top of it in recent years has run some way ahead of the evidence.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Trade">Why a root needs help</h2>
 <p>Phosphate ions bind tightly to soil particles and diffuse extremely slowly. A root absorbing phosphorus creates a depletion zone around itself within days, and after that it is limited not by its uptake capacity but by how fast phosphate arrives — which is barely at all.</p>

@@ -8,6 +8,7 @@ export const lichens: RewrittenArticle = {
   standfirst:
     "Lichens were classified as plants, then shown in 1867 to be two organisms living as one — a claim rejected by most lichenologists for decades because it offended the assumption that a species is a single thing. The dual hypothesis won, entered every textbook, and was itself complicated in 2016 by the discovery of an additional fungal partner present in many lichens worldwide. They are now best understood not as a partnership but as a small ecosystem with a stable architecture.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Schwendener">The heresy of 1867</h2>
 <p>Simon Schwendener proposed that a lichen is not an organism but an association: a fungus enclosing a population of algae, living on what the algae produce.</p>

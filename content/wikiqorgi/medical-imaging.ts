@@ -8,6 +8,7 @@ export const medicalImaging: RewrittenArticle = {
   standfirst:
     "For all of medical history before 1895, the interior of a living body could be examined only by opening it. Within a year of Röntgen's discovery, X-ray machines were in hospitals worldwide, and the sequence of technologies that followed — computed tomography, ultrasound, magnetic resonance, functional scanning — each solved a limitation of the last. The unanticipated consequence is that imaging now finds abnormalities faster than medicine can determine which of them matter.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="Rontgen">An accident in a darkened laboratory</h2>
 <p>Wilhelm Röntgen was working with a Crookes tube in November 1895 when he noticed a screen coated in barium platinocyanide glowing across the room — although the tube was wrapped in black cardboard and no light could escape it.</p>

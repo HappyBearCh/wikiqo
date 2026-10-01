@@ -8,6 +8,7 @@ export const theSteamEngine: RewrittenArticle = {
   standfirst:
     "The steam engine was not invented to power industry. It was invented to solve one specific problem — mines flooding faster than horses could bail them — and the earliest working version wasted well over ninety-nine per cent of its fuel. It survived that inefficiency because it was installed at the pithead, where fuel was effectively free. Everything afterwards followed from making it good enough to move.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="The_problem">A pumping problem</h2>
 <p>Deep mining runs into water. Below the water table a shaft fills continuously, and by the early eighteenth century British coal and tin mines had reached depths where horse-driven pumps could not keep up. Mines were being abandoned not because the seam was exhausted but because they could not be kept dry.</p>

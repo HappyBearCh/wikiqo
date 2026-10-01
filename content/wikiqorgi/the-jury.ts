@@ -8,6 +8,7 @@ export const theJury: RewrittenArticle = {
   standfirst:
     "A jury is a body of untrained people, chosen essentially at random, who decide questions of fact and cannot be punished for deciding them wrongly. Almost every feature of it looks like a design flaw until you notice that the alternative is letting the state decide alone whether the state's accusation is true. Its origins are nothing like its present justification, and its use is shrinking almost everywhere it exists.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Backwards_origins">It started as the opposite of what it is now</h2>
 <p>The earliest English juries were assembled precisely because they knew the parties and the local facts. A panel of neighbours was the cheapest available way to establish what had happened in a village, and jurors were expected to arrive already informed and to investigate on their own account. A juror with no knowledge of the matter was useless.</p>

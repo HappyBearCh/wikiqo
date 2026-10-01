@@ -8,6 +8,7 @@ export const circadianRhythms: RewrittenArticle = {
   standfirst:
     "Almost every organism on the planet carries an internal oscillator with a period of roughly a day, built from a loop of genes that switch themselves off and take about twenty-four hours to do it. In humans the free-running period is a little over twenty-four hours, so the clock must be corrected daily, and it is corrected by light through a photoreceptor system separate from the one used for vision. The health consequences of getting that correction wrong are large and, in shift workers, well documented.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Free_running">The experiment of living underground</h2>
 <p>The question of whether daily rhythms are driven by the environment or generated internally was settled by removing the environment.</p>

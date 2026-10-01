@@ -81,3 +81,18 @@ export function titleFromSlug(slug: string): string {
   }
   return decoded.replace(/_/g, " ");
 }
+
+/**
+ * The form content/popular-titles.ts stores titles in: underscores for spaces,
+ * lower case. Here rather than there so the browser can apply the same
+ * normalisation to the key list served from /search-index.json without
+ * importing the list itself.
+ */
+export function renderableTitleKey(title: string): string {
+  return title.trim().replace(/[\s_]+/g, "_").toLowerCase();
+}
+
+/** Builds the internal /wikiqorgi/[slug] path for a rewritten article. */
+export function rewrittenHref(slug: string): string {
+  return `/wikiqorgi/${slug}`;
+}

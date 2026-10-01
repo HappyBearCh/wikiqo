@@ -8,6 +8,7 @@ export const replicationCrisis: RewrittenArticle = {
   standfirst:
     "Beginning around 2011, several fields discovered that a substantial share of their published findings could not be reproduced when the experiments were run again carefully. The immediate cause was not fraud, which is rare. It was a set of ordinary practices that everybody used, that nobody considered dishonest, and that reliably manufacture statistically significant results from data containing nothing at all.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="The_numbers">What the audits found</h2>
 <p>The Reproducibility Project in psychology repeated 100 studies published in leading journals, working with original materials and often with the original authors' input. Of the 97 that had reported significant effects, 36 did so on replication. Where effects did appear, their average size was about half the original.</p>

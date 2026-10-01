@@ -8,6 +8,7 @@ export const theBicycle: RewrittenArticle = {
   standfirst:
     "A person on a bicycle is more efficient at converting energy into distance than any animal and any other machine, by a considerable margin. It arrived astonishingly late, needed better metallurgy rather than any conceptual leap, built the industrial base that made cars possible, and was central to a shift in what women were permitted to do. It is also, in its dynamics, not fully explained.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Efficiency">The number that makes it remarkable</h2>
 <p>Measured as energy consumed per unit mass per unit distance, cycling beats walking by a factor of several, and beats every animal that has been measured — including the salmon, which is the most efficient swimmer, and the condor, which is the most efficient flier. A human on foot is unexceptional among animals. A human on a bicycle is off the chart.</p>

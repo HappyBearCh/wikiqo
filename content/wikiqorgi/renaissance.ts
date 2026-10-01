@@ -8,6 +8,7 @@ export const renaissance: RewrittenArticle = {
   standfirst:
     "The Renaissance is the only historical period that named itself in advance. Fourteenth-century Italian writers declared that a thousand years of darkness had ended and that antiquity was returning through them — a piece of self-promotion so effective that it organised European history for the next six hundred years.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="The_label_is_an_argument">The label is an argument</h2>
 <p>Petrarch, writing in the 1330s, divided history into a luminous classical past, a "dark age" of decline, and a present in which the light might be recovered. That scheme was a polemic, not a description. It cast his own literary programme as civilisational rescue, and it has been quietly shaping curricula ever since.</p>

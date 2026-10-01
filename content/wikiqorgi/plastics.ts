@@ -8,6 +8,7 @@ export const plastics: RewrittenArticle = {
   standfirst:
     "The complaint about plastic is that it lasts forever, is hard to degrade, and does not react with anything. Those are the specifications. Plastics were engineered to be cheap, light, durable and chemically indifferent, and they succeeded completely — which is why they are in everything, and why they are still in everything long after the thing they were in stopped being useful.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="Long_molecules">Long molecules</h2>
 <p>A polymer is a very large molecule built by linking small repeating units into a chain, often thousands of units long. Nature makes them constantly — cellulose, proteins, DNA and rubber are all polymers — and synthetic plastics are the same principle with units chosen by a chemist.</p>

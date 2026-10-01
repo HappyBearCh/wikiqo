@@ -8,6 +8,7 @@ export const colourVision: RewrittenArticle = {
   standfirst:
     "Light arriving at the eye carries a continuous distribution of wavelengths, and the eye samples it at three points. That is a catastrophic loss of information, and it means an unlimited number of physically different spectra produce identical sensations. Colour is not a property being measured; it is a judgement the visual system reaches about surfaces, using assumptions about illumination that are usually right and occasionally, spectacularly, are not.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Three_numbers">Three samples of a continuous signal</h2>
 <p>Human colour vision starts with three cone types, conventionally short, medium and long wavelength. Each responds over a broad range with a peak, and each returns a single number — how strongly it was stimulated. Any incoming light, however complex its spectrum, is reduced to three values.</p>

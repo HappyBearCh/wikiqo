@@ -8,6 +8,7 @@ export const exoplanets: RewrittenArticle = {
   standfirst:
     "Until 1995 there were no confirmed planets around other stars, and the theory of planet formation had exactly one example to work from. It predicted systems like ours: small rocky worlds close in, gas giants far out, orbits neat and circular. The first planet found around a sun-like star was a Jupiter-mass body orbiting closer than Mercury, in four days. The model has been under repair ever since.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="Why_it_took_so_long">Why it took so long</h2>
 <p>Seeing a planet directly is close to impossible. It shines only by reflected light, and it sits beside a star billions of times brighter — the standard comparison is spotting a firefly next to a searchlight from a thousand kilometres away. Direct imaging works now for a handful of young, massive planets far from their stars, and it accounts for a tiny fraction of discoveries.</p>

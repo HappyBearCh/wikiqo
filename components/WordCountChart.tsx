@@ -7,11 +7,14 @@ import { scaleLinear } from "d3-scale";
 import { max } from "d3-array";
 // Side-effect import: augments the d3-selection prototype with .transition().
 import "d3-transition";
-import { articleHref } from "@/lib/links";
-
 export interface WordCountDatum {
   title: string;
   wordcount: number;
+  /** Where the bar goes: /wiki/… when wikiqo renders the article, otherwise
+   *  the article on Wikipedia. Decided by the server, which has the list. */
+  href: string;
+  /** True when href leaves the site. */
+  offsite: boolean;
 }
 
 interface WordCountChartProps {
@@ -66,7 +69,10 @@ export default function WordCountChart({ data }: WordCountChartProps) {
       .join("g")
       .attr("transform", (_d, i) => `translate(0,${i * ROW_HEIGHT})`)
       .style("cursor", "pointer")
-      .on("click", (_event, d) => router.push(articleHref(d.title)));
+      .on("click", (_event, d) => {
+        if (d.offsite) window.location.assign(d.href);
+        else router.push(d.href);
+      });
 
     // Track behind every bar, so short articles still register as a row.
     row
@@ -107,7 +113,10 @@ export default function WordCountChart({ data }: WordCountChartProps) {
       .attr("paint-order", "stroke")
       .attr("stroke-linejoin", "round")
       .style("pointer-events", "none")
-      .text((d) => (d.title.length > 34 ? `${d.title.slice(0, 33)}…` : d.title));
+      .text((d) => {
+        const title = d.title.length > 34 ? `${d.title.slice(0, 33)}…` : d.title;
+        return d.offsite ? `${title} ↗` : title;
+      });
 
     // Word count is right-aligned into the reserved right margin (a fixed
     // column) rather than trailing each bar. Trailing short bars would drop the

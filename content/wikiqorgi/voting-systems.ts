@@ -8,6 +8,7 @@ export const votingSystems: RewrittenArticle = {
   standfirst:
     "The intuition that there must be a correct way to count votes, if only we were clever enough, is false in a specific and provable sense. Kenneth Arrow showed that a short list of entirely uncontroversial fairness conditions cannot all be satisfied at once by any ranking method. The practical question is therefore not which system is fair but which failure you prefer — and the systems in actual use differ enormously in how often and how badly they fail.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="Condorcet">The paradox that starts it</h2>
 <p>Consider three voters ranking three options. The first prefers A to B to C. The second prefers B to C to A. The third prefers C to A to B.</p>

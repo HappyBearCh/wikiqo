@@ -8,6 +8,7 @@ export const propaganda: RewrittenArticle = {
   standfirst:
     "The popular model of propaganda is a lie told loudly enough to be believed, aimed at converting opponents. Almost none of it works that way. The techniques that survive scrutiny operate by selection rather than fabrication, by determining which questions are asked rather than which answers are given, and by mobilising and hardening existing sympathisers — which is both more effective and far harder to identify while it is happening.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="The_word">The word used to be neutral</h2>
 <p>It comes from the Congregation for the Propagation of the Faith, established by the Catholic Church in 1622 to coordinate missionary work. Propaganda meant, straightforwardly, things to be propagated.</p>

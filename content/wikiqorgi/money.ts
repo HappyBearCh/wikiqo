@@ -8,6 +8,7 @@ export const money: RewrittenArticle = {
   standfirst:
     "Economics textbooks open with a village where a butcher wants shoes and a cobbler wants bread, and money is invented to solve the mismatch. It is a tidy story and there is no evidence for it. Where the record is good enough to check, credit came first: elaborate systems of who owed what to whom, with coinage arriving much later and usually to pay soldiers.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="The_barter_myth">The barter myth</h2>
 <p>Adam Smith described money as emerging from the inconvenience of barter, and the account has been repeated ever since. The difficulty is the double coincidence of wants — trade requires each party to have what the other lacks — and money is presented as the solution someone eventually stumbled on.</p>

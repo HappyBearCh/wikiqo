@@ -8,6 +8,7 @@ export const theCell: RewrittenArticle = {
   standfirst:
     "The cell is the smallest thing that is unambiguously alive, and the boundary is sharp: half a cell is not half alive, it is debris. Everything living is either a single cell or an assembly of them, they all arise from existing cells, and the machinery inside them is similar enough across all life to establish that the whole of biology descends from one population that solved the problem once.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="A_slow_discovery">A slow discovery</h2>
 <p>Robert Hooke published drawings of thin-sliced cork in 1665 and called the compartments he saw <em>cells</em>, after the small rooms monks lived in. He was looking at the empty walls of dead plant tissue, and had no notion that the boxes had once contained anything important.</p>

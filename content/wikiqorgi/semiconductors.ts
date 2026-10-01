@@ -8,6 +8,7 @@ export const semiconductors: RewrittenArticle = {
   standfirst:
     "The entire digital world runs on a material chosen for being mediocre at conducting electricity. What matters about silicon is not what it does but what it can be made to do: add a few atoms of the right impurity, in the right place, and you get a region whose conductivity you can control with a voltage. Every transistor is that trick, repeated a few billion times on a chip.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="Between_conductor_and_insulator">Between conductor and insulator</h2>
 <p>Whether a material conducts depends on whether its electrons can move freely. In a metal they can. In an insulator they are bound, and the energy needed to free one — the band gap — is too large to supply.</p>

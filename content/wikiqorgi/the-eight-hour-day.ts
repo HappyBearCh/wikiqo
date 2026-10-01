@@ -8,6 +8,7 @@ export const theEightHourDay: RewrittenArticle = {
   standfirst:
     "The standard working week is not a natural quantity. It fell from something like seventy hours to around forty over a century of legislation and bargaining, on a trajectory so consistent that economists projected it forward confidently. Then, around 1970, it stopped falling in most rich countries and in some began rising again. Explaining the halt is more interesting than explaining the decline.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="The_demand">Eight hours for what we will</h2>
 <p>The demand was formulated by Robert Owen in 1817 as eight hours labour, eight hours recreation, eight hours rest — and the tripartite division is a rhetorical device rather than a physiological finding.</p>

@@ -8,6 +8,7 @@ export const borders: RewrittenArticle = {
   standfirst:
     "The idea that a state ends at a definite line, that the line can be marked on the ground, and that crossing it changes which laws apply is a modern arrangement. Earlier polities had frontiers — zones of overlapping, weakening and negotiated authority — and the transition to lines followed from surveying technology, from the logic of sovereignty, and from the practical needs of taxation and conscription. Where the lines are straight, they were generally drawn by people who had never been there.",
   readingMinutes: 7,
+  published: "2026-08-18",
   html: `
 <h2 id="Frontiers">Zones before lines</h2>
 <p>A pre-modern ruler's authority faded with distance. Near the centre, taxes were collected and law was enforced; further out, local powers acknowledged the ruler nominally and did as they liked; further still, allegiance was seasonal or purchased.</p>

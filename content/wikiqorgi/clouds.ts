@@ -8,6 +8,7 @@ export const clouds: RewrittenArticle = {
   standfirst:
     "A cloud is not water vapour — vapour is invisible. It is a suspension of liquid droplets or ice crystals, each formed on a speck of dust, salt or pollution, because water in genuinely clean air refuses to condense until it is supersaturated several hundred per cent. Clouds also cool the planet by reflecting sunlight and warm it by trapping heat, and which effect wins as the world warms is the single largest unresolved question in climate projection.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Nucleation">Water will not condense on its own</h2>
 <p>Cooling moist air to its dew point ought to produce droplets. In genuinely clean air it does not.</p>

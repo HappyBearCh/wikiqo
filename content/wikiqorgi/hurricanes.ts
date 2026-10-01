@@ -8,6 +8,7 @@ export const hurricanes: RewrittenArticle = {
   standfirst:
     "A tropical cyclone is a machine for moving heat from a warm ocean to the upper atmosphere, and it obeys the same thermodynamic limits as any other heat engine. Understanding it as an engine explains everything about it: why it needs water above a threshold temperature, why it dies over land within hours, why it spins the way it does, and why there is a computable ceiling on how strong one can get.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="The_engine">It is literally a heat engine</h2>
 <p>Kerry Emanuel's framing, developed in the 1980s, treats a hurricane as a Carnot cycle. Air spirals inward at the sea surface, picking up heat and enormous quantities of water vapour from warm water. It rises in the eyewall, where the vapour condenses and releases its latent heat — this is where nearly all the storm's energy comes from. The air flows outward at high altitude and radiates heat to space at a much colder temperature, then sinks.</p>

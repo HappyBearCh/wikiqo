@@ -8,6 +8,7 @@ export const fire: RewrittenArticle = {
   standfirst:
     "Every other animal spends its energy budget as it comes. Controlling fire let one species pre-digest its food outside the body, which released enough energy and enough time to support an organ that is metabolically ruinous by any ordinary standard. The argument that cooking made us human is not a metaphor — it is a claim about calorie accounting, and the numbers behind it are unusually specific.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="What_fire_is">What is actually happening</h2>
 <p>Combustion is oxidation running fast enough to sustain itself. A fuel is heated until it releases volatile gases, those gases react with oxygen, and the reaction gives off enough heat to keep releasing more. The visible flame is burning gas, not burning wood — which is why a log glows rather than flames once the volatiles are exhausted, and why a candle's flame sits above the wick rather than on it.</p>

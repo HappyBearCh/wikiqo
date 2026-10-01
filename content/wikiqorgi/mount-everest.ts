@@ -8,6 +8,7 @@ export const mountEverest: RewrittenArticle = {
   standfirst:
     "Everest is not the hardest mountain to climb, nor the most beautiful, nor even the farthest point from the centre of the Earth. It is simply the highest, and that single superlative has shaped everything that has happened on it — the surveying, the nationalism, the record-chasing, and the traffic jam at 8,700 metres.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="How_a_seabed_ended_up_in_the_sky">How a seabed ended up in the sky</h2>
 <p>The limestone at the summit of Everest contains marine fossils. That is not a curiosity but the whole explanation: the rock at the top of the world was laid down on the floor of an ocean called the Tethys, and the mountain exists because that ocean was destroyed.</p>

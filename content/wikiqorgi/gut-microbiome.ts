@@ -8,6 +8,7 @@ export const gutMicrobiome: RewrittenArticle = {
   standfirst:
     "You are carrying roughly as many bacterial cells as human ones, most of them in the large intestine, collectively holding several hundred times more genes than your own genome. That much is solid. Almost everything downstream of it — what those microbes do, and what changing them can achieve — is a field where genuine discoveries and commercial nonsense have become difficult to separate.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="Correcting_the_numbers">Correcting the numbers</h2>
 <p>The figure everyone repeats is that bacterial cells outnumber human cells ten to one. It came from a back-of-envelope estimate in 1972 and was never seriously checked until 2016, when a careful recount put the ratio at roughly one to one — about 38 trillion bacteria against 30 trillion human cells, and a single bowel movement shifts the balance.</p>

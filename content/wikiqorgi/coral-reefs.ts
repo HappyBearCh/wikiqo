@@ -8,6 +8,7 @@ export const coralReefs: RewrittenArticle = {
   standfirst:
     "Tropical seas are clear because they are empty: warm, stratified, and starved of the nutrients that feed life elsewhere. Coral reefs sit in the middle of that desert and support a density of life comparable to rainforest. The trick that makes it possible is a partnership between an animal and an alga, and it is also the reason the whole system is so easy to break.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="An_animal_that_grows_a_rock">An animal that grows a rock</h2>
 <p>A coral is a colony of small anemone-like animals called polyps, each sitting in a cup of calcium carbonate it has secreted. The polyp is a simple predator — a mouth ringed with stinging tentacles — and the limestone skeleton it builds is not part of the animal but the structure it lives on.</p>

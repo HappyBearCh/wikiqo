@@ -8,6 +8,7 @@ export const theInternet: RewrittenArticle = {
   standfirst:
     "The internet was not designed to be fast, secure, or commercially useful. It was designed to be indifferent to its own components failing, and to make no assumptions about what would be sent over it. Both choices looked like weaknesses to the telecommunications engineers of the day. They are the reason a network sketched for a few dozen research computers scaled to the planet.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="Cutting_the_message_into_pieces">Cutting the message into pieces</h2>
 <p>The telephone system worked by circuit switching: placing a call opened a dedicated physical path held for the duration, whether or not anyone was speaking. It was reliable, it was well understood, and it was catastrophically wasteful for computers, which communicate in short bursts separated by long silences.</p>

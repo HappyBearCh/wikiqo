@@ -8,6 +8,7 @@ export const play: RewrittenArticle = {
   standfirst:
     "Play is defined by what it is not: not feeding, not fighting, not mating, not escaping. It is behaviour borrowed from those contexts and performed without their consequences, and it is costly — in calories, in attention, and in injury. Its persistence across mammals, birds and further afield is the argument for taking it seriously, and the leading explanations concern learning to handle situations that have not happened yet.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Definition">Defining something by its uselessness</h2>
 <p>The standard working definition, from Gordon Burghardt, requires five criteria together, and the combination is what makes the category tractable.</p>

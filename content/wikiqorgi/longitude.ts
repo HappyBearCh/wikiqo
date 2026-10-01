@@ -8,6 +8,7 @@ export const longitude: RewrittenArticle = {
   standfirst:
     "For most of the age of sail, navigators could establish how far north or south they were with reasonable confidence and had essentially no way to determine how far east or west. Ships were wrecked on coasts their captains believed were still days away. The solution turned out to require not better astronomy but a clock that would keep time on a rolling, damp, temperature-swinging ship — and the man who built it spent forty years being refused his prize.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Why_one_is_easy">Why one coordinate is easy and the other is not</h2>
 <p>Latitude has a natural reference: the Earth's axis. Measure the angle of the pole star above the horizon, or the sun's height at noon with a table of its seasonal declination, and you have your latitude to within a fraction of a degree. Sailors were doing this competently for centuries with instruments of modest precision.</p>

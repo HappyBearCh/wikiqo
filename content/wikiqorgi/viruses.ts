@@ -8,6 +8,7 @@ export const viruses: RewrittenArticle = {
   standfirst:
     "A virus does nothing at all outside a cell. It does not eat, respire, grow, or move under its own power; a purified virus can be crystallised like a salt and stored on a shelf. Everything we associate with being alive happens only when it gets inside something that is alive, and borrows that thing's machinery to make copies of itself. Whether that counts as living is a question biology has never satisfactorily closed.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="Discovered_by_subtraction">Discovered by subtraction</h2>
 <p>Viruses were found before anyone could see one, by a process of elimination. Dmitri Ivanovsky in 1892 and Martinus Beijerinck in 1898 showed that the agent causing tobacco mosaic disease passed through porcelain filters fine enough to hold back every known bacterium, and that the filtrate was still infectious. Beijerinck called it a <em>contagium vivum fluidum</em> — a living contagious fluid — which was wrong about the fluid part but correct that something new was involved.</p>

@@ -8,6 +8,7 @@ export const grasses: RewrittenArticle = {
   standfirst:
     "Most plants extend from growing points at the ends of their shoots, so removing the top removes the ability to grow. Grasses put their growth zone at the base, near or below ground, which means the part an animal bites off is the part the plant has already finished with. That single structural difference explains lawns, grazing, the world's grain supply, and why grasses came to cover roughly a quarter of the land surface.",
   readingMinutes: 7,
+  published: "2026-08-18",
   html: `
 <h2 id="Growing_from_the_base">The meristem is in the wrong place, deliberately</h2>
 <p>A plant's growth happens at meristems, regions of dividing cells. In most plants these sit at the tips of shoots, so the newest tissue is the most exposed — which is why pinching out the top of a bean plant stops it growing upward, and why a hedge must be cut repeatedly to stay dense.</p>

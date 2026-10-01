@@ -8,6 +8,7 @@ export const blackHole: RewrittenArticle = {
   standfirst:
     "A black hole is usually introduced as an object so heavy that nothing escapes it. That is a serviceable half-truth. The better description is stranger and simpler: a black hole is not a thing sitting in space, it is a region where space and time have been bent so far that every road out has quietly turned into a road inward.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="What_a_black_hole_actually_is">What a black hole actually is</h2>
 <p>Start with the mistake almost everyone makes. A black hole is not a cosmic drain, and it is not a super-dense ball with an especially fierce grip. If the Sun were swapped for a black hole of exactly the same mass, Earth's orbit would not change by a metre. Gravity does not become greedier when matter collapses; it only becomes <em>closer</em>. What collapse buys you is proximity — the chance to stand near an enormous mass without a stellar surface in the way — and proximity is where general relativity stops resembling anything Newton would recognise.</p>

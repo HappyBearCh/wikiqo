@@ -8,6 +8,7 @@ export const citizenship: RewrittenArticle = {
   standfirst:
     "Citizenship is the mechanism by which the world's population is divided among its states, and it operates on two incompatible principles: the place of birth, or descent from a citizen. Most states use a mixture. The gaps between the rules produce statelessness — people no state recognises, who consequently have no state obliged to admit them, and for whom the ordinary machinery of rights has no attachment point.",
   readingMinutes: 7,
+  published: "2026-08-18",
   html: `
 <h2 id="Two_rules">Soil and blood</h2>
 <p><strong>Jus soli</strong> grants citizenship by birth on the territory. It is simple to administer, since the fact is recorded at the time, and it ensures that anyone born in a country belongs to it. Unrestricted versions are now largely confined to the Americas — the United States, Canada, Mexico, Brazil and most of the region.</p>

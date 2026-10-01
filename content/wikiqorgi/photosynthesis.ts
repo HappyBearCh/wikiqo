@@ -8,6 +8,7 @@ export const photosynthesis: RewrittenArticle = {
   standfirst:
     "Every textbook gives photosynthesis the same one-line summary: plants turn sunlight, water and carbon dioxide into sugar and oxygen. True, and almost useless. The interesting story is mechanical — a leaf is a machine that uses light to tear electrons off water, walks them downhill through a chain of proteins, and spends the released energy building sugar out of air.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="The_trick_nobody_else_learned">The trick nobody else learned</h2>
 <p>Life needs electrons. Building anything — a cell wall, a protein, a leaf — means taking carbon in its dull, fully oxidised form and adding electrons until it becomes something energetic enough to be worth eating. Getting electrons is therefore the central problem of biology, and most organisms solve it by stealing them from something else that is already alive.</p>

@@ -13,13 +13,17 @@ import { latestPromoted } from "@/content/wikiqorgi/schedule";
  */
 export default function PromotedShelf({
   count = 4,
+  offset = 0,
   now,
 }: {
   count?: number;
+  /** Skip this many of the newest — the home page shows the newest one on its
+   *  own, above the shelf. */
+  offset?: number;
   /** Injected by the page so the render is deterministic and testable. */
   now?: Date;
 }) {
-  const promoted = latestPromoted(count, now);
+  const promoted = latestPromoted(offset + count, now).slice(offset);
 
   // Before the first promotion date there is nothing to show. Render nothing
   // rather than an empty grid with a heading over it.
@@ -62,8 +66,8 @@ export default function PromotedShelf({
 }
 
 /** The section links the promoted cards came from, for the "browse it all" row. */
-export function PromotedShelfFooter({ now }: { now?: Date }) {
-  const promoted = latestPromoted(4, now);
+export function PromotedShelfFooter({ now, count = 4 }: { now?: Date; count?: number }) {
+  const promoted = latestPromoted(count, now);
   if (promoted.length === 0) return null;
 
   const sections = [...new Set(promoted.map(({ section }) => section))];

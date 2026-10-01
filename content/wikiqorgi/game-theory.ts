@@ -8,6 +8,7 @@ export const gameTheory: RewrittenArticle = {
   standfirst:
     "Ordinary decision theory asks what to do given the odds. Game theory asks what to do when the odds depend on what someone else decides, and they are simultaneously working out what to do about you. The recursion has no natural stopping point, and the discipline's most durable result is that when it stops, it often stops somewhere nobody wanted — not through error, but through each participant reasoning correctly.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="Nash">The equilibrium concept</h2>
 <p>The central solution concept is due to John Nash in 1950. A set of strategies is an equilibrium if no player can do better by changing their own strategy while everyone else keeps theirs unchanged.</p>

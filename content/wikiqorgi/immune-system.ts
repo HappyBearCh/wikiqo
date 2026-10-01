@@ -8,6 +8,7 @@ export const immuneSystem: RewrittenArticle = {
   standfirst:
     "An immune system has to recognise threats it has never encountered, including ones that did not exist when the organism was born. The vertebrate solution is to manufacture receptors by shuffling gene segments at random, producing a repertoire large enough to bind almost anything. The unavoidable consequence is that many of those receptors bind the body itself, and most of the system's machinery is devoted to deleting, suppressing and restraining them.",
   readingMinutes: 8,
+  published: "2026-08-19",
   html: `
 <h2 id="Two_systems">Two systems doing different jobs</h2>
 <p>The innate immune system is old, shared in some form across most multicellular life, and works from a fixed set of recognition tools. Its receptors detect molecular patterns common to whole classes of pathogen and absent from the host — bacterial cell wall components, flagellin, double-stranded RNA — and it responds within minutes. Macrophages and neutrophils engulf material, the complement cascade punctures membranes and tags targets, and inflammation opens the local vasculature to bring more of everything in.</p>

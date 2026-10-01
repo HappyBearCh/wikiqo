@@ -8,6 +8,7 @@ export const chess: RewrittenArticle = {
   standfirst:
     "Chess is usually described as ancient, and the board and the pieces are. The game actually played today is not: it dates from a rule change in late fifteenth-century southern Europe that transformed the weakest piece into the strongest and cut the length of a game dramatically. Almost everything characteristic of chess — memorised openings, sharp tactics, the tension between attack and the drawn endgame — follows from that one revision.",
   readingMinutes: 8,
+  published: "2026-08-19",
   html: `
 <h2 id="The_old_game">The game before the queen</h2>
 <p>The ancestor is <em>chaturanga</em>, played in India by roughly the sixth century, which travelled west as Persian <em>shatranj</em> and reached Europe through the Islamic world and Iberia. The board, the eight-by-eight grid, the pawns, the knight's leap and the rook's line are all inherited essentially unchanged.</p>

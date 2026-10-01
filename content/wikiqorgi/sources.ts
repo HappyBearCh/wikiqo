@@ -1,0 +1,883 @@
+import type { Source } from "./types";
+
+/**
+ * Further reading for every wikiqorgi article, keyed by slug.
+ *
+ * The shelf's house rule is that rewriting changes the prose and not the
+ * record. This is where that promise is made checkable: each list names the
+ * standard works a reader would go to next — the landmark paper behind a
+ * claim, the book a debate in the article comes from, the history the account
+ * leans on. Where an article names a person's argument ("Graeber's", "Olson's"),
+ * that work is here.
+ *
+ * These are sources in the "go and read this" sense, not footnotes: nothing in
+ * the article body points at a particular entry. Kept in one file rather than
+ * one per article so the whole bibliography can be audited in one sitting.
+ *
+ * content/wikiqorgi/index.ts asserts at import time that every article has an
+ * entry, so adding an article without its sources fails the build.
+ */
+export const WIKIQORGI_SOURCES: Record<string, Source[]> = {
+  "black-hole": [
+    { author: "Kip S. Thorne", title: "Black Holes and Time Warps: Einstein's Outrageous Legacy", year: 1994, publication: "W. W. Norton" },
+    { author: "S. W. Hawking", title: "Black hole explosions?", year: 1974, publication: "Nature" },
+    { author: "LIGO Scientific Collaboration and Virgo Collaboration", title: "Observation of Gravitational Waves from a Binary Black Hole Merger", year: 2016, publication: "Physical Review Letters" },
+    { author: "Event Horizon Telescope Collaboration", title: "First M87 Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole", year: 2019, publication: "The Astrophysical Journal Letters" },
+  ],
+  photosynthesis: [
+    { author: "Oliver Morton", title: "Eating the Sun: How Plants Power the Planet", year: 2007, publication: "Fourth Estate" },
+    { author: "Timothy W. Lyons, Christopher T. Reinhard and Noah J. Planavsky", title: "The rise of oxygen in Earth's early ocean and atmosphere", year: 2014, publication: "Nature" },
+    { author: "Yasufumi Umena, Keisuke Kawakami, Jian-Ren Shen and Nobuo Kamiya", title: "Crystal structure of oxygen-evolving photosystem II at a resolution of 1.9 Å", year: 2011, publication: "Nature" },
+  ],
+  "mount-everest": [
+    { author: "John Hunt", title: "The Ascent of Everest", year: 1953, publication: "Hodder & Stoughton" },
+    { author: "Walt Unsworth", title: "Everest", year: 1981, publication: "Allen Lane" },
+    { author: "Reinhold Messner", title: "Everest: Expedition to the Ultimate", year: 1979, publication: "Kaye & Ward" },
+    { author: "Wade Davis", title: "Into the Silence: The Great War, Mallory, and the Conquest of Everest", year: 2011, publication: "Knopf" },
+  ],
+  "albert-einstein": [
+    { author: "Albert Einstein", title: "On the Electrodynamics of Moving Bodies", year: 1905, publication: "Annalen der Physik" },
+    { author: "Abraham Pais", title: "'Subtle is the Lord': The Science and the Life of Albert Einstein", year: 1982, publication: "Oxford University Press" },
+    { author: "Walter Isaacson", title: "Einstein: His Life and Universe", year: 2007, publication: "Simon & Schuster" },
+  ],
+  "artificial-intelligence": [
+    { author: "A. M. Turing", title: "Computing Machinery and Intelligence", year: 1950, publication: "Mind" },
+    { author: "Stuart Russell and Peter Norvig", title: "Artificial Intelligence: A Modern Approach", year: 1995, publication: "Prentice Hall" },
+    { author: "Ashish Vaswani et al.", title: "Attention Is All You Need", year: 2017, publication: "Advances in Neural Information Processing Systems" },
+  ],
+  "roman-empire": [
+    { author: "Edward Gibbon", title: "The History of the Decline and Fall of the Roman Empire", year: 1776 },
+    { author: "Mary Beard", title: "SPQR: A History of Ancient Rome", year: 2015, publication: "Profile Books" },
+    { author: "Peter Heather", title: "The Fall of the Roman Empire: A New History", year: 2005, publication: "Macmillan" },
+  ],
+  renaissance: [
+    { author: "Jacob Burckhardt", title: "The Civilization of the Renaissance in Italy", year: 1860 },
+    { author: "Peter Burke", title: "The European Renaissance: Centres and Peripheries", year: 1998, publication: "Blackwell" },
+    { author: "Lorenzo Valla", title: "On the Donation of Constantine", year: 1440 },
+  ],
+  jazz: [
+    { author: "Gunther Schuller", title: "Early Jazz: Its Roots and Musical Development", year: 1968, publication: "Oxford University Press" },
+    { author: "Paul F. Berliner", title: "Thinking in Jazz: The Infinite Art of Improvisation", year: 1994, publication: "University of Chicago Press" },
+    { author: "Ted Gioia", title: "The History of Jazz", year: 1997, publication: "Oxford University Press" },
+  ],
+  "antibiotic-resistance": [
+    { author: "Vanessa M. D'Costa et al.", title: "Antibiotic resistance is ancient", year: 2011, publication: "Nature" },
+    { author: "Review on Antimicrobial Resistance, chaired by Jim O'Neill", title: "Tackling Drug-Resistant Infections Globally: Final Report and Recommendations", year: 2016 },
+    { author: "Antimicrobial Resistance Collaborators", title: "Global burden of bacterial antimicrobial resistance in 2019: a systematic analysis", year: 2022, publication: "The Lancet" },
+  ],
+  vaccines: [
+    { author: "Edward Jenner", title: "An Inquiry into the Causes and Effects of the Variolae Vaccinae", year: 1798 },
+    { author: "Stanley A. Plotkin and Edward A. Mortimer (eds.)", title: "Vaccines", year: 1988, publication: "W. B. Saunders" },
+    { author: "Arthur Allen", title: "Vaccine: The Controversial Story of Medicine's Greatest Lifesaver", year: 2007, publication: "W. W. Norton" },
+  ],
+  sleep: [
+    { author: "Eugene Aserinsky and Nathaniel Kleitman", title: "Regularly Occurring Periods of Eye Motility, and Concomitant Phenomena, During Sleep", year: 1953, publication: "Science" },
+    { author: "Alexander A. Borbély", title: "A two process model of sleep regulation", year: 1982, publication: "Human Neurobiology" },
+    { author: "Lulu Xie et al.", title: "Sleep Drives Metabolite Clearance from the Adult Brain", year: 2013, publication: "Science" },
+  ],
+  zero: [
+    { author: "Brahmagupta", title: "Brāhmasphuṭasiddhānta", year: 628 },
+    { author: "Leonardo of Pisa (Fibonacci)", title: "Liber Abaci", year: 1202 },
+    { author: "Robert Kaplan", title: "The Nothing That Is: A Natural History of Zero", year: 1999, publication: "Oxford University Press" },
+    { author: "Georges Ifrah", title: "The Universal History of Numbers", year: 1981 },
+  ],
+  cryptography: [
+    { author: "Claude E. Shannon", title: "Communication Theory of Secrecy Systems", year: 1949, publication: "Bell System Technical Journal" },
+    { author: "Whitfield Diffie and Martin E. Hellman", title: "New Directions in Cryptography", year: 1976, publication: "IEEE Transactions on Information Theory" },
+    { author: "Peter W. Shor", title: "Algorithms for quantum computation: discrete logarithms and factoring", year: 1994, publication: "Proceedings of the 35th Annual Symposium on Foundations of Computer Science" },
+    { author: "David Kahn", title: "The Codebreakers", year: 1967, publication: "Macmillan" },
+  ],
+  probability: [
+    { author: "Andrey Kolmogorov", title: "Foundations of the Theory of Probability", year: 1933 },
+    { author: "Ian Hacking", title: "The Emergence of Probability", year: 1975, publication: "Cambridge University Press" },
+    { author: "Keith Devlin", title: "The Unfinished Game: Pascal, Fermat, and the Seventeenth-Century Letter That Made the World Modern", year: 2008, publication: "Basic Books" },
+    { author: "Amos Tversky and Daniel Kahneman", title: "Judgment under Uncertainty: Heuristics and Biases", year: 1974, publication: "Science" },
+  ],
+  "plate-tectonics": [
+    { author: "Alfred Wegener", title: "The Origin of Continents and Oceans", year: 1915 },
+    { author: "F. J. Vine and D. H. Matthews", title: "Magnetic Anomalies Over Oceanic Ridges", year: 1963, publication: "Nature" },
+    { author: "Naomi Oreskes", title: "The Rejection of Continental Drift: Theory and Method in American Earth Science", year: 1999, publication: "Oxford University Press" },
+  ],
+  evolution: [
+    { author: "Charles Darwin", title: "On the Origin of Species", year: 1859, publication: "John Murray" },
+    { author: "Richard E. Green et al.", title: "A Draft Sequence of the Neandertal Genome", year: 2010, publication: "Science" },
+    { author: "Jerry A. Coyne", title: "Why Evolution Is True", year: 2009, publication: "Viking" },
+  ],
+  "kpg-extinction": [
+    { author: "Luis W. Alvarez, Walter Alvarez, Frank Asaro and Helen V. Michel", title: "Extraterrestrial Cause for the Cretaceous-Tertiary Extinction", year: 1980, publication: "Science" },
+    { author: "Alan R. Hildebrand et al.", title: "Chicxulub Crater: A possible Cretaceous/Tertiary boundary impact crater on the Yucatán Peninsula, Mexico", year: 1991, publication: "Geology" },
+    { author: "Walter Alvarez", title: "T. rex and the Crater of Doom", year: 1997, publication: "Princeton University Press" },
+    { author: "Peter Schulte et al.", title: "The Chicxulub Asteroid Impact and Mass Extinction at the Cretaceous-Paleogene Boundary", year: 2010, publication: "Science" },
+  ],
+  light: [
+    { author: "Isaac Newton", title: "Opticks", year: 1704 },
+    { author: "James Clerk Maxwell", title: "A Dynamical Theory of the Electromagnetic Field", year: 1865, publication: "Philosophical Transactions of the Royal Society" },
+    { author: "Albert Einstein", title: "On a Heuristic Point of View Concerning the Production and Transformation of Light", year: 1905, publication: "Annalen der Physik" },
+    { author: "Richard P. Feynman", title: "QED: The Strange Theory of Light and Matter", year: 1985, publication: "Princeton University Press" },
+  ],
+  water: [
+    { author: "Philip Ball", title: "H2O: A Biography of Water", year: 1999, publication: "Weidenfeld & Nicolson" },
+    { author: "Martin Chaplin", title: "Do we underestimate the importance of water in cell biology?", year: 2006, publication: "Nature Reviews Molecular Cell Biology" },
+    { author: "Paola Gallo et al.", title: "Water: A Tale of Two Liquids", year: 2016, publication: "Chemical Reviews" },
+  ],
+  "alan-turing": [
+    { author: "A. M. Turing", title: "On Computable Numbers, with an Application to the Entscheidungsproblem", year: 1936, publication: "Proceedings of the London Mathematical Society" },
+    { author: "A. M. Turing", title: "Computing Machinery and Intelligence", year: 1950, publication: "Mind" },
+    { author: "Andrew Hodges", title: "Alan Turing: The Enigma", year: 1983, publication: "Burnett Books" },
+  ],
+  "the-internet": [
+    { author: "Paul Baran", title: "On Distributed Communications Networks", year: 1964, publication: "IEEE Transactions on Communications Systems" },
+    { author: "Vinton G. Cerf and Robert E. Kahn", title: "A Protocol for Packet Network Intercommunication", year: 1974, publication: "IEEE Transactions on Communications" },
+    { author: "Tim Berners-Lee", title: "Information Management: A Proposal", year: 1989, publication: "CERN" },
+    { author: "Katie Hafner and Matthew Lyon", title: "Where Wizards Stay Up Late: The Origins of the Internet", year: 1996, publication: "Simon & Schuster" },
+  ],
+  "printing-press": [
+    { author: "Lucien Febvre and Henri-Jean Martin", title: "The Coming of the Book", year: 1958 },
+    { author: "Elizabeth L. Eisenstein", title: "The Printing Press as an Agent of Change", year: 1979, publication: "Cambridge University Press" },
+    { author: "Andrew Pettegree", title: "The Book in the Renaissance", year: 2010, publication: "Yale University Press" },
+  ],
+  "silk-road": [
+    { author: "Susan Whitfield", title: "Life Along the Silk Road", year: 1999, publication: "John Murray" },
+    { author: "Valerie Hansen", title: "The Silk Road: A New History", year: 2012, publication: "Oxford University Press" },
+    { author: "Peter Frankopan", title: "The Silk Roads: A New History of the World", year: 2015, publication: "Bloomsbury" },
+  ],
+  consciousness: [
+    { author: "Thomas Nagel", title: "What Is It Like to Be a Bat?", year: 1974, publication: "The Philosophical Review" },
+    { author: "Frank Jackson", title: "Epiphenomenal Qualia", year: 1982, publication: "The Philosophical Quarterly" },
+    { author: "Benjamin Libet et al.", title: "Time of Conscious Intention to Act in Relation to Onset of Cerebral Activity (Readiness-Potential)", year: 1983, publication: "Brain" },
+    { author: "David J. Chalmers", title: "Facing Up to the Problem of Consciousness", year: 1995, publication: "Journal of Consciousness Studies" },
+  ],
+  "gut-microbiome": [
+    { author: "Human Microbiome Project Consortium", title: "Structure, function and diversity of the healthy human microbiome", year: 2012, publication: "Nature" },
+    { author: "Ron Sender, Shai Fuchs and Ron Milo", title: "Revised Estimates for the Number of Human and Bacteria Cells in the Body", year: 2016, publication: "PLOS Biology" },
+    { author: "Ed Yong", title: "I Contain Multitudes: The Microbes Within Us and a Grander View of Life", year: 2016, publication: "Ecco" },
+  ],
+  pain: [
+    { author: "Ronald Melzack and Patrick D. Wall", title: "Pain Mechanisms: A New Theory", year: 1965, publication: "Science" },
+    { author: "Patrick Wall", title: "Pain: The Science of Suffering", year: 1999, publication: "Weidenfeld & Nicolson" },
+    { author: "Srinivasa N. Raja et al.", title: "The revised International Association for the Study of Pain definition of pain: concepts, challenges, and compromises", year: 2020, publication: "Pain" },
+  ],
+  infinity: [
+    { author: "Georg Cantor", title: "On an Elementary Question of Set Theory", year: 1891, publication: "Jahresbericht der Deutschen Mathematiker-Vereinigung" },
+    { author: "Paul J. Cohen", title: "The Independence of the Continuum Hypothesis", year: 1963, publication: "Proceedings of the National Academy of Sciences" },
+    { author: "Joseph W. Dauben", title: "Georg Cantor: His Mathematics and Philosophy of the Infinite", year: 1979, publication: "Harvard University Press" },
+  ],
+  incompleteness: [
+    { author: "Kurt Gödel", title: "On Formally Undecidable Propositions of Principia Mathematica and Related Systems I", year: 1931, publication: "Monatshefte für Mathematik und Physik" },
+    { author: "Ernest Nagel and James R. Newman", title: "Gödel's Proof", year: 1958, publication: "New York University Press" },
+    { author: "Torkel Franzén", title: "Gödel's Theorem: An Incomplete Guide to Its Use and Abuse", year: 2005, publication: "A K Peters" },
+  ],
+  "origin-of-life": [
+    { author: "Stanley L. Miller", title: "A Production of Amino Acids Under Possible Primitive Earth Conditions", year: 1953, publication: "Science" },
+    { author: "Walter Gilbert", title: "Origin of life: The RNA world", year: 1986, publication: "Nature" },
+    { author: "Matthew W. Powner, Béatrice Gerland and John D. Sutherland", title: "Synthesis of activated pyrimidine ribonucleotides in prebiotically plausible conditions", year: 2009, publication: "Nature" },
+    { author: "Nick Lane", title: "The Vital Question: Why Is Life the Way It Is?", year: 2015, publication: "Profile Books" },
+  ],
+  "ice-ages": [
+    { author: "Louis Agassiz", title: "Études sur les glaciers", year: 1840 },
+    { author: "James Croll", title: "Climate and Time in Their Geological Relations", year: 1875 },
+    { author: "J. D. Hays, John Imbrie and N. J. Shackleton", title: "Variations in the Earth's Orbit: Pacemaker of the Ice Ages", year: 1976, publication: "Science" },
+    { author: "John Imbrie and Katherine Palmer Imbrie", title: "Ice Ages: Solving the Mystery", year: 1979 },
+  ],
+  "writing-systems": [
+    { author: "Michael Ventris and John Chadwick", title: "Evidence for Greek Dialect in the Mycenaean Archives", year: 1953, publication: "Journal of Hellenic Studies" },
+    { author: "Denise Schmandt-Besserat", title: "Before Writing", year: 1992, publication: "University of Texas Press" },
+    { author: "Andrew Robinson", title: "The Story of Writing", year: 1995, publication: "Thames & Hudson" },
+    { author: "Stanislas Dehaene", title: "Reading in the Brain", year: 2009, publication: "Viking" },
+  ],
+  "proto-indo-european": [
+    { author: "J. P. Mallory", title: "In Search of the Indo-Europeans: Language, Archaeology and Myth", year: 1989, publication: "Thames and Hudson" },
+    { author: "David W. Anthony", title: "The Horse, the Wheel, and Language", year: 2007, publication: "Princeton University Press" },
+    { author: "Benjamin W. Fortson IV", title: "Indo-European Language and Culture: An Introduction", year: 2004, publication: "Blackwell" },
+    { author: "Wolfgang Haak et al.", title: "Massive migration from the steppe was a source for Indo-European languages in Europe", year: 2015, publication: "Nature" },
+  ],
+  translation: [
+    { author: "Eugene A. Nida", title: "Toward a Science of Translating", year: 1964, publication: "Brill" },
+    { author: "Lawrence Venuti", title: "The Translator's Invisibility: A History of Translation", year: 1995, publication: "Routledge" },
+    { author: "David Bellos", title: "Is That a Fish in Your Ear? Translation and the Meaning of Everything", year: 2011, publication: "Faber and Faber" },
+    { author: "Emily Wilson (trans.)", title: "Homer, The Odyssey", year: 2017, publication: "W. W. Norton" },
+  ],
+  "sign-language": [
+    { author: "William C. Stokoe", title: "Sign Language Structure", year: 1960, publication: "Studies in Linguistics: Occasional Papers" },
+    { author: "Harlan Lane", title: "When the Mind Hears: A History of the Deaf", year: 1984, publication: "Random House" },
+    { author: "Oliver Sacks", title: "Seeing Voices", year: 1989, publication: "University of California Press" },
+    { author: "Wendy Sandler, Irit Meir, Carol Padden and Mark Aronoff", title: "The emergence of grammar: Systematic structure in a new language", year: 2005, publication: "Proceedings of the National Academy of Sciences" },
+  ],
+  dictionaries: [
+    { author: "Robert Cawdrey", title: "A Table Alphabeticall", year: 1604 },
+    { author: "Samuel Johnson", title: "A Dictionary of the English Language", year: 1755 },
+    { author: "K. M. Elisabeth Murray", title: "Caught in the Web of Words: James A. H. Murray and the Oxford English Dictionary", year: 1977, publication: "Yale University Press" },
+    { author: "Simon Winchester", title: "The Professor and the Madman", year: 1998, publication: "HarperCollins" },
+  ],
+  money: [
+    { author: "Adam Smith", title: "An Inquiry into the Nature and Causes of the Wealth of Nations", year: 1776 },
+    { author: "R. A. Radford", title: "The Economic Organisation of a P.O.W. Camp", year: 1945, publication: "Economica" },
+    { author: "Caroline Humphrey", title: "Barter and Economic Disintegration", year: 1985, publication: "Man" },
+    { author: "David Graeber", title: "Debt: The First 5,000 Years", year: 2011, publication: "Melville House" },
+  ],
+  inflation: [
+    { author: "Milton Friedman", title: "The Role of Monetary Policy", year: 1968, publication: "American Economic Review" },
+    { author: "Adam Fergusson", title: "When Money Dies: The Nightmare of the Weimar Collapse", year: 1975, publication: "William Kimber" },
+    { author: "Advisory Commission to Study the Consumer Price Index (Boskin Commission)", title: "Toward a More Accurate Measure of the Cost of Living", year: 1996, publication: "US Senate Finance Committee" },
+  ],
+  insurance: [
+    { author: "Edmond Halley", title: "An Estimate of the Degrees of the Mortality of Mankind", year: 1693, publication: "Philosophical Transactions of the Royal Society" },
+    { author: "Lorraine Daston", title: "Classical Probability in the Enlightenment", year: 1988, publication: "Princeton University Press" },
+    { author: "Peter L. Bernstein", title: "Against the Gods: The Remarkable Story of Risk", year: 1996, publication: "Wiley" },
+  ],
+  "joint-stock-company": [
+    { author: "Adolf A. Berle and Gardiner C. Means", title: "The Modern Corporation and Private Property", year: 1932, publication: "Macmillan" },
+    { author: "Milton Friedman", title: "The Social Responsibility of Business Is to Increase Its Profits", year: 1970, publication: "The New York Times Magazine" },
+    { author: "John Micklethwait and Adrian Wooldridge", title: "The Company: A Short History of a Revolutionary Idea", year: 2003, publication: "Modern Library" },
+  ],
+  "great-depression": [
+    { author: "John Maynard Keynes", title: "The General Theory of Employment, Interest and Money", year: 1936, publication: "Macmillan" },
+    { author: "Milton Friedman and Anna Jacobson Schwartz", title: "A Monetary History of the United States, 1867–1960", year: 1963, publication: "Princeton University Press" },
+    { author: "Ben S. Bernanke", title: "Nonmonetary Effects of the Financial Crisis in the Propagation of the Great Depression", year: 1983, publication: "American Economic Review" },
+    { author: "Barry Eichengreen", title: "Golden Fetters: The Gold Standard and the Great Depression, 1919–1939", year: 1992, publication: "Oxford University Press" },
+  ],
+  sanitation: [
+    { author: "Edwin Chadwick", title: "Report on the Sanitary Condition of the Labouring Population of Great Britain", year: 1842 },
+    { author: "Stephen Halliday", title: "The Great Stink of London: Sir Joseph Bazalgette and the Cleansing of the Victorian Metropolis", year: 1999, publication: "Sutton" },
+    { author: "David Cutler and Grant Miller", title: "The Role of Public Health Improvements in Health Advances: The Twentieth-Century United States", year: 2005, publication: "Demography" },
+    { author: "Annabel Ferriman", title: "BMJ readers choose the \"sanitary revolution\" as greatest medical advance since 1840", year: 2007, publication: "BMJ" },
+  ],
+  "broad-street-pump": [
+    { author: "John Snow", title: "On the Mode of Communication of Cholera (2nd edition)", year: 1855, publication: "John Churchill" },
+    { author: "Steven Johnson", title: "The Ghost Map", year: 2006, publication: "Riverhead" },
+    { author: "Sandra Hempel", title: "The Medical Detective: John Snow, Cholera and the Mystery of the Broad Street Pump", year: 2006, publication: "Granta" },
+  ],
+  "electrical-grid": [
+    { author: "Thomas P. Hughes", title: "Networks of Power: Electrification in Western Society, 1880–1930", year: 1983, publication: "Johns Hopkins University Press" },
+    { author: "U.S.-Canada Power System Outage Task Force", title: "Final Report on the August 14, 2003 Blackout in the United States and Canada", year: 2004 },
+    { author: "Gretchen Bakke", title: "The Grid: The Fraying Wires Between Americans and Our Energy Future", year: 2016, publication: "Bloomsbury" },
+  ],
+  "induced-demand": [
+    { author: "A. C. Pigou", title: "The Economics of Welfare", year: 1920, publication: "Macmillan" },
+    { author: "Anthony Downs", title: "The Law of Peak-Hour Expressway Congestion", year: 1962, publication: "Traffic Quarterly" },
+    { author: "Sally Cairns, Stephen Atkins and Phil Goodwin", title: "Disappearing traffic? The story so far", year: 2002, publication: "Proceedings of the Institution of Civil Engineers – Municipal Engineer" },
+    { author: "Gilles Duranton and Matthew A. Turner", title: "The Fundamental Law of Road Congestion: Evidence from US Cities", year: 2011, publication: "American Economic Review" },
+  ],
+  zoning: [
+    { author: "Supreme Court of the United States", title: "Village of Euclid v. Ambler Realty Co., 272 U.S. 365", year: 1926 },
+    { author: "Edward L. Glaeser and Joseph Gyourko", title: "The Impact of Building Restrictions on Housing Affordability", year: 2003, publication: "Federal Reserve Bank of New York Economic Policy Review" },
+    { author: "Donald Shoup", title: "The High Cost of Free Parking", year: 2005, publication: "APA Planners Press" },
+    { author: "Richard Rothstein", title: "The Color of Law", year: 2017, publication: "Liveright" },
+  ],
+  "the-moon": [
+    { author: "William K. Hartmann and Donald R. Davis", title: "Satellite-sized planetesimals and lunar origin", year: 1975, publication: "Icarus" },
+    { author: "Robin M. Canup and Erik Asphaug", title: "Origin of the Moon in a giant impact near the end of the Earth's formation", year: 2001, publication: "Nature" },
+    { author: "Andrew Chaikin", title: "A Man on the Moon", year: 1994, publication: "Viking" },
+  ],
+  "the-sun": [
+    { author: "Arthur Eddington", title: "The Internal Constitution of the Stars", year: 1926, publication: "Cambridge University Press" },
+    { author: "H. A. Bethe", title: "Energy Production in Stars", year: 1939, publication: "Physical Review" },
+    { author: "John A. Eddy", title: "The Maunder Minimum", year: 1976, publication: "Science" },
+    { author: "Borexino Collaboration", title: "Neutrinos from the primary proton–proton fusion process in the Sun", year: 2014, publication: "Nature" },
+  ],
+  telescopes: [
+    { author: "Galileo Galilei", title: "Sidereus Nuncius", year: 1610 },
+    { author: "Richard Panek", title: "Seeing and Believing: How the Telescope Opened Our Eyes and Minds to the Heavens", year: 1998, publication: "Viking" },
+    { author: "Robert E. Williams et al.", title: "The Hubble Deep Field: Observations, Data Reduction, and Galaxy Photometry", year: 1996, publication: "The Astronomical Journal" },
+  ],
+  exoplanets: [
+    { author: "A. Wolszczan and D. A. Frail", title: "A planetary system around the millisecond pulsar PSR1257 + 12", year: 1992, publication: "Nature" },
+    { author: "Michel Mayor and Didier Queloz", title: "A Jupiter-mass companion to a solar-type star", year: 1995, publication: "Nature" },
+    { author: "William J. Borucki et al.", title: "Kepler Planet-Detection Mission: Introduction and First Results", year: 2010, publication: "Science" },
+  ],
+  "the-calendar": [
+    { author: "Pope Gregory XIII", title: "Inter gravissimas", year: 1582 },
+    { author: "E. G. Richards", title: "Mapping Time: The Calendar and Its History", year: 1998, publication: "Oxford University Press" },
+    { author: "Duncan Steel", title: "Marking Time: The Epic Quest to Invent the Perfect Calendar", year: 2000, publication: "Wiley" },
+  ],
+  "ocean-circulation": [
+    { author: "Henry Stommel", title: "Thermohaline Convection with Two Stable Regimes of Flow", year: 1961, publication: "Tellus" },
+    { author: "Wallace S. Broecker", title: "The Great Ocean Conveyor", year: 1991, publication: "Oceanography" },
+    { author: "L. Caesar, S. Rahmstorf, A. Robinson, G. Feulner and V. Saba", title: "Observed fingerprint of a weakening Atlantic Ocean overturning circulation", year: 2018, publication: "Nature" },
+  ],
+  "coral-reefs": [
+    { author: "Charles Darwin", title: "The Structure and Distribution of Coral Reefs", year: 1842, publication: "Smith, Elder" },
+    { author: "J. E. N. Veron", title: "A Reef in Time: The Great Barrier Reef from Beginning to End", year: 2008, publication: "Harvard University Press" },
+    { author: "Terry P. Hughes et al.", title: "Global warming and recurrent mass bleaching of corals", year: 2017, publication: "Nature" },
+  ],
+  whales: [
+    { author: "Philip D. Gingerich et al.", title: "Origin of Whales from Early Artiodactyls: Hands and Feet of Eocene Protocetidae from Pakistan", year: 2001, publication: "Science" },
+    { author: "Joe Roman and James J. McCarthy", title: "The Whale Pump: Marine Mammals Enhance Primary Productivity in a Coastal Basin", year: 2010, publication: "PLOS ONE" },
+    { author: "Hal Whitehead and Luke Rendell", title: "The Cultural Lives of Whales and Dolphins", year: 2015, publication: "University of Chicago Press" },
+    { author: "Philip Hoare", title: "Leviathan, or The Whale", year: 2008, publication: "Fourth Estate" },
+  ],
+  fisheries: [
+    { author: "Daniel Pauly", title: "Anecdotes and the shifting baseline syndrome of fisheries", year: 1995, publication: "Trends in Ecology & Evolution" },
+    { author: "Mark Kurlansky", title: "Cod: A Biography of the Fish That Changed the World", year: 1997, publication: "Walker" },
+    { author: "Boris Worm et al.", title: "Rebuilding Global Fisheries", year: 2009, publication: "Science" },
+    { author: "Food and Agriculture Organization of the United Nations", title: "The State of World Fisheries and Aquaculture 2024", year: 2024 },
+  ],
+  "deep-sea": [
+    { author: "C. Wyville Thomson", title: "The Depths of the Sea", year: 1873, publication: "Macmillan" },
+    { author: "John B. Corliss et al.", title: "Submarine Thermal Springs on the Galápagos Rift", year: 1979, publication: "Science" },
+    { author: "Eva Ramirez-Llodra et al.", title: "Deep, diverse and definitely different: unique attributes of the world's largest ecosystem", year: 2010, publication: "Biogeosciences" },
+  ],
+  steel: [
+    { author: "Henry Bessemer", title: "On the Manufacture of Malleable Iron and Steel without Fuel", year: 1856 },
+    { author: "Thomas J. Misa", title: "A Nation of Steel: The Making of Modern America, 1865–1925", year: 1995, publication: "Johns Hopkins University Press" },
+    { author: "J. D. Verhoeven, A. H. Pendray and W. E. Dauksch", title: "The key role of impurities in ancient Damascus steel blades", year: 1998, publication: "JOM" },
+  ],
+  concrete: [
+    { author: "Robert Courland", title: "Concrete Planet: The Strange and Fascinating Story of the World's Most Common Man-Made Material", year: 2011, publication: "Prometheus Books" },
+    { author: "Marie D. Jackson et al.", title: "Phillipsite and Al-tobermorite mineral cements produced through low-temperature water-rock reactions in Roman marine concrete", year: 2017, publication: "American Mineralogist" },
+    { author: "Linda M. Seymour et al.", title: "Hot mixing: Mechanistic insights into the durability of ancient Roman concrete", year: 2023, publication: "Science Advances" },
+  ],
+  glass: [
+    { author: "L. A. B. Pilkington", title: "Review Lecture: The Float Glass Process", year: 1969, publication: "Proceedings of the Royal Society of London A" },
+    { author: "E. D. Zanotto", title: "Do cathedral glasses flow?", year: 1998, publication: "American Journal of Physics" },
+    { author: "Alan Macfarlane and Gerry Martin", title: "The Glass Bathyscaphe: How Glass Changed the World", year: 2002, publication: "Profile Books" },
+  ],
+  plastics: [
+    { author: "L. H. Baekeland", title: "The Synthesis, Constitution, and Uses of Bakelite", year: 1909, publication: "Journal of Industrial & Engineering Chemistry" },
+    { author: "Jeffrey L. Meikle", title: "American Plastic: A Cultural History", year: 1995, publication: "Rutgers University Press" },
+    { author: "Roland Geyer, Jenna R. Jambeck and Kara Lavender Law", title: "Production, use, and fate of all plastics ever made", year: 2017, publication: "Science Advances" },
+    { author: "Susan Freinkel", title: "Plastic: A Toxic Love Story", year: 2011, publication: "Houghton Mifflin Harcourt" },
+  ],
+  semiconductors: [
+    { author: "Gordon E. Moore", title: "Cramming more components onto integrated circuits", year: 1965, publication: "Electronics" },
+    { author: "Michael Riordan and Lillian Hoddeson", title: "Crystal Fire: The Birth of the Information Age", year: 1997, publication: "W. W. Norton" },
+    { author: "Chris Miller", title: "Chip War: The Fight for the World's Most Critical Technology", year: 2022, publication: "Scribner" },
+  ],
+  fermentation: [
+    { author: "Louis Pasteur", title: "Études sur la bière", year: 1876 },
+    { author: "Patrick E. McGovern", title: "Uncorking the Past: The Quest for Wine, Beer, and Other Alcoholic Beverages", year: 2009, publication: "University of California Press" },
+    { author: "Sandor Ellix Katz", title: "The Art of Fermentation", year: 2012, publication: "Chelsea Green" },
+  ],
+  "haber-bosch": [
+    { author: "Vaclav Smil", title: "Enriching the Earth: Fritz Haber, Carl Bosch, and the Transformation of World Food Production", year: 2001, publication: "MIT Press" },
+    { author: "Thomas Hager", title: "The Alchemy of Air", year: 2008, publication: "Harmony Books" },
+    { author: "Jan Willem Erisman et al.", title: "How a century of ammonia synthesis changed the world", year: 2008, publication: "Nature Geoscience" },
+  ],
+  "green-revolution": [
+    { author: "Leon Hesser", title: "The Man Who Fed the World: Nobel Peace Prize Laureate Norman Borlaug and His Battle to End World Hunger", year: 2006, publication: "Durban House" },
+    { author: "Prabhu L. Pingali", title: "Green Revolution: Impacts, limits, and the path ahead", year: 2012, publication: "Proceedings of the National Academy of Sciences" },
+    { author: "Raj Patel", title: "The Long Green Revolution", year: 2013, publication: "The Journal of Peasant Studies" },
+  ],
+  refrigeration: [
+    { author: "Mario J. Molina and F. S. Rowland", title: "Stratospheric sink for chlorofluoromethanes: chlorine atom-catalysed destruction of ozone", year: 1974, publication: "Nature" },
+    { author: "J. C. Farman, B. G. Gardiner and J. D. Shanklin", title: "Large losses of total ozone in Antarctica reveal seasonal ClOx/NOx interaction", year: 1985, publication: "Nature" },
+    { author: "Jonathan Rees", title: "Refrigeration Nation: A History of Ice, Appliances, and Enterprise in America", year: 2013, publication: "Johns Hopkins University Press" },
+    { author: "Tom Jackson", title: "Chilled: How Refrigeration Changed the World and Might Do So Again", year: 2015, publication: "Bloomsbury" },
+  ],
+  coffee: [
+    { author: "Mark Pendergrast", title: "Uncommon Grounds: The History of Coffee and How It Transformed Our World", year: 1999, publication: "Basic Books" },
+    { author: "Markman Ellis", title: "The Coffee-House: A Cultural History", year: 2004, publication: "Weidenfeld & Nicolson" },
+    { author: "Brian Cowan", title: "The Social Life of Coffee: The Emergence of the British Coffeehouse", year: 2005, publication: "Yale University Press" },
+  ],
+  "the-atom": [
+    { author: "E. Rutherford", title: "The Scattering of α and β Particles by Matter and the Structure of the Atom", year: 1911, publication: "Philosophical Magazine" },
+    { author: "N. Bohr", title: "On the Constitution of Atoms and Molecules", year: 1913, publication: "Philosophical Magazine" },
+    { author: "Jean Perrin", title: "Atoms", year: 1913 },
+  ],
+  "the-cell": [
+    { author: "Robert Hooke", title: "Micrographia", year: 1665 },
+    { author: "Lynn Sagan (Margulis)", title: "On the Origin of Mitosing Cells", year: 1967, publication: "Journal of Theoretical Biology" },
+    { author: "Hiroyuki Imachi et al.", title: "Isolation of an archaeon at the prokaryote–eukaryote interface", year: 2020, publication: "Nature" },
+    { author: "Nick Lane", title: "The Vital Question: Why Is Life the Way It Is?", year: 2015, publication: "Profile Books" },
+  ],
+  dna: [
+    { author: "J. D. Watson and F. H. C. Crick", title: "Molecular Structure of Nucleic Acids: A Structure for Deoxyribose Nucleic Acid", year: 1953, publication: "Nature" },
+    { author: "Rosalind E. Franklin and R. G. Gosling", title: "Molecular Configuration in Sodium Thymonucleate", year: 1953, publication: "Nature" },
+    { author: "Horace Freeland Judson", title: "The Eighth Day of Creation", year: 1979, publication: "Simon & Schuster" },
+    { author: "Brenda Maddox", title: "Rosalind Franklin: The Dark Lady of DNA", year: 2002, publication: "HarperCollins" },
+  ],
+  viruses: [
+    { author: "M. W. Beijerinck", title: "Concerning a contagium vivum fluidum as cause of the spot disease of tobacco leaves", year: 1898 },
+    { author: "Bernard La Scola et al.", title: "A Giant Virus in Amoebae", year: 2003, publication: "Science" },
+    { author: "Curtis A. Suttle", title: "Viruses in the sea", year: 2005, publication: "Nature" },
+    { author: "Carl Zimmer", title: "A Planet of Viruses", year: 2011, publication: "University of Chicago Press" },
+  ],
+  "quantum-mechanics": [
+    { author: "A. Einstein, B. Podolsky and N. Rosen", title: "Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?", year: 1935, publication: "Physical Review" },
+    { author: "J. S. Bell", title: "On the Einstein Podolsky Rosen Paradox", year: 1964, publication: "Physics" },
+    { author: "Richard P. Feynman, Robert B. Leighton and Matthew Sands", title: "The Feynman Lectures on Physics, Volume III", year: 1965, publication: "Addison-Wesley" },
+    { author: "B. Hensen et al.", title: "Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres", year: 2015, publication: "Nature" },
+  ],
+  property: [
+    { author: "Wesley Newcomb Hohfeld", title: "Some Fundamental Legal Conceptions as Applied in Judicial Reasoning", year: 1913, publication: "Yale Law Journal" },
+    { author: "Garrett Hardin", title: "The Tragedy of the Commons", year: 1968, publication: "Science" },
+    { author: "Elinor Ostrom", title: "Governing the Commons: The Evolution of Institutions for Collective Action", year: 1990, publication: "Cambridge University Press" },
+    { author: "Hernando de Soto", title: "The Mystery of Capital", year: 2000, publication: "Basic Books" },
+  ],
+  copyright: [
+    { author: "Parliament of Great Britain", title: "An Act for the Encouragement of Learning (Statute of Anne)", year: 1710 },
+    { author: "Lawrence Lessig", title: "Free Culture", year: 2004, publication: "Penguin Press" },
+    { author: "Adrian Johns", title: "Piracy: The Intellectual Property Wars from Gutenberg to Gates", year: 2009, publication: "University of Chicago Press" },
+  ],
+  "the-jury": [
+    { author: "Patrick Devlin", title: "Trial by Jury", year: 1956, publication: "Stevens & Sons" },
+    { author: "Harry Kalven Jr. and Hans Zeisel", title: "The American Jury", year: 1966, publication: "Little, Brown" },
+    { author: "Thomas Andrew Green", title: "Verdict According to Conscience: Perspectives on the English Criminal Trial Jury, 1200–1800", year: 1985, publication: "University of Chicago Press" },
+  ],
+  "habeas-corpus": [
+    { author: "Court of King's Bench", title: "Somerset v Stewart", year: 1772 },
+    { author: "Supreme Court of the United States", title: "Ex parte Endo, 323 U.S. 283", year: 1944 },
+    { author: "Supreme Court of the United States", title: "Boumediene v. Bush, 553 U.S. 723", year: 2008 },
+    { author: "Paul D. Halliday", title: "Habeas Corpus: From England to Empire", year: 2010, publication: "Harvard University Press" },
+  ],
+  "international-law": [
+    { author: "Hugo Grotius", title: "On the Law of War and Peace", year: 1625 },
+    { author: "Louis Henkin", title: "How Nations Behave: Law and Foreign Policy", year: 1968, publication: "Praeger" },
+    { author: "Oona A. Hathaway and Scott J. Shapiro", title: "The Internationalists: How a Radical Plan to Outlaw War Remade the World", year: 2017, publication: "Simon & Schuster" },
+  ],
+  "the-scientific-method": [
+    { author: "Karl Popper", title: "The Logic of Scientific Discovery", year: 1934 },
+    { author: "Thomas S. Kuhn", title: "The Structure of Scientific Revolutions", year: 1962, publication: "University of Chicago Press" },
+    { author: "Imre Lakatos", title: "Falsification and the Methodology of Scientific Research Programmes", year: 1970, publication: "Criticism and the Growth of Knowledge, Cambridge University Press" },
+    { author: "Paul Feyerabend", title: "Against Method", year: 1975, publication: "New Left Books" },
+  ],
+  "peer-review": [
+    { author: "Richard Smith", title: "Peer review: a flawed process at the heart of science and journals", year: 2006, publication: "Journal of the Royal Society of Medicine" },
+    { author: "Sara Schroter et al.", title: "What errors do peer reviewers detect, and does training improve their ability to detect them?", year: 2008, publication: "Journal of the Royal Society of Medicine" },
+    { author: "Melinda Baldwin", title: "Making \"Nature\": The History of a Scientific Journal", year: 2015, publication: "University of Chicago Press" },
+    { author: "Aileen Fyfe et al.", title: "A History of Scientific Journals: Publishing at the Royal Society, 1665–2015", year: 2022, publication: "UCL Press" },
+  ],
+  "randomised-trials": [
+    { author: "James Lind", title: "A Treatise of the Scurvy", year: 1753 },
+    { author: "R. A. Fisher", title: "The Design of Experiments", year: 1935, publication: "Oliver and Boyd" },
+    { author: "Medical Research Council", title: "Streptomycin Treatment of Pulmonary Tuberculosis", year: 1948, publication: "British Medical Journal" },
+    { author: "Ben Goldacre", title: "Bad Pharma", year: 2012, publication: "Fourth Estate" },
+  ],
+  "replication-crisis": [
+    { author: "John P. A. Ioannidis", title: "Why Most Published Research Findings Are False", year: 2005, publication: "PLOS Medicine" },
+    { author: "Joseph P. Simmons, Leif D. Nelson and Uri Simonsohn", title: "False-Positive Psychology: Undisclosed Flexibility in Data Collection and Analysis Allows Presenting Anything as Significant", year: 2011, publication: "Psychological Science" },
+    { author: "Andrew Gelman and Eric Loken", title: "The Statistical Crisis in Science", year: 2014, publication: "American Scientist" },
+    { author: "Open Science Collaboration", title: "Estimating the reproducibility of psychological science", year: 2015, publication: "Science" },
+  ],
+  "cognitive-bias": [
+    { author: "Amos Tversky and Daniel Kahneman", title: "Judgment under Uncertainty: Heuristics and Biases", year: 1974, publication: "Science" },
+    { author: "Gerd Gigerenzer, Peter M. Todd and the ABC Research Group", title: "Simple Heuristics That Make Us Smart", year: 1999, publication: "Oxford University Press" },
+    { author: "Daniel Kahneman", title: "Thinking, Fast and Slow", year: 2011, publication: "Farrar, Straus and Giroux" },
+  ],
+  photography: [
+    { author: "William Henry Fox Talbot", title: "The Pencil of Nature", year: 1844 },
+    { author: "Susan Sontag", title: "On Photography", year: 1977, publication: "Farrar, Straus and Giroux" },
+    { author: "Geoffrey Batchen", title: "Burning with Desire: The Conception of Photography", year: 1997, publication: "MIT Press" },
+  ],
+  maps: [
+    { author: "Mark Monmonier", title: "How to Lie with Maps", year: 1991, publication: "University of Chicago Press" },
+    { author: "John P. Snyder", title: "Flattening the Earth: Two Thousand Years of Map Projections", year: 1993, publication: "University of Chicago Press" },
+    { author: "Jerry Brotton", title: "A History of the World in Twelve Maps", year: 2012, publication: "Allen Lane" },
+  ],
+  encyclopedias: [
+    { author: "Pliny the Elder", title: "Natural History", year: 77 },
+    { author: "Denis Diderot and Jean le Rond d'Alembert (eds.)", title: "Encyclopédie, ou dictionnaire raisonné des sciences, des arts et des métiers", year: 1751 },
+    { author: "Richard Yeo", title: "Encyclopaedic Visions: Scientific Dictionaries and Enlightenment Culture", year: 2001, publication: "Cambridge University Press" },
+    { author: "Jim Giles", title: "Internet encyclopaedias go head to head", year: 2005, publication: "Nature" },
+  ],
+  "sound-recording": [
+    { author: "Jonathan Sterne", title: "The Audible Past: Cultural Origins of Sound Reproduction", year: 2003, publication: "Duke University Press" },
+    { author: "Mark Katz", title: "Capturing Sound: How Technology Has Changed Music", year: 2004, publication: "University of California Press" },
+    { author: "Greg Milner", title: "Perfecting Sound Forever: The Story of Recorded Music", year: 2009, publication: "Faber and Faber" },
+  ],
+  "the-census": [
+    { author: "Margo J. Anderson", title: "The American Census: A Social History", year: 1988, publication: "Yale University Press" },
+    { author: "James C. Scott", title: "Seeing Like a State", year: 1998, publication: "Yale University Press" },
+    { author: "William Seltzer and Margo Anderson", title: "The Dark Side of Numbers: The Role of Population Data Systems in Human Rights Abuses", year: 2001, publication: "Social Research" },
+  ],
+  "the-wheel": [
+    { author: "Richard W. Bulliet", title: "The Camel and the Wheel", year: 1975, publication: "Harvard University Press" },
+    { author: "David W. Anthony", title: "The Horse, the Wheel, and Language", year: 2007, publication: "Princeton University Press" },
+    { author: "Richard W. Bulliet", title: "The Wheel: Inventions and Reinventions", year: 2016, publication: "Columbia University Press" },
+  ],
+  "shipping-containers": [
+    { author: "Marc Levinson", title: "The Box: How the Shipping Container Made the World Smaller and the World Economy Bigger", year: 2006, publication: "Princeton University Press" },
+    { author: "Rose George", title: "Ninety Percent of Everything", year: 2013, publication: "Metropolitan Books" },
+    { author: "Daniel M. Bernhofen, Zouheir El-Sahli and Richard Kneller", title: "Estimating the effects of the container revolution on world trade", year: 2016, publication: "Journal of International Economics" },
+  ],
+  railways: [
+    { author: "Alfred D. Chandler Jr.", title: "The Visible Hand: The Managerial Revolution in American Business", year: 1977, publication: "Harvard University Press" },
+    { author: "Wolfgang Schivelbusch", title: "The Railway Journey", year: 1977 },
+    { author: "Christian Wolmar", title: "Blood, Iron and Gold: How the Railways Transformed the World", year: 2009, publication: "Atlantic Books" },
+  ],
+  longitude: [
+    { author: "Derek Howse", title: "Greenwich Time and the Discovery of the Longitude", year: 1980, publication: "Oxford University Press" },
+    { author: "Dava Sobel", title: "Longitude", year: 1995, publication: "Walker" },
+    { author: "Richard Dunn and Rebekah Higgitt", title: "Finding Longitude", year: 2014, publication: "Collins" },
+  ],
+  "the-bicycle": [
+    { author: "Vance A. Tucker", title: "The energetic cost of moving about", year: 1975, publication: "American Scientist" },
+    { author: "David V. Herlihy", title: "Bicycle: The History", year: 2004, publication: "Yale University Press" },
+    { author: "Margaret Guroff", title: "The Mechanical Horse: How the Bicycle Reshaped American Life", year: 2016, publication: "University of Texas Press" },
+  ],
+  fire: [
+    { author: "Stephen J. Pyne", title: "Fire: A Brief History", year: 2001, publication: "University of Washington Press" },
+    { author: "Naama Goren-Inbar et al.", title: "Evidence of Hominin Control of Fire at Gesher Benot Ya'aqov, Israel", year: 2004, publication: "Science" },
+    { author: "Richard Wrangham", title: "Catching Fire: How Cooking Made Us Human", year: 2009, publication: "Basic Books" },
+    { author: "Francesco Berna et al.", title: "Microstratigraphic evidence of in situ fire in the Acheulean strata of Wonderwerk Cave, Northern Cape province, South Africa", year: 2012, publication: "Proceedings of the National Academy of Sciences" },
+  ],
+  "the-steam-engine": [
+    { author: "Sadi Carnot", title: "Reflections on the Motive Power of Fire", year: 1824 },
+    { author: "William Stanley Jevons", title: "The Coal Question", year: 1865 },
+    { author: "Robert C. Allen", title: "The British Industrial Revolution in Global Perspective", year: 2009, publication: "Cambridge University Press" },
+    { author: "William Rosen", title: "The Most Powerful Idea in the World", year: 2010, publication: "Random House" },
+  ],
+  entropy: [
+    { author: "Rudolf Clausius", title: "On Several Convenient Forms of the Fundamental Equations of the Mechanical Theory of Heat", year: 1865, publication: "Annalen der Physik" },
+    { author: "Rolf Landauer", title: "Irreversibility and Heat Generation in the Computing Process", year: 1961, publication: "IBM Journal of Research and Development" },
+    { author: "Charles H. Bennett", title: "The Thermodynamics of Computation — a Review", year: 1982, publication: "International Journal of Theoretical Physics" },
+    { author: "Roger Penrose", title: "Cycles of Time", year: 2010, publication: "The Bodley Head" },
+  ],
+  batteries: [
+    { author: "Alessandro Volta", title: "On the Electricity Excited by the Mere Contact of Conducting Substances of Different Kinds", year: 1800, publication: "Philosophical Transactions of the Royal Society" },
+    { author: "Seth Fletcher", title: "Bottled Lightning: Superbatteries, Electric Cars, and the New Lithium Economy", year: 2011, publication: "Hill and Wang" },
+    { author: "Royal Swedish Academy of Sciences", title: "Lithium-ion batteries: Scientific Background on the Nobel Prize in Chemistry 2019", year: 2019 },
+  ],
+  "nuclear-power": [
+    { author: "Spencer R. Weart", title: "Nuclear Fear: A History of Images", year: 1988, publication: "Harvard University Press" },
+    { author: "Anil Markandya and Paul Wilkinson", title: "Electricity generation and health", year: 2007, publication: "The Lancet" },
+    { author: "United Nations Scientific Committee on the Effects of Atomic Radiation", title: "Sources and Effects of Ionizing Radiation, UNSCEAR 2008 Report, Annex D: Health effects due to radiation from the Chernobyl accident", year: 2011 },
+  ],
+  "voting-systems": [
+    { author: "Kenneth J. Arrow", title: "Social Choice and Individual Values", year: 1951, publication: "Wiley" },
+    { author: "Allan Gibbard", title: "Manipulation of Voting Schemes: A General Result", year: 1973, publication: "Econometrica" },
+    { author: "William Poundstone", title: "Gaming the Vote: Why Elections Aren't Fair (and What We Can Do About It)", year: 2008, publication: "Hill and Wang" },
+  ],
+  "game-theory": [
+    { author: "John von Neumann and Oskar Morgenstern", title: "Theory of Games and Economic Behavior", year: 1944, publication: "Princeton University Press" },
+    { author: "John F. Nash", title: "Equilibrium Points in n-Person Games", year: 1950, publication: "Proceedings of the National Academy of Sciences" },
+    { author: "Thomas C. Schelling", title: "The Strategy of Conflict", year: 1960, publication: "Harvard University Press" },
+    { author: "Robert Axelrod", title: "The Evolution of Cooperation", year: 1984, publication: "Basic Books" },
+  ],
+  "collective-action": [
+    { author: "Mancur Olson", title: "The Logic of Collective Action", year: 1965, publication: "Harvard University Press" },
+    { author: "Garrett Hardin", title: "The Tragedy of the Commons", year: 1968, publication: "Science" },
+    { author: "Elinor Ostrom", title: "Governing the Commons: The Evolution of Institutions for Collective Action", year: 1990, publication: "Cambridge University Press" },
+  ],
+  crowds: [
+    { author: "Gustave Le Bon", title: "The Crowd: A Study of the Popular Mind", year: 1895 },
+    { author: "Clark McPhail", title: "The Myth of the Madding Crowd", year: 1991, publication: "Aldine de Gruyter" },
+    { author: "G. Keith Still", title: "Introduction to Crowd Science", year: 2014, publication: "CRC Press" },
+  ],
+  propaganda: [
+    { author: "Walter Lippmann", title: "Public Opinion", year: 1922, publication: "Harcourt, Brace" },
+    { author: "Edward L. Bernays", title: "Propaganda", year: 1928, publication: "Horace Liveright" },
+    { author: "Jacques Ellul", title: "Propaganda: The Formation of Men's Attitudes", year: 1962 },
+    { author: "Hugo Mercier", title: "Not Born Yesterday: The Science of Who We Trust and What We Believe", year: 2020, publication: "Princeton University Press" },
+  ],
+  "weather-forecasting": [
+    { author: "Vilhelm Bjerknes", title: "The Problem of Weather Prediction, Considered from the Viewpoints of Mechanics and Physics", year: 1904, publication: "Meteorologische Zeitschrift" },
+    { author: "Lewis Fry Richardson", title: "Weather Prediction by Numerical Process", year: 1922, publication: "Cambridge University Press" },
+    { author: "Edward N. Lorenz", title: "Deterministic Nonperiodic Flow", year: 1963, publication: "Journal of the Atmospheric Sciences" },
+    { author: "Peter Bauer, Alan Thorpe and Gilbert Brunet", title: "The quiet revolution of numerical weather prediction", year: 2015, publication: "Nature" },
+  ],
+  hurricanes: [
+    { author: "Erik Larson", title: "Isaac's Storm", year: 1999, publication: "Crown" },
+    { author: "Kerry Emanuel", title: "Divine Wind: The History and Science of Hurricanes", year: 2005, publication: "Oxford University Press" },
+    { author: "Kerry Emanuel", title: "Increasing destructiveness of tropical cyclones over the past 30 years", year: 2005, publication: "Nature" },
+  ],
+  clouds: [
+    { author: "Luke Howard", title: "On the Modifications of Clouds", year: 1803 },
+    { author: "Richard Hamblyn", title: "The Invention of Clouds", year: 2001, publication: "Farrar, Straus and Giroux" },
+    { author: "World Meteorological Organization", title: "International Cloud Atlas", year: 1896 },
+  ],
+  lightning: [
+    { author: "Benjamin Franklin", title: "Experiments and Observations on Electricity", year: 1751 },
+    { author: "Vladimir A. Rakov and Martin A. Uman", title: "Lightning: Physics and Effects", year: 2003, publication: "Cambridge University Press" },
+    { author: "Joseph R. Dwyer and Martin A. Uman", title: "The physics of lightning", year: 2014, publication: "Physics Reports" },
+  ],
+  "the-monsoon": [
+    { author: "Edmond Halley", title: "An Historical Account of the Trade Winds, and Monsoons", year: 1686, publication: "Philosophical Transactions of the Royal Society" },
+    { author: "G. T. Walker", title: "Correlation in seasonal variations of weather, IX: A further study of world weather", year: 1924, publication: "Memoirs of the India Meteorological Department" },
+    { author: "Sunil Amrith", title: "Unruly Waters: How Rains, Rivers, Coasts, and Seas Have Shaped Asia's History", year: 2018, publication: "Basic Books" },
+  ],
+  anaesthesia: [
+    { author: "Julie M. Fenster", title: "Ether Day: The Strange Tale of America's Greatest Medical Discovery and the Haunted Men Who Made It", year: 2001, publication: "HarperCollins" },
+    { author: "Stephanie J. Snow", title: "Blessed Days of Anaesthesia: How Anaesthetics Changed the World", year: 2008, publication: "Oxford University Press" },
+  ],
+  "germ-theory": [
+    { author: "Ignaz Semmelweis", title: "The Etiology, Concept, and Prophylaxis of Childbed Fever", year: 1861 },
+    { author: "Joseph Lister", title: "On the Antiseptic Principle in the Practice of Surgery", year: 1867, publication: "The Lancet" },
+    { author: "Robert Koch", title: "The Etiology of Tuberculosis", year: 1882, publication: "Berliner klinische Wochenschrift" },
+    { author: "Nancy Tomes", title: "The Gospel of Germs: Men, Women, and the Microbe in American Life", year: 1998, publication: "Harvard University Press" },
+  ],
+  "blood-transfusion": [
+    { author: "Karl Landsteiner", title: "Über Agglutinationserscheinungen normalen menschlichen Blutes", year: 1901, publication: "Wiener klinische Wochenschrift" },
+    { author: "Richard M. Titmuss", title: "The Gift Relationship: From Human Blood to Social Policy", year: 1970, publication: "Allen & Unwin" },
+    { author: "Douglas Starr", title: "Blood: An Epic History of Medicine and Commerce", year: 1998, publication: "Knopf" },
+  ],
+  insulin: [
+    { author: "F. G. Banting and C. H. Best", title: "The Internal Secretion of the Pancreas", year: 1922, publication: "Journal of Laboratory and Clinical Medicine" },
+    { author: "F. Sanger", title: "Chemistry of Insulin", year: 1959, publication: "Science" },
+    { author: "Michael Bliss", title: "The Discovery of Insulin", year: 1982, publication: "University of Chicago Press" },
+  ],
+  "medical-imaging": [
+    { author: "G. N. Hounsfield", title: "Computerized transverse axial scanning (tomography): Part 1. Description of system", year: 1973, publication: "British Journal of Radiology" },
+    { author: "P. C. Lauterbur", title: "Image Formation by Induced Local Interactions: Examples Employing Nuclear Magnetic Resonance", year: 1973, publication: "Nature" },
+    { author: "Bettyann Holtzmann Kevles", title: "Naked to the Bone: Medical Imaging in the Twentieth Century", year: 1997, publication: "Rutgers University Press" },
+    { author: "H. Gilbert Welch, Lisa M. Schwartz and Steven Woloshin", title: "Overdiagnosed: Making People Sick in the Pursuit of Health", year: 2011, publication: "Beacon Press" },
+  ],
+  "animal-migration": [
+    { author: "Stephen T. Emlen", title: "Migratory Orientation in the Indigo Bunting, Passerina cyanea. Part I: Evidence for Use of Celestial Cues", year: 1967, publication: "The Auk" },
+    { author: "Hugh Dingle", title: "Migration: The Biology of Life on the Move", year: 1996, publication: "Oxford University Press" },
+    { author: "Henrik Mouritsen", title: "Long-distance navigation and magnetoreception in migratory animals", year: 2018, publication: "Nature" },
+  ],
+  camouflage: [
+    { author: "Gerald H. Thayer", title: "Concealing-Coloration in the Animal Kingdom", year: 1909, publication: "Macmillan" },
+    { author: "Hugh B. Cott", title: "Adaptive Coloration in Animals", year: 1940, publication: "Methuen" },
+    { author: "Innes C. Cuthill et al.", title: "Disruptive coloration and background pattern matching", year: 2005, publication: "Nature" },
+    { author: "Tim Caro", title: "Zebra Stripes", year: 2016, publication: "University of Chicago Press" },
+  ],
+  "eusocial-insects": [
+    { author: "W. D. Hamilton", title: "The Genetical Evolution of Social Behaviour", year: 1964, publication: "Journal of Theoretical Biology" },
+    { author: "Bert Hölldobler and E. O. Wilson", title: "The Superorganism: The Beauty, Elegance, and Strangeness of Insect Societies", year: 2009, publication: "W. W. Norton" },
+    { author: "Martin A. Nowak, Corina E. Tarnita and Edward O. Wilson", title: "The evolution of eusociality", year: 2010, publication: "Nature" },
+  ],
+  venom: [
+    { author: "S. H. Ferreira", title: "A bradykinin-potentiating factor (BPF) present in the venom of Bothrops jararaca", year: 1965, publication: "British Journal of Pharmacology" },
+    { author: "Anuradhani Kasturiratne et al.", title: "The Global Burden of Snakebite", year: 2008, publication: "PLOS Medicine" },
+    { author: "Bryan G. Fry et al.", title: "The toxicogenomic multiverse: convergent recruitment of proteins into animal venoms", year: 2009, publication: "Annual Review of Genomics and Human Genetics" },
+    { author: "Christie Wilcox", title: "Venomous: How Earth's Deadliest Creatures Mastered Biochemistry", year: 2016, publication: "Scientific American / Farrar, Straus and Giroux" },
+  ],
+  cephalopods: [
+    { author: "Roger T. Hanlon and John B. Messenger", title: "Cephalopod Behaviour", year: 1996, publication: "Cambridge University Press" },
+    { author: "Peter Godfrey-Smith", title: "Other Minds: The Octopus, the Sea, and the Deep Origins of Consciousness", year: 2016, publication: "Farrar, Straus and Giroux" },
+    { author: "Noa Liscovitch-Brauer et al.", title: "Trade-off between Transcriptome Plasticity and Genome Evolution in Cephalopods", year: 2017, publication: "Cell" },
+  ],
+  "the-factory": [
+    { author: "Sidney Pollard", title: "The Genesis of Modern Management", year: 1965, publication: "Edward Arnold" },
+    { author: "E. P. Thompson", title: "Time, Work-Discipline, and Industrial Capitalism", year: 1967, publication: "Past & Present" },
+    { author: "Joshua B. Freeman", title: "Behemoth: A History of the Factory and the Making of the Modern World", year: 2018, publication: "W. W. Norton" },
+  ],
+  "the-assembly-line": [
+    { author: "Frederick Winslow Taylor", title: "The Principles of Scientific Management", year: 1911, publication: "Harper & Brothers" },
+    { author: "Merritt Roe Smith", title: "Harpers Ferry Armory and the New Technology", year: 1977, publication: "Cornell University Press" },
+    { author: "Stephen Meyer III", title: "The Five Dollar Day: Labor Management and Social Control in the Ford Motor Company, 1908–1921", year: 1981, publication: "SUNY Press" },
+    { author: "David A. Hounshell", title: "From the American System to Mass Production, 1800–1932", year: 1984, publication: "Johns Hopkins University Press" },
+  ],
+  bureaucracy: [
+    { author: "Max Weber", title: "Economy and Society", year: 1922 },
+    { author: "Robert K. Merton", title: "Bureaucratic Structure and Personality", year: 1940, publication: "Social Forces" },
+    { author: "David Graeber", title: "The Utopia of Rules: On Technology, Stupidity, and the Secret Joys of Bureaucracy", year: 2015, publication: "Melville House" },
+  ],
+  "trade-unions": [
+    { author: "Sidney and Beatrice Webb", title: "The History of Trade Unionism", year: 1894, publication: "Longmans, Green" },
+    { author: "E. P. Thompson", title: "The Making of the English Working Class", year: 1963, publication: "Victor Gollancz" },
+    { author: "Richard B. Freeman and James L. Medoff", title: "What Do Unions Do?", year: 1984, publication: "Basic Books" },
+  ],
+  "the-eight-hour-day": [
+    { author: "John Maynard Keynes", title: "Economic Possibilities for our Grandchildren", year: 1930 },
+    { author: "Paul Avrich", title: "The Haymarket Tragedy", year: 1984, publication: "Princeton University Press" },
+    { author: "Juliet B. Schor", title: "The Overworked American: The Unexpected Decline of Leisure", year: 1991, publication: "Basic Books" },
+    { author: "Michael Huberman and Chris Minns", title: "The times they are not changin': Days and hours of work in Old and New Worlds, 1870–2000", year: 2007, publication: "Explorations in Economic History" },
+  ],
+  grasses: [
+    { author: "Virginia Scott Jenkins", title: "The Lawn: A History of an American Obsession", year: 1994, publication: "Smithsonian Institution Press" },
+    { author: "Caroline A. E. Strömberg", title: "Evolution of Grasses and Grassland Ecosystems", year: 2011, publication: "Annual Review of Earth and Planetary Sciences" },
+    { author: "James C. Scott", title: "Against the Grain: A Deep History of the Earliest States", year: 2017, publication: "Yale University Press" },
+  ],
+  trees: [
+    { author: "Henry H. Dixon and J. Joly", title: "On the ascent of sap", year: 1895, publication: "Philosophical Transactions of the Royal Society B" },
+    { author: "Edmund Schulman", title: "Bristlecone Pine, Oldest Known Living Thing", year: 1958, publication: "National Geographic" },
+    { author: "George W. Koch, Stephen C. Sillett, Gregg M. Jennings and Stephen D. Davis", title: "The limits to tree height", year: 2004, publication: "Nature" },
+    { author: "Colin Tudge", title: "The Secret Life of Trees", year: 2005, publication: "Allen Lane" },
+  ],
+  seeds: [
+    { author: "J. Shen-Miller et al.", title: "Exceptional seed longevity and robust growth: ancient Sacred Lotus from China", year: 1995, publication: "American Journal of Botany" },
+    { author: "Carol C. Baskin and Jerry M. Baskin", title: "Seeds: Ecology, Biogeography, and Evolution of Dormancy and Germination", year: 1998, publication: "Academic Press" },
+    { author: "Sarah Sallon et al.", title: "Germination, genetics, and growth of an ancient date seed", year: 2008, publication: "Science" },
+    { author: "Thor Hanson", title: "The Triumph of Seeds", year: 2015, publication: "Basic Books" },
+  ],
+  pollination: [
+    { author: "Charles Darwin", title: "On the Various Contrivances by which British and Foreign Orchids are Fertilised by Insects", year: 1862, publication: "John Murray" },
+    { author: "Alexandra-Maria Klein et al.", title: "Importance of pollinators in changing landscapes for world crops", year: 2007, publication: "Proceedings of the Royal Society B" },
+    { author: "Jeff Ollerton, Rachael Winfree and Sam Tarrant", title: "How many flowering plants are pollinated by animals?", year: 2011, publication: "Oikos" },
+    { author: "Jeff Ollerton", title: "Pollinators and Pollination: Nature and Society", year: 2021, publication: "Pelagic Publishing" },
+  ],
+  "flowering-plants": [
+    { author: "William E. Friedman", title: "The meaning of Darwin's \"abominable mystery\"", year: 2009, publication: "American Journal of Botany" },
+    { author: "Amborella Genome Project", title: "The Amborella Genome and the Evolution of Flowering Plants", year: 2013, publication: "Science" },
+  ],
+  "the-passport": [
+    { author: "Stefan Zweig", title: "The World of Yesterday", year: 1942 },
+    { author: "Hannah Arendt", title: "The Origins of Totalitarianism", year: 1951 },
+    { author: "John Torpey", title: "The Invention of the Passport: Surveillance, Citizenship and the State", year: 2000, publication: "Cambridge University Press" },
+    { author: "Martin Lloyd", title: "The Passport: The History of Man's Most Travelled Document", year: 2003, publication: "Sutton" },
+  ],
+  nationalism: [
+    { author: "Eugen Weber", title: "Peasants into Frenchmen: The Modernization of Rural France, 1870–1914", year: 1976, publication: "Stanford University Press" },
+    { author: "Benedict Anderson", title: "Imagined Communities", year: 1983, publication: "Verso" },
+    { author: "Ernest Gellner", title: "Nations and Nationalism", year: 1983, publication: "Blackwell" },
+    { author: "Eric Hobsbawm and Terence Ranger (eds.)", title: "The Invention of Tradition", year: 1983, publication: "Cambridge University Press" },
+    { author: "Anthony D. Smith", title: "The Ethnic Origins of Nations", year: 1986, publication: "Blackwell" },
+  ],
+  borders: [
+    { author: "Lucy P. Chester", title: "Borders and Conflict in South Asia: The Radcliffe Boundary Commission and the Partition of Punjab", year: 2009, publication: "Manchester University Press" },
+    { author: "Wendy Brown", title: "Walled States, Waning Sovereignty", year: 2010, publication: "Zone Books" },
+    { author: "Reece Jones", title: "Violent Borders: Refugees and the Right to Move", year: 2016, publication: "Verso" },
+  ],
+  refugees: [
+    { author: "United Nations", title: "Convention Relating to the Status of Refugees", year: 1951 },
+    { author: "Colloquium on the International Protection of Refugees in Central America, Mexico and Panama", title: "Cartagena Declaration on Refugees", year: 1984 },
+    { author: "Alexander Betts and Paul Collier", title: "Refuge: Transforming a Broken Refugee System", year: 2017, publication: "Allen Lane" },
+  ],
+  citizenship: [
+    { author: "Supreme Court of the United States", title: "United States v. Wong Kim Ark, 169 U.S. 649", year: 1898 },
+    { author: "T. H. Marshall", title: "Citizenship and Social Class", year: 1950, publication: "Cambridge University Press" },
+    { author: "Ayelet Shachar", title: "The Birthright Lottery: Citizenship and Global Inequality", year: 2009, publication: "Harvard University Press" },
+  ],
+  chess: [
+    { author: "H. J. R. Murray", title: "A History of Chess", year: 1913, publication: "Clarendon Press" },
+    { author: "Claude E. Shannon", title: "Programming a Computer for Playing Chess", year: 1950, publication: "Philosophical Magazine" },
+    { author: "Garry Kasparov", title: "Deep Thinking: Where Machine Intelligence Ends and Human Creativity Begins", year: 2017, publication: "PublicAffairs" },
+  ],
+  "playing-cards": [
+    { author: "L. A. Mayer", title: "Mamluk Playing Cards", year: 1971, publication: "Brill" },
+    { author: "Michael Dummett", title: "The Game of Tarot", year: 1980, publication: "Duckworth" },
+    { author: "David Parlett", title: "A History of Card Games", year: 1991, publication: "Oxford University Press" },
+  ],
+  "go-game": [
+    { author: "Peter Shotwell", title: "Go! More Than a Game", year: 2003, publication: "Tuttle" },
+    { author: "David Silver et al.", title: "Mastering the game of Go with deep neural networks and tree search", year: 2016, publication: "Nature" },
+    { author: "David Silver et al.", title: "Mastering the game of Go without human knowledge", year: 2017, publication: "Nature" },
+  ],
+  football: [
+    { author: "David Goldblatt", title: "The Ball Is Round: A Global History of Football", year: 2006, publication: "Viking" },
+    { author: "Jonathan Wilson", title: "Inverting the Pyramid: The History of Football Tactics", year: 2008, publication: "Orion" },
+    { author: "Chris Anderson and David Sally", title: "The Numbers Game: Why Everything You Know About Football Is Wrong", year: 2013, publication: "Viking" },
+  ],
+  play: [
+    { author: "Johan Huizinga", title: "Homo Ludens", year: 1938 },
+    { author: "Gordon M. Burghardt", title: "The Genesis of Animal Play: Testing the Limits", year: 2005, publication: "MIT Press" },
+    { author: "Peter Gray", title: "Free to Learn", year: 2013, publication: "Basic Books" },
+  ],
+  "immune-system": [
+    { author: "Nobumichi Hozumi and Susumu Tonegawa", title: "Evidence for somatic rearrangement of immunoglobulin genes coding for variable and constant regions", year: 1976, publication: "Proceedings of the National Academy of Sciences" },
+    { author: "Charles A. Janeway and Paul Travers", title: "Immunobiology: The Immune System in Health and Disease", year: 1994, publication: "Garland" },
+    { author: "Shimon Sakaguchi et al.", title: "Immunologic self-tolerance maintained by activated T cells expressing IL-2 receptor alpha-chains (CD25)", year: 1995, publication: "Journal of Immunology" },
+    { author: "Daniel M. Davis", title: "The Beautiful Cure: Harnessing Your Body's Natural Defences", year: 2018, publication: "The Bodley Head" },
+  ],
+  "the-heart": [
+    { author: "William Harvey", title: "Exercitatio Anatomica de Motu Cordis et Sanguinis in Animalibus", year: 1628 },
+    { author: "Marcello Malpighi", title: "De pulmonibus", year: 1661 },
+    { author: "Thomas Wright", title: "Circulation: William Harvey's Revolutionary Idea", year: 2012, publication: "Chatto & Windus" },
+  ],
+  "the-kidney": [
+    { author: "Homer W. Smith", title: "From Fish to Philosopher", year: 1953, publication: "Little, Brown" },
+    { author: "John P. Merrill, Joseph E. Murray, J. Hartwell Harrison and Warren R. Guild", title: "Successful homotransplantation of the human kidney between identical twins", year: 1956, publication: "JAMA" },
+    { author: "Willem J. Kolff", title: "The Artificial Kidney", year: 1946 },
+  ],
+  "the-liver": [
+    { author: "G. M. Higgins and R. M. Anderson", title: "Experimental pathology of the liver. I. Restoration of the liver of the white rat following partial surgical removal", year: 1931, publication: "Archives of Pathology" },
+    { author: "George K. Michalopoulos and Marie C. DeFrances", title: "Liver Regeneration", year: 1997, publication: "Science" },
+    { author: "F. Peter Guengerich", title: "Cytochrome P450 and chemical toxicology", year: 2008, publication: "Chemical Research in Toxicology" },
+  ],
+  "the-nervous-system": [
+    { author: "Santiago Ramón y Cajal", title: "Histology of the Nervous System of Man and Vertebrates", year: 1899 },
+    { author: "A. L. Hodgkin and A. F. Huxley", title: "A quantitative description of membrane current and its application to conduction and excitation in nerve", year: 1952, publication: "Journal of Physiology" },
+    { author: "Eric R. Kandel and James H. Schwartz (eds.)", title: "Principles of Neural Science", year: 1981, publication: "Elsevier" },
+  ],
+  clocks: [
+    { author: "Christiaan Huygens", title: "Horologium Oscillatorium", year: 1673 },
+    { author: "David S. Landes", title: "Revolution in Time: Clocks and the Making of the Modern World", year: 1983, publication: "Harvard University Press" },
+    { author: "Gerhard Dohrn-van Rossum", title: "History of the Hour: Clocks and Modern Temporal Orders", year: 1996, publication: "University of Chicago Press" },
+  ],
+  "time-zones": [
+    { author: "International Meridian Conference", title: "Protocols of the Proceedings", year: 1884 },
+    { author: "Ian R. Bartky", title: "Selling the True Time: Nineteenth-Century Timekeeping in America", year: 2000, publication: "Stanford University Press" },
+    { author: "Clark Blaise", title: "Time Lord: Sir Sandford Fleming and the Creation of Standard Time", year: 2000, publication: "Weidenfeld & Nicolson" },
+    { author: "Vanessa Ogle", title: "The Global Transformation of Time: 1870–1950", year: 2015, publication: "Harvard University Press" },
+  ],
+  "leap-seconds": [
+    { author: "R. A. Nelson et al.", title: "The leap second: its history and possible future", year: 2001, publication: "Metrologia" },
+    { author: "General Conference on Weights and Measures", title: "Resolution 4 of the 27th CGPM: On the use and future development of UTC", year: 2022 },
+    { author: "Duncan Carr Agnew", title: "A global timekeeping problem postponed by global warming", year: 2024, publication: "Nature" },
+  ],
+  "circadian-rhythms": [
+    { author: "Ronald J. Konopka and Seymour Benzer", title: "Clock Mutants of Drosophila melanogaster", year: 1971, publication: "Proceedings of the National Academy of Sciences" },
+    { author: "Charles A. Czeisler et al.", title: "Stability, precision, and near-24-hour period of the human circadian pacemaker", year: 1999, publication: "Science" },
+    { author: "Till Roenneberg", title: "Internal Time: Chronotypes, Social Jet Lag, and Why You're So Tired", year: 2012, publication: "Harvard University Press" },
+  ],
+  "atomic-clocks": [
+    { author: "L. Essen and J. V. L. Parry", title: "An Atomic Standard of Frequency and Time Interval: A Caesium Resonator", year: 1955, publication: "Nature" },
+    { author: "Tony Jones", title: "Splitting the Second: The Story of Atomic Time", year: 2000, publication: "Institute of Physics Publishing" },
+    { author: "C. W. Chou, D. B. Hume, T. Rosenband and D. J. Wineland", title: "Optical Clocks and Relativity", year: 2010, publication: "Science" },
+  ],
+  "the-arch": [
+    { author: "Robert Hooke", title: "A Description of Helioscopes, and Some Other Instruments", year: 1676 },
+    { author: "Jacques Heyman", title: "The Stone Skeleton: Structural Engineering of Masonry Architecture", year: 1995, publication: "Cambridge University Press" },
+    { author: "Philippe Block, Matt DeJong and John Ochsendorf", title: "As Hangs the Flexible Line: Equilibrium of Masonry Arches", year: 2006, publication: "Nexus Network Journal" },
+  ],
+  domes: [
+    { author: "Rowland J. Mainstone", title: "Hagia Sophia: Architecture, Structure and Liturgy of Justinian's Great Church", year: 1988, publication: "Thames and Hudson" },
+    { author: "Jacques Heyman", title: "The Stone Skeleton: Structural Engineering of Masonry Architecture", year: 1995, publication: "Cambridge University Press" },
+    { author: "Ross King", title: "Brunelleschi's Dome", year: 2000, publication: "Chatto & Windus" },
+  ],
+  skyscrapers: [
+    { author: "Carol Willis", title: "Form Follows Finance: Skyscrapers and Skylines in New York and Chicago", year: 1995, publication: "Princeton Architectural Press" },
+    { author: "Joe Morgenstern", title: "The Fifty-Nine-Story Crisis", year: 1995, publication: "The New Yorker" },
+    { author: "Jason M. Barr", title: "Building the Skyline: The Birth and Growth of Manhattan's Skyscrapers", year: 2016, publication: "Oxford University Press" },
+  ],
+  bridges: [
+    { author: "O. H. Ammann, Theodore von Kármán and G. B. Woodruff", title: "The Failure of the Tacoma Narrows Bridge", year: 1941, publication: "Federal Works Agency" },
+    { author: "David McCullough", title: "The Great Bridge", year: 1972, publication: "Simon & Schuster" },
+    { author: "Henry Petroski", title: "Engineers of Dreams: Great Bridge Builders and the Spanning of America", year: 1995, publication: "Knopf" },
+  ],
+  "earthquake-engineering": [
+    { author: "Thomas Paulay and M. J. N. Priestley", title: "Seismic Design of Reinforced Concrete and Masonry Buildings", year: 1992, publication: "Wiley" },
+    { author: "Anil K. Chopra", title: "Dynamics of Structures: Theory and Applications to Earthquake Engineering", year: 1995, publication: "Prentice Hall" },
+    { author: "Robert Reitherman", title: "Earthquakes and Engineers: An International History", year: 2012, publication: "ASCE Press" },
+  ],
+  "the-eye": [
+    { author: "Edme Mariotte", title: "Nouvelle découverte touchant la veüe", year: 1668 },
+    { author: "Dan-E. Nilsson and Susanne Pelger", title: "A pessimistic estimate of the time required for an eye to evolve", year: 1994, publication: "Proceedings of the Royal Society B" },
+    { author: "Trevor D. Lamb, Shaun P. Collin and Edward N. Pugh Jr.", title: "Evolution of the vertebrate eye: opsins, photoreceptors, retina and eye cup", year: 2007, publication: "Nature Reviews Neuroscience" },
+    { author: "Ivan R. Schwab", title: "Evolution's Witness: How Eyes Evolved", year: 2012, publication: "Oxford University Press" },
+  ],
+  "colour-vision": [
+    { author: "Thomas Young", title: "On the Theory of Light and Colours", year: 1802, publication: "Philosophical Transactions of the Royal Society" },
+    { author: "Hermann von Helmholtz", title: "Handbuch der physiologischen Optik", year: 1867 },
+    { author: "Brent Berlin and Paul Kay", title: "Basic Color Terms: Their Universality and Evolution", year: 1969, publication: "University of California Press" },
+    { author: "Jeremy Nathans, Darcy Thomas and David S. Hogness", title: "Molecular genetics of human color vision: the genes encoding blue, green, and red pigments", year: 1986, publication: "Science" },
+  ],
+  "pigments-and-dyes": [
+    { author: "Simon Garfield", title: "Mauve: How One Man Invented a Colour That Changed the World", year: 2000, publication: "Faber and Faber" },
+    { author: "Philip Ball", title: "Bright Earth: The Invention of Colour", year: 2001, publication: "Viking" },
+    { author: "Victoria Finlay", title: "Colour: Travels Through the Paintbox", year: 2002, publication: "Sceptre" },
+    { author: "Andrew E. Smith et al.", title: "Mn3+ in Trigonal Bipyramidal Coordination: A New Blue Chromophore", year: 2009, publication: "Journal of the American Chemical Society" },
+  ],
+  spectacles: [
+    { author: "Robert Hooke", title: "Micrographia", year: 1665 },
+    { author: "Lynn White Jr.", title: "Medieval Technology and Social Change", year: 1962, publication: "Oxford University Press" },
+    { author: "Vincent Ilardi", title: "Renaissance Vision from Spectacles to Telescopes", year: 2007, publication: "American Philosophical Society" },
+    { author: "Brien A. Holden et al.", title: "Global Prevalence of Myopia and High Myopia and Temporal Trends from 2000 through 2050", year: 2016, publication: "Ophthalmology" },
+  ],
+  "optical-illusions": [
+    { author: "Robert Addams", title: "An account of a peculiar optical phænomenon seen after having looked at a moving body", year: 1834, publication: "London and Edinburgh Philosophical Magazine" },
+    { author: "R. L. Gregory", title: "Eye and Brain: The Psychology of Seeing", year: 1966, publication: "Weidenfeld & Nicolson" },
+    { author: "Jerry A. Fodor", title: "The Modularity of Mind", year: 1983, publication: "MIT Press" },
+    { author: "Edward H. Adelson", title: "Lightness Perception and Lightness Illusions", year: 2000, publication: "The New Cognitive Neurosciences, MIT Press" },
+  ],
+  fungi: [
+    { author: "R. H. Whittaker", title: "New Concepts of Kingdoms of Organisms", year: 1969, publication: "Science" },
+    { author: "B. A. Ferguson et al.", title: "Coarse-scale population structure of pathogenic Armillaria species in a mixed-conifer forest in the Blue Mountains of northeast Oregon", year: 2003, publication: "Canadian Journal of Forest Research" },
+    { author: "David L. Hawksworth and Robert Lücking", title: "Fungal Diversity Revisited: 2.2 to 3.8 Million Species", year: 2017, publication: "Microbiology Spectrum" },
+    { author: "Merlin Sheldrake", title: "Entangled Life: How Fungi Make Our Worlds, Change Our Minds and Shape Our Futures", year: 2020, publication: "The Bodley Head" },
+  ],
+  lichens: [
+    { author: "Thomas H. Nash III (ed.)", title: "Lichen Biology", year: 1996, publication: "Cambridge University Press" },
+    { author: "Toby Spribille et al.", title: "Basidiomycete yeasts in the cortex of ascomycete macrolichens", year: 2016, publication: "Science" },
+    { author: "Merlin Sheldrake", title: "Entangled Life: How Fungi Make Our Worlds, Change Our Minds and Shape Our Futures", year: 2020, publication: "The Bodley Head" },
+  ],
+  "mycorrhizal-networks": [
+    { author: "Suzanne W. Simard et al.", title: "Net transfer of carbon between ectomycorrhizal tree species in the field", year: 1997, publication: "Nature" },
+    { author: "Sally E. Smith and David J. Read", title: "Mycorrhizal Symbiosis", year: 1997, publication: "Academic Press" },
+    { author: "Justine Karst, Melanie D. Jones and Jason D. Hoeksema", title: "Positive citation bias and overinterpreted results lead to misinformation on common mycorrhizal networks in forests", year: 2023, publication: "Nature Ecology & Evolution" },
+  ],
+  moulds: [
+    { author: "Alexander Fleming", title: "On the Antibacterial Action of Cultures of a Penicillium, with Special Reference to their Use in the Isolation of B. influenzæ", year: 1929, publication: "British Journal of Experimental Pathology" },
+    { author: "E. Chain et al.", title: "Penicillin as a Chemotherapeutic Agent", year: 1940, publication: "The Lancet" },
+    { author: "John I. Pitt and Ailsa D. Hocking", title: "Fungi and Food Spoilage", year: 1985, publication: "Academic Press" },
+    { author: "Eric Lax", title: "The Mold in Dr. Florey's Coat", year: 2004, publication: "Henry Holt" },
+  ],
+  spores: [
+    { author: "Frances Trail", title: "Fungal cannons: explosive spore discharge in the Ascomycota", year: 2007, publication: "FEMS Microbiology Letters" },
+    { author: "W. Elbert et al.", title: "Contribution of fungi to primary biogenic aerosols in the atmosphere: wet and dry discharged spores, carbohydrates, and inorganic ions", year: 2007, publication: "Atmospheric Chemistry and Physics" },
+    { author: "Nicholas P. Money", title: "Mushroom", year: 2011, publication: "Oxford University Press" },
+  ],
+};

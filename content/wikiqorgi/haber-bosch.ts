@@ -8,6 +8,7 @@ export const haberBosch: RewrittenArticle = {
   standfirst:
     "Air is 78 per cent nitrogen and almost none of it is available to living things, because the two atoms in an N₂ molecule are bound by one of the strongest bonds in chemistry. Breaking it industrially was the single most consequential chemical achievement of the twentieth century — it removed the limit on how many people the planet could feed, and it removed a limit on how long a war could last.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="The_nitrogen_bottleneck">The nitrogen bottleneck</h2>
 <p>Every protein and every strand of DNA contains nitrogen. It is abundant in the atmosphere and useless there: the triple bond holding N₂ together requires an enormous amount of energy to break, so plants cannot touch it.</p>

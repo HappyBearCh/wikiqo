@@ -8,6 +8,7 @@ export const originOfLife: RewrittenArticle = {
   standfirst:
     "Evolution explains what happens once you have things that copy themselves imperfectly. It says nothing about how you get the first one. That problem — a chemical system crossing into biology — remains genuinely open, and it is the largest unresolved question in the natural sciences that is not merely a matter of collecting more data.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="The_timing_is_the_first_clue">The timing is the first clue</h2>
 <p>Earth formed around 4.54 billion years ago and spent its early history too hot and too heavily bombarded for anything to persist. The oldest widely accepted evidence of life — isotopic signatures and microbial structures in ancient rock — dates to somewhere between 3.5 and 3.8 billion years, and contested claims run earlier still.</p>

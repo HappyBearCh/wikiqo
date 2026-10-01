@@ -8,6 +8,7 @@ export const theSun: RewrittenArticle = {
   standfirst:
     "Before nuclear physics, the Sun was an unsolved problem verging on a scandal. Any chemical fuel would have burned out in a few thousand years; even gravitational contraction, the best nineteenth-century answer, gave an age of some tens of millions of years — which geologists and Darwin both knew was far too short. The rocks said the Earth was old. Physics said the Sun could not be. Physics was wrong.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="The_energy_problem">The energy problem</h2>
 <p>Lord Kelvin calculated in the 1860s that a Sun powered by gravitational contraction — slowly collapsing, converting potential energy to heat — could shine for perhaps 20 to 100 million years. It was rigorous work with the physics available, and it put him in direct conflict with geologists reading far longer histories in sedimentary rock, and with Darwin, whose mechanism needed deep time.</p>

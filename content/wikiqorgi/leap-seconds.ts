@@ -8,6 +8,7 @@ export const leapSeconds: RewrittenArticle = {
   standfirst:
     "There are two ways to define a second: as a fraction of the Earth's rotation, which is what a day has always meant, and as a fixed number of oscillations of a caesium atom, which is what the second officially became in 1967. The planet does not rotate at a constant rate, so the two definitions drift apart, and since 1972 the gap has been closed by occasionally inserting an extra second into the last minute of a day. That practice is scheduled to end.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Two_seconds">Two incompatible definitions</h2>
 <p>The historical second was astronomical: a day divided by 86,400. This was serviceable for as long as nothing could measure the day precisely enough to notice it varying.</p>

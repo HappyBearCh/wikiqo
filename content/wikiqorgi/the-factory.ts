@@ -8,6 +8,7 @@ export const theFactory: RewrittenArticle = {
   standfirst:
     "The factory is usually explained by its machines, and the machines are the less interesting half. Powered mills were medieval; what changed around 1770 was the decision to bring workers into a single building on a fixed schedule under continuous supervision. That was a change in the organisation of labour rather than in technology, and the resistance it met was not to the machines but to what the machines were being used to impose.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="Putting_out">What it replaced</h2>
 <p>Textile production before the factory ran on the putting-out system. A merchant supplied raw material to households, collected the finished goods, and paid by the piece. Spinning and weaving were done at home, on the household's own equipment, at hours the household chose.</p>

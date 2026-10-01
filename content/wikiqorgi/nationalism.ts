@@ -8,6 +8,7 @@ export const nationalism: RewrittenArticle = {
   standfirst:
     "Nationalism presents itself as the political expression of an ancient people finally achieving self-determination. The historical record generally runs the other way: states and movements construct national identity, standardising a language, writing a shared history and instituting a common schooling, and the resulting sense of ancient belonging is an output of that process rather than its cause. This is not a claim that national feeling is fake — only that it is recent, and made.",
   readingMinutes: 8,
+  published: "2026-08-18",
   html: `
 <h2 id="Making_italians">A politician's admission</h2>
 <p>At Italian unification in 1861, estimates of the proportion of the population who habitually spoke Italian run from a few per cent to perhaps ten. The rest spoke Neapolitan, Sicilian, Venetian, Piedmontese, Sardinian and dozens of others — mutually unintelligible in many cases, and languages rather than accents.</p>

@@ -8,6 +8,7 @@ export const theMoon: RewrittenArticle = {
   standfirst:
     "Every other rocky planet has either no moon or captured asteroids a few kilometres across. Ours is a quarter of Earth's diameter, which by planetary standards is not a satellite but a companion. Explaining how it got there took until the 1980s, and the answer is that something the size of Mars hit us.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="The_composition_problem">The composition problem</h2>
 <p>Before Apollo there were three competing theories, and the returned samples killed all of them.</p>

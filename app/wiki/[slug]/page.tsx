@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { getArticleHtml, getFileInfo, getSummary } from "@/lib/wikipedia";
 import { sanitizeWikiHtml } from "@/lib/sanitize";
@@ -7,14 +8,18 @@ import {
   articleHref,
   isFileNamespace,
   isNonArticleNamespace,
+  rewrittenHref,
   titleFromSlug,
   wikipediaUrlFor,
 } from "@/lib/links";
 import { isRenderableTitle } from "@/content/popular-titles";
+import { WIKIQORGI_CATALOG } from "@/content/wikiqorgi/catalog";
+import { findBySourceTitle } from "@/lib/shelf-search";
 import { OG_BASE } from "@/lib/site";
 import { parseArticleStructure } from "@/lib/structure";
 import { keywordsFromHtml } from "@/lib/keywords";
 import ArticleStructureLazy from "@/components/ArticleStructureLazy";
+import MobileContents from "@/components/MobileContents";
 import TextBanner from "@/components/TextBanner";
 
 // Keep this route `ƒ (Dynamic)` — do not add a route-level `revalidate` +
@@ -229,6 +234,13 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const hasStructure = structure.children.length > 0;
   // Salient terms from the article body, for the text-viz banner.
   const words = keywordsFromHtml(sanitizedHtml);
+  // wikiqorgi links every original to the Wikipedia article it covers; this is
+  // the link back, so a reader of the mirror learns the rewrite exists. Read
+  // from the generated catalog, not content/wikiqorgi, to keep the shelf's
+  // prose out of this dynamic route's bundle.
+  const rewrite =
+    findBySourceTitle(WIKIQORGI_CATALOG, summary.title) ??
+    findBySourceTitle(WIKIQORGI_CATALOG, title);
 
   return (
     <div className="shell py-10">
@@ -251,6 +263,33 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               <p className="mt-3 text-lg text-muted">{summary.description}</p>
             )}
           </header>
+
+          {rewrite && (
+            <Link
+              href={rewrittenHref(rewrite.slug)}
+              className="group mb-8 flex items-start gap-4 rounded-2xl border border-border bg-surface p-4 transition-colors hover:border-accent sm:p-5"
+            >
+              <span
+                aria-hidden
+                className="mt-1 h-10 w-1.5 shrink-0 rounded-full"
+                style={{ background: "var(--rainbow)" }}
+              />
+              <span className="min-w-0">
+                <span className="block font-mono text-[11px] uppercase tracking-widest text-muted">
+                  We wrote our own article on this
+                </span>
+                <span className="mt-1 block font-serif text-lg font-semibold leading-snug text-foreground group-hover:text-accent">
+                  {rewrite.title}
+                </span>
+                <span className="mt-1 block text-sm leading-relaxed text-muted">
+                  {rewrite.dek}{" "}
+                  <span className="whitespace-nowrap font-semibold text-accent">
+                    Read it on wikiqorgi <span aria-hidden>&rarr;</span>
+                  </span>
+                </span>
+              </span>
+            </Link>
+          )}
 
           {/* Lead image and summary surface inline on small screens, where the
               sidebar collapses below the article. */}
@@ -276,6 +315,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
               {summary.extract}
             </p>
           )}
+
+          <MobileContents root={structure} />
 
           <div
             className="wiki-content prose prose-lg prose-neutral dark:prose-invert max-w-none"

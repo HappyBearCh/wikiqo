@@ -8,6 +8,7 @@ export const cephalopods: RewrittenArticle = {
   standfirst:
     "The last common ancestor of an octopus and a human was a small worm-like creature living some 600 million years ago, with essentially no brain. Everything sophisticated about cephalopod nervous systems evolved separately from everything sophisticated about ours. That makes them the only available comparison case for which features of intelligence are necessary and which are simply how it happened to go once.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Separate">Why they matter</h2>
 <p>Comparing human cognition with that of chimpanzees, dogs or crows tells you about variations on a shared vertebrate design — the same basic brain architecture, inherited from a common ancestor, elaborated differently.</p>

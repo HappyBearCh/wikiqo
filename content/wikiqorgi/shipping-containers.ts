@@ -8,6 +8,7 @@ export const shippingContainers: RewrittenArticle = {
   standfirst:
     "Before containers, loading a ship meant dozens of men manhandling barrels, sacks and crates into a hold for days, and the cost of moving goods between countries was high enough to make distant manufacturing uneconomic for most products. A corrugated steel box with standardised corner fittings collapsed that cost by an order of magnitude, and the global division of labour that followed is a consequence of it. The hard part was never engineering.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Break_bulk">What it replaced</h2>
 <p>Break-bulk shipping meant every item was handled individually. Cargo arrived at a port in whatever form its shipper used, was stored in a shed, was carried aboard by gangs of longshoremen, and was stowed by men who fitted irregular objects together in a hold as a matter of craft judgment.</p>

@@ -8,6 +8,7 @@ export const coffee: RewrittenArticle = {
   standfirst:
     "Caffeine is a defensive compound. Coffee plants produce it to paralyse insects that eat their leaves and to poison competing seedlings around them. In humans at ordinary doses it does something more subtle than stimulate: it does not add energy, it blocks the signal that tells you that you are tired — which is a different thing, and explains most of what is confusing about it.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="How_it_actually_works">How it actually works</h2>
 <p>Adenosine accumulates in the brain through the waking day as a by-product of energy use, and binding to its receptors produces drowsiness — it is the chemical measure of how long you have been awake.</p>

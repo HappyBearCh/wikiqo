@@ -8,6 +8,7 @@ export const greenRevolution: RewrittenArticle = {
   standfirst:
     "In the 1960s serious people predicted mass famine in South Asia within a decade, and the predictions were reasonable given the trends. They did not happen, and the main reason was a change to plant architecture so unglamorous it is hard to believe it mattered: breeding cereals with shorter stems. What followed fed a great many people and caused problems that are still being managed.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Why_short_plants">Why short plants</h2>
 <p>The obvious way to raise yields is to add nitrogen fertiliser, and applied to traditional cereal varieties it failed in a specific way. The plants responded by growing tall — putting the extra resources into stem rather than grain — and then fell over under the weight of their own heads in wind or rain. Lodging, as it is called, ruins the crop. Traditional varieties had a hard ceiling on how much fertiliser they could usefully receive.</p>

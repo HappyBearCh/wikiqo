@@ -8,6 +8,7 @@ export const maps: RewrittenArticle = {
   standfirst:
     "There is a theorem behind every world map. A curved surface cannot be represented on a flat one without distorting something — area, shape, distance, or direction — and no projection preserves all of them. This is not a limitation of technique that better cartography might overcome; it is a proof, and it means every flat map of the Earth misrepresents it in a way its maker selected.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="The_theorem">Why it cannot be done</h2>
 <p>Gauss proved in 1827 that a surface has an intrinsic curvature which no bending or stretching can change without tearing. A sphere and a plane have different intrinsic curvature, so no mapping between them preserves distances. The result is usually called the <em>Theorema Egregium</em>, the remarkable theorem, which is what Gauss himself thought of it.</p>

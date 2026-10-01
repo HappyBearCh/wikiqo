@@ -8,6 +8,7 @@ export const pollination: RewrittenArticle = {
   standfirst:
     "A plant cannot move, so its gametes must. Releasing pollen to the wind works and is profligate — a pine produces pollen by the kilogram and almost none of it arrives anywhere useful. Recruiting an animal to carry pollen directly from one flower to another of the same species is far more precise, and paying for that service with nectar, oil, scent or outright deception is what flowers are for.",
   readingMinutes: 7,
+  published: "2026-08-18",
   html: `
 <h2 id="Wind">The wasteful option</h2>
 <p>Wind pollination is the older strategy and remains dominant in several major groups — conifers, grasses, and many temperate trees including oak, birch and hazel.</p>

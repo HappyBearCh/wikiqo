@@ -8,6 +8,7 @@ export const opticalIllusions: RewrittenArticle = {
   standfirst:
     "The pattern of light on the retina is consistent with infinitely many arrangements of objects in the world, so vision cannot be a matter of reading it off. It is an inference: the visual system commits to the most probable interpretation given assumptions built in by evolution and experience. Illusions are the cases where those assumptions are violated, and their most instructive feature is that understanding one does not dispel it — which tells you the process is sealed off from anything you know.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Inverse">The problem vision has to solve</h2>
 <p>Projecting a three-dimensional world onto a two-dimensional retina discards information irreversibly. A small near object and a large far one cast the same image; a surface may be dark because it is dark or because it is shadowed; an outline may be an object's edge or the boundary of a shadow.</p>

@@ -8,6 +8,7 @@ export const animalMigration: RewrittenArticle = {
   standfirst:
     "Migration is not simply travelling. It is a heritable programme — direction, timing, distance and fuelling all encoded well enough that a naive juvenile can reach a wintering ground it has never seen, alone. The navigational toolkit includes a magnetic sense whose receptor has still not been definitively identified in any vertebrate, which makes this one of the largest unresolved questions in sensory biology.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="Programmed">The programme is inherited</h2>
 <p>The decisive evidence comes from birds raised in isolation. A captive songbird with no view of the sky, no experienced adults to follow, and no migratory experience of its own becomes restless at exactly the season its wild relatives depart — a behaviour German ornithologists named <em>Zugunruhe</em>, migratory restlessness.</p>

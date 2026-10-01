@@ -8,6 +8,7 @@ export const nuclearPower: RewrittenArticle = {
   standfirst:
     "Count deaths per terawatt-hour and nuclear power sits among the safest sources ever operated, well ahead of every fossil fuel and comparable to renewables. This is not a contested figure. Yet it is the source most people fear most, and the gap between the statistic and the perception is not simple irrationality — it reflects real features of the risk that a single number does not capture, and a history in which the industry earned a great deal of the distrust.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="The_reaction">What a reactor is doing</h2>
 <p>A uranium-235 nucleus struck by a slow neutron splits, releasing energy and two or three further neutrons. If on average exactly one of those goes on to split another nucleus, the reaction sustains itself at a constant rate. Above one it grows; below one it dies out.</p>

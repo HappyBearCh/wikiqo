@@ -8,6 +8,7 @@ export const plateTectonics: RewrittenArticle = {
   standfirst:
     "Every schoolchild notices that South America fits into Africa. The observation is not subtle and had been made repeatedly since the first decent Atlantic maps. What kept continental drift out of geology for half a century was not a shortage of evidence but the absence of a mechanism — and a discipline unwilling to be corrected by a meteorologist.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="The_wrong_man_with_the_right_idea">The wrong man with the right idea</h2>
 <p>Alfred Wegener proposed in 1912 that the continents had once been joined in a single landmass and had since separated. He was not guessing from the coastline shapes alone. He assembled the case an investigator would want: matching rock formations and mountain ranges that ran off one continent and resumed on another; identical fossils of land animals and plants on both sides of oceans they could not conceivably have crossed; glacial scratches in India, Australia, southern Africa and South America pointing outward from a common centre, in places now tropical.</p>

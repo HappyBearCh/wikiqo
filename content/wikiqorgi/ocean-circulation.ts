@@ -8,6 +8,7 @@ export const oceanCirculation: RewrittenArticle = {
   standfirst:
     "The ocean is usually pictured as a basin that wind pushes around at the surface. Underneath that is a slower system driven by density: water made heavy by cold and salt sinks in a few small regions, spreads across the planet at depth, and returns. It moves about as much heat as the atmosphere does, and it takes a millennium to complete a circuit.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="Two_circulations,_stacked">Two circulations, stacked</h2>
 <p>The surface ocean is driven by wind. Prevailing winds drag the top few hundred metres, and the Earth's rotation deflects the resulting flow, producing the great rotating gyres that fill each basin — clockwise in the northern hemisphere, anticlockwise in the southern.</p>

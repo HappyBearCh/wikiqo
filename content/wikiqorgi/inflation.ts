@@ -8,6 +8,7 @@ export const inflation: RewrittenArticle = {
   standfirst:
     "Inflation is reported as a fact about the economy — a percentage, monthly, to one decimal place. It is really a weighted average of price changes across a basket of goods that no actual household buys in those proportions, which is why the official figure so often disagrees with what people feel. Both can be right at once, and the gap between them explains a great deal of political anger.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="Measuring_it_is_already_a_judgement">Measuring it is already a judgement</h2>
 <p>To compute inflation you must first decide what to measure. Statistical agencies define a basket of goods and services, weight each by how much of a typical household's spending it represents, track prices, and report the change.</p>

@@ -8,6 +8,7 @@ export const theScientificMethod: RewrittenArticle = {
   standfirst:
     "Observe, hypothesise, predict, experiment, conclude. The version on the classroom poster is tidy, memorable, and a poor description of how any significant discovery has been made. Philosophers of science spent the twentieth century failing to find a single procedure that distinguishes science from everything else, and the more useful account that emerged is not about method at all but about institutions built to make error expensive.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="The_textbook_version">The version on the poster</h2>
 <p>The standard formulation presents research as a linear sequence: notice something, form a hypothesis, deduce a testable prediction, run a controlled experiment, accept or reject.</p>

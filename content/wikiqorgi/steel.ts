@@ -8,6 +8,7 @@ export const steel: RewrittenArticle = {
   standfirst:
     "Steel is iron with a small amount of carbon dissolved in it, and the amount is startlingly small: below about 0.02 per cent you have soft wrought iron, above about 2 per cent you have brittle cast iron, and the useful range in between is where nearly every structure, vehicle and tool of the industrial world lives. For most of history the difficulty was not knowing this but controlling it.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="Why_a_trace_matters_so_much">Why a trace matters so much</h2>
 <p>Pure iron is soft, because its atoms sit in a regular lattice whose layers slide past each other easily. Deformation in metals happens through the movement of defects in that lattice, and anything that obstructs those defects makes the metal harder.</p>

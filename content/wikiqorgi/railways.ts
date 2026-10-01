@@ -8,6 +8,7 @@ export const railways: RewrittenArticle = {
   standfirst:
     "The railway's technical achievement is a very low-friction interface between steel and steel. Its social achievement is stranger: it made local time unworkable, produced the first standardised time zones, invented modern management as a discipline, and imposed a schedule on people who had never previously needed one. Almost everything about how industrial society organises itself in time can be traced to a scheduling problem on a single track.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="Steel_on_steel">The physics is the whole thing</h2>
 <p>A steel wheel on a steel rail has extraordinarily low rolling resistance — on the order of a thousandth of the load, against perhaps a hundredth for a rubber tyre on asphalt. This single ratio determines every characteristic of railway operation.</p>

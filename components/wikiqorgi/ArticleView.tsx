@@ -1,16 +1,20 @@
 import Link from "next/link";
 import {
   getSectionForSlug,
+  getSources,
   rewrittenHref,
   sectionHref,
   type RewrittenArticle,
+  type Source,
 } from "@/content/wikiqorgi";
+import { linkArticleHtml } from "@/content/wikiqorgi/crosslinks";
 import { articleHref } from "@/lib/links";
 import { keywordsFromHtml } from "@/lib/keywords";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { parseArticleStructure } from "@/lib/structure";
 import { wikipediaUrlFor } from "@/lib/wikipedia";
 import ArticleStructureLazy from "@/components/ArticleStructureLazy";
+import MobileContents from "@/components/MobileContents";
 import TextBanner from "@/components/TextBanner";
 
 /** One rewritten article, in the same reading chrome as a mirrored Wikipedia
@@ -23,6 +27,10 @@ export default function ArticleView({ article }: { article: RewrittenArticle }) 
   const hasStructure = structure.children.length > 0;
   const words = keywordsFromHtml(article.html);
   const sourceUrl = wikipediaUrlFor(article.sourceTitle);
+  const sources = getSources(article.slug);
+  // Body with in-text links to the rest of the shelf. Built at prerender time
+  // from compile-time constants, so it is as static as the article itself.
+  const bodyHtml = linkArticleHtml(article);
 
   // Siblings on the same shelf, for the "keep reading" links at the foot.
   const siblings = (section?.articles ?? []).filter((a) => a.slug !== article.slug);
@@ -34,6 +42,15 @@ export default function ArticleView({ article }: { article: RewrittenArticle }) 
     description: article.dek,
     url: `${SITE_URL}${rewrittenHref(article.slug)}`,
     inLanguage: "en",
+    datePublished: article.published,
+    // The Sources list, so search engines see the article's grounding the way
+    // a reader does.
+    citation: sources.map((source) => ({
+      "@type": "CreativeWork",
+      name: source.title,
+      author: source.author,
+      datePublished: String(source.year),
+    })),
     author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
     publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
     about: article.sourceTitle,
@@ -98,6 +115,10 @@ export default function ArticleView({ article }: { article: RewrittenArticle }) 
               <span aria-hidden className="opacity-50">
                 ·
               </span>
+              <time dateTime={article.published}>{formatPublished(article.published)}</time>
+              <span aria-hidden className="opacity-50">
+                ·
+              </span>
               <span>Subject: {article.sourceTitle}</span>
             </p>
           </header>
@@ -109,12 +130,18 @@ export default function ArticleView({ article }: { article: RewrittenArticle }) 
             {article.standfirst}
           </p>
 
+          <MobileContents root={structure} />
+
           <div
             className="wiki-content prose prose-lg prose-neutral dark:prose-invert max-w-none"
             // Hand-authored HTML from content/wikiqorgi — a compile-time
-            // constant in this repo, never user or network input.
-            dangerouslySetInnerHTML={{ __html: article.html }}
+            // constant in this repo, never user or network input — plus the
+            // links added by crosslinks.ts, which only ever inserts anchors to
+            // /wikiqorgi/ slugs around text already in that HTML.
+            dangerouslySetInnerHTML={{ __html: bodyHtml }}
           />
+
+          {sources.length > 0 && <SourcesList sources={sources} />}
 
           <footer className="mt-12 rounded-2xl border border-border bg-surface px-5 py-4 text-sm text-muted">
             <p>
@@ -226,5 +253,45 @@ export default function ArticleView({ article }: { article: RewrittenArticle }) 
         </aside>
       </div>
     </div>
+  );
+}
+
+/** "2026-08-16" → "16 August 2026", in UTC so the build machine's zone can't
+ *  shift the day. */
+function formatPublished(isoDate: string): string {
+  return new Date(`${isoDate}T00:00:00Z`).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
+
+/**
+ * Further reading: the standard works behind the article, oldest first. Not
+ * footnotes — nothing in the body points at a particular entry — but enough
+ * for a reader to check the account against the record.
+ */
+function SourcesList({ sources }: { sources: Source[] }) {
+  return (
+    <section aria-labelledby="sources-heading" className="mt-12">
+      <h2
+        id="sources-heading"
+        className="font-serif text-2xl font-semibold tracking-tight text-foreground"
+      >
+        Sources and further reading
+      </h2>
+      <ol className="mt-4 space-y-2.5 text-sm leading-relaxed text-muted">
+        {sources.map((source) => (
+          <li key={`${source.author}-${source.title}`} className="pl-4 -indent-4">
+            {source.author} ({source.year}).{" "}
+            <cite className="text-foreground">{source.title}</cite>
+            {/* "Black hole explosions?" takes no full stop after it. */}
+            {/[.?!]$/.test(source.title) ? "" : "."}
+            {source.publication && <> {source.publication}.</>}
+          </li>
+        ))}
+      </ol>
+    </section>
   );
 }

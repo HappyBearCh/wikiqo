@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Source_Serif_4 } from "next/font/google";
-import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AnalyticsConsent from "@/components/AnalyticsConsent";
 import { OG_BASE, SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -89,18 +89,8 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
-          `}
-        </Script>
+        {/* GA4 loads only once the reader consents; see AnalyticsConsent. */}
+        <AnalyticsConsent measurementId={GA_MEASUREMENT_ID} />
       </body>
     </html>
   );

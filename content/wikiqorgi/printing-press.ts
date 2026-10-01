@@ -8,6 +8,7 @@ export const printingPress: RewrittenArticle = {
   standfirst:
     "The printing press is the standard example of a technology whose effects ran far beyond its purpose. It was a business proposition — mechanise the copying of books people already bought — and within seventy years it had broken the Church's monopoly on interpretation, standardised half a dozen languages, and made cumulative science possible. Its inventor went bankrupt.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="What_Gutenberg_actually_invented">What Gutenberg actually invented</h2>
 <p>Printing was not new. Woodblock printing had been practised in China for centuries, movable type of clay was described by Bi Sheng around 1040, and Korea was printing with cast metal type decades before Gutenberg — the <em>Jikji</em>, printed in 1377, survives. Europe's contribution was not the idea but a manufacturing system.</p>

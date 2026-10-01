@@ -8,6 +8,7 @@ export const theAtom: RewrittenArticle = {
   standfirst:
     "The atom in the logo — a nucleus with electrons circling it on neat elliptical tracks — was obsolete within about a decade of being proposed, and physicists knew it could not work even as they used it. Its replacement is harder to draw and considerably stranger: electrons occupy standing-wave patterns of probability, and asking where one is between measurements may not be a meaningful question.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Mostly_empty">Mostly empty</h2>
 <p>Ernest Rutherford's team fired alpha particles at a thin gold foil in 1909, expecting them to pass through with slight deflections. Almost all did. A tiny fraction bounced back, which Rutherford described as about as credible as firing a shell at tissue paper and having it come back at you.</p>

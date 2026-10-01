@@ -8,6 +8,7 @@ export const jointStockCompany: RewrittenArticle = {
   standfirst:
     "A corporation is a person that cannot be imprisoned, does not die, and whose owners are not responsible for its debts. Every part of that is an invention — a set of legal conveniences agreed on for practical reasons — and the combination made it possible to assemble capital from thousands of strangers who had never met and did not trust each other.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="The_problem_it_solved">The problem it solved</h2>
 <p>Some ventures are too large and too risky for any partnership. Fitting out a fleet for a two-year voyage to Asia required capital beyond individual fortunes, might return nothing, and might well sink.</p>

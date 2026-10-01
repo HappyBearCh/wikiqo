@@ -8,6 +8,7 @@ export const playingCards: RewrittenArticle = {
   standfirst:
     "A standard deck looks like a natural object — fifty-two cards, four suits, three court cards each — and every part of it is a decision someone made for a reason, usually a manufacturing one. The deck travelled from China through the Islamic world into Europe, was redesigned in fifteenth-century France to be cheap to stencil, acquired reversible court cards and corner indices in the nineteenth century because of how people hold them, and picked up the joker in America.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Route">The route west</h2>
 <p>Cards appear first in China, where references to a leaf game date from the Tang period and printed money-suited cards are documented later; the technology and the concept both plausibly follow from woodblock printing and paper money, which is to say cards are a by-product of a society that had already worked out how to print small rectangular objects in quantity.</p>

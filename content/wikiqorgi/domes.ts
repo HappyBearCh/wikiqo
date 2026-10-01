@@ -8,6 +8,7 @@ export const domes: RewrittenArticle = {
   standfirst:
     "The usual description of a dome as an arch rotated about its axis is half right and misses the interesting half. Because the material forms continuous rings as well as vertical arcs, a dome carries force in two directions at once. Near the crown the rings are squeezed and the structure is exceptionally stable; below roughly the halfway point the rings are stretched, and masonry cannot be stretched. Every great masonry dome is an answer to that problem, and the answers are visible from outside if you know what to look for.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Hoop">The force that only exists because it is round</h2>
 <p>Consider a slice of a dome running from crown to base — that is an arch, and it behaves like one. Now consider a horizontal ring cut through the dome at some height. That ring is a structural element in its own right, and its behaviour changes with height.</p>

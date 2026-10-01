@@ -8,6 +8,7 @@ export const infinity: RewrittenArticle = {
   standfirst:
     "For two thousand years infinity was handled by not handling it — treated as a direction rather than a quantity, something a process tends toward but never reaches. Then Georg Cantor took it seriously as an object you could count with, and found that the infinite comes in different sizes. The result is one of the few mathematical proofs that genuinely offends intuition, and it is not difficult.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="The_ancient_refusal">The ancient refusal</h2>
 <p>Greek mathematics distinguished the <em>potential</em> infinite — a process that can always be continued, like adding one more to any number — from the <em>actual</em> infinite, a completed infinite totality. Aristotle permitted the first and rejected the second, and the distinction held for two millennia.</p>

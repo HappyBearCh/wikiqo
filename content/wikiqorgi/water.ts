@@ -8,6 +8,7 @@ export const water: RewrittenArticle = {
   standfirst:
     "Water is so ordinary that its peculiarity is invisible. Compare it with the molecules it should resemble and nearly every property is wrong: it boils hundreds of degrees too high, it expands when it freezes, it takes an absurd amount of energy to warm, and it dissolves almost anything. Each anomaly traces to one weak bond, and life depends on all of them.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="A_molecule_bent_at_the_right_angle">A molecule bent at the right angle</h2>
 <p>Water is one oxygen atom and two hydrogens, and the whole story follows from two facts about that arrangement. First, the molecule is bent rather than straight — the hydrogens sit at roughly 104 degrees, pushed together by the oxygen's unshared electron pairs. Second, oxygen pulls electrons far more strongly than hydrogen does.</p>

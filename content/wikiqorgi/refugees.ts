@@ -8,6 +8,7 @@ export const refugees: RewrittenArticle = {
   standfirst:
     "The 1951 Refugee Convention is a narrow instrument drafted for a specific situation — displaced Europeans after the Second World War — and its definition turns on a well-founded fear of persecution on five enumerated grounds. Most people displaced today do not fit it, and the gap between the legal category and the ordinary meaning of the word explains most of the confusion in public argument about it.",
   readingMinutes: 7,
+  published: "2026-08-18",
   html: `
 <h2 id="The_definition">What the convention actually says</h2>
 <p>A refugee, under the 1951 Convention, is a person who is outside their country of nationality, owing to a well-founded fear of being persecuted for reasons of race, religion, nationality, membership of a particular social group, or political opinion, and is unable or unwilling to avail themselves of that country's protection.</p>

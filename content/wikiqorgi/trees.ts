@@ -8,6 +8,7 @@ export const trees: RewrittenArticle = {
   standfirst:
     "A tree is a strategy rather than a kind of organism. Being tall and woody has evolved independently in many unrelated plant lineages, been abandoned in others, and re-evolved in some — so the category groups a magnolia with a pine and excludes a bamboo that is taller than both. Understanding a tree as a solution to a specific problem, rather than as a taxon, explains most of what is peculiar about them.",
   readingMinutes: 8,
+  published: "2026-08-18",
   html: `
 <h2 id="Not_a_taxon">There is no tree clade</h2>
 <p>Grouping organisms properly means grouping by ancestry, and by that standard trees are not a group. Oaks are more closely related to some herbs than to pines. The trait has arisen many times over.</p>

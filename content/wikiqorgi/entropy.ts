@@ -8,6 +8,7 @@ export const entropy: RewrittenArticle = {
   standfirst:
     "Entropy is routinely explained as disorder, which is a metaphor that misleads more than it helps. It is a count — of how many microscopic arrangements produce the same macroscopic state — and its tendency to increase is not a law of nature so much as an overwhelming statistical likelihood. That distinction is what makes it interesting, because it is the only thing in physics that distinguishes forward from backward in time.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="Two_definitions">Two definitions, arrived at from opposite ends</h2>
 <p>Entropy was defined twice, by people solving different problems, and the two definitions turned out to describe the same quantity.</p>

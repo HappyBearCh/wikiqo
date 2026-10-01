@@ -8,6 +8,7 @@ export const moulds: RewrittenArticle = {
   standfirst:
     "Mould is not a taxonomic group but a growth habit — filamentous fungi producing visible colonies on a surface — and it is the principal reason food spoils, buildings decay and stored grain becomes dangerous. It is also the source of penicillin, of several cheeses, of citric acid at industrial scale, and of the compound that lowers cholesterol in tens of millions of people. The same biology underlies all of it: an organism that digests its substrate externally and defends the resulting meal with chemistry.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Growth">What is actually growing</h2>
 <p>What you see on a spoiled surface is mostly not the organism. The mycelium has already penetrated the substrate, secreting enzymes and absorbing the products; the visible fuzz is the aerial layer producing spores, and its colour comes from those spores rather than from the fungus itself — which is why moulds are described as blue, green or black.</p>

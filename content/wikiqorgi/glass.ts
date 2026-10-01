@@ -8,6 +8,7 @@ export const glass: RewrittenArticle = {
   standfirst:
     "Glass is easy to take for granted because it is everywhere and does nothing dramatic. Its significance is that no other cheap material combines transparency with chemical inertness and the ability to be blown into any vessel shape. Take glass away and you lose lenses, so no microscope and no telescope; you lose flasks, so no observable chemistry; you lose windows, so no reading indoors in a northern winter.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="Neither_solid_nor_liquid,_exactly">Neither solid nor liquid, exactly</h2>
 <p>Most materials crystallise on cooling: their atoms settle into a repeating lattice at a definite freezing point. Glass does not. Cool molten silica fast enough and the atoms become too sluggish to arrange themselves before motion effectively ceases, leaving a disordered structure — the atomic arrangement of a liquid, frozen in place.</p>

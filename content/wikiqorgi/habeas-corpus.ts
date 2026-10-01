@@ -8,6 +8,7 @@ export const habeasCorpus: RewrittenArticle = {
   standfirst:
     "Habeas corpus is a procedural device of almost brutal simplicity: produce the person you are holding and state the lawful basis for holding them. It makes no claim about innocence and offers no opinion on the merits. Its power is that it forces detention to be justified to someone other than the person doing the detaining — and the entire history of the writ is a history of governments finding ways around exactly that.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="What_it_does">The mechanism</h2>
 <p>The name is the opening of the Latin writ: <em>habeas corpus ad subjiciendum</em>, "that you have the body to submit". It is an order directed not at the prisoner but at whoever holds them — a governor, a commanding officer, a minister — requiring them to bring the detainee before a court and state the authority for the detention.</p>

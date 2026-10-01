@@ -8,6 +8,7 @@ export const theKidney: RewrittenArticle = {
   standfirst:
     "Human kidneys filter roughly 180 litres of fluid a day and excrete around one and a half. Every gram of glucose, nearly all the sodium, and almost all the water is pushed out and then pulled back in. The apparent waste is the point: by discarding the blood's contents wholesale and then adjusting recovery substance by substance, the kidney can control volume, sodium, potassium, acidity, calcium and several hormones with one mechanism.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Filter_first">Filter everything, then decide</h2>
 <p>A nephron begins with a glomerulus, a tuft of capillaries under pressure inside a capsule. Blood pressure forces fluid across the capillary wall, and the wall's structure determines what goes: water, ions, glucose, amino acids, urea and small molecules pass freely; cells and most proteins do not, being excluded by size and by a strong negative charge on the barrier.</p>

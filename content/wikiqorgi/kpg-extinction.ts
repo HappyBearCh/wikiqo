@@ -8,6 +8,7 @@ export const kpgExtinction: RewrittenArticle = {
   standfirst:
     "Sixty-six million years ago an object roughly ten kilometres across struck what is now the Yucatán Peninsula at something like twenty kilometres per second. The impact itself killed almost nothing beyond the immediate region. What followed over the next months and years killed three-quarters of all species on Earth, and the reason it did is more interesting than the collision.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="A_layer_of_clay_that_should_not_exist">A layer of clay that should not exist</h2>
 <p>The discovery started with a question about time, not extinction. In the late 1970s the geologist Walter Alvarez was studying a thin band of clay in Italian limestone that marked the boundary between Cretaceous and Paleogene rock — below it, abundant marine microfossils; above it, almost none. He wanted to know how long the layer had taken to form.</p>

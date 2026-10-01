@@ -8,6 +8,7 @@ export const insulin: RewrittenArticle = {
   standfirst:
     "Before 1922, a diagnosis of type 1 diabetes in a child meant death within roughly a year, and the only treatment was starvation to postpone it. The discovery of insulin is among the fastest translations from laboratory to bedside in medical history, and its discoverers sold the patent to the University of Toronto for a dollar each so that nobody could monopolise it. What happened to the price afterwards is the part worth understanding.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Before">A death sentence with one delaying tactic</h2>
 <p>Type 1 diabetes destroys the pancreatic beta cells that produce insulin. Without insulin, glucose cannot enter most cells, so it accumulates in the blood while the tissues starve. The body turns to fat, producing ketones, and the resulting acidosis kills.</p>

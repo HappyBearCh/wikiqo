@@ -8,6 +8,7 @@ export const property: RewrittenArticle = {
   standfirst:
     "The intuitive picture of property is a person and an object, joined by ownership. Lawyers abandoned that picture more than a century ago, because it explains nothing about the cases that matter. Property is better understood as a bundle of separable rights — to use, to exclude, to transfer, to destroy — held against other people, and almost every interesting dispute is about which strands of the bundle someone actually holds.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="The_bundle">The bundle</h2>
 <p>Consider what you own when you own a house. You may live in it, but not run a foundry in it. You may sell it, but you may not sell it with a covenant forbidding certain buyers. You may not build upward past a certain height, and if the state wants the land for a road it can take it and pay you. Your neighbour may have a right of way across the garden that you cannot revoke. A bank may hold a claim that outranks yours if you stop paying.</p>

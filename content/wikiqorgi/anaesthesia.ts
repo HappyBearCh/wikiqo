@@ -8,6 +8,7 @@ export const anaesthesia: RewrittenArticle = {
   standfirst:
     "The most striking fact about anaesthesia is not its discovery but its delay. Both ether and nitrous oxide were available, well characterised, and being inhaled at parties for entertainment for roughly half a century before anyone connected them to the problem of surgical pain. In the meantime operations were performed on conscious patients held down by assistants, and speed was the surgeon's most valued skill. Nobody has a fully satisfying explanation for the gap.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="Before">What surgery was</h2>
 <p>Before 1846, an operation was a controlled assault. Patients were restrained by strong assistants or strapped to the table, given alcohol or opium of limited effect, and sometimes bled to unconsciousness. Screaming was expected, and hospitals sited operating theatres away from the wards for that reason.</p>

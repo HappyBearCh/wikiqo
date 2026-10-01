@@ -8,6 +8,7 @@ export const bridges: RewrittenArticle = {
   standfirst:
     "A bridge holds a load in the air over a gap, and doing so always produces both compression and tension somewhere. The bridge types are distinguished by where each is placed and which material carries it — which is why arches dominated when only stone was available, why iron and steel produced trusses and suspension bridges within a few decades of becoming cheap, and why the failures that matter have almost all involved a force the designers had not thought to include.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Five_types">The five arrangements</h2>
 <p>A <strong>beam</strong> carries load by bending: the top of the deck is compressed, the bottom stretched. It is the simplest and least efficient form, because most of the material sits near the neutral axis in the middle doing nothing, and its span is limited by the fact that a longer beam must be deeper, which makes it heavier, which requires it to be deeper still. Almost every short bridge in the world is a beam, because at short spans efficiency does not matter and simplicity does.</p>

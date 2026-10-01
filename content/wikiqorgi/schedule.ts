@@ -4,11 +4,11 @@ import { WIKIQORGI_SECTIONS } from "./index";
 /**
  * The promotion schedule for the wikiqorgi shelf.
  *
- * All 100 articles are already published and reachable — nothing here hides a
+ * Every article is already published and reachable — nothing here hides a
  * page or gates a URL. What this staggers is *promotion*: which articles the
  * home page puts in front of a reader, and when. The shelf was written in a
- * short window, and dropping 100 links onto the front page at once is both a
- * worse read (nobody browses 100 cards) and the surface pattern search engines
+ * short window, and dropping 160 links onto the front page at once is both a
+ * worse read (nobody browses 160 cards) and the surface pattern search engines
  * treat as scaled content abuse. Releasing them a few a week gives the front
  * page a reason to change and spreads the footprint out.
  *
@@ -22,8 +22,8 @@ import { WIKIQORGI_SECTIONS } from "./index";
  *  re-dates the entire shelf. */
 const SHELF_START_UTC = Date.UTC(2026, 7, 17); // 2026-08-17
 
-/** Days between one article being promoted and the next. At 100 articles this
- *  spreads the shelf across roughly ten months. */
+/** Days between one article being promoted and the next. At 160 articles this
+ *  spreads the shelf across roughly sixteen months. */
 const DAYS_BETWEEN_PROMOTIONS = 3;
 
 /** How many articles are promoted on the start date itself. The front page

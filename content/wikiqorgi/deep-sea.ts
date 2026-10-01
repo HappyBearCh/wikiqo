@@ -8,6 +8,7 @@ export const deepSea: RewrittenArticle = {
   standfirst:
     "Below about 200 metres the sunlight runs out, and everything beneath is the deep sea — some 95 per cent of the volume in which life on Earth can exist. It is cold, dark, crushing, and mostly food-free, and it is inhabited throughout. More people have been to space than to the bottom of the Mariana Trench.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="The_conditions">The conditions</h2>
 <p>Three constraints define the deep, and organisms have solved each in ways that look bizarre from the surface.</p>

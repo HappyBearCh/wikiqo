@@ -8,6 +8,7 @@ export const randomisedTrials: RewrittenArticle = {
   standfirst:
     "The central problem in evaluating any treatment is that people who receive it differ from people who do not, in ways that are usually unknown and frequently invisible. Randomisation is the one procedure that solves this, and it solves it completely: assigning by chance balances the groups on every characteristic, including the ones nobody has thought to measure. Almost every other feature of a modern trial exists to protect that single property from being undermined.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="The_problem_it_solves">The problem it solves</h2>
 <p>Suppose people taking a vitamin have fewer heart attacks than people who do not. There are three possible explanations and only one of them is interesting.</p>

@@ -8,6 +8,7 @@ export const dictionaries: RewrittenArticle = {
   standfirst:
     "A dictionary looks like an authority and is in fact a survey. Its compilers gather evidence of how a word has actually been used, and record what they find — including the uses they personally dislike. That this is the job has been explained repeatedly by lexicographers and disbelieved just as repeatedly by the public, occasionally to the point of scandal.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="Word_lists_before_dictionaries">Word lists before dictionaries</h2>
 <p>The ancestor of the dictionary is the glossary, and it existed to solve a narrower problem: readers encountering hard words in a text. Mesopotamian scribes compiled bilingual sign lists; medieval monks wrote translations of difficult Latin words between the lines of manuscripts, and those interlinear notes were eventually gathered into standalone lists.</p>

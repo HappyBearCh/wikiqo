@@ -8,6 +8,7 @@ export const peerReview: RewrittenArticle = {
   standfirst:
     "Peer review is treated as the boundary between knowledge and noise, and it is routinely invoked as though a reviewed paper had been verified. It has not. Reviewers do not repeat experiments, rarely see the data, and cannot detect competent fraud. It became standard practice recently, for partly administrative reasons, and the evidence on how well it performs is considerably less flattering than its status suggests.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="It_is_recent">It is much newer than its reputation</h2>
 <p>The impression that peer review is ancient comes from the age of the journals rather than the practice. The Royal Society's <em>Philosophical Transactions</em> began in 1665, and for most of its history papers were selected by the editor, sometimes with a colleague consulted informally.</p>

@@ -8,6 +8,7 @@ export const theMonsoon: RewrittenArticle = {
   standfirst:
     "The monsoon is not a season of rain — it is a seasonal reversal of wind, and the rain follows from it. The mechanism is the same one that produces an afternoon breeze at any coastline, operating across thousands of kilometres and driven by the largest landmass and highest plateau on Earth. Around two billion people depend on it arriving roughly on time, and the record of failed predictions about it is long.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="The_mechanism">A sea breeze, scaled up</h2>
 <p>Land and water heat at very different rates. Water has a high heat capacity, mixes to depth, and is transparent enough that sunlight is absorbed through a thick layer. Land has a low heat capacity, does not mix, and absorbs at the surface. So in sunshine land warms far faster than adjacent sea.</p>

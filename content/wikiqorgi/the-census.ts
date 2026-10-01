@@ -8,6 +8,7 @@ export const theCensus: RewrittenArticle = {
   standfirst:
     "A census looks like a neutral inventory and has never been one. Deciding who counts as a household, which boxes appear under ethnicity, whether prisoners are residents of the prison or of their home, and who is missed entirely are choices that determine the distribution of political representation and public money. States have also learned, more than once, that a good population register is exactly what a persecuting government needs.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Why_states_count">States count in order to extract</h2>
 <p>The purpose was never curiosity. Early censuses existed to establish who could be taxed and who could be conscripted, and the two lists were substantially the same. This shapes the historical record in a specific way: many early counts enumerate households or adult men rather than people, because those were the taxable and drafted units, and reconstructing actual populations from them requires assumptions that vary by historian.</p>

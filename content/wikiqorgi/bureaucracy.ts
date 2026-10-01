@@ -8,6 +8,7 @@ export const bureaucracy: RewrittenArticle = {
   standfirst:
     "Bureaucracy is a term of abuse and was originally a description of an achievement. The features people object to — the forms, the rules, the refusal to make exceptions, the insistence on documentation — are the mechanism by which decisions stop depending on who your family is. Weber's analysis remains the best account of why it beat the alternatives, and also of why he expected it to become a cage.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="What_it_replaced">Patrimonial administration</h2>
 <p>Before bureaucratic administration, offices were held as personal property or personal favours. Positions were inherited, purchased outright, or granted by a ruler to a client. The officeholder's income came substantially from fees charged to the public, and the distinction between the office's money and the holder's own was frequently not drawn at all.</p>

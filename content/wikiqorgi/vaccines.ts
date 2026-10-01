@@ -8,6 +8,7 @@ export const vaccines: RewrittenArticle = {
   standfirst:
     "A vaccine does nothing to a virus. It works entirely on you: it shows your immune system a convincing forgery of a pathogen, lets it mount a response with no disease attached, and leaves behind a cellular memory that recognises the real thing years later. The entire technology is a training exercise.",
   readingMinutes: 8,
+  published: "2026-08-16",
   html: `
 <h2 id="The_memory_the_body_already_had">The memory the body already had</h2>
 <p>Vaccination did not invent immunity; it exploited a property the immune system already had and that people had noticed long before they could explain it. Thucydides recorded during the plague of Athens in 430 BC that survivors could nurse the sick without falling ill twice. That observation contains the whole principle.</p>

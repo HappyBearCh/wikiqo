@@ -8,6 +8,7 @@ export const insurance: RewrittenArticle = {
   standfirst:
     "Insurance looks like gambling and is close to its opposite. A gambler accepts a worse expected outcome in exchange for variance; an insurance buyer accepts a worse expected outcome in exchange for less of it. You pay more than your losses will average, on purpose, because the average is not what would ruin you — the tail is.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="Why_paying_too_much_is_rational">Why paying too much is rational</h2>
 <p>Every insurance policy is priced above the expected loss. It has to be: the premiums must cover claims, administration and profit. So the average buyer, over a lifetime, pays out more than they receive. Buying it is nonetheless correct for most people, and the reason is that money is not linear in its usefulness.</p>

@@ -8,6 +8,7 @@ export const football: RewrittenArticle = {
   standfirst:
     "Association football was codified in a London pub in 1863 by men arguing about whether you could pick the ball up, and the compromise they reached produced a game with very few scoring events. Low scoring makes outcomes noisy: the stronger team wins a smaller share of matches than in almost any other major sport. Everything distinctive about football's competitive structure — the leagues, the cup upsets, the global audience — follows from that.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Codification">The schism of 1863</h2>
 <p>Before codification there was no single game. English public schools each had their own football, shaped by the space available: Eton's field game grew on open ground and restricted handling; Rugby's grew in an environment where carrying the ball was accepted. Boys who had learned incompatible games arrived at university unable to play together, which is the practical problem that produced the rules.</p>

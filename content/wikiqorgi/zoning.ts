@@ -8,6 +8,7 @@ export const zoning: RewrittenArticle = {
   standfirst:
     "Zoning sounds like municipal housekeeping — a map, some categories, a set of permitted uses. It is in practice one of the most consequential policy instruments any government wields, because it decides in advance what can be built and therefore how many people can live in a place. Much of the argument about housing costs is an argument about zoning conducted without naming it.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="What_it_does">What it does</h2>
 <p>Zoning divides land into districts and specifies what may be built in each. Ordinances typically control <em>use</em> — residential, commercial, industrial, and their subdivisions — and also <em>form</em>: how tall, how far from the street, how much of the lot may be covered, how many dwellings per building, and how many parking spaces must be provided.</p>

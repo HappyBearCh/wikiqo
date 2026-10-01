@@ -8,6 +8,7 @@ export const fermentation: RewrittenArticle = {
   standfirst:
     "Fermentation is deliberate decay. You invite microorganisms to consume part of your food, and in exchange they make it keep longer, digest more easily, and taste of considerably more than it did. Humans have been doing this since before agriculture, and did it successfully for the entire period in which the existence of microorganisms was unknown.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Why_it_preserves">Why it preserves</h2>
 <p>The logic is competitive exclusion. Food spoils because organisms colonise it, and most of the dangerous ones are fussy — they want a neutral pH, plenty of oxygen, and no competition.</p>

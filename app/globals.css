@@ -269,6 +269,12 @@ a {
    consecutive link reads in a different color (assigned in document order
    during sanitization — see lib/sanitize.ts). The matching tokens shift for
    dark mode automatically, so contrast holds on both canvases. */
+/* Links from one wikiqorgi article to another (content/wikiqorgi/crosslinks.ts).
+   Accent-coloured so a reader can tell "more of our writing" from plain text. */
+.wiki-content a.wq-crosslink {
+  color: var(--accent);
+}
+
 .wiki-content a.wlink-1 {
   color: var(--rb-1);
   text-decoration-color: color-mix(in srgb, var(--rb-1) 40%, transparent);

@@ -13,7 +13,10 @@ const DESCRIPTION =
 export const metadata: Metadata = {
   title: "wikiqorgi",
   description: DESCRIPTION,
-  alternates: { canonical: "/wikiqorgi" },
+  alternates: {
+    canonical: "/wikiqorgi",
+    types: { "application/rss+xml": [{ url: "/wikiqorgi/feed.xml", title: "wikiqorgi" }] },
+  },
   openGraph: {
     ...OG_BASE,
     type: "website",
@@ -80,7 +83,10 @@ export default function WikiqorgiPage() {
           date.
         </p>
         <p className="mt-4 text-sm text-muted">
-          {sectionCount} sections · {articleCount} articles
+          {sectionCount} sections · {articleCount} articles ·{" "}
+          <a href="/wikiqorgi/feed.xml" className="underline hover:text-foreground">
+            RSS
+          </a>
         </p>
         <div
           aria-hidden
@@ -148,6 +154,12 @@ export default function WikiqorgiPage() {
             Rewriting means changing the prose, not the record. Where a subject is
             genuinely disputed, the article says so instead of picking a side and
             sounding confident.
+          </li>
+          <li>
+            <strong className="text-foreground">Every article lists its sources.</strong>{" "}
+            The standard works behind each account are at the foot of the page,
+            so the claims can be checked against the record rather than taken
+            on trust.
           </li>
           <li>
             <strong className="text-foreground">Every article names its subject on Wikipedia.</strong>{" "}

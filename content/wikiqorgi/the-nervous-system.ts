@@ -8,6 +8,7 @@ export const theNervousSystem: RewrittenArticle = {
   standfirst:
     "Describing nerves as electrical wiring is misleading in almost every respect. The signal is a travelling collapse of a chemical gradient, it moves at speeds comparable to a car rather than to electricity, it is regenerated at intervals because it would otherwise fade, and at each junction between cells it is converted into a puff of molecules and back again. The apparent inefficiency buys the one thing a wire cannot offer: every junction is a place where the signal can be modified.",
   readingMinutes: 8,
+  published: "2026-08-19",
   html: `
 <h2 id="The_impulse">What an impulse actually is</h2>
 <p>A neuron at rest maintains an imbalance of ions across its membrane, with the inside negative relative to the outside, held there by pumps that spend a substantial fraction of the body's entire energy budget doing it.</p>

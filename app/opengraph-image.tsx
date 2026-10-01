@@ -11,9 +11,11 @@ export const contentType = "image/png";
 const STRIPES = ["#e40303", "#ff8c00", "#ffb800", "#008026", "#004dff", "#750787"];
 
 /**
- * Social card for every route that doesn't supply its own image. Article pages
- * override this with the Wikipedia lead image (see wiki/[slug]/generateMetadata),
- * so in practice this covers the home, search, and about pages.
+ * Social card for every route that doesn't supply its own image. Mirrored
+ * articles override it with the Wikipedia lead image (see
+ * wiki/[slug]/generateMetadata) and wikiqorgi pages with their own card (see
+ * wikiqorgi/[slug]/opengraph-image.tsx), so in practice this covers the home,
+ * search, about and /wikiqorgi index pages.
  *
  * Rendered at build time for the static routes, so it costs nothing per request.
  */
@@ -55,7 +57,7 @@ export default function OpengraphImage() {
               color: "#5f5f5f",
             }}
           >
-            Powered by the Wikipedia API
+            Original writing · Wikipedia reader
           </div>
           <div
             style={{

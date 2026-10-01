@@ -8,6 +8,7 @@ export const venom: RewrittenArticle = {
   standfirst:
     "Venom is not a single poison but a cocktail, often of dozens or hundreds of separate compounds, each evolved to disable a specific piece of physiological machinery. That precision is why envenomation is so hard to treat and why the same molecules keep reappearing as pharmaceuticals. Several drugs taken by millions of people every day were derived from things that evolved to kill.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Definitions">Venom, poison, toxin</h2>
 <p>The terms are used interchangeably in ordinary speech and mean different things.</p>

@@ -8,6 +8,7 @@ export const timeZones: RewrittenArticle = {
   standfirst:
     "Before the 1840s, time was local everywhere and this caused nobody any trouble, because nothing moved fast enough for the differences to matter. The railway changed that in a decade: a timetable requires that everyone on the line agree what time it is, and a signalling system that prevents collisions requires it absolutely. The zones that resulted are not geometric divisions of the globe but political ones, and their boundaries record exactly whom each country wanted to be synchronised with.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Local_time">When every town had its own time</h2>
 <p>Local mean time sets noon at the moment the sun is highest, which happens at a different instant at every meridian. Britain spans enough longitude for Bristol to run about ten minutes behind London; the United States spans several hours.</p>

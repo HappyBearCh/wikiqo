@@ -8,6 +8,7 @@ export const batteries: RewrittenArticle = {
   standfirst:
     "A battery is two materials that would react if allowed to touch, deliberately kept apart. The reaction can only proceed if electrons travel from one to the other, and the only path provided runs out through a terminal, through whatever you have connected, and back in the other side. Everything difficult about batteries — capacity, lifetime, charging speed, fires — follows from managing a reaction that is straining to happen the short way.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="How_it_works">The trick</h2>
 <p>Some materials give up electrons more readily than others. Put a metal that surrenders them easily next to a compound that accepts them eagerly, and there is a chemical incentive for electrons to move from one to the other.</p>

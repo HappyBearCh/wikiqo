@@ -8,6 +8,7 @@ export const artificialIntelligence: RewrittenArticle = {
   standfirst:
     "Artificial intelligence has no stable definition, and that is not sloppiness — it is the central fact about the field. Every capability that once counted as proof of machine intelligence became, on the day it was achieved, an ordinary piece of software. Chess. Translation. Speech. The definition of AI is whatever has not been solved yet.",
   readingMinutes: 9,
+  published: "2026-08-16",
   html: `
 <h2 id="The_founding_bet">The founding bet</h2>
 <p>The field was named at a 1956 workshop in Dartmouth, whose proposal contained one of the more consequential sentences in the history of computing: that "every aspect of learning or any other feature of intelligence can in principle be so precisely described that a machine can be made to simulate it." The organisers thought a summer's work by ten people might make significant progress. They were wrong by about seventy years and counting, but the underlying bet — that thinking is a kind of information processing, and therefore substrate-independent — has never been refuted either.</p>

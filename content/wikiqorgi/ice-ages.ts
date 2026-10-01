@@ -8,6 +8,7 @@ export const iceAges: RewrittenArticle = {
   standfirst:
     "We are living in an ice age. Not between ice ages — in one, defined as a period with permanent ice at the poles, which has been true for about 34 million years. What ended twelve thousand years ago was a glacial period within it, one of dozens, arriving on a schedule that turned out to be written in the geometry of Earth's orbit.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="Discovering_that_ice_had_been_there">Discovering that ice had been there</h2>
 <p>Nineteenth-century European geologists had a problem with boulders. Enormous rocks sat in valleys hundreds of kilometres from any outcrop of the same stone, scattered across landscapes with no river capable of moving them. The standard explanation was the biblical flood, and it was not a good one, since water does not carry house-sized granite uphill.</p>

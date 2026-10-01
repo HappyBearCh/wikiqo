@@ -8,6 +8,7 @@ export const pain: RewrittenArticle = {
   standfirst:
     "The intuitive model is that pain is a signal travelling from an injury to the brain, with intensity proportional to damage. Almost every part of that is wrong. Soldiers have walked off catastrophic wounds feeling nothing; people have suffered agony in limbs that were amputated years earlier. Pain is not a measurement of tissue damage. It is a decision the brain makes about how much danger you are in.",
   readingMinutes: 7,
+  published: "2026-08-16",
   html: `
 <h2 id="The_wire_that_is_not_a_wire">The wire that is not a wire</h2>
 <p>Descartes drew the standard picture in the seventeenth century: a fire, a foot, a thread running to the brain, ringing a bell. It was a reasonable guess and it held for three hundred years.</p>

@@ -8,6 +8,7 @@ export const fungi: RewrittenArticle = {
   standfirst:
     "Fungi were classified as plants for most of the history of biology, on the reasoning that they do not move. They are not plants: they cannot photosynthesise, their cell walls are chitin rather than cellulose, they store glycogen as animals do, and molecular phylogeny places them closer to animals than to plants. They constitute a kingdom whose visible portion is a small and temporary part of the organism, and whose ecological function — dismantling dead material — is what keeps the carbon cycle from stopping.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Not_plants">The reclassification</h2>
 <p>Linnaeus put fungi among the plants, and the arrangement lasted into the twentieth century. Robert Whittaker's five-kingdom scheme of 1969 separated them, and molecular work from the 1990s onward settled the relationships decisively.</p>

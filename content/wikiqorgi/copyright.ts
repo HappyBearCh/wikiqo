@@ -8,6 +8,7 @@ export const copyright: RewrittenArticle = {
   standfirst:
     "Copyright is not an ancient right of creators. It is a statutory monopoly, roughly three hundred years old, invented to regulate a printing industry and repurposed almost immediately as a claim about authorship. The original deal was explicit: a limited term of exclusivity in exchange for the work eventually belonging to everyone. Both halves are still in the statute; only one is still enforced with any energy.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="Before_authors">It started as licensing, not as rights</h2>
 <p>Printing arrived in England in the 1470s, and within a century the Crown had noticed what a machine for mass-producing text meant for religious and political control. The response, in 1557, was to grant the Stationers' Company a monopoly on printing. Members registered titles; registration gave the member a perpetual exclusive right to print that work; and nothing could lawfully be printed by anyone outside the company.</p>

@@ -8,6 +8,7 @@ export const spectacles: RewrittenArticle = {
   standfirst:
     "Spectacles appeared in northern Italy in the 1280s, and no name is reliably attached to them. Their effect was larger than their reputation: presbyopia arrives on schedule in middle age, and in a world without correction it removed scribes, jewellers, weavers and instrument makers from their trades at exactly the point when they had accumulated the most skill. Lenses returned those decades, and the trade of grinding them produced, three centuries later, the telescope and the microscope.",
   readingMinutes: 7,
+  published: "2026-08-19",
   html: `
 <h2 id="Presbyopia">The problem everyone eventually has</h2>
 <p>The lens of the eye stiffens gradually and continuously from childhood. The change is imperceptible until the lens can no longer round up enough to focus at reading distance, which for most people happens in the mid-forties.</p>

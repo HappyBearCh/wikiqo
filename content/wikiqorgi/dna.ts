@@ -8,6 +8,7 @@ export const dna: RewrittenArticle = {
   standfirst:
     "Most molecular structures tell you how something works only after considerable further study. DNA is the exception. The moment the double helix was drawn, with each base on one strand paired to a specific partner on the other, the mechanism of heredity was visible in it: separate the strands and each is a template for rebuilding its partner. Watson and Crick's paper noted this in a single famously coy sentence.",
   readingMinutes: 8,
+  published: "2026-08-17",
   html: `
 <h2 id="Nobody_thought_it_was_the_one">Nobody thought it was the one</h2>
 <p>DNA was isolated in 1869 by Friedrich Miescher, working with pus-soaked bandages, and for seventy years it was regarded as a structural molecule of no great interest. Genes were assumed to be made of protein, and the reasoning was sound: proteins are built from twenty different amino acids and are enormously varied, whereas DNA has only four components and was thought to be a monotonous repeating polymer. Four letters looked too impoverished to carry the complexity of an organism.</p>

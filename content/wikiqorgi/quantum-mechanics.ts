@@ -8,6 +8,7 @@ export const quantumMechanics: RewrittenArticle = {
   standfirst:
     "There is no controversy about how to use quantum mechanics. Write down the equation, solve it, calculate probabilities, compare with experiment; the agreement is the best in the history of science. The controversy is entirely about what the equation refers to — whether the wave function is a physical thing or a bookkeeping device, and what happens at the moment a measurement is made. A century of experiment has narrowed the options without settling them.",
   readingMinutes: 9,
+  published: "2026-08-17",
   html: `
 <h2 id="Where_it_came_from">Where it came from</h2>
 <p>Quantum mechanics did not begin as a philosophical departure. It began as a fudge to fix a calculation that had gone catastrophically wrong.</p>

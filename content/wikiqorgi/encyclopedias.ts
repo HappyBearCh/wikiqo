@@ -8,6 +8,7 @@ export const encyclopedias: RewrittenArticle = {
   standfirst:
     "The idea of collecting all knowledge in one work is old, persistent, and repeatedly defeated by the same two problems: knowledge grows faster than the book, and any arrangement of it embeds a claim about how the world is organised. The solutions adopted at each attempt — alphabetical order, cross-references, paid contributors, continuous revision — were each controversial when introduced and each look obvious now.",
   readingMinutes: 7,
+  published: "2026-08-17",
   html: `
 <h2 id="Before_alphabetical">Arrangement was the first fight</h2>
 <p>Pliny the Elder's <em>Natural History</em>, finished around AD 77, is the earliest surviving work recognisably of this kind: thirty-seven books, drawing on hundreds of sources he named — an unusual courtesy at the time — covering astronomy, geography, zoology, botany, medicine and minerals. It was copied and consulted for fifteen centuries, and a good deal of it is wrong in ways later readers took on trust for far too long.</p>
