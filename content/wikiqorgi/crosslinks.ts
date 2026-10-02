@@ -76,7 +76,7 @@ const TARGETS: Record<string, LinkTarget> = {
   evolution: { phrases: ["natural selection", "Darwin"] },
   exoplanets: { phrases: ["exoplanet", "exoplanets", "extrasolar planet", "extrasolar planets"] },
   fermentation: { phrases: ["fermentation", "fermented", "yeast"] },
-  fire: { phrases: ["control of fire", "cooking"], notIn: ["water"] },
+  fire: { phrases: ["control of fire", "cooking"], notIn: ["water", "quarantine"] },
   fisheries: { phrases: ["overfishing", "fisheries", "fishery", "fishing"] },
   "flowering-plants": { phrases: ["flowering plants", "flowering plant", "angiosperms", "angiosperm"] },
   football: { phrases: ["football"] },
@@ -138,7 +138,7 @@ const TARGETS: Record<string, LinkTarget> = {
   "quantum-mechanics": { phrases: ["quantum mechanics", "quantum theory", "quantum physics", "uncertainty principle", "quantum"] },
   railways: { phrases: ["railway", "railways", "railroad", "railroads", "locomotive", "locomotives"] },
   "randomised-trials": { phrases: ["randomised controlled trial", "randomised controlled trials", "randomized controlled trial", "randomised trial", "randomised trials", "clinical trial", "clinical trials"] },
-  refrigeration: { phrases: ["refrigeration", "refrigerator", "refrigerators", "refrigerated", "fridge"] },
+  refrigeration: { phrases: ["refrigeration", "refrigerator", "refrigerators", "refrigerated", "fridge"], notIn: ["magnetic-field"] },
   refugees: { phrases: ["refugee", "refugees", "asylum seekers"] },
   renaissance: { phrases: ["Renaissance"] },
   "replication-crisis": { phrases: ["replication crisis", "failed to replicate", "p-hacking"] },
@@ -203,6 +203,16 @@ const TARGETS: Record<string, LinkTarget> = {
   irrigation: { phrases: ["irrigation", "irrigated", "irrigate"] },
   aquifers: { phrases: ["aquifer", "aquifers", "groundwater"] },
   desalination: { phrases: ["desalination", "desalinated", "reverse osmosis"] },
+  volcanoes: { phrases: ["volcano", "volcanoes", "volcanic eruption", "volcanic eruptions", "lava", "magma"] },
+  tsunamis: { phrases: ["tsunami", "tsunamis"] },
+  geysers: { phrases: ["geyser", "geysers", "hot springs", "Old Faithful"] },
+  supervolcanoes: { phrases: ["supervolcano", "supervolcanoes", "super-eruption", "Yellowstone"] },
+  "magnetic-field": { phrases: ["magnetic field", "geomagnetic", "magnetic north", "compass"] },
+  "black-death": { phrases: ["Black Death", "bubonic plague", "Yersinia pestis"] },
+  "spanish-flu": { phrases: ["Spanish flu", "1918 influenza", "influenza pandemic", "1918 pandemic"] },
+  smallpox: { phrases: ["smallpox", "variola"] },
+  quarantine: { phrases: ["quarantine", "quarantined", "quarantines"] },
+  malaria: { phrases: ["malaria", "Plasmodium", "mosquitoes", "mosquito"] },
 };
 
 /**
@@ -216,6 +226,7 @@ const BLOCKED_PHRASES = [
   "energy currency",
   "Ring of Fire",
   "eye of the storm",
+  "sun compass",
 ];
 
 /** At most this many outbound links per article. Past a handful, links stop

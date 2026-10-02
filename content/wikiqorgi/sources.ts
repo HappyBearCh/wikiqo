@@ -945,4 +945,62 @@ export const WIKIQORGI_SOURCES: Record<string, Source[]> = {
     { author: "Seth M. Siegel", title: "Let There Be Water: Israel's Solution for a Water-Starved World", year: 2015, publication: "Thomas Dunne Books" },
     { author: "Edward Jones et al.", title: "The state of desalination and brine production: A global outlook", year: 2019, publication: "Science of the Total Environment" },
   ],
+  volcanoes: [
+    { author: "Pliny the Younger", title: "Letters 6.16 and 6.20 (on the eruption of Vesuvius)", year: 107 },
+    { author: "Haraldur Sigurdsson (ed.)", title: "The Encyclopedia of Volcanoes", year: 2000, publication: "Academic Press" },
+    { author: "Christopher G. Newhall and Raymundo S. Punongbayan (eds.)", title: "Fire and Mud: Eruptions and Lahars of Mount Pinatubo, Philippines", year: 1996, publication: "University of Washington Press" },
+    { author: "Clive Oppenheimer", title: "Eruptions That Shook the World", year: 2011, publication: "Cambridge University Press" },
+  ],
+  tsunamis: [
+    { author: "Brian F. Atwater et al.", title: "The Orphan Tsunami of 1700: Japanese Clues to a Parent Earthquake in North America", year: 2005, publication: "US Geological Survey and University of Washington Press" },
+    { author: "Thorne Lay et al.", title: "The Great Sumatra-Andaman Earthquake of 26 December 2004", year: 2005, publication: "Science" },
+    { author: "Richard Lloyd Parry", title: "Ghosts of the Tsunami: Death and Life in Japan's Disaster Zone", year: 2017, publication: "Jonathan Cape" },
+  ],
+  geysers: [
+    { author: "Thomas D. Brock and Hudson Freeze", title: "Thermus aquaticus gen. n. and sp. n., a nonsporulating extreme thermophile", year: 1969, publication: "Journal of Bacteriology" },
+    { author: "T. Scott Bryan", title: "The Geysers of Yellowstone", year: 1979, publication: "Colorado Associated University Press" },
+    { author: "C. C. Porco et al.", title: "Cassini Observes the Active South Pole of Enceladus", year: 2006, publication: "Science" },
+  ],
+  supervolcanoes: [
+    { author: "Stanley H. Ambrose", title: "Late Pleistocene human population bottlenecks, volcanic winter, and differentiation of modern humans", year: 1998, publication: "Journal of Human Evolution" },
+    { author: "Michael Petraglia et al.", title: "Middle Paleolithic assemblages from the Indian subcontinent before and after the Toba super-eruption", year: 2007, publication: "Science" },
+    { author: "Christine S. Lane, Ben T. Chorn and Thomas C. Johnson", title: "Ash from the Toba supereruption in Lake Malawi shows no volcanic winter in East Africa at 75 ka", year: 2013, publication: "Proceedings of the National Academy of Sciences" },
+    { author: "Eugene I. Smith et al.", title: "Humans thrived in South Africa through the Toba eruption about 74,000 years ago", year: 2018, publication: "Nature" },
+  ],
+  "magnetic-field": [
+    { author: "William Gilbert", title: "De Magnete", year: 1600 },
+    { author: "F. J. Vine and D. H. Matthews", title: "Magnetic Anomalies Over Oceanic Ridges", year: 1963, publication: "Nature" },
+    { author: "Alanna Mitchell", title: "The Spinning Magnet: The Electromagnetic Force That Created the Modern World and Could Destroy It", year: 2018, publication: "Dutton" },
+  ],
+  "black-death": [
+    { author: "Philip Ziegler", title: "The Black Death", year: 1969, publication: "Collins" },
+    { author: "Ole J. Benedictow", title: "The Black Death, 1346-1353: The Complete History", year: 2004, publication: "Boydell Press" },
+    { author: "Kirsten I. Bos et al.", title: "A draft genome of Yersinia pestis from victims of the Black Death", year: 2011, publication: "Nature" },
+    { author: "Katharine R. Dean et al.", title: "Human ectoparasites and the spread of plague in Europe during the Second Pandemic", year: 2018, publication: "Proceedings of the National Academy of Sciences" },
+    { author: "Maria A. Spyrou et al.", title: "The source of the Black Death in fourteenth-century central Eurasia", year: 2022, publication: "Nature" },
+  ],
+  "spanish-flu": [
+    { author: "Alfred W. Crosby", title: "America's Forgotten Pandemic: The Influenza of 1918", year: 1976, publication: "Cambridge University Press" },
+    { author: "John M. Barry", title: "The Great Influenza: The Epic Story of the Deadliest Plague in History", year: 2004, publication: "Viking" },
+    { author: "Terrence M. Tumpey et al.", title: "Characterization of the Reconstructed 1918 Spanish Influenza Pandemic Virus", year: 2005, publication: "Science" },
+    { author: "Richard J. Hatchett, Carter E. Mecher and Marc Lipsitch", title: "Public health interventions and epidemic intensity during the 1918 influenza pandemic", year: 2007, publication: "Proceedings of the National Academy of Sciences" },
+    { author: "David M. Morens, Jeffery K. Taubenberger and Anthony S. Fauci", title: "Predominant Role of Bacterial Pneumonia as a Cause of Death in Pandemic Influenza", year: 2008, publication: "Journal of Infectious Diseases" },
+  ],
+  smallpox: [
+    { author: "F. Fenner, D. A. Henderson, I. Arita, Z. Jezek and I. D. Ladnyi", title: "Smallpox and Its Eradication", year: 1988, publication: "World Health Organization" },
+    { author: "D. A. Henderson", title: "Smallpox: The Death of a Disease", year: 2009, publication: "Prometheus Books" },
+    { author: "William H. Foege", title: "House on Fire: The Fight to Eradicate Smallpox", year: 2011, publication: "University of California Press" },
+  ],
+  quarantine: [
+    { author: "Christophe Fraser, Steven Riley, Roy M. Anderson and Neil M. Ferguson", title: "Factors that make an infectious disease outbreak controllable", year: 2004, publication: "Proceedings of the National Academy of Sciences" },
+    { author: "Judith Walzer Leavitt", title: "Typhoid Mary: Captive to the Public's Health", year: 1996, publication: "Beacon Press" },
+    { author: "Geoff Manaugh and Nicola Twilley", title: "Until Proven Safe: The History and Future of Quarantine", year: 2021, publication: "MCD / Farrar, Straus and Giroux" },
+  ],
+  malaria: [
+    { author: "A. C. Allison", title: "Protection afforded by sickle-cell trait against subtertian malarial infection", year: 1954, publication: "British Medical Journal" },
+    { author: "Daniel R. Headrick", title: "The Tools of Empire: Technology and European Imperialism in the Nineteenth Century", year: 1981, publication: "Oxford University Press" },
+    { author: "Youyou Tu", title: "The discovery of artemisinin (qinghaosu) and gifts from Chinese medicine", year: 2011, publication: "Nature Medicine" },
+    { author: "S. Bhatt et al.", title: "The effect of malaria control on Plasmodium falciparum in Africa between 2000 and 2015", year: 2015, publication: "Nature" },
+    { author: "World Health Organization", title: "World Malaria Report 2024", year: 2024 },
+  ],
 };
