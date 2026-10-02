@@ -162,6 +162,16 @@ import { lichens } from "./lichens";
 import { mycorrhizalNetworks } from "./mycorrhizal-networks";
 import { moulds } from "./moulds";
 import { spores } from "./spores";
+import { sound } from "./sound";
+import { hearing } from "./hearing";
+import { musicalTuning } from "./musical-tuning";
+import { musicalNotation } from "./musical-notation";
+import { echolocation } from "./echolocation";
+import { aqueducts } from "./aqueducts";
+import { dams } from "./dams";
+import { irrigation } from "./irrigation";
+import { aquifers } from "./aquifers";
+import { desalination } from "./desalination";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -170,7 +180,7 @@ import { spores } from "./spores";
  * Everything below is a compile-time constant. No database, no API, no fetch —
  * the index and every article page prerender to static HTML at build time.
  *
- * Shape: sections of 5 articles each, currently 32 (160 articles). The target has been raised
+ * Shape: sections of 5 articles each, currently 34 (170 articles). The target has been raised
  * twice — 50, then 100 at twenty sections, and the shelf is now open-ended and
  * grows a section or two at a time.
  *
@@ -470,6 +480,22 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "A kingdom nearer to animals than to plants: organisms that are mostly underground network, an association that turned out to have a third partner, the fungal trade nine in ten plants depend on, the moulds that set how long food lasts, and spores launched by the trillion.",
     hue: "var(--rb-3)",
     articles: [fungi, lichens, mycorrhizalNetworks, moulds, spores],
+  },
+  {
+    id: "sound-and-hearing",
+    title: "Sound and hearing",
+    blurb:
+      "A wave in which nothing travels, a bone lever that rescues it from bouncing off water, a gap in arithmetic every piano hides, a page that leaves most of the music out, and two animal lineages that learned to see by shouting.",
+    hue: "var(--rb-2)",
+    articles: [sound, hearing, musicalTuning, musicalNotation, echolocation],
+  },
+  {
+    id: "moving-water",
+    title: "Moving water",
+    blurb:
+      "Getting water to where people are without a pump, and what it costs: channels at a slope too gentle to see, walls across rivers, fields that slowly salt themselves, rock that sinks as it is drained, and the sea pushed through plastic.",
+    hue: "var(--rb-5)",
+    articles: [aqueducts, dams, irrigation, aquifers, desalination],
   },
 ];
 
