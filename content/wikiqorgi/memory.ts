@@ -1,0 +1,35 @@
+import type { RewrittenArticle } from "./types";
+
+export const memory: RewrittenArticle = {
+  slug: "memory",
+  title: "Memory: not one system but several, and none of them a recording",
+  sourceTitle: "Memory",
+  dek: "A man who could form no new memories learned a new skill without knowing he had practised it. That patient showed memory is a collection of systems, and every recollection is rebuilt.",
+  standfirst:
+    "It is natural to think of memory as storage: experiences go in, and remembering takes them out again. Almost everything learned about memory in the last seventy years contradicts that picture. Memory is several distinct systems with different brain machinery, which can fail independently. And what is retrieved is not a stored copy but a reconstruction, assembled afresh each time and altered by the act of recalling it.",
+  readingMinutes: 7,
+  published: "2026-10-02",
+  html: `
+<h2 id="HM">The patient who could not remember</h2>
+<p>In 1953 the American neurosurgeon William Scoville removed parts of both medial temporal lobes, including most of the hippocampus, from a young man with severe epilepsy. The operation reduced his seizures. It also left him unable to form new lasting memories. Henry Molaison, known in the scientific literature for decades only as H. M., could hold a conversation, but forgot it minutes later; he met researchers who worked with him for years as strangers each time.</p>
+<p>His other abilities were largely intact. His intelligence was normal, his memories of childhood were present, and he could keep a short string of digits in mind as long as he was not distracted. The psychologist Brenda Milner, who studied him, discovered something more surprising still. Asked to trace a star while watching his hand only in a mirror, a difficult task, he improved steadily over several days — while insisting each time that he had never done it before.</p>
+<p>The conclusion was that memory is not a single faculty. The hippocampus was essential for remembering facts and events, but learning a motor skill depended on different machinery that H. M. still had. His case, more than any other, founded the modern science of memory.</p>
+
+<h2 id="Systems">Different kinds of remembering</h2>
+<p>The distinctions drawn since then are now standard. Working memory is the small amount of information held and manipulated in mind for seconds — a phone number while dialling it, the beginning of this sentence while reading the end. Its capacity is limited to a handful of items; George Miller's famous estimate of seven, plus or minus two, is now generally revised downward to around four meaningful chunks.</p>
+<p>Long-term memory divides into declarative memory, which can be consciously recalled, and non-declarative memory, which shows itself in performance. The psychologist Endel Tulving split declarative memory further into episodic memory, for particular experiences located in time and place, and semantic memory, for general knowledge detached from when it was learned: remembering a holiday in Paris versus knowing that Paris is the capital of France.</p>
+<p>Non-declarative memory includes skills and habits, priming — the way prior exposure makes something easier to process again — and conditioned responses. These depend on structures such as the basal ganglia and cerebellum rather than the hippocampus, which is why they survived H. M.'s operation and why people with severe amnesia can still learn to ride a bicycle.</p>
+
+<h2 id="Synapses">Where a memory lives</h2>
+<p>In 1949 the psychologist Donald Hebb proposed that learning occurs when connections between neurons that are active at the same time are strengthened, a principle often summarised as cells that fire together wire together. In 1973 Timothy Bliss and Terje Lømo found the physiological mechanism in the hippocampus of rabbits: brief, intense stimulation produced a lasting increase in the strength of synaptic connections, called long-term potentiation. Eric Kandel's work on the sea slug <em>Aplysia</em>, which earned a Nobel Prize in 2000, traced the molecular steps by which short-term changes at a synapse become long-term ones, requiring new proteins and the growth of new connections.</p>
+<p>Where a particular memory is stored proved elusive. The psychologist Karl Lashley spent decades removing parts of rats' brains in search of the location of a learned maze, and concluded in 1950 that he could not find it: memory seemed to be everywhere and nowhere. The modern answer is that a memory is stored as a pattern of connections distributed across many neurons, an engram. In 2012 a team in Susumu Tonegawa's laboratory showed in mice that reactivating, with light, the specific neurons that had been active during a fearful experience made the animals freeze as if recalling it — direct evidence that a particular set of cells holds a particular memory.</p>
+
+<h2 id="Consolidation">From fragile to stable, and back again</h2>
+<p>A new memory is initially fragile and depends on the hippocampus. Over time, through a process called consolidation, it becomes more stable and comes to depend more on the cortex. This is why damage to the hippocampus, as in H. M.'s case, can spare old memories while preventing new ones, and why people with head injuries often lose memories of the period just before the injury but not of their distant past. Sleep plays an important part in consolidation, with patterns of activity during learning replayed in the hippocampus during sleep.</p>
+<p>Consolidation was long thought to be a one-way process: once a memory was stable, it stayed so. In 2000 Karim Nader and colleagues showed in rats that recalling a consolidated fear memory made it fragile again, so that blocking protein synthesis immediately after recall weakened it. Each time a memory is retrieved, it must be stored again — reconsolidated — and during that window it can be modified or strengthened. Researchers have explored whether this could help treat conditions such as post-traumatic stress disorder, with mixed results.</p>
+
+<h2 id="Reconstruction">Remembering as rebuilding</h2>
+<p>In 1932 the Cambridge psychologist Frederic Bartlett asked English students to read a Native American folk tale, "The War of the Ghosts," and retell it after intervals. Their versions grew shorter, lost unfamiliar details, and changed in the direction of their own cultural expectations: canoes became boats, puzzling supernatural elements were rationalised or dropped. Bartlett concluded that remembering is an act of reconstruction guided by existing knowledge, not the replay of a record.</p>
+<p>Almost everything learned since has supported him. Recall assembles fragments of stored information with general knowledge and present expectations, filling gaps without any sense of doing so. That is efficient — a system that stored every detail would be vast and slow — but it means that memories feel equally vivid whether they are accurate or not. Confident, detailed, entirely false memories are a normal product of a normal memory system, a fact with serious consequences in courtrooms and in therapy.</p>
+`,
+};

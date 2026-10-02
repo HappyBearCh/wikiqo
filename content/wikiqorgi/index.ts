@@ -182,6 +182,16 @@ import { spanishFlu } from "./spanish-flu";
 import { smallpox } from "./smallpox";
 import { quarantine } from "./quarantine";
 import { malaria } from "./malaria";
+import { memory } from "./memory";
+import { forgetting } from "./forgetting";
+import { methodOfLoci } from "./method-of-loci";
+import { spacedRepetition } from "./spaced-repetition";
+import { falseMemory } from "./false-memory";
+import { metricSystem } from "./metric-system";
+import { kilogram } from "./kilogram";
+import { thermometer } from "./thermometer";
+import { cavendishExperiment } from "./cavendish-experiment";
+import { earthsCircumference } from "./earths-circumference";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -190,7 +200,7 @@ import { malaria } from "./malaria";
  * Everything below is a compile-time constant. No database, no API, no fetch —
  * the index and every article page prerender to static HTML at build time.
  *
- * Shape: sections of 5 articles each, currently 36 (180 articles). The target has been raised
+ * Shape: sections of 5 articles each, currently 38 (190 articles). The target has been raised
  * twice — 50, then 100 at twenty sections, and the shelf is now open-ended and
  * grows a section or two at a time.
  *
@@ -522,6 +532,22 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "Epidemics and what societies learned from them: a plague that made labour expensive, a flu that killed the young, a disease ended by finding every case, a forty-day wait that works only for some infections, and a parasite written into the human genome.",
     hue: "var(--rb-4)",
     articles: [blackDeath, spanishFlu, smallpox, quarantine, malaria],
+  },
+  {
+    id: "memory-and-learning",
+    title: "Memory and learning",
+    blurb:
+      "How remembering actually works: several systems rather than one store, a forgetting curve measured on nonsense syllables, a Roman technique that rewires ordinary brains in six weeks, a study method that feels worse and works better, and confident recollections of things that never happened.",
+    hue: "var(--rb-6)",
+    articles: [memory, forgetting, methodOfLoci, spacedRepetition, falseMemory],
+  },
+  {
+    id: "measuring-the-world",
+    title: "Measuring the world",
+    blurb:
+      "Units and the people who fixed them: a revolution's metre measured slightly wrong, a metal cylinder that defined mass until 2019, an instrument that had to be trusted before it could be checked, the planet weighed in a shed, and its size worked out from a shadow.",
+    hue: "var(--rb-3)",
+    articles: [metricSystem, kilogram, thermometer, cavendishExperiment, earthsCircumference],
   },
 ];
 

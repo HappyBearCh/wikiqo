@@ -34,7 +34,7 @@ interface LinkTarget {
 
 const TARGETS: Record<string, LinkTarget> = {
   "alan-turing": { phrases: ["Turing"] },
-  "albert-einstein": { phrases: ["Einstein"] },
+  "albert-einstein": { phrases: ["Einstein"], notIn: ["method-of-loci"] },
   anaesthesia: { phrases: ["anaesthesia", "anaesthetic", "anaesthetics", "anesthesia"] },
   "animal-migration": { phrases: ["animal migration", "bird migration", "migratory birds", "migrating birds"] },
   "antibiotic-resistance": { phrases: ["antibiotic resistance", "antimicrobial resistance", "resistant bacteria"] },
@@ -62,7 +62,7 @@ const TARGETS: Record<string, LinkTarget> = {
   consciousness: { phrases: ["consciousness"] },
   copyright: { phrases: ["copyright"] },
   "coral-reefs": { phrases: ["coral reef", "coral reefs", "corals", "coral"] },
-  crowds: { phrases: ["crowd", "crowds"], notIn: ["sound"] },
+  crowds: { phrases: ["crowd", "crowds"], notIn: ["sound", "forgetting"] },
   cryptography: { phrases: ["cryptography", "encryption", "cipher", "ciphers"] },
   "deep-sea": { phrases: ["deep sea", "deep ocean", "hydrothermal vent", "hydrothermal vents"] },
   dictionaries: { phrases: ["dictionary", "dictionaries"] },
@@ -150,7 +150,7 @@ const TARGETS: Record<string, LinkTarget> = {
   "sign-language": { phrases: ["sign language", "sign languages"] },
   "silk-road": { phrases: ["Silk Road", "Silk Roads"] },
   skyscrapers: { phrases: ["skyscraper", "skyscrapers", "tall buildings"] },
-  sleep: { phrases: ["sleep"] },
+  sleep: { phrases: ["sleep"], notIn: ["false-memory"] },
   "sound-recording": { phrases: ["sound recording", "recorded music", "phonograph", "gramophone"] },
   spectacles: { phrases: ["spectacles", "eyeglasses", "reading glasses"] },
   spores: { phrases: ["spore", "spores"] },
@@ -164,7 +164,7 @@ const TARGETS: Record<string, LinkTarget> = {
   "the-cell": { phrases: ["eukaryotic cell", "eukaryotic cells", "living cells", "eukaryotes", "mitochondria"] },
   "the-census": { phrases: ["census", "censuses"] },
   "the-eight-hour-day": { phrases: ["eight-hour day", "working week", "working hours", "working day"] },
-  "the-eye": { phrases: ["retina", "the eye", "eyes"], notIn: ["hurricanes", "aqueducts"] },
+  "the-eye": { phrases: ["retina", "the eye", "eyes"], notIn: ["hurricanes", "aqueducts", "method-of-loci"] },
   "the-factory": { phrases: ["factory", "factories"] },
   "the-heart": { phrases: ["heartbeat", "cardiac", "circulation of the blood"] },
   "the-internet": { phrases: ["internet", "World Wide Web", "the web"] },
@@ -213,6 +213,16 @@ const TARGETS: Record<string, LinkTarget> = {
   smallpox: { phrases: ["smallpox", "variola"] },
   quarantine: { phrases: ["quarantine", "quarantined", "quarantines"] },
   malaria: { phrases: ["malaria", "Plasmodium", "mosquitoes", "mosquito"] },
+  memory: { phrases: ["hippocampus", "long-term memory", "working memory", "episodic memory"] },
+  forgetting: { phrases: ["forgetting curve", "forgetting", "tip of the tongue"] },
+  "method-of-loci": { phrases: ["method of loci", "memory palace", "art of memory"] },
+  "spaced-repetition": { phrases: ["spaced repetition", "spacing effect", "retrieval practice", "flashcards"] },
+  "false-memory": { phrases: ["false memory", "false memories", "eyewitness", "eyewitnesses"] },
+  "metric-system": { phrases: ["metric system", "metric units", "SI units"] },
+  kilogram: { phrases: ["Le Grand K", "Planck constant"] },
+  thermometer: { phrases: ["thermometer", "thermometers", "Fahrenheit", "Celsius"] },
+  "cavendish-experiment": { phrases: ["Cavendish", "gravitational constant"] },
+  "earths-circumference": { phrases: ["Eratosthenes", "circumference of the Earth", "Earth's circumference"] },
 };
 
 /**
