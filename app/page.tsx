@@ -7,6 +7,7 @@ import { WIKIQORGI_ARTICLES, rewrittenHref } from "@/content/wikiqorgi";
 import { latestPromoted } from "@/content/wikiqorgi/schedule";
 import { keywordsFromText } from "@/lib/keywords";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
+import { ORGANIZATION, ORGANIZATION_REF } from "@/lib/structured-data";
 
 export const metadata: Metadata = {
   // `title.absolute` so the home page carries the full site title rather than
@@ -38,12 +39,20 @@ export const revalidate = 86400;
  */
 const websiteJsonLd = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: SITE_NAME,
-  alternateName: SITE_TITLE,
-  url: SITE_URL,
-  description: SITE_DESCRIPTION,
-  inLanguage: "en",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      name: SITE_NAME,
+      alternateName: SITE_TITLE,
+      url: SITE_URL,
+      description: SITE_DESCRIPTION,
+      inLanguage: "en",
+      publisher: ORGANIZATION_REF,
+    },
+    // The organisation and its logo, which Google may show beside results.
+    ORGANIZATION,
+  ],
 };
 
 /** Cards in the shelf under the lead article. */

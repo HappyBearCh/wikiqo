@@ -11,6 +11,7 @@ import { linkArticleHtml } from "@/content/wikiqorgi/crosslinks";
 import { articleHref } from "@/lib/links";
 import { keywordsFromHtml } from "@/lib/keywords";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { ORGANIZATION, ORGANIZATION_REF, breadcrumbList } from "@/lib/structured-data";
 import { parseArticleStructure } from "@/lib/structure";
 import { wikipediaUrlFor } from "@/lib/wikipedia";
 import ArticleStructureLazy from "@/components/ArticleStructureLazy";
@@ -35,14 +36,29 @@ export default function ArticleView({ article }: { article: RewrittenArticle }) 
   // Siblings on the same shelf, for the "keep reading" links at the foot.
   const siblings = (section?.articles ?? []).filter((a) => a.slug !== article.slug);
 
+  const articleUrl = `${SITE_URL}${rewrittenHref(article.slug)}`;
   const articleJsonLd = {
-    "@context": "https://schema.org",
     "@type": "Article",
+    "@id": `${articleUrl}#article`,
     headline: article.title,
     description: article.dek,
-    url: `${SITE_URL}${rewrittenHref(article.slug)}`,
+    url: articleUrl,
+    mainEntityOfPage: articleUrl,
+    // The page's generated social card (opengraph-image.tsx beside the
+    // route). Google's article rich results require an image, and these
+    // articles have no other.
+    image: {
+      "@type": "ImageObject",
+      url: `${articleUrl}/opengraph-image`,
+      width: 1200,
+      height: 630,
+    },
     inLanguage: "en",
     datePublished: article.published,
+    // Articles are not revised after publication yet; when one is, give it a
+    // `modified` field and use it here.
+    dateModified: article.published,
+    wordCount: article.html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length,
     // The Sources list, so search engines see the article's grounding the way
     // a reader does.
     citation: sources.map((source) => ({
@@ -51,9 +67,9 @@ export default function ArticleView({ article }: { article: RewrittenArticle }) 
       author: source.author,
       datePublished: String(source.year),
     })),
-    author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
-    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
-    about: article.sourceTitle,
+    author: ORGANIZATION_REF,
+    publisher: ORGANIZATION_REF,
+    about: { "@type": "Thing", name: article.sourceTitle, sameAs: sourceUrl },
     isPartOf: section
       ? {
           "@type": "CollectionPage",
@@ -68,7 +84,20 @@ export default function ArticleView({ article }: { article: RewrittenArticle }) 
       <script
         type="application/ld+json"
         // Static, developer-authored object — no user input reaches it.
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              articleJsonLd,
+              ORGANIZATION,
+              breadcrumbList([
+                { name: "wikiqorgi", path: "/wikiqorgi" },
+                ...(section ? [{ name: section.title, path: sectionHref(section.id) }] : []),
+                { name: article.title, path: rewrittenHref(article.slug) },
+              ]),
+            ],
+          }),
+        }}
       />
 
       <TextBanner words={words} title={article.title} initial="cloud" />

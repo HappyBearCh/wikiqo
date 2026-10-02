@@ -5,6 +5,7 @@ import {
   WIKIQORGI_SECTIONS,
   getRewrittenArticle,
   getSection,
+  getSectionForSlug,
   rewrittenHref,
   sectionHref,
 } from "@/content/wikiqorgi";
@@ -84,6 +85,8 @@ export async function generateMetadata({
       url,
       title: article.title,
       description: article.dek,
+      publishedTime: article.published,
+      section: getSectionForSlug(article.slug)?.title,
     },
   };
 }

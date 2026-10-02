@@ -6,6 +6,7 @@ import {
   sectionHref,
 } from "@/content/wikiqorgi";
 import { OG_BASE, SITE_NAME, SITE_URL } from "@/lib/site";
+import { ORGANIZATION, ORGANIZATION_REF, breadcrumbList } from "@/lib/structured-data";
 
 const DESCRIPTION =
   "wikiqorgi — Wikipedia's subjects, rewritten from scratch. Same facts, different prose: original articles written to be read end to end rather than assembled by committee.";
@@ -40,8 +41,8 @@ export const metadata: Metadata = {
  * body of original writing rather than a set of unrelated pages.
  */
 const collectionJsonLd = {
-  "@context": "https://schema.org",
   "@type": "CollectionPage",
+  publisher: ORGANIZATION_REF,
   name: "wikiqorgi",
   url: `${SITE_URL}/wikiqorgi`,
   description: DESCRIPTION,
@@ -64,7 +65,16 @@ export default function WikiqorgiPage() {
       <script
         type="application/ld+json"
         // Static, developer-authored object — no user input reaches it.
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              collectionJsonLd,
+              ORGANIZATION,
+              breadcrumbList([{ name: "wikiqorgi", path: "/wikiqorgi" }]),
+            ],
+          }),
+        }}
       />
 
       {/* ---- Masthead ------------------------------------------------------ */}

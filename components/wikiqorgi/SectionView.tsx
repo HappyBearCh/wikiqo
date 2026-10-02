@@ -5,7 +5,8 @@ import {
   sectionHref,
   type WikiqorgiSection,
 } from "@/content/wikiqorgi";
-import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
+import { ORGANIZATION, ORGANIZATION_REF, breadcrumbList } from "@/lib/structured-data";
 
 /** One section of the shelf: its own page, listing the articles it holds.
  *  Rendered by the shared /wikiqorgi/[slug] route when the slug names a
@@ -21,7 +22,6 @@ export default function SectionView({ section }: { section: WikiqorgiSection }) 
   const totalMinutes = section.articles.reduce((sum, a) => sum + a.readingMinutes, 0);
 
   const sectionJsonLd = {
-    "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: section.title,
     description: section.blurb,
@@ -37,8 +37,9 @@ export default function SectionView({ section }: { section: WikiqorgiSection }) 
       headline: article.title,
       description: article.dek,
       url: `${SITE_URL}${rewrittenHref(article.slug)}`,
-      author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+      author: ORGANIZATION_REF,
     })),
+    publisher: ORGANIZATION_REF,
   };
 
   return (
@@ -46,7 +47,19 @@ export default function SectionView({ section }: { section: WikiqorgiSection }) 
       <script
         type="application/ld+json"
         // Static, developer-authored object — no user input reaches it.
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(sectionJsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              sectionJsonLd,
+              ORGANIZATION,
+              breadcrumbList([
+                { name: "wikiqorgi", path: "/wikiqorgi" },
+                { name: section.title, path: sectionHref(section.id) },
+              ]),
+            ],
+          }),
+        }}
       />
 
       <div className="mx-auto max-w-4xl">

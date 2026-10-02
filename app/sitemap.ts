@@ -1,10 +1,6 @@
 import type { MetadataRoute } from "next";
-import {
-  WIKIQORGI_ARTICLES,
-  WIKIQORGI_SECTIONS,
-  rewrittenHref,
-  sectionHref,
-} from "@/content/wikiqorgi";
+import { WIKIQORGI_SECTIONS, rewrittenHref, sectionHref } from "@/content/wikiqorgi";
+import { promotedArticles } from "@/content/wikiqorgi/schedule";
 import { SITE_URL } from "@/lib/site";
 
 /**
@@ -21,29 +17,44 @@ import { SITE_URL } from "@/lib/site";
  * /search is gone for the same reason — disallowed, and an unbounded query
  * space besides.
  *
- * Dropping the popular-titles fetch also makes this route fully static: there
- * is no longer any request-time data here, so the daily `revalidate` that used
- * to sit above went with it. The file is now prerendered once per deploy.
+ * ## Articles enter the sitemap as they are promoted
+ *
+ * The shelf was written in short bursts, and listing every article at once
+ * advertises a large number of new pages in a single day — the pattern search
+ * engines associate with mass-produced content (see the note on pacing in
+ * content/wikiqorgi/index.ts). So an article is listed only once the
+ * front-page schedule has promoted it (content/wikiqorgi/schedule.ts), and
+ * the sitemap regenerates daily to pick up each new promotion.
+ *
+ * This does not hide anything. Every article is published and linked from its
+ * section page, and crawlers that follow those links will find it; the sitemap
+ * only controls what wikiqo actively announces, and when.
+ *
+ * lastModified is the article's real publication date, because Google uses
+ * the field only when it is consistently accurate.
  */
+export const revalidate = 86400;
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticEntries: MetadataRoute.Sitemap = [
-    { url: `${SITE_URL}/`, changeFrequency: "daily", priority: 1 },
+  const promoted = promotedArticles(new Date());
+  const newestPromotion = promoted[0]?.promotedAt;
+
+  return [
+    { url: `${SITE_URL}/`, lastModified: newestPromotion, changeFrequency: "daily", priority: 1 },
     { url: `${SITE_URL}/about`, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${SITE_URL}/wikiqorgi`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${SITE_URL}/wikiqorgi`, changeFrequency: "weekly", priority: 0.9 },
     ...WIKIQORGI_SECTIONS.map((section) => ({
       url: `${SITE_URL}${sectionHref(section.id)}`,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
-    // Unlike the mirrored article entries below, these are original writing
-    // that canonicals to wikiqo itself — the only pages here worth indexing on
-    // their own merits, hence the high priority.
-    ...WIKIQORGI_ARTICLES.map((article) => ({
+    // Original writing that canonicals to wikiqo itself — the pages here most
+    // worth indexing on their own merits, hence the high priority.
+    ...promoted.map(({ article }) => ({
       url: `${SITE_URL}${rewrittenHref(article.slug)}`,
+      lastModified: article.published,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
   ];
-
-  return staticEntries;
 }
