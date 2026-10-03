@@ -901,7 +901,7 @@ export const WIKIQORGI_SOURCES: Record<string, Source[]> = {
   ],
   "musical-notation": [
     { author: "Ottaviano Petrucci (printer)", title: "Harmonice Musices Odhecaton A", year: 1501 },
-    { author: "Willi Apel", title: "The Notation of Polyphonic Music, 900–1600", year: 1942, publication: "Medieval Academy of America" },
+    { author: "Willi Apel", title: "The Notation of Polyphonic Music, 900–1600", year: 1942, publication: "Mediaeval Academy of America" },
     { author: "John Cage", title: "Notations", year: 1969, publication: "Something Else Press" },
     { author: "Leo Treitler", title: "With Voice and Pen: Coming to Know Medieval Song and How It Was Made", year: 2003, publication: "Oxford University Press" },
   ],
@@ -984,7 +984,7 @@ export const WIKIQORGI_SOURCES: Record<string, Source[]> = {
     { author: "John M. Barry", title: "The Great Influenza: The Epic Story of the Deadliest Plague in History", year: 2004, publication: "Viking" },
     { author: "Terrence M. Tumpey et al.", title: "Characterization of the Reconstructed 1918 Spanish Influenza Pandemic Virus", year: 2005, publication: "Science" },
     { author: "Richard J. Hatchett, Carter E. Mecher and Marc Lipsitch", title: "Public health interventions and epidemic intensity during the 1918 influenza pandemic", year: 2007, publication: "Proceedings of the National Academy of Sciences" },
-    { author: "David M. Morens, Jeffery K. Taubenberger and Anthony S. Fauci", title: "Predominant Role of Bacterial Pneumonia as a Cause of Death in Pandemic Influenza", year: 2008, publication: "Journal of Infectious Diseases" },
+    { author: "David M. Morens, Jeffery K. Taubenberger and Anthony S. Fauci", title: "Predominant Role of Bacterial Pneumonia as a Cause of Death in Pandemic Influenza: Implications for Pandemic Influenza Preparedness", year: 2008, publication: "Journal of Infectious Diseases" },
   ],
   smallpox: [
     { author: "F. Fenner, D. A. Henderson, I. Arita, Z. Jezek and I. D. Ladnyi", title: "Smallpox and Its Eradication", year: 1988, publication: "World Health Organization" },
@@ -1018,6 +1018,7 @@ export const WIKIQORGI_SOURCES: Record<string, Source[]> = {
     { author: "A. R. Luria", title: "The Mind of a Mnemonist", year: 1968, publication: "Basic Books" },
     { author: "D. R. Godden and A. D. Baddeley", title: "Context-dependent memory in two natural environments: on land and underwater", year: 1975, publication: "British Journal of Psychology" },
     { author: "Jaap M. J. Murre and Joeri Dros", title: "Replication and Analysis of Ebbinghaus' Forgetting Curve", year: 2015, publication: "PLOS ONE" },
+    { author: "Jaap M. J. Murre", title: "The Godden and Baddeley (1975) experiment on context-dependent memory on land and underwater: a replication", year: 2021, publication: "Royal Society Open Science" },
     { author: "Blake A. Richards and Paul W. Frankland", title: "The Persistence and Transience of Memory", year: 2017, publication: "Neuron" },
   ],
   "method-of-loci": [
