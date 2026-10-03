@@ -6,8 +6,18 @@ import type { Metadata } from "next";
  * their own copy of the origin.
  */
 
-/** Canonical production origin, without a trailing slash. */
-export const SITE_URL = "https://wikiqo.com";
+/**
+ * Canonical production origin, without a trailing slash.
+ *
+ * This must be the host that actually serves the site. In the Vercel project,
+ * wikiqo.com is configured to 308-redirect to www.wikiqo.com, so www is the
+ * primary host. With the apex here instead, every canonical tag, sitemap
+ * entry, Open Graph URL and structured-data link pointed at a URL that
+ * redirects — which Search Console reports as "Page with redirect" and which
+ * muddies which URL Google should index. If the Vercel redirect is ever
+ * flipped to make the apex primary, change this to match.
+ */
+export const SITE_URL = "https://www.wikiqo.com";
 
 export const SITE_NAME = "wikiqo";
 

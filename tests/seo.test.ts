@@ -28,7 +28,7 @@ describe("sitemap", () => {
   it("lists every section page, whatever the date", () => {
     const urls = sitemap().map((entry) => entry.url);
     for (const section of WIKIQORGI_SECTIONS) {
-      expect(urls).toContain(`https://wikiqo.com/wikiqorgi/${section.id}`);
+      expect(urls).toContain(`https://www.wikiqo.com/wikiqorgi/${section.id}`);
     }
   });
 
@@ -53,8 +53,8 @@ describe("breadcrumbList", () => {
   it("starts at home and numbers positions from 1", () => {
     const list = breadcrumbList([{ name: "wikiqorgi", path: "/wikiqorgi" }]);
     expect(list.itemListElement).toEqual([
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://wikiqo.com" },
-      { "@type": "ListItem", position: 2, name: "wikiqorgi", item: "https://wikiqo.com/wikiqorgi" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.wikiqo.com" },
+      { "@type": "ListItem", position: 2, name: "wikiqorgi", item: "https://www.wikiqo.com/wikiqorgi" },
     ]);
   });
 });

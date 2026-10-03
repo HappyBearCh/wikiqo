@@ -12,7 +12,9 @@ const DESCRIPTION =
   "wikiqorgi — Wikipedia's subjects, rewritten from scratch. Same facts, different prose: original articles written to be read end to end rather than assembled by committee.";
 
 export const metadata: Metadata = {
-  title: "wikiqorgi",
+  // "wikiqorgi" alone means nothing to someone scanning search results; say
+  // what the page is.
+  title: "wikiqorgi: Wikipedia's best subjects, rewritten from scratch",
   description: DESCRIPTION,
   alternates: {
     canonical: "/wikiqorgi",
