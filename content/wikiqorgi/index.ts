@@ -192,6 +192,16 @@ import { kilogram } from "./kilogram";
 import { thermometer } from "./thermometer";
 import { cavendishExperiment } from "./cavendish-experiment";
 import { earthsCircumference } from "./earths-circumference";
+import { salt } from "./salt";
+import { sugar } from "./sugar";
+import { potato } from "./potato";
+import { spiceTrade } from "./spice-trade";
+import { maillardReaction } from "./maillard-reaction";
+import { paper } from "./paper";
+import { pencil } from "./pencil";
+import { typewriter } from "./typewriter";
+import { braille } from "./braille";
+import { punctuation } from "./punctuation";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -200,7 +210,7 @@ import { earthsCircumference } from "./earths-circumference";
  * Everything below is a compile-time constant. No database, no API, no fetch —
  * the index and every article page prerender to static HTML at build time.
  *
- * Shape: sections of 5 articles each, currently 38 (190 articles). The target has been raised
+ * Shape: sections of 5 articles each, currently 40 (200 articles). The target has been raised
  * twice — 50, then 100 at twenty sections, and the shelf is now open-ended and
  * grows a section or two at a time.
  *
@@ -548,6 +558,22 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "Units and the people who fixed them: a revolution's metre measured slightly wrong, a metal cylinder that defined mass until 2019, an instrument that had to be trusted before it could be checked, the planet weighed in a shed, and its size worked out from a shadow.",
     hue: "var(--rb-3)",
     articles: [metricSystem, kilogram, thermometer, cavendishExperiment, earthsCircumference],
+  },
+  {
+    id: "what-we-eat",
+    title: "What we eat",
+    blurb:
+      "Foods whose histories are histories of power: a mineral states taxed because nobody could do without it, a sweetness made cheap by slavery, an Andean tuber that fed Europe and starved Ireland, a nut worth a massacre, and the chemistry that makes cooked food taste cooked.",
+    hue: "var(--rb-2)",
+    articles: [salt, sugar, potato, spiceTrade, maillardReaction],
+  },
+  {
+    id: "tools-of-writing",
+    title: "Tools of writing",
+    blurb:
+      "The everyday technology of the written word: a mat of fibres that took a thousand years to cross Eurasia, a stick of clay and graphite born of a blockade, a machine that put women in offices, a six-dot code a school tried to ban, and the marks that tell a reader where to breathe.",
+    hue: "var(--rb-5)",
+    articles: [paper, pencil, typewriter, braille, punctuation],
   },
 ];
 

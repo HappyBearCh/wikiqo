@@ -1073,4 +1073,62 @@ export const WIKIQORGI_SOURCES: Record<string, Source[]> = {
     { author: "Jeffrey Burton Russell", title: "Inventing the Flat Earth: Columbus and Modern Historians", year: 1991, publication: "Praeger" },
     { author: "Nicholas Nicastro", title: "Circumference: Eratosthenes and the Ancient Quest to Measure the Globe", year: 2008, publication: "St. Martin's Press" },
   ],
+  salt: [
+    { author: "Intersalt Cooperative Research Group", title: "Intersalt: an international study of electrolyte excretion and blood pressure", year: 1988, publication: "BMJ" },
+    { author: "Mark Kurlansky", title: "Salt: A World History", year: 2002, publication: "Walker" },
+    { author: "Sujay S. Kaushal et al.", title: "Freshwater salinization syndrome on a continental scale", year: 2018, publication: "Proceedings of the National Academy of Sciences" },
+    { author: "Bruce Neal et al.", title: "Effect of Salt Substitution on Cardiovascular Events and Death", year: 2021, publication: "New England Journal of Medicine" },
+  ],
+  sugar: [
+    { author: "John Yudkin", title: "Pure, White and Deadly", year: 1972, publication: "Davis-Poynter" },
+    { author: "Sidney W. Mintz", title: "Sweetness and Power: The Place of Sugar in Modern History", year: 1985, publication: "Viking" },
+    { author: "World Health Organization", title: "Guideline: Sugars intake for adults and children", year: 2015 },
+    { author: "Cristin E. Kearns, Laura A. Schmidt and Stanton A. Glantz", title: "Sugar Industry and Coronary Heart Disease Research: A Historical Analysis of Internal Industry Documents", year: 2016, publication: "JAMA Internal Medicine" },
+  ],
+  potato: [
+    { author: "Redcliffe N. Salaman", title: "The History and Social Influence of the Potato", year: 1949, publication: "Cambridge University Press" },
+    { author: "Cormac Ó Gráda", title: "Black '47 and Beyond: The Great Irish Famine in History, Economy, and Memory", year: 1999, publication: "Princeton University Press" },
+    { author: "Nathan Nunn and Nancy Qian", title: "The Potato's Contribution to Population and Urbanization: Evidence from a Historical Experiment", year: 2011, publication: "Quarterly Journal of Economics" },
+    { author: "Kentaro Yoshida et al.", title: "The rise and fall of the Phytophthora infestans lineage that triggered the Irish potato famine", year: 2013, publication: "eLife" },
+  ],
+  "spice-trade": [
+    { author: "Lionel Casson", title: "The Periplus Maris Erythraei: Text with Introduction, Translation, and Commentary", year: 1989, publication: "Princeton University Press" },
+    { author: "Giles Milton", title: "Nathaniel's Nutmeg", year: 1999, publication: "Hodder & Stoughton" },
+    { author: "Jack Turner", title: "Spice: The History of a Temptation", year: 2004, publication: "Knopf" },
+    { author: "Paul Freedman", title: "Out of the East: Spices and the Medieval Imagination", year: 2008, publication: "Yale University Press" },
+  ],
+  "maillard-reaction": [
+    { author: "L. C. Maillard", title: "Action des acides aminés sur les sucres; formation des mélanoïdines par voie méthodique", year: 1912, publication: "Comptes rendus de l'Académie des sciences" },
+    { author: "John E. Hodge", title: "Dehydrated Foods, Chemistry of Browning Reactions in Model Systems", year: 1953, publication: "Journal of Agricultural and Food Chemistry" },
+    { author: "Harold McGee", title: "On Food and Cooking: The Science and Lore of the Kitchen", year: 1984, publication: "Scribner" },
+    { author: "Eden Tareke et al.", title: "Analysis of acrylamide, a carcinogen formed in heated foodstuffs", year: 2002, publication: "Journal of Agricultural and Food Chemistry" },
+  ],
+  paper: [
+    { author: "Dard Hunter", title: "Papermaking: The History and Technique of an Ancient Craft", year: 1947, publication: "Knopf" },
+    { author: "Jonathan M. Bloom", title: "Paper Before Print: The History and Impact of Paper in the Islamic World", year: 2001, publication: "Yale University Press" },
+    { author: "Abigail J. Sellen and Richard H. R. Harper", title: "The Myth of the Paperless Office", year: 2002, publication: "MIT Press" },
+    { author: "Mark Kurlansky", title: "Paper: Paging Through History", year: 2016, publication: "W. W. Norton" },
+  ],
+  pencil: [
+    { author: "Supreme Court of the United States", title: "Reckendorfer v. Faber, 92 U.S. 347", year: 1875 },
+    { author: "Henry Petroski", title: "The Pencil: A History of Design and Circumstance", year: 1990, publication: "Knopf" },
+  ],
+  typewriter: [
+    { author: "Margery W. Davies", title: "Woman's Place Is at the Typewriter: Office Work and Office Workers, 1870–1930", year: 1982, publication: "Temple University Press" },
+    { author: "Paul A. David", title: "Clio and the Economics of QWERTY", year: 1985, publication: "American Economic Review" },
+    { author: "S. J. Liebowitz and Stephen E. Margolis", title: "The Fable of the Keys", year: 1990, publication: "Journal of Law and Economics" },
+    { author: "Koichi Yasuoka and Motoko Yasuoka", title: "On the Prehistory of QWERTY", year: 2011, publication: "ZINBUN" },
+    { author: "Thomas S. Mullaney", title: "The Chinese Typewriter: A History", year: 2017, publication: "MIT Press" },
+  ],
+  braille: [
+    { author: "Frances A. Koestler", title: "The Unseen Minority: A Social History of Blindness in the United States", year: 1976, publication: "David McKay" },
+    { author: "C. Michael Mellor", title: "Louis Braille: A Touch of Genius", year: 2006, publication: "National Braille Press" },
+    { author: "National Federation of the Blind Jernigan Institute", title: "The Braille Literacy Crisis in America", year: 2009 },
+  ],
+  punctuation: [
+    { author: "M. B. Parkes", title: "Pause and Effect: An Introduction to the History of Punctuation in the West", year: 1992, publication: "Scolar Press" },
+    { author: "Paul Saenger", title: "Space Between Words: The Origins of Silent Reading", year: 1997, publication: "Stanford University Press" },
+    { author: "Keith Houston", title: "Shady Characters: The Secret Life of Punctuation, Symbols, and Other Typographical Marks", year: 2013, publication: "W. W. Norton" },
+    { author: "US Court of Appeals for the First Circuit", title: "O'Connor v. Oakhurst Dairy, 851 F.3d 69", year: 2017 },
+  ],
 };

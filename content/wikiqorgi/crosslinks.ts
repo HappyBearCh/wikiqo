@@ -112,7 +112,7 @@ const TARGETS: Record<string, LinkTarget> = {
   maps: { phrases: ["map projection", "map projections", "Mercator", "cartography", "cartographers"] },
   "medical-imaging": { phrases: ["medical imaging", "MRI", "CT scan", "CT scans", "CT scanner"] },
   money: { phrases: ["paper money", "currency", "coinage"], notIn: ["photosynthesis", "origin-of-life"] },
-  moulds: { phrases: ["mould", "moulds", "penicillin", "Penicillium"], notIn: ["hearing"] },
+  moulds: { phrases: ["mould", "moulds", "penicillin", "Penicillium"], notIn: ["hearing", "pencil"] },
   "mount-everest": { phrases: ["Everest"] },
   "mycorrhizal-networks": { phrases: ["mycorrhizal", "mycorrhiza", "mycorrhizae", "wood wide web"] },
   nationalism: { phrases: ["nationalism", "nationalist", "nation-state", "nation-states"] },
@@ -164,7 +164,7 @@ const TARGETS: Record<string, LinkTarget> = {
   "the-cell": { phrases: ["eukaryotic cell", "eukaryotic cells", "living cells", "eukaryotes", "mitochondria"] },
   "the-census": { phrases: ["census", "censuses"] },
   "the-eight-hour-day": { phrases: ["eight-hour day", "working week", "working hours", "working day"] },
-  "the-eye": { phrases: ["retina", "the eye", "eyes"], notIn: ["hurricanes", "aqueducts", "method-of-loci"] },
+  "the-eye": { phrases: ["retina", "the eye", "eyes"], notIn: ["hurricanes", "aqueducts", "method-of-loci", "potato"] },
   "the-factory": { phrases: ["factory", "factories"] },
   "the-heart": { phrases: ["heartbeat", "cardiac", "circulation of the blood"] },
   "the-internet": { phrases: ["internet", "World Wide Web", "the web"] },
@@ -223,6 +223,16 @@ const TARGETS: Record<string, LinkTarget> = {
   thermometer: { phrases: ["thermometer", "thermometers", "Fahrenheit", "Celsius"] },
   "cavendish-experiment": { phrases: ["Cavendish", "gravitational constant"] },
   "earths-circumference": { phrases: ["Eratosthenes", "circumference of the Earth", "Earth's circumference"] },
+  salt: { phrases: ["salt", "sodium chloride"] },
+  sugar: { phrases: ["sugar", "sugarcane", "sugar beet"] },
+  potato: { phrases: ["potato", "potatoes"] },
+  "spice-trade": { phrases: ["spice trade", "spices", "nutmeg", "cloves", "pepper"] },
+  "maillard-reaction": { phrases: ["Maillard reaction", "browning"] },
+  paper: { phrases: ["papermaking", "paper mill", "wood pulp"] },
+  pencil: { phrases: ["pencil", "pencils", "graphite"] },
+  typewriter: { phrases: ["typewriter", "typewriters", "QWERTY"] },
+  braille: { phrases: ["braille"] },
+  punctuation: { phrases: ["punctuation", "semicolon", "semicolons"] },
 };
 
 /**
@@ -237,6 +247,7 @@ const BLOCKED_PHRASES = [
   "Ring of Fire",
   "eye of the storm",
   "sun compass",
+  "molten salt",
 ];
 
 /** At most this many outbound links per article. Past a handful, links stop
