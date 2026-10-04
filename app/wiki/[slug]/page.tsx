@@ -17,10 +17,7 @@ import { WIKIQORGI_CATALOG } from "@/content/wikiqorgi/catalog";
 import { findBySourceTitle } from "@/lib/shelf-search";
 import { OG_BASE } from "@/lib/site";
 import { parseArticleStructure } from "@/lib/structure";
-import { keywordsFromHtml } from "@/lib/keywords";
-import ArticleStructureLazy from "@/components/ArticleStructureLazy";
-import MobileContents from "@/components/MobileContents";
-import TextBanner from "@/components/TextBanner";
+import TableOfContents from "@/components/TableOfContents";
 
 // Keep this route `ƒ (Dynamic)` — do not add a route-level `revalidate` +
 // empty `generateStaticParams` here. That was tried, measured, and reverted.
@@ -229,11 +226,8 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const sourceUrl = wikipediaUrlFor(summary.title);
   const image = summary.originalimage ?? summary.thumbnail;
   // Section outline, parsed from the same sanitized HTML the reader sees, for
-  // the D3 structure map in the sidebar.
+  // the table of contents.
   const structure = parseArticleStructure(summary.title, sanitizedHtml);
-  const hasStructure = structure.children.length > 0;
-  // Salient terms from the article body, for the text-viz banner.
-  const words = keywordsFromHtml(sanitizedHtml);
   // wikiqorgi links every original to the Wikipedia article it covers; this is
   // the link back, so a reader of the mirror learns the rewrite exists. Read
   // from the generated catalog, not content/wikiqorgi, to keep the shelf's
@@ -243,18 +237,10 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
     findBySourceTitle(WIKIQORGI_CATALOG, title);
 
   return (
-    <div className="shell py-10">
-      <TextBanner words={words} title={summary.title} initial="cloud" />
-
-      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-14">
-        <article className="min-w-0">
-          <header className="relative mb-8 border-b border-border pb-6">
-            {/* Rainbow rule that runs under the heading. */}
-            <span
-              aria-hidden
-              className="absolute -bottom-px left-0 h-1 w-28 rounded-full"
-              style={{ background: "var(--rainbow)" }}
-            />
+    <div className="shell py-10 sm:py-12">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_16rem] lg:gap-16">
+        <article className="min-w-0 max-w-3xl">
+          <header className="mb-8">
             <h1
               className="font-serif text-4xl font-bold tracking-tight sm:text-5xl"
               dangerouslySetInnerHTML={{ __html: sanitizedDisplayTitle }}
@@ -265,42 +251,27 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </header>
 
           {rewrite && (
-            <Link
-              href={rewrittenHref(rewrite.slug)}
-              className="group mb-8 flex items-start gap-4 rounded-2xl border border-border bg-surface p-4 transition-colors hover:border-accent sm:p-5"
-            >
-              <span
-                aria-hidden
-                className="mt-1 h-10 w-1.5 shrink-0 rounded-full"
-                style={{ background: "var(--rainbow)" }}
-              />
-              <span className="min-w-0">
-                <span className="block font-mono text-[11px] uppercase tracking-widest text-muted">
-                  We wrote our own article on this
-                </span>
-                <span className="mt-1 block font-serif text-lg font-semibold leading-snug text-foreground group-hover:text-accent">
-                  {rewrite.title}
-                </span>
-                <span className="mt-1 block text-sm leading-relaxed text-muted">
-                  {rewrite.dek}{" "}
-                  <span className="whitespace-nowrap font-semibold text-accent">
-                    Read it on wikiqorgi <span aria-hidden>&rarr;</span>
-                  </span>
-                </span>
+            <Link href={rewrittenHref(rewrite.slug)} className="card mb-8 p-4 sm:p-5">
+              <span className="eyebrow">We wrote our own article on this</span>
+              <span className="mt-1.5 block font-serif text-lg font-semibold leading-snug text-foreground">
+                {rewrite.title}
+              </span>
+              <span className="mt-1 block text-sm leading-relaxed text-muted">{rewrite.dek}</span>
+              <span className="mt-3 text-sm font-semibold text-accent">
+                Read our article <span aria-hidden>&rarr;</span>
               </span>
             </Link>
           )}
 
-          {/* Lead image and summary surface inline on small screens, where the
-              sidebar collapses below the article. */}
+          {/* On small screens the sidebar is gone, so the lead image sits here. */}
           {image && (
-            <div className="img-zoom mb-8 overflow-hidden rounded-2xl border border-border lg:hidden">
+            <div className="mb-8 overflow-hidden rounded-xl border border-border lg:hidden">
               <Image
                 src={image.source}
                 alt={summary.title}
                 width={image.width}
                 height={image.height}
-                className="img-zoom__media w-full object-cover"
+                className="w-full object-cover"
                 priority
                 unoptimized
               />
@@ -308,40 +279,30 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           )}
 
           {summary.extract && (
-            <p
-              className="mb-8 rounded-r-xl border-l-4 bg-surface py-3 pl-4 pr-4 text-lg leading-8 text-foreground/80 italic"
-              style={{ borderImage: "var(--rainbow) 1", borderImageSlice: 1 }}
-            >
-              {summary.extract}
-            </p>
+            <p className="mb-8 text-lg leading-8 text-foreground/85">{summary.extract}</p>
           )}
 
-          <MobileContents root={structure} />
+          <TableOfContents root={structure} variant="collapsible" />
 
           <div
             className="wiki-content prose prose-lg prose-neutral dark:prose-invert max-w-none"
             dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
           />
 
-          <footer className="mt-12 rounded-2xl border border-border bg-surface px-5 py-4 text-sm text-muted">
+          <footer className="mt-12 border-t border-border pt-6 text-sm leading-relaxed text-muted">
             <p>
-              This article is adapted from{" "}
-              <a
-                href={sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-medium text-accent underline"
-              >
+              Adapted from{" "}
+              <a href={sourceUrl} target="_blank" rel="noopener noreferrer" className="underline">
                 &ldquo;{summary.title}&rdquo; on Wikipedia
-              </a>
-              , by Wikipedia contributors, used under the{" "}
+              </a>{" "}
+              by Wikipedia contributors, under the{" "}
               <a
                 href="https://creativecommons.org/licenses/by-sa/4.0/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline"
               >
-                Creative Commons Attribution-ShareAlike 4.0 License
+                CC BY-SA 4.0 licence
               </a>
               .{" "}
               <a
@@ -357,55 +318,24 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </footer>
         </article>
 
-        {/* Sticky sidebar — fills the space freed up by the wide shell on large
-            screens, mirroring Wikipedia's own infobox without crowding the
-            reading column. */}
+        {/* Desktop sidebar: the lead image, then a section list that stays in
+            view while reading and scrolls on its own if it is long. */}
         <aside className="hidden lg:block">
-          <div className="sticky top-20 flex flex-col gap-5">
-            {image && (
-              <div className="img-zoom overflow-hidden rounded-2xl border border-border">
-                <Image
-                  src={image.source}
-                  alt={summary.title}
-                  width={image.width}
-                  height={image.height}
-                  className="img-zoom__media w-full object-cover"
-                  priority
-                  unoptimized
-                />
-              </div>
-            )}
-
-            <div className="overflow-hidden rounded-2xl border border-border bg-surface">
-              <div className="h-1.5 w-full" style={{ background: "var(--rainbow)" }} />
-              <div className="p-5">
-              <h2 className="font-serif text-base font-semibold text-foreground">
-                About this article
-              </h2>
-              {summary.description && (
-                <p className="mt-2 text-sm leading-relaxed text-muted">
-                  {summary.description}
-                </p>
-              )}
-              </div>
+          {image && (
+            <div className="mb-8 overflow-hidden rounded-xl border border-border">
+              <Image
+                src={image.source}
+                alt={summary.title}
+                width={image.width}
+                height={image.height}
+                className="w-full object-cover"
+                priority
+                unoptimized
+              />
             </div>
-
-            {hasStructure && (
-              <div className="overflow-hidden rounded-2xl border border-border bg-surface">
-                <div className="h-1.5 w-full" style={{ background: "var(--rainbow)" }} />
-                <div className="p-5">
-                  <h2 className="font-serif text-base font-semibold text-foreground">
-                    Article structure
-                  </h2>
-                  <p className="mt-1 text-xs text-muted">
-                    Click a section to jump to it.
-                  </p>
-                  <div className="mt-3">
-                    <ArticleStructureLazy root={structure} />
-                  </div>
-                </div>
-              </div>
-            )}
+          )}
+          <div className="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto pb-4">
+            <TableOfContents root={structure} variant="sidebar" />
           </div>
         </aside>
       </div>
@@ -432,26 +362,21 @@ async function FileView({ title }: { title: string }) {
 
   return (
     <div className="shell py-10">
-      <header className="relative mb-6 border-b border-border pb-6">
-        <span
-          aria-hidden
-          className="absolute -bottom-px left-0 h-1 w-28 rounded-full"
-          style={{ background: "var(--rainbow)" }}
-        />
+      <header className="mb-6 border-b border-border pb-6">
         <h1 className="font-serif text-3xl font-bold tracking-tight break-words sm:text-4xl">
           {title.replace(/^(File|Image|Media)\s*:/i, "")}
         </h1>
       </header>
 
       <figure className="m-0">
-        <div className="img-zoom flex justify-center overflow-hidden rounded-2xl border border-border bg-surface">
+        <div className="flex justify-center overflow-hidden rounded-xl border border-border bg-surface">
           {isImage ? (
             <Image
               src={info.thumbUrl ?? info.url}
               alt={title}
               width={info.width}
               height={info.height}
-              className="img-zoom__media h-auto w-full max-w-full object-contain"
+              className="h-auto w-full max-w-full object-contain"
               sizes="(min-width: 1024px) 60rem, 100vw"
               priority
               unoptimized

@@ -23,8 +23,7 @@ export default function ArticleError({
       <div className="mt-6 flex items-center justify-center gap-4">
         <button
           onClick={reset}
-          className="shadow-glow rounded-full px-6 py-2.5 text-sm font-semibold text-white transition-transform hover:scale-105"
-          style={{ background: "var(--library-blue)", backgroundSize: "200% auto" }}
+          className="btn-primary"
         >
           Try again
         </button>

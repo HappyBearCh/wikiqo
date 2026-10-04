@@ -13,16 +13,6 @@ function fixProtocolRelative(value: string): string {
   return value.replace(/(^|,|\s)\/\//g, "$1https://");
 }
 
-// Number of rainbow color tokens (--rb-1 … --rb-6) that inline content links
-// cycle through, so each consecutive link reads in a different color.
-const LINK_COLOR_COUNT = 6;
-
-// Running index over content links within a single sanitize pass. Reset at the
-// start of each sanitizeWikiHtml() call (see below). Safe as module state:
-// sanitize-html processes a document synchronously and in document order, so a
-// single pass never interleaves with another request's pass.
-let linkColorIndex = 0;
-
 // MathML elements, preserved so formula markup from Parsoid survives. Mirrors
 // the set DOMPurify's `mathMl` profile allowed.
 const MATHML_TAGS = [
@@ -79,9 +69,6 @@ const COMMON_ATTRS = [
  */
 function transformAnchor(tagName: string, attribs: sanitizeHtml.Attributes) {
   const href = attribs.href ?? "";
-  // Whether this is a prose/content link (a wiki page or external site) rather
-  // than an in-page anchor like a "[1]" citation jump (href "#...").
-  let isContentLink = false;
 
   // Parsoid writes internal wiki links in two shapes: relative ("./Some_Page")
   // throughout prose, and absolute-local ("/wiki/File:Foo.oga") around some
@@ -117,24 +104,13 @@ function transformAnchor(tagName: string, attribs: sanitizeHtml.Attributes) {
     attribs.href = `${WIKIPEDIA_ARTICLE_BASE}${wikiPath}`;
     attribs.target = "_blank";
     attribs.rel = "noopener noreferrer external";
-    isContentLink = true;
   } else if (href.startsWith("//")) {
     attribs.href = `https:${href}`;
     attribs.target = "_blank";
     attribs.rel = "noopener noreferrer external";
-    isContentLink = true;
   } else if (/^https?:\/\//.test(href)) {
     attribs.target = "_blank";
     attribs.rel = "noopener noreferrer external";
-    isContentLink = true;
-  }
-
-  // sanitize-html visits tags in document order, so cycling a counter here gives
-  // each successive content link the next color in reading order.
-  if (isContentLink) {
-    const colorClass = `wlink-${(linkColorIndex % LINK_COLOR_COUNT) + 1}`;
-    linkColorIndex += 1;
-    attribs.class = attribs.class ? `${attribs.class} ${colorClass}` : colorClass;
   }
 
   return { tagName, attribs };
@@ -198,8 +174,5 @@ const OPTIONS: sanitizeHtml.IOptions = {
  * Wikipedia articles actually use (tables, infoboxes, MathML, etc).
  */
 export function sanitizeWikiHtml(html: string): string {
-  // Restart the rainbow cycle for each pass so a document's links always begin
-  // at the same color regardless of what was sanitized before it.
-  linkColorIndex = 0;
   return sanitizeHtml(html, OPTIONS);
 }

@@ -2,20 +2,20 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  /* Full pride-rainbow palette, site-wide. Near-black (#111111) text on white
-     surfaces, with a vivid magenta accent for links and controls. The --rb-*
-     tokens carry the classic six-stripe pride spectrum (red → violet) and feed
-     every gradient, glow, and category accent across the site. */
+  /* A calm, reading-first palette: near-black text on white, one blue accent
+     for everything interactive (links, buttons, focus), and the six-stripe
+     pride spectrum kept as the site's signature — the hairline at the very
+     top of every page and the small colour marks that label each section. */
   --background: #ffffff;
-  --foreground: #111111;
+  --foreground: #16161a;
   --surface: #ffffff;
-  --surface-hover: #fbf3fa;
-  --border: #ececec;
-  --accent: #b5179e; /* vivid magenta */
-  --accent-hover: #7b0d6b;
+  --surface-hover: #f5f7fb;
+  --border: #e4e6eb;
+  --accent: #1d4ed8; /* links, buttons, focus — the conventional link blue */
+  --accent-hover: #1e3a8a;
   --accent-foreground: #ffffff;
-  --accent-soft: #fbeaf7;
-  --muted: #5f5f5f;
+  --accent-soft: #eef3ff;
+  --muted: #5b6070;
 
   /* Six-stripe pride spectrum. Amber is lifted off pure yellow so it stays
      legible on white. */
@@ -26,24 +26,15 @@
   --rb-5: #004dff; /* blue   */
   --rb-6: #750787; /* violet */
 
-  /* Signature brand gradient: the full rainbow, red → violet. */
+  /* The full rainbow, red → violet: the brand hairline. */
   --rainbow: linear-gradient(
-    135deg,
+    90deg,
     #e40303 0%,
     #ff8c00 18%,
     #ffb800 36%,
     #008026 56%,
     #004dff 78%,
     #750787 100%
-  );
-
-  /* Library blue — a sweep through shades of blue, used for the brand logo,
-     the wordmark, and primary buttons. Deep navy → royal → sky. */
-  --library-blue: linear-gradient(
-    135deg,
-    #1e3a8a 0%,
-    #1d4ed8 50%,
-    #3b82f6 100%
   );
 }
 
@@ -71,28 +62,27 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0c0a12;
-    --foreground: #f0eaf4;
-    --surface: #161121;
-    --surface-hover: #221831;
-    --border: #2c2140;
-    --accent: #ff7ad9; /* bright magenta */
-    --accent-hover: #ffa6e6;
-    --accent-foreground: #0c0a12;
-    --accent-soft: #2a1430;
-    --muted: #b3a8c4;
+    --background: #101114;
+    --foreground: #ececf0;
+    --surface: #17181c;
+    --surface-hover: #1f2127;
+    --border: #2b2d34;
+    --accent: #8ab4ff;
+    --accent-hover: #b3ceff;
+    --accent-foreground: #101114;
+    --accent-soft: #1b2436;
+    --muted: #a3a7b3;
 
-    /* Same pride spectrum, brightened so it sings on a dark canvas. */
-    --rb-1: #ff5a5a; /* red    */
-    --rb-2: #ffae42; /* orange */
-    --rb-3: #ffd24a; /* amber  */
-    --rb-4: #36c46a; /* green  */
-    --rb-5: #5b8cff; /* blue   */
-    --rb-6: #b56cff; /* violet */
+    /* Same pride spectrum, brightened for a dark canvas. */
+    --rb-1: #ff5a5a;
+    --rb-2: #ffae42;
+    --rb-3: #ffd24a;
+    --rb-4: #36c46a;
+    --rb-5: #5b8cff;
+    --rb-6: #b56cff;
 
-    /* Same rainbow sweep, brightened for dark surfaces. */
     --rainbow: linear-gradient(
-      135deg,
+      90deg,
       #ff5a5a 0%,
       #ffae42 18%,
       #ffd24a 36%,
@@ -100,139 +90,101 @@
       #5b8cff 78%,
       #b56cff 100%
     );
-
-    /* Library blue, brightened so it sings on a dark canvas. */
-    --library-blue: linear-gradient(
-      135deg,
-      #3b82f6 0%,
-      #60a5fa 50%,
-      #93c5fd 100%
-    );
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-  /* Soft rainbow wash anchored to the top of the page — each blob a different
-     stripe of the spectrum, kept faint so text stays readable. */
-  background-image:
-    radial-gradient(48rem 34rem at 4% -10%, color-mix(in srgb, var(--rb-1) 14%, transparent), transparent 60%),
-    radial-gradient(46rem 32rem at 28% -8%, color-mix(in srgb, var(--rb-2) 12%, transparent), transparent 60%),
-    radial-gradient(46rem 32rem at 50% -6%, color-mix(in srgb, var(--rb-4) 11%, transparent), transparent 60%),
-    radial-gradient(46rem 32rem at 72% -8%, color-mix(in srgb, var(--rb-5) 12%, transparent), transparent 60%),
-    radial-gradient(48rem 34rem at 96% -10%, color-mix(in srgb, var(--rb-6) 14%, transparent), transparent 60%);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-
-a {
-  color: var(--accent);
-}
-
-/* ---- Modern utilities -------------------------------------------------- */
-
-/* Animated rainbow text fill. */
-.text-rainbow {
-  background: var(--rainbow);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: rainbow-pan 6s linear infinite;
-}
-
-/* Animated library-blue text fill, mirroring .text-rainbow. */
-.text-library-blue {
-  background: var(--library-blue);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: rainbow-pan 6s linear infinite;
-}
-
-/* Rainbow gradient border via masked padding-box, so the inside stays solid. */
-.rainbow-border {
-  position: relative;
-  border: 1px solid transparent;
-  background:
-    linear-gradient(var(--surface), var(--surface)) padding-box,
-    var(--rainbow) border-box;
-  background-size: 100% 100%, 200% auto;
-}
-.rainbow-border:hover {
-  animation: rainbow-pan 4s linear infinite;
-}
-
-/* Frosted-glass panel. */
-.glass {
-  background: color-mix(in srgb, var(--surface) 70%, transparent);
-  backdrop-filter: saturate(180%) blur(16px);
-  -webkit-backdrop-filter: saturate(180%) blur(16px);
-}
-
-.shadow-glow {
-  box-shadow: 0 10px 40px -12px color-mix(in srgb, var(--accent) 45%, transparent);
-}
-
-/* Image hover reaction (mirrors bosniakstudies.org associate cards): the image
-   zooms in slightly on hover. Put `.img-zoom` on the overflow-hidden wrapper
-   and `.img-zoom__media` on the <img>/<Image>. */
-.img-zoom__media {
-  transition: transform 0.3s ease;
-}
-.img-zoom:hover .img-zoom__media {
-  transform: scale(1.05);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .img-zoom__media {
-    transition: none;
+/* Base and component styles live in Tailwind's layers, so utility classes on
+   an element (text-foreground, flex-row, …) can still override them. Unlayered
+   rules would beat every utility. */
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   }
-  .img-zoom:hover .img-zoom__media {
-    transform: none;
+
+  a {
+    color: var(--accent);
   }
 }
 
-@keyframes rainbow-pan {
-  to {
-    background-position: 200% center;
+/* One visible focus style for every interactive element, for keyboard users.
+   Mouse clicks don't trigger :focus-visible, so it never gets in the way. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---- Shared components ---------------------------------------------------- */
+
+@layer components {
+  /* Primary and secondary buttons (also used on links styled as buttons). */
+  .btn-primary,
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    padding: 0.65rem 1.4rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.25rem;
+    transition:
+      background-color 0.15s ease,
+      border-color 0.15s ease,
+      color 0.15s ease;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--accent-foreground);
+  }
+  .btn-primary:hover {
+    background: var(--accent-hover);
+    color: var(--accent-foreground);
+  }
+  .btn-secondary {
+    border: 1px solid var(--border);
+    color: var(--foreground);
+  }
+  .btn-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* A plain, clickable card: a border that darkens to the accent on hover. No
+     lift, glow or colour wash — the content is the decoration. */
+  .card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 0.875rem;
+    background: var(--surface);
+    transition:
+      border-color 0.15s ease,
+      background-color 0.15s ease;
+  }
+  a.card:hover {
+    border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+    background: var(--surface-hover);
+  }
+
+  /* Small uppercase label above titles ("Money and markets", "On this page"). */
+  .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
   }
 }
 
-@keyframes float-up {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-in {
-  animation: float-up 0.5s cubic-bezier(0.21, 1, 0.4, 1) both;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .text-rainbow,
-  .text-library-blue,
-  .rainbow-border:hover,
-  .animate-in {
-    animation: none;
-  }
-}
-
-/* Site-wide page container. Uses the full viewport with comfortable padding
-   on small screens, then opens up to 80% of the viewport (capped so lines
-   don't get absurdly wide on ultra-wide monitors) once there's room to
-   spare, so the chrome and wide layouts (sidebars, grids) can make real use
-   of large screens. */
+/* Site-wide page container: comfortable padding on small screens, capped
+   width on large ones. */
 .shell {
   width: 100%;
+  max-width: 1200px;
   margin-inline: auto;
   padding-inline: 1.25rem;
 }
@@ -243,61 +195,23 @@ a {
   }
 }
 
-@media (min-width: 1024px) {
-  .shell {
-    width: 80%;
-    max-width: 1680px;
-    padding-inline: 0;
-  }
-}
+/* ---- Article body ---------------------------------------------------------- */
 
-/* Wikipedia article body styling, scoped so it doesn't leak into the rest
-   of the site. Pairs with the @tailwindcss/typography `prose` classes
-   applied in the article template. */
+/* Article body styling, scoped so it doesn't leak into the rest of the site.
+   Pairs with the @tailwindcss/typography `prose` classes in the templates. */
 .wiki-content {
   font-family: var(--font-serif);
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
 .wiki-content a {
+  color: var(--accent);
   text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent);
+  text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent);
   text-underline-offset: 2px;
 }
-
-/* Inline content links cycle through the six pride-spectrum tokens, so each
-   consecutive link reads in a different color (assigned in document order
-   during sanitization — see lib/sanitize.ts). The matching tokens shift for
-   dark mode automatically, so contrast holds on both canvases. */
-/* Links from one wikiqorgi article to another (content/wikiqorgi/crosslinks.ts).
-   Accent-coloured so a reader can tell "more of our writing" from plain text. */
-.wiki-content a.wq-crosslink {
-  color: var(--accent);
-}
-
-.wiki-content a.wlink-1 {
-  color: var(--rb-1);
-  text-decoration-color: color-mix(in srgb, var(--rb-1) 40%, transparent);
-}
-.wiki-content a.wlink-2 {
-  color: var(--rb-2);
-  text-decoration-color: color-mix(in srgb, var(--rb-2) 40%, transparent);
-}
-.wiki-content a.wlink-3 {
-  color: var(--rb-3);
-  text-decoration-color: color-mix(in srgb, var(--rb-3) 40%, transparent);
-}
-.wiki-content a.wlink-4 {
-  color: var(--rb-4);
-  text-decoration-color: color-mix(in srgb, var(--rb-4) 40%, transparent);
-}
-.wiki-content a.wlink-5 {
-  color: var(--rb-5);
-  text-decoration-color: color-mix(in srgb, var(--rb-5) 40%, transparent);
-}
-.wiki-content a.wlink-6 {
-  color: var(--rb-6);
-  text-decoration-color: color-mix(in srgb, var(--rb-6) 40%, transparent);
+.wiki-content a:hover {
+  text-decoration-color: var(--accent);
 }
 
 .wiki-content table {
@@ -327,48 +241,12 @@ a {
 .wiki-content img {
   max-width: 100%;
   height: auto;
-  transition: transform 0.3s ease;
-}
-
-.wiki-content a:hover img,
-.wiki-content img:hover {
-  transform: scale(1.04);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .wiki-content img {
-    transition: none;
-  }
-  .wiki-content a:hover img,
-  .wiki-content img:hover {
-    transform: none;
-  }
 }
 
 /* Leave room beneath the sticky header when jumping to a section from the
-   D3 article-structure map, and briefly flash the heading on arrival. */
+   table of contents. */
 .wiki-content :is(h2, h3, h4) {
-  scroll-margin-top: 5rem;
-}
-
-.structure-target-flash {
-  animation: structure-flash 1.2s ease-out;
-  border-radius: 0.375rem;
-}
-
-@keyframes structure-flash {
-  0% {
-    background-color: color-mix(in srgb, var(--accent) 22%, transparent);
-  }
-  100% {
-    background-color: transparent;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .structure-target-flash {
-    animation: none;
-  }
+  scroll-margin-top: 5.5rem;
 }
 
 .wiki-content .mw-editsection,
@@ -381,4 +259,11 @@ a {
 .wiki-content .reflist,
 .wiki-content .references {
   font-size: 0.85em;
+}
+
+/* Smooth in-page jumps, unless the reader has asked for less motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }

@@ -63,7 +63,7 @@ export default function WikiqorgiPage() {
   const sectionCount = WIKIQORGI_SECTIONS.length;
 
   return (
-    <div className="shell py-14 sm:py-20">
+    <div className="shell py-12 sm:py-16">
       <script
         type="application/ld+json"
         // Static, developer-authored object — no user input reaches it.
@@ -80,69 +80,39 @@ export default function WikiqorgiPage() {
       />
 
       {/* ---- Masthead ------------------------------------------------------ */}
-      <section className="animate-in mx-auto max-w-3xl text-center">
-        <span className="rainbow-border rounded-full px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide text-muted">
-          Original writing · not mirrored
-        </span>
-        <h1 className="text-rainbow mt-6 font-serif text-5xl font-bold tracking-tight sm:text-6xl">
-          wikiqorgi
-        </h1>
-        <p className="mt-5 text-lg leading-relaxed text-muted">
-          The rest of wikiqo hands you Wikipedia as it is. This shelf does the
-          opposite: {articleCount} of the encyclopedia&rsquo;s best subjects,
-          researched again and <em>written</em> again — same facts, entirely new
-          prose, built to be read from top to bottom rather than skimmed for a
-          date.
+      <section className="max-w-2xl">
+        <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">All articles</h1>
+        <p className="mt-4 text-lg leading-relaxed text-muted">
+          {articleCount}{" "}of the encyclopedia&rsquo;s best subjects, researched again
+          and written from scratch — same facts, new prose, built to be read from
+          top to bottom.
         </p>
-        <p className="mt-4 text-sm text-muted">
-          {sectionCount} sections · {articleCount} articles ·{" "}
-          <a href="/wikiqorgi/feed.xml" className="underline hover:text-foreground">
-            RSS
+        <p className="mt-3 text-sm text-muted">
+          {sectionCount} sections ·{" "}
+          <a href="/wikiqorgi/feed.xml" className="underline">
+            RSS feed
           </a>
         </p>
-        <div
-          aria-hidden
-          className="mx-auto mt-8 h-1.5 w-44 rounded-full shadow-glow"
-          style={{ background: "var(--rainbow)" }}
-        />
       </section>
 
       {/* ---- The shelf: one card per section -------------------------------- */}
-      <ul className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-2">
+      <ul className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2">
         {WIKIQORGI_SECTIONS.map((section) => (
           <li key={section.id}>
-            <Link
-              href={sectionHref(section.id)}
-              className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5"
-            >
-              {/* Colour wash that blooms in on hover. */}
-              <span
-                aria-hidden
-                className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.07]"
-                style={{ background: section.hue }}
-              />
-              <span
-                aria-hidden
-                className="h-1.5 w-12 rounded-full transition-all duration-300 group-hover:w-20"
-                style={{ background: section.hue }}
-              />
-              <h2 className="mt-4 font-serif text-2xl font-semibold tracking-tight text-foreground">
-                {section.title}
-              </h2>
-              <p className="mt-2.5 flex-1 text-sm leading-relaxed text-muted">
-                {section.blurb}
-              </p>
-              <span className="mt-5 flex items-center gap-2 text-sm font-semibold text-accent">
-                Browse the section
+            <Link href={sectionHref(section.id)} className="card h-full p-5 sm:p-6">
+              <span className="flex items-center gap-2">
                 <span
                   aria-hidden
-                  className="transition-transform duration-300 group-hover:translate-x-1"
-                >
-                  &rarr;
-                </span>
-                <span className="ml-auto font-mono text-[11px] font-normal uppercase tracking-widest text-muted">
-                  {section.articles.length} articles
-                </span>
+                  className="h-2.5 w-2.5 shrink-0 rounded-full"
+                  style={{ background: section.hue }}
+                />
+                <h2 className="font-serif text-xl font-semibold tracking-tight text-foreground">
+                  {section.title}
+                </h2>
+              </span>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{section.blurb}</p>
+              <span className="mt-4 text-sm text-muted">
+                {section.articles.length} articles
               </span>
             </Link>
           </li>
@@ -150,7 +120,7 @@ export default function WikiqorgiPage() {
       </ul>
 
       {/* ---- House rules --------------------------------------------------- */}
-      <section className="mx-auto mt-20 max-w-3xl rounded-2xl border border-border bg-surface p-6">
+      <section className="mt-16 max-w-3xl border-t border-border pt-8">
         <h2 className="font-serif text-xl font-semibold text-foreground">
           How these are written
         </h2>
@@ -181,17 +151,10 @@ export default function WikiqorgiPage() {
           </li>
         </ul>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link
-            href="/search"
-            className="shadow-glow rounded-full px-6 py-2.5 text-sm font-semibold transition-transform hover:scale-105"
-            style={{ background: "var(--library-blue)", backgroundSize: "200% auto", color: "#fff" }}
-          >
+          <Link href="/search" className="btn-primary">
             Search the encyclopedia
           </Link>
-          <Link
-            href="/about"
-            className="rounded-full border border-border px-6 py-2.5 text-sm font-semibold text-muted transition-colors hover:border-accent hover:text-accent"
-          >
+          <Link href="/about" className="btn-secondary">
             About wikiqo
           </Link>
         </div>

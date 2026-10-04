@@ -21,8 +21,7 @@ export default function GlobalError({
       </p>
       <button
         onClick={reset}
-        className="shadow-glow mt-6 rounded-full px-6 py-2.5 text-sm font-semibold text-white transition-transform hover:scale-105"
-        style={{ background: "var(--library-blue)", backgroundSize: "200% auto" }}
+        className="btn-primary mt-6"
       >
         Try again
       </button>

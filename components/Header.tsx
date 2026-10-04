@@ -1,41 +1,41 @@
 import Link from "next/link";
 import SearchBar from "@/components/SearchBar";
 
+/**
+ * Site header. On phones it is two short rows — logo and links, then search —
+ * and scrolls away with the page, so it doesn't permanently take a fifth of a
+ * small screen. From the md breakpoint up it is a single row that stays at
+ * the top while reading.
+ */
 export default function Header() {
   return (
-    <header className="glass sticky top-0 z-30 border-b border-border">
-      {/* Rainbow hairline along the very top edge. */}
-      <div className="h-1 w-full" style={{ background: "var(--rainbow)" }} />
+    <header className="z-30 border-b border-border bg-background/95 backdrop-blur md:sticky md:top-0">
+      {/* The brand's rainbow hairline along the very top edge. */}
+      <div aria-hidden className="h-1 w-full" style={{ background: "var(--rainbow)" }} />
       <div className="shell flex flex-wrap items-center gap-x-6 gap-y-3 py-3">
         <Link
           href="/"
-          className="group flex items-center gap-2.5 font-serif text-xl font-semibold tracking-tight text-foreground"
+          className="order-1 flex items-center gap-2 font-serif text-xl font-semibold tracking-tight text-foreground"
         >
           <span
-            className="grid h-9 w-9 place-items-center rounded-xl text-sm font-bold text-white shadow-glow transition-transform group-hover:scale-110 group-hover:rotate-6"
-            style={{ background: "var(--library-blue)", backgroundSize: "200% auto" }}
+            aria-hidden
+            className="grid h-8 w-8 place-items-center rounded-lg bg-accent text-sm font-bold text-accent-foreground"
           >
             w
           </span>
-          <span className="text-library-blue">wikiqo</span>
+          wikiqo
         </Link>
-        <div className="ml-auto w-full sm:ml-0 sm:w-auto sm:flex-1">
-          <SearchBar />
-        </div>
-        <nav className="flex items-center gap-5">
-          <Link
-            href="/wikiqorgi"
-            className="text-sm font-semibold text-muted transition-colors hover:text-accent"
-          >
-            wikiqorgi
+        <nav aria-label="Main" className="order-2 ml-auto flex items-center gap-5 md:order-3 md:ml-0">
+          <Link href="/wikiqorgi" className="text-sm font-medium text-foreground hover:text-accent">
+            Articles
           </Link>
-          <Link
-            href="/about"
-            className="text-sm font-semibold text-muted transition-colors hover:text-accent"
-          >
+          <Link href="/about" className="text-sm font-medium text-foreground hover:text-accent">
             About
           </Link>
         </nav>
+        <div className="order-3 w-full md:order-2 md:mx-auto md:w-auto md:max-w-xl md:flex-1">
+          <SearchBar />
+        </div>
       </div>
     </header>
   );

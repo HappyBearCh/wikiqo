@@ -4,7 +4,6 @@ import { CookieSettingsButton } from "@/components/AnalyticsConsent";
 export default function Footer() {
   return (
     <footer className="mt-16 border-t border-border bg-surface">
-      <div className="h-1 w-full" style={{ background: "var(--rainbow)" }} />
       <div className="shell flex flex-col gap-4 py-8 text-sm text-muted sm:flex-row sm:items-start sm:justify-between">
         <p className="max-w-2xl">
           wikiqo publishes original articles on{" "}

@@ -192,7 +192,7 @@ export default function SearchBar() {
   }
 
   return (
-    <div ref={containerRef} className="relative w-full sm:mx-auto sm:max-w-xl">
+    <div ref={containerRef} className="relative w-full">
       <form
         role="search"
         onSubmit={(e) => {
@@ -203,7 +203,7 @@ export default function SearchBar() {
         <label htmlFor="site-search" className="sr-only">
           Search wikiqo and Wikipedia
         </label>
-        <div className="rainbow-border flex items-center gap-2.5 rounded-full px-4 py-2.5 shadow-sm transition-shadow focus-within:shadow-glow">
+        <div className="flex items-center gap-2.5 rounded-full border border-border bg-surface px-4 py-2 transition-colors focus-within:border-accent">
           <svg
             aria-hidden
             viewBox="0 0 20 20"
@@ -231,7 +231,7 @@ export default function SearchBar() {
             onFocus={() => {
               if (trimmed.length >= 2) setOpen(true);
             }}
-            className="w-full bg-transparent text-sm outline-none placeholder:text-muted"
+            className="w-full bg-transparent text-sm outline-none focus-visible:outline-none placeholder:text-muted"
           />
         </div>
       </form>
@@ -240,7 +240,7 @@ export default function SearchBar() {
         <ul
           id={listboxId}
           role="listbox"
-          className="glass animate-in absolute z-40 mt-2 w-full overflow-hidden rounded-2xl border border-border p-1.5 shadow-xl shadow-black/10"
+          className="absolute z-40 mt-2 w-full overflow-hidden rounded-xl border border-border bg-surface p-1.5 shadow-lg shadow-black/10"
         >
           {options.map((option, i) => {
             const firstOfKind = i === 0 || options[i - 1].kind !== option.kind;
@@ -284,11 +284,6 @@ export default function SearchBar() {
 function ShelfOption({ entry }: { entry: ShelfEntry }) {
   return (
     <span className="flex items-center gap-3">
-      <span
-        className="h-6 w-1 shrink-0 rounded-full"
-        style={{ background: "var(--accent)" }}
-        aria-hidden
-      />
       <span className="min-w-0">
         <span className="block truncate font-medium">{entry.title}</span>
         <span className="block truncate text-xs text-muted">
@@ -308,11 +303,6 @@ function WikipediaOption({
 }) {
   return (
     <span className="flex items-center gap-3">
-      <span
-        className="h-6 w-1 shrink-0 rounded-full"
-        style={{ background: "var(--rainbow)" }}
-        aria-hidden
-      />
       <span className="min-w-0 flex-1">
         <span className="block font-medium">{suggestion.title}</span>
         {suggestion.description && (

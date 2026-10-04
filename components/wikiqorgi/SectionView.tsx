@@ -65,7 +65,7 @@ export default function SectionView({ section }: { section: WikiqorgiSection }) 
       <div className="mx-auto max-w-4xl">
         <nav aria-label="Breadcrumb" className="mb-8 text-sm text-muted">
           <Link href="/wikiqorgi" className="font-medium transition-colors hover:text-accent">
-            wikiqorgi
+            Articles
           </Link>
           <span aria-hidden className="mx-2 opacity-50">
             /
@@ -74,19 +74,19 @@ export default function SectionView({ section }: { section: WikiqorgiSection }) 
         </nav>
 
         {/* ---- Section masthead -------------------------------------------- */}
-        <header className="animate-in relative border-b border-border pb-8">
+        <header className="border-b border-border pb-8">
           <span
             aria-hidden
-            className="block h-1.5 w-16 rounded-full shadow-glow"
+            className="block h-2.5 w-2.5 rounded-full"
             style={{ background: section.hue }}
           />
-          <h1 className="mt-5 font-serif text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="mt-4 font-serif text-4xl font-bold tracking-tight sm:text-5xl">
             {section.title}
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-muted">
             {section.blurb}
           </p>
-          <p className="mt-5 font-mono text-[11px] uppercase tracking-widest text-muted">
+          <p className="mt-5 text-sm text-muted">
             {section.articles.length} articles · about {totalMinutes} minutes of reading
           </p>
         </header>
@@ -95,43 +95,20 @@ export default function SectionView({ section }: { section: WikiqorgiSection }) 
         <ol className="mt-10 space-y-4">
           {section.articles.map((article, i) => (
             <li key={article.slug}>
-              <Link
-                href={rewrittenHref(article.slug)}
-                className="group relative flex gap-5 overflow-hidden rounded-2xl border border-border bg-surface p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5 sm:p-6"
-              >
-                {/* Colour wash that blooms in on hover. */}
+              <Link href={rewrittenHref(article.slug)} className="card flex-row gap-5 p-5 sm:p-6">
                 <span
                   aria-hidden
-                  className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.07]"
-                  style={{ background: section.hue }}
-                />
-                <span
-                  aria-hidden
-                  className="hidden shrink-0 font-serif text-3xl font-bold leading-none text-muted/40 transition-colors group-hover:text-muted sm:block"
+                  className="hidden shrink-0 font-serif text-2xl font-bold leading-none text-muted/50 sm:block"
                 >
-                  {String(i + 1).padStart(2, "0")}
+                  {i + 1}
                 </span>
                 <span className="min-w-0 flex-1">
-                  <span className="block font-mono text-[11px] uppercase tracking-widest text-muted">
-                    Rewritten from &ldquo;{article.sourceTitle}&rdquo;
-                  </span>
-                  <span className="mt-2 block font-serif text-xl font-semibold leading-snug tracking-tight text-foreground">
+                  <span className="block font-serif text-xl font-semibold leading-snug text-foreground">
                     {article.title}
                   </span>
-                  <span className="mt-2 block text-sm leading-relaxed text-muted">
-                    {article.dek}
-                  </span>
-                  <span className="mt-4 flex items-center gap-2 text-sm font-semibold text-accent">
-                    Read it here
-                    <span
-                      aria-hidden
-                      className="transition-transform duration-300 group-hover:translate-x-1"
-                    >
-                      &rarr;
-                    </span>
-                    <span className="ml-auto text-xs font-normal text-muted">
-                      {article.readingMinutes} min
-                    </span>
+                  <span className="mt-2 block text-sm leading-relaxed text-muted">{article.dek}</span>
+                  <span className="mt-3 block text-xs text-muted">
+                    {article.readingMinutes} min read · on {article.sourceTitle}
                   </span>
                 </span>
               </Link>
@@ -147,9 +124,9 @@ export default function SectionView({ section }: { section: WikiqorgiSection }) 
           {previous ? (
             <Link
               href={sectionHref(previous.id)}
-              className="group rounded-2xl border border-border bg-surface p-4 transition-colors hover:border-accent"
+              className="group card p-4"
             >
-              <span className="font-mono text-[11px] uppercase tracking-widest text-muted">
+              <span className="eyebrow">
                 &larr; Previous section
               </span>
               <span className="mt-1.5 block font-serif text-base font-semibold text-foreground group-hover:text-accent">
@@ -164,7 +141,7 @@ export default function SectionView({ section }: { section: WikiqorgiSection }) 
               href={sectionHref(next.id)}
               className="group rounded-2xl border border-border bg-surface p-4 text-right transition-colors hover:border-accent sm:col-start-2"
             >
-              <span className="font-mono text-[11px] uppercase tracking-widest text-muted">
+              <span className="eyebrow">
                 Next section &rarr;
               </span>
               <span className="mt-1.5 block font-serif text-base font-semibold text-foreground group-hover:text-accent">

@@ -104,7 +104,7 @@ export default function AnalyticsConsent({ measurementId }: { measurementId: str
         <div
           role="region"
           aria-label="Analytics consent"
-          className="glass animate-in fixed inset-x-3 bottom-3 z-50 mx-auto max-w-xl rounded-2xl border border-border p-4 shadow-xl shadow-black/10 sm:inset-x-6 sm:bottom-6 sm:p-5"
+          className="fixed bg-surface inset-x-3 bottom-3 z-50 mx-auto max-w-xl rounded-2xl border border-border p-4 shadow-xl shadow-black/10 sm:inset-x-6 sm:bottom-6 sm:p-5"
         >
           <p className="text-sm leading-relaxed text-foreground">
             May wikiqo count your visit with Google Analytics? It sets cookies
@@ -115,15 +115,14 @@ export default function AnalyticsConsent({ measurementId }: { measurementId: str
             <button
               type="button"
               onClick={() => decide("granted")}
-              className="rounded-full px-5 py-2 text-sm font-semibold text-white"
-              style={{ background: "var(--library-blue)", backgroundSize: "200% auto", color: "#fff" }}
+              className="btn-primary"
             >
               Allow
             </button>
             <button
               type="button"
               onClick={() => decide("denied")}
-              className="rounded-full border border-border px-5 py-2 text-sm font-semibold text-muted transition-colors hover:border-accent hover:text-accent"
+              className="btn-secondary"
             >
               No thanks
             </button>

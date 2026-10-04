@@ -1,11 +1,11 @@
 /**
- * Extracts the section outline (heading hierarchy) from a Wikipedia article's
- * sanitized Parsoid HTML, so it can be visualized as an interactive tree.
+ * Extracts the section outline (heading hierarchy) from an article's HTML, for
+ * the table of contents (components/TableOfContents.tsx).
  *
  * Parsoid renders section headings as `<h2 id="...">`, `<h3 id="...">`, etc.,
  * where the `id` is the in-page anchor (e.g. "Early_development"). Those same
- * ids survive sanitization and end up on the rendered DOM nodes, so the tree's
- * nodes can scroll the reader straight to the matching section.
+ * ids survive sanitization and end up on the rendered DOM nodes, so the
+ * contents links can jump straight to the matching section.
  */
 
 /** A single heading pulled from the article body. */

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
 };
 
-// The site now wears the full rainbow everywhere (see globals.css), so this page
+// The pride spectrum is the site's signature (see globals.css); this page
 // simply leans into the shared --rb-* spectrum. One hue per pride stripe,
 // red → violet, reused across the subject tags and principle cards.
 const HUES = [
@@ -79,36 +79,27 @@ const PRINCIPLES = [
 
 export default function AboutPage() {
   return (
-    <div className="shell py-14 sm:py-20">
+    <div className="shell py-12 sm:py-16">
       {/* ---- Masthead ---------------------------------------------------- */}
-      <section className="animate-in mx-auto max-w-3xl text-center">
-        <span className="rainbow-border rounded-full px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wide text-muted">
-          Reader&rsquo;s colophon · est. in good spirits
-        </span>
-        <h1 className="text-rainbow mt-6 font-serif text-5xl font-bold tracking-tight sm:text-6xl">
-          About wikiqo
-        </h1>
-        <p className="mt-5 text-lg leading-relaxed text-muted">
+      <section className="max-w-2xl">
+        <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">About wikiqo</h1>
+        <p className="mt-4 text-lg leading-relaxed text-muted">
           A reading room for the encyclopedia&rsquo;s best subjects — kept with
-          the rigour of a research library and painted in the colours of a
-          pride parade.
+          the rigour of a research library, and flying the colours of a pride
+          parade.
         </p>
-        {/* Full spectrum as a stack of stripes. */}
-        <div
-          aria-hidden
-          className="mx-auto mt-8 flex h-3 w-44 overflow-hidden rounded-full shadow-glow"
-        >
+        {/* The six-stripe spectrum, once, as the page's signature. */}
+        <div aria-hidden className="mt-6 flex h-1.5 w-32 overflow-hidden rounded-full">
           {HUES.map((hue) => (
             <span key={hue} className="flex-1" style={{ background: hue }} />
           ))}
         </div>
       </section>
 
-      <div className="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-8 lg:grid-cols-[20rem_minmax(0,1fr)] lg:gap-12">
+      <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-[20rem_minmax(0,1fr)] lg:gap-12">
         {/* ---- Catalogue record card (OPAC flavour) ---------------------- */}
         <aside className="lg:sticky lg:top-20 lg:self-start">
-          <div className="overflow-hidden rounded-2xl border border-border bg-surface shadow-glow">
-            <div className="h-1.5 w-full" style={{ background: "var(--rainbow)" }} />
+          <div className="rounded-xl border border-border bg-surface">
             <div className="p-5">
               <p className="font-mono text-[11px] uppercase tracking-widest text-muted">
                 Catalogue record
@@ -176,40 +167,33 @@ export default function AboutPage() {
             </p>
             <h2 className="font-serif">Why the colours</h2>
             <p>
-              wikiqo now flies the full rainbow on every page, not just this one.
-              A reference desk can be rigorous <em>and</em> joyful; knowledge has
-              always been more welcoming when it is allowed to be bright. Consider
-              the whole site a reading room fitted with the good stained glass.
+              The rainbow runs along the top of every page, and each section of
+              the shelf carries one of its colours. A reference desk can be
+              rigorous <em>and</em> joyful; knowledge has always been more
+              welcoming when it is allowed to be bright.
             </p>
             <p>
               The palette is the classic six-stripe pride spectrum — red, orange,
-              amber, green, blue, violet — wired through every gradient, glow, and
-              accent. It is a small, deliberate way of saying that open knowledge
-              and an open door belong together.
+              amber, green, blue, violet. It is kept to the edges so the reading
+              stays calm, and it is a small, deliberate way of saying that open
+              knowledge and an open door belong together.
             </p>
           </section>
 
-          {/* Principles grid — one rainbow stripe per card. */}
+          {/* Principles grid — one stripe of the spectrum per card. */}
           <section className="mt-10">
-            <h2 className="text-sm font-semibold uppercase tracking-wide text-muted">
-              Principles on the shelf
-            </h2>
+            <h2 className="eyebrow">Principles on the shelf</h2>
             <ul className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {PRINCIPLES.map(({ title, body }, i) => {
                 const hue = HUES[i % HUES.length];
                 return (
                   <li
                     key={title}
-                    className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-surface p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5"
+                    className="card h-full p-5"
                   >
                     <span
                       aria-hidden
-                      className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-[0.07]"
-                      style={{ background: hue }}
-                    />
-                    <span
-                      aria-hidden
-                      className="h-1.5 w-10 rounded-full transition-all duration-300 group-hover:w-16"
+                      className="h-2.5 w-2.5 rounded-full"
                       style={{ background: hue }}
                     />
                     <h3 className="mt-4 font-serif text-lg font-semibold tracking-tight text-foreground">
@@ -232,12 +216,8 @@ export default function AboutPage() {
                 Original articles, no library card required.
               </p>
             </div>
-            <Link
-              href="/wikiqorgi"
-              className="shadow-glow shrink-0 rounded-full px-7 py-3 text-sm font-semibold text-white transition-transform hover:scale-105"
-              style={{ background: "var(--library-blue)", backgroundSize: "200% auto", color: "#fff" }}
-            >
-              Browse wikiqorgi
+            <Link href="/wikiqorgi" className="btn-primary shrink-0">
+              Browse the articles
             </Link>
           </section>
 
