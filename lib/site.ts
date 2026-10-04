@@ -36,7 +36,7 @@ export const SITE_DESCRIPTION =
   "Wikipedia's best subjects, researched again and written from scratch to be read end to end. Plus a calm, uncluttered reader for Wikipedia's most-read articles — no ads, no account.";
 
 /** The generated social card served from app/opengraph-image.tsx. */
-export const OG_IMAGE = "/opengraph-image";
+const OG_IMAGE = "/opengraph-image";
 
 /**
  * Open Graph fields that every page needs to repeat. Next.js *replaces* the

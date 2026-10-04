@@ -679,5 +679,4 @@ if (JSON.stringify(EXPECTED_CATALOG) !== JSON.stringify(WIKIQORGI_CATALOG)) {
   );
 }
 
-export { WIKIQORGI_CATALOG };
 export type { RewrittenArticle, Source, WikiqorgiSection };

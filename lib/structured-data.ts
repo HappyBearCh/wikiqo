@@ -10,7 +10,7 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
  */
 
 /** Absolute URL of the 512 px logo rendered by scripts/generate-icons.py. */
-export const LOGO_URL = `${SITE_URL}/icon.png`;
+const LOGO_URL = `${SITE_URL}/icon.png`;
 
 /** wikiqo as an organisation, with the logo Google may show for it. */
 export const ORGANIZATION = {

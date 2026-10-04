@@ -6,8 +6,8 @@ import { SITE_URL } from "@/lib/site";
 /**
  * Site sitemap: wikiqo's own pages only.
  *
- * The mirrored /wiki/ articles used to be listed here, seeded from
- * getPopularArticleTitles(). They were removed along with the robots.txt change
+ * The mirrored /wiki/ articles used to be listed here, seeded from the
+ * Wikimedia pageviews API. They were removed along with the robots.txt change
  * that disallows /wiki/ — advertising URLs in a sitemap that robots.txt forbids
  * is a contradiction crawlers report as an error, so the two have to move
  * together. The reason for both is in app/robots.ts: those pages are dynamic,

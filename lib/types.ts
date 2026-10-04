@@ -21,7 +21,7 @@ export interface WikiSummary {
   };
 }
 
-export interface WikiImage {
+interface WikiImage {
   source: string;
   width: number;
   height: number;
@@ -65,14 +65,4 @@ export interface OpenSearchSuggestion {
   title: string;
   description: string;
   url: string;
-}
-
-export class WikipediaApiError extends Error {
-  constructor(
-    message: string,
-    public readonly status: number,
-  ) {
-    super(message);
-    this.name = "WikipediaApiError";
-  }
 }

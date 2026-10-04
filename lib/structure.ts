@@ -9,7 +9,7 @@
  */
 
 /** A single heading pulled from the article body. */
-export interface FlatHeading {
+interface FlatHeading {
   /** The heading's anchor id, matching the rendered element's `id`. */
   id: string;
   /** Plain-text heading label (inner markup stripped). */
@@ -32,7 +32,7 @@ export interface HeadingNode {
  * Headings without an `id` or with empty text are skipped, since they can't be
  * linked to and add no structure.
  */
-export function extractHeadings(html: string): FlatHeading[] {
+function extractHeadings(html: string): FlatHeading[] {
   const headings: FlatHeading[] = [];
   // Match an opening h2/h3/h4 tag, capture its attributes and inner content,
   // up to the matching close tag (back-reference \1 keeps the levels aligned).
@@ -63,7 +63,7 @@ export function extractHeadings(html: string): FlatHeading[] {
  * levels that skip a step (e.g. h2 straight to h4) still nest sensibly against
  * whatever is currently on the stack.
  */
-export function buildHeadingTree(title: string, headings: FlatHeading[]): HeadingNode {
+function buildHeadingTree(title: string, headings: FlatHeading[]): HeadingNode {
   const root: HeadingNode = { id: "", text: title, level: 1, children: [] };
   // Stack of open ancestors, shallowest first; root is always the base.
   const stack: HeadingNode[] = [root];
