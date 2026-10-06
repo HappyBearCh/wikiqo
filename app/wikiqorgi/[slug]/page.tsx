@@ -54,7 +54,10 @@ export async function generateMetadata({
     const url = sectionHref(section.id);
     const title = `${section.title} — wikiqorgi`;
     return {
-      title: section.title,
+      // A bare "Weather | wikiqo" says nothing in a results page, and several
+      // section titles are single common words that would compete with every
+      // reference site on earth. Say what the page holds.
+      title: `${section.title}: ${section.articles.length} original articles`,
       description: section.blurb,
       alternates: { canonical: url },
       openGraph: {

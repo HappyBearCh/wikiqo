@@ -1,0 +1,40 @@
+import type { RewrittenArticle } from "./types";
+
+export const pompeii: RewrittenArticle = {
+  slug: "pompeii",
+  title: "Pompeii: a town preserved by the thing that killed it",
+  sourceTitle: "Pompeii",
+  dek: "Vesuvius buried a Roman town of perhaps ten thousand people in under a day. What survived is less a frozen moment than an archive: election slogans, bread, and the hollow shapes of people.",
+  standfirst:
+    "Pompeii is the most famous archaeological site in the world because it seems to offer something no other site can: ordinary Roman life, stopped mid-sentence. That impression is partly true and partly an illusion created by nearly three centuries of excavation, restoration and storytelling. Some of the most familiar stories about the town have been revised in the last few years — including the date it died and who some of its dead actually were.",
+  readingMinutes: 8,
+  published: "2026-10-06",
+  html: `
+<h2 id="Town">A provincial town on the bay</h2>
+<p>Pompeii stood near the mouth of the river Sarno on the Bay of Naples, in the fertile region of Campania. It was founded by Oscan-speaking Italians, later came under the Samnites, and became a Roman colony in 80 BC, when the dictator Sulla settled veterans there. By the first century AD it was a prosperous trading and wine-producing town of perhaps ten to twelve thousand people, with an amphitheatre, theatres, public baths, temples and a forum. It was not especially important; that is part of what makes it valuable.</p>
+<p>In AD 62 or 63 a severe earthquake damaged much of the town. Nobody connected it with the mountain overlooking the bay, which had not erupted in living memory and was covered in vineyards. Seventeen years later, many buildings were still being repaired.</p>
+
+<h2 id="Eruption">The eruption</h2>
+<p>The only eyewitness account comes from Pliny the Younger, who was seventeen and staying across the bay at Misenum with his uncle, Pliny the Elder, the admiral of the Roman fleet there. About twenty-five years later, at the request of the historian Tacitus, he described it in two letters. He saw a cloud rising from the mountain in the shape of an umbrella pine, a tall trunk spreading into branches at the top. His uncle set out with warships to rescue people on the far shore and died at Stabiae, apparently overcome by fumes. Volcanologists now call this kind of eruption, with a towering column of gas and ash, Plinian.</p>
+<p>The eruption came in stages. For many hours a column of gas and pumice rose to a height of more than thirty kilometres, and pumice rained down on Pompeii, piling up nearly three metres deep. Roofs collapsed under its weight, killing some of those who had taken shelter, and many people fled. Overnight and into the next morning, the column repeatedly collapsed, sending pyroclastic surges — fast, ground-hugging currents of hot gas, ash and rock — down the mountainside. Herculaneum, much closer to the volcano on the coast, was hit first. The surges that reached Pompeii in the morning killed everyone still in the town.</p>
+<p>The remains of more than a thousand people have been recovered at Pompeii, and since a third of the town has never been excavated, there are certainly more. At Herculaneum, excavations from the 1980s uncovered around three hundred skeletons crowded into boat sheds on what was then the beach, people apparently waiting for rescue by sea.</p>
+
+<h2 id="Date">When it happened</h2>
+<p>For centuries the date was given as 24 August AD 79, from the most widely copied manuscripts of Pliny's letter. Other manuscripts give different dates, and archaeologists had long noticed evidence that sat oddly with late summer: autumn fruits such as pomegranates, braziers in use, and wine sealed in jars as though the harvest was already in. In 2018 excavators found an inscription written in charcoal on a wall, dated to the sixteenth day before the kalends of November — 17 October. It gives no year, but charcoal on a wall is unlikely to have survived long, so it was probably written in 79. Many researchers now place the eruption in late October, often on 24 October.</p>
+
+<h2 id="Rediscovery">Rediscovery, and the casts</h2>
+<p>The site was never entirely forgotten, but serious digging began in the eighteenth century under the Bourbon kings of Naples — at Herculaneum from 1738 and at Pompeii from 1748. For a long time the aim was to find statues and paintings for the royal collections, which were cut from walls and carried off. Erotic art was locked away in a "secret cabinet" in Naples.</p>
+<p>Systematic excavation began under Giuseppe Fiorelli in the 1860s. He divided the town into numbered regions and blocks, a system still used, and in 1863 introduced the technique that made Pompeii's victims famous. The ash had hardened around bodies, which then decayed, leaving hollows in their shape. By pouring plaster into the hollows and chipping away the ash, Fiorelli's workers recovered the forms of people at the moment of death, sometimes with folds of clothing and expressions of faces.</p>
+<p>The casts have always been read as stories: a mother holding her child, sisters embracing, a family sheltering together. In 2024 a study that extracted ancient DNA from bones inside several casts found that some of these stories were wrong. An adult long described as a mother holding a child turned out to be a man unrelated to the child; a pair assumed to be sisters, or a mother and daughter, included at least one male. The casts had also been altered by restorers over the years. The people of Pompeii had been made to fit the expectations of their excavators.</p>
+
+<h2 id="Archive">What the town records</h2>
+<p>Pompeii's greatest value is in the ordinary. Its walls carry thousands of painted and scratched inscriptions: election notices urging votes for candidates for local office, advertisements for gladiator shows, rental notices, sums, insults, boasts and love messages. Together they are the largest body of everyday writing to survive from the Roman world, and they show that a great many people in a small town could read and write, at least a little.</p>
+<p>The town's bakeries still have their millstones and ovens; carbonised loaves have been found, scored into segments for breaking. Dozens of street-food counters, with jars set into their masonry tops, show how many people ate out. Workshops for cleaning and dyeing cloth, a brothel, private houses with gardens and wall paintings, and rich villas like the House of the Faun, home of the great mosaic of Alexander the Great in battle, show the range of the town from bottom to top. Excavation continues: since 2018 work in one region of the town has uncovered new houses, paintings and a decorated street-food counter.</p>
+
+<h2 id="Herculaneum">The library at Herculaneum</h2>
+<p>Herculaneum was buried far deeper, under more than twenty metres of volcanic material, and the heat carbonised organic material that would otherwise have rotted: wood, food and, in one great villa, a library. The Villa of the Papyri held hundreds of scrolls, many of them works of Epicurean philosophy, burned into lumps of carbon that crumble when unrolled. In 2023 and 2024 participants in a prize competition called the Vesuvius Challenge used X-ray scans and machine learning to read text from inside scrolls that had never been opened — the first word identified was the Greek for "purple". Scholars hope to read many more, and the possibility that unexcavated parts of the villa hold more scrolls is one of the most tantalising open questions in classical studies.</p>
+
+<h2 id="Today">A ruin that is still ruining</h2>
+<p>Excavation exposed Pompeii to a new set of enemies: rain, plants, earthquakes, bombing in 1943, and millions of visitors a year. The collapse in 2010 of a building known as the House of the Gladiators prompted a large conservation programme, part-funded by the European Union. Vesuvius, meanwhile, is still active. It last erupted in 1944, and hundreds of thousands of people now live in the zone that would have to be evacuated if it erupts again.</p>
+`,
+};

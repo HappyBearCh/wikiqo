@@ -202,6 +202,16 @@ import { pencil } from "./pencil";
 import { typewriter } from "./typewriter";
 import { braille } from "./braille";
 import { punctuation } from "./punctuation";
+import { titanic } from "./titanic";
+import { hindenburg } from "./hindenburg";
+import { chernobyl } from "./chernobyl";
+import { challenger } from "./challenger";
+import { tenerife } from "./tenerife";
+import { gobekliTepe } from "./gobekli-tepe";
+import { stonehenge } from "./stonehenge";
+import { troy } from "./troy";
+import { pompeii } from "./pompeii";
+import { rosettaStone } from "./rosetta-stone";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -574,6 +584,22 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "The everyday technology of the written word: a mat of fibres that took a thousand years to cross Eurasia, a stick of clay and graphite born of a blockade, a machine that put women in offices, a six-dot code a school tried to ban, and the marks that tell a reader where to breathe.",
     hue: "var(--rb-5)",
     articles: [paper, pencil, typewriter, braille, punctuation],
+  },
+  {
+    id: "disasters-that-changed-the-rules",
+    title: "Disasters that changed the rules",
+    blurb:
+      "Accidents that rewrote how dangerous things are run: a liner that carried more lifeboats than the law required, an airship filled with the only gas it could get, a reactor whose emergency button briefly sped it up, a launch engineers argued against the night before, and two jumbo jets undone by the word \"OK\".",
+    hue: "var(--rb-1)",
+    articles: [titanic, hindenburg, chernobyl, challenger, tenerife],
+  },
+  {
+    id: "digging-up-the-past",
+    title: "Digging up the past",
+    blurb:
+      "What excavation has done to famous stories: carved pillars raised by hunter-gatherers before farming, a monument assembled from stones hauled across Britain, a legendary city found nine times over, a buried town whose dead were not who we thought, and a decree that taught the world to read hieroglyphs again.",
+    hue: "var(--rb-4)",
+    articles: [gobekliTepe, stonehenge, troy, pompeii, rosettaStone],
   },
 ];
 

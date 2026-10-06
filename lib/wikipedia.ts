@@ -1,5 +1,5 @@
 import "server-only";
-import type { FileInfo, SearchResult, WikiSummary } from "@/lib/types";
+import type { SearchResult, WikiSummary } from "@/lib/types";
 
 const REST_BASE = "https://en.wikipedia.org/api/rest_v1";
 const ACTION_BASE = "https://en.wikipedia.org/w/api.php";
@@ -67,71 +67,6 @@ export async function getArticleHtml(title: string): Promise<string | null> {
   }
 
   return await res.text();
-}
-
-/** Strips an extmetadata HTML value down to a trimmed string, or undefined. */
-function metaValue(field?: { value?: string }): string | undefined {
-  const value = field?.value?.trim();
-  return value ? value : undefined;
-}
-
-/**
- * Resolves a File:/Image: title to its underlying media via the Action API's
- * `prop=imageinfo` module, returning the upload.wikimedia.org URL plus a
- * display-sized thumbnail and attribution metadata. Cached for a year, matching
- * the article endpoints. Returns null if the file doesn't exist.
- */
-export async function getFileInfo(title: string, thumbWidth = 1600): Promise<FileInfo | null> {
-  const url = new URL(ACTION_BASE);
-  url.searchParams.set("action", "query");
-  url.searchParams.set("titles", normalizeTitle(title));
-  url.searchParams.set("prop", "imageinfo");
-  url.searchParams.set("iiprop", "url|size|mime|extmetadata");
-  url.searchParams.set("iiurlwidth", String(thumbWidth));
-  url.searchParams.set("format", "json");
-  url.searchParams.set("formatversion", "2");
-
-  const res = await fetch(url, {
-    headers: { "User-Agent": USER_AGENT, Accept: "application/json" },
-    next: { revalidate: ONE_YEAR },
-  });
-
-  if (!res.ok) {
-    throw new Error(`Wikipedia imageinfo request failed: ${res.status} ${res.statusText}`);
-  }
-
-  type ImageInfo = {
-    url: string;
-    thumburl?: string;
-    descriptionurl: string;
-    width: number;
-    height: number;
-    mime: string;
-    extmetadata?: Record<string, { value?: string }>;
-  };
-  const data = (await res.json()) as {
-    query?: { pages?: Array<{ missing?: boolean; imageinfo?: ImageInfo[] }> };
-  };
-
-  // Commons-hosted files report `missing: true` on en.wikipedia (no *local*
-  // description page) yet still return fully populated federated `imageinfo`.
-  // So existence is determined by the presence of imageinfo, not `missing`.
-  const page = data.query?.pages?.[0];
-  const info = page?.imageinfo?.[0];
-  if (!page || !info) return null;
-
-  const meta = info.extmetadata ?? {};
-  return {
-    url: info.url,
-    thumbUrl: info.thumburl,
-    width: info.width,
-    height: info.height,
-    mime: info.mime,
-    description: metaValue(meta.ImageDescription),
-    artist: metaValue(meta.Artist),
-    license: metaValue(meta.LicenseShortName),
-    descriptionUrl: info.descriptionurl,
-  };
 }
 
 /**

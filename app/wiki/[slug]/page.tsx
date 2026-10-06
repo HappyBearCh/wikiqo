@@ -1,17 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound, redirect } from "next/navigation";
-import { getArticleHtml, getFileInfo, getSummary } from "@/lib/wikipedia";
+import { redirect } from "next/navigation";
+import { getArticleHtml, getSummary } from "@/lib/wikipedia";
 import { sanitizeWikiHtml } from "@/lib/sanitize";
-import {
-  articleHref,
-  isFileNamespace,
-  isNonArticleNamespace,
-  rewrittenHref,
-  titleFromSlug,
-  wikipediaUrlFor,
-} from "@/lib/links";
+import { articleHref, rewrittenHref, titleFromSlug, wikipediaUrlFor } from "@/lib/links";
 import { isRenderableTitle } from "@/content/popular-titles";
 import { WIKIQORGI_CATALOG } from "@/content/wikiqorgi/catalog";
 import { findBySourceTitle } from "@/lib/shelf-search";
@@ -111,27 +104,6 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     redirect(wikipediaUrlFor(title));
   }
 
-  // File:/Image:/Media: pages have no REST summary — describe them directly and
-  // point search engines at the original Wikipedia file page.
-  if (isFileNamespace(title)) {
-    const name = title.replace(/^(File|Image|Media)\s*:/i, "");
-    const description = `${name} — a media file from Wikimedia Commons, with its description, author, and licence.`;
-    return {
-      title,
-      description,
-      alternates: { canonical: wikipediaUrlFor(title) },
-      openGraph: { ...OG_BASE, type: "article", title, description },
-    };
-  }
-
-  // Non-article namespaces resolve to nothing renderable, so skip the summary
-  // fetch entirely and go straight to the not-found head tags. Unreachable via
-  // the gate above (the popular set holds no namespaced titles), kept because
-  // the gate is a policy that can widen and this is a fact about the namespace.
-  if (isNonArticleNamespace(title)) {
-    return { title: "Article not found", robots: { index: false, follow: true } };
-  }
-
   const summary = await getSummary(title).catch(() => null);
 
   // The page then redirects to Wikipedia; these head tags are only ever seen by
@@ -188,25 +160,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   // to widen or remove it.
   if (!isRenderableTitle(title)) {
     redirect(wikipediaUrlFor(title));
-  }
-
-  // Media-namespace pages (File:/Image:/Media:) aren't articles — there's no
-  // Parsoid body to fetch, so we embed the real Wikipedia file page in an
-  // iframe rather than 404 on a missing summary.
-  //
-  // Reachable only if a File: title is added to the popular set by hand. The
-  // generated set holds no namespaced titles, and nothing here links to one any
-  // more — lib/sanitize.ts sends Wikipedia's own /wiki/File:… hrefs off-site
-  // along with the rest of the link graph.
-  if (isFileNamespace(title)) {
-    return <FileView title={title} />;
-  }
-
-  // Talk:, Template talk:, Category:, Portal: and friends have no article body.
-  // Same reachability note as above: the gate already turns these away, and
-  // this stays as a statement about the namespace rather than about the gate.
-  if (isNonArticleNamespace(title)) {
-    notFound();
   }
 
   const article = await fetchArticle(title);
@@ -339,105 +292,6 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
           </div>
         </aside>
       </div>
-    </div>
-  );
-}
-
-/**
- * Renders a Wikipedia media page (File:/Image:/Media:). These pages have no
- * article body to mirror, so we resolve the title to its underlying
- * upload.wikimedia.org asset via the Action API and display the media directly
- * — an image, audio/video player, or a download link by MIME type.
- */
-async function FileView({ title }: { title: string }) {
-  const [info, sourceUrl] = [await getFileInfo(title), wikipediaUrlFor(title)];
-
-  if (!info) {
-    notFound();
-  }
-
-  const isImage = info.mime.startsWith("image/");
-  const isAudio = info.mime.startsWith("audio/");
-  const isVideo = info.mime.startsWith("video/");
-
-  return (
-    <div className="shell py-10">
-      <header className="mb-6 border-b border-border pb-6">
-        <h1 className="font-serif text-3xl font-bold tracking-tight break-words sm:text-4xl">
-          {title.replace(/^(File|Image|Media)\s*:/i, "")}
-        </h1>
-      </header>
-
-      <figure className="m-0">
-        <div className="flex justify-center overflow-hidden rounded-xl border border-border bg-surface">
-          {isImage ? (
-            <Image
-              src={info.thumbUrl ?? info.url}
-              alt={title}
-              width={info.width}
-              height={info.height}
-              className="h-auto w-full max-w-full object-contain"
-              sizes="(min-width: 1024px) 60rem, 100vw"
-              priority
-              unoptimized
-            />
-          ) : isAudio ? (
-            <audio controls src={info.url} className="w-full p-6">
-              Your browser does not support the audio element.
-            </audio>
-          ) : isVideo ? (
-            <video controls src={info.url} className="h-auto w-full max-w-full">
-              Your browser does not support the video element.
-            </video>
-          ) : (
-            <a
-              href={info.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-10 font-medium text-accent underline"
-            >
-              Download this file ({info.mime})
-            </a>
-          )}
-        </div>
-
-        <figcaption className="mt-4 space-y-2 text-sm text-muted">
-          {info.description && (
-            <div
-              className="leading-relaxed [&_a]:underline"
-              dangerouslySetInnerHTML={{ __html: sanitizeWikiHtml(info.description) }}
-            />
-          )}
-          <p className="flex flex-wrap gap-x-3 gap-y-1">
-            {info.artist && (
-              <span
-                className="[&_a]:underline"
-                dangerouslySetInnerHTML={{ __html: sanitizeWikiHtml(info.artist) }}
-              />
-            )}
-            {info.license && <span>{info.license}</span>}
-          </p>
-          <p>
-            <a
-              href={info.descriptionUrl || sourceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-accent underline"
-            >
-              File page on Wikipedia
-            </a>
-            {" · "}
-            <a
-              href={info.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline"
-            >
-              Original file
-            </a>
-          </p>
-        </figcaption>
-      </figure>
     </div>
   );
 }

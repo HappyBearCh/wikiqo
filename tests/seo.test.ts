@@ -40,6 +40,15 @@ describe("sitemap", () => {
     }
   });
 
+  it("dates each section by its newest article", () => {
+    const entries = sitemap();
+    for (const section of WIKIQORGI_SECTIONS) {
+      const entry = entries.find((e) => e.url === `https://www.wikiqo.com/wikiqorgi/${section.id}`);
+      const newest = section.articles.map((a) => a.published).sort().at(-1);
+      expect(entry?.lastModified).toBe(newest);
+    }
+  });
+
   it("grows as articles are promoted", () => {
     vi.useFakeTimers();
     vi.setSystemTime(new Date(Date.UTC(2026, 8, 1)));

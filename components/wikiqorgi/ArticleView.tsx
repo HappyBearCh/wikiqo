@@ -128,7 +128,13 @@ export default function ArticleView({ article }: { article: RewrittenArticle }) 
               <span aria-hidden className="opacity-50">
                 ·
               </span>
-              <Link href={articleHref(article.sourceTitle)} className="hover:text-accent">
+              {/* Links into /wiki/ are nofollow: the mirror is disallowed in
+                  robots.txt and canonicals to Wikipedia (see FeaturedGrid). */}
+              <Link
+                href={articleHref(article.sourceTitle)}
+                rel="nofollow"
+                className="hover:text-accent"
+              >
                 Wikipedia&rsquo;s &ldquo;{article.sourceTitle}&rdquo;
               </Link>
             </p>
@@ -158,6 +164,7 @@ export default function ArticleView({ article }: { article: RewrittenArticle }) 
               subject — you can read that one{" "}
               <Link
                 href={articleHref(article.sourceTitle)}
+                rel="nofollow"
                 className="font-medium text-accent underline"
               >
                 in the wikiqo reader
@@ -210,7 +217,7 @@ export default function ArticleView({ article }: { article: RewrittenArticle }) 
               <h2 className="eyebrow mb-2">Compare with Wikipedia</h2>
               <p>
                 Same subject, a different article.{" "}
-                <Link href={articleHref(article.sourceTitle)} className="font-medium">
+                <Link href={articleHref(article.sourceTitle)} rel="nofollow" className="font-medium">
                   Read Wikipedia&rsquo;s version
                 </Link>
                 .

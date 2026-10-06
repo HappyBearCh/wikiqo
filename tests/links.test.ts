@@ -3,7 +3,6 @@ import { isRenderableTitle, renderableTitleKeys } from "@/content/popular-titles
 import { FEATURED } from "@/lib/featured";
 import {
   articleHref,
-  isNonArticleNamespace,
   renderableTitleKey,
   titleFromSlug,
   wikipediaUrlFor,
@@ -26,11 +25,6 @@ describe("title helpers", () => {
     expect(renderableTitleKey("Black_hole")).toBe("black_hole");
   });
 
-  it("rejects namespaces but not titles that merely contain a colon", () => {
-    expect(isNonArticleNamespace("Talk:Black hole")).toBe(true);
-    expect(isNonArticleNamespace("User_talk:Someone")).toBe(true);
-    expect(isNonArticleNamespace("Alien: Covenant")).toBe(false);
-  });
 });
 
 describe("renderable set", () => {

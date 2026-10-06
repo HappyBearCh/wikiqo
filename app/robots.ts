@@ -1,22 +1,28 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/site";
 
-// High-volume AI/training crawlers. Each article is a non-canonical Wikipedia
-// mirror, so letting these walk our copy of the link graph is pure cost (a cold
-// function invocation per unique slug) with no upside. We disallow them here,
-// but robots.txt is only advisory — bots that ignore it are stopped at the edge
-// by the Vercel WAF "AI Bots" managed ruleset (see deploy notes), which blocks
-// before any function runs and isn't billed.
+// AI *training* crawlers: they copy pages into model datasets and send no
+// readers back, so they get nothing. robots.txt is only advisory — bots that
+// ignore it are stopped at the edge by the Vercel WAF "AI Bots" managed ruleset
+// (see deploy notes), which blocks before any function runs and isn't billed.
+//
+// AI *search* agents are deliberately not here: OAI-SearchBot and ChatGPT-User
+// (ChatGPT search), PerplexityBot and Perplexity-User, Claude-SearchBot and
+// Claude-User. They cite and link the pages they read, which makes them search
+// engines in every way that matters, so they fall through to the `*` group and
+// see exactly what Googlebot sees: /wikiqorgi open, /wiki/ and /search closed.
+// They were blocked when every page here was a Wikipedia mirror and crawling
+// cost a function call per slug; /wiki/ is now closed to everyone and the
+// original writing is prerendered, so crawling it costs nothing. If the WAF's
+// AI Bots ruleset is set to block these as well, it has to exempt them for this
+// to take effect.
 const AI_CRAWLERS = [
   "GPTBot",
-  "OAI-SearchBot",
-  "ChatGPT-User",
   "ClaudeBot",
   "Claude-Web",
   "anthropic-ai",
   "CCBot",
   "Google-Extended",
-  "PerplexityBot",
   "Bytespider",
   "Amazonbot",
   "Applebot-Extended",
@@ -31,8 +37,9 @@ const AI_CRAWLERS = [
 ];
 
 /**
- * Allow general search engines to crawl our own pages, but deny the mirrored
- * Wikipedia routes to everyone and deny dedicated AI scrapers entirely.
+ * Allow search engines, AI search included, to crawl our own pages, but deny
+ * the mirrored Wikipedia routes to everyone and deny AI training crawlers
+ * entirely.
  *
  * `/wiki/` is disallowed for `*` because those pages cannot earn anything back.
  * They are `ƒ (Dynamic)` — one cold function invocation, two Wikipedia
@@ -57,7 +64,8 @@ const AI_CRAWLERS = [
  * Reversing this is a one-line change if the mirror is ever given
  * self-referencing canonicals and a bounded, cached page set.
  *
- * Inline article links additionally carry rel="nofollow" (see lib/sanitize.ts).
+ * Links this site renders into /wiki/ carry rel="nofollow" (FeaturedGrid,
+ * ArticleView), and in-article links point at Wikipedia itself (lib/sanitize.ts).
  */
 export default function robots(): MetadataRoute.Robots {
   return {

@@ -31,9 +31,16 @@ import { SITE_URL } from "@/lib/site";
  * only controls what wikiqo actively announces, and when.
  *
  * lastModified is the article's real publication date, because Google uses
- * the field only when it is consistently accurate.
+ * the field only when it is consistently accurate. A section page changes only
+ * when an article is added to it, so it takes its newest article's date, and
+ * the shelf index takes the newest date on the shelf.
  */
 export const revalidate = 86400;
+
+/** ISO dates compare correctly as strings, so the newest is the max. */
+function newest(dates: string[]): string | undefined {
+  return dates.reduce<string | undefined>((max, d) => (max && max > d ? max : d), undefined);
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const promoted = promotedArticles(new Date());
@@ -42,9 +49,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: `${SITE_URL}/`, lastModified: newestPromotion, changeFrequency: "daily", priority: 1 },
     { url: `${SITE_URL}/about`, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${SITE_URL}/wikiqorgi`, changeFrequency: "weekly", priority: 0.9 },
+    {
+      url: `${SITE_URL}/wikiqorgi`,
+      lastModified: newest(WIKIQORGI_SECTIONS.flatMap((s) => s.articles.map((a) => a.published))),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
     ...WIKIQORGI_SECTIONS.map((section) => ({
       url: `${SITE_URL}${sectionHref(section.id)}`,
+      lastModified: newest(section.articles.map((a) => a.published)),
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),

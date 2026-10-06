@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { SITE_DESCRIPTION, SITE_NAME } from "@/lib/site";
 
-export const alt = `${SITE_NAME} — a clean reader for Wikipedia`;
+export const alt = `${SITE_NAME} — the encyclopedia's best subjects, rewritten`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
