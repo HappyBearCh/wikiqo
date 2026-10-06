@@ -212,6 +212,16 @@ import { stonehenge } from "./stonehenge";
 import { troy } from "./troy";
 import { pompeii } from "./pompeii";
 import { rosettaStone } from "./rosetta-stone";
+import { alexanderTheGreat } from "./alexander-the-great";
+import { cleopatra } from "./cleopatra";
+import { juliusCaesar } from "./julius-caesar";
+import { genghisKhan } from "./genghis-khan";
+import { mansaMusa } from "./mansa-musa";
+import { vikings } from "./vikings";
+import { bayeuxTapestry } from "./bayeux-tapestry";
+import { hundredYearsWar } from "./hundred-years-war";
+import { joanOfArc } from "./joan-of-arc";
+import { fallOfConstantinople } from "./fall-of-constantinople";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -600,6 +610,22 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "What excavation has done to famous stories: carved pillars raised by hunter-gatherers before farming, a monument assembled from stones hauled across Britain, a legendary city found nine times over, a buried town whose dead were not who we thought, and a decree that taught the world to read hieroglyphs again.",
     hue: "var(--rb-4)",
     articles: [gobekliTepe, stonehenge, troy, pompeii, rosettaStone],
+  },
+  {
+    id: "rulers-who-became-legends",
+    title: "Rulers who became legends",
+    blurb:
+      "Five reputations larger than the people who held them: a king who conquered to the Indus and left no heir, a queen written by her enemies, a general who broke the Republic by playing its game, an outcast who reorganised the steppe, and a pilgrim whose gold kept its price low in Cairo for years.",
+    hue: "var(--rb-6)",
+    articles: [alexanderTheGreat, cleopatra, juliusCaesar, genghisKhan, mansaMusa],
+  },
+  {
+    id: "medieval-turning-points",
+    title: "Medieval turning points",
+    blurb:
+      "Moments when the medieval world changed direction: seafarers who reached both the Volga and Newfoundland, an embroidery that tells the Norman Conquest, a century of war that turned cousins into rival nations, a peasant girl who spoke for herself at her own trial, and the cannon that ended Rome.",
+    hue: "var(--rb-3)",
+    articles: [vikings, bayeuxTapestry, hundredYearsWar, joanOfArc, fallOfConstantinople],
   },
 ];
 

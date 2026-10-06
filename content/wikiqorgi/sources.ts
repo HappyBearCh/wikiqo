@@ -1196,4 +1196,63 @@ export const WIKIQORGI_SOURCES: Record<string, Source[]> = {
     { author: "John Ray", title: "The Rosetta Stone and the Rebirth of Ancient Egypt", year: 2007, publication: "Profile Books" },
     { author: "Andrew Robinson", title: "Cracking the Egyptian Code: The Revolutionary Life of Jean-François Champollion", year: 2012, publication: "Thames & Hudson" },
   ],
+  "alexander-the-great": [
+    { author: "Robin Lane Fox", title: "Alexander the Great", year: 1973, publication: "Allen Lane" },
+    { author: "A. B. Bosworth", title: "Conquest and Empire: The Reign of Alexander the Great", year: 1988, publication: "Cambridge University Press" },
+    { author: "Pierre Briant", title: "Darius dans l'ombre d'Alexandre", year: 2003, publication: "Fayard" },
+  ],
+  cleopatra: [
+    { author: "Peter van Minnen", title: "An official act of Cleopatra (with a subscription in her own hand)", year: 2000, publication: "Ancient Society" },
+    { author: "Duane W. Roller", title: "Cleopatra: A Biography", year: 2010, publication: "Oxford University Press" },
+    { author: "Stacy Schiff", title: "Cleopatra: A Life", year: 2010, publication: "Little, Brown" },
+    { author: "Adrian Goldsworthy", title: "Antony and Cleopatra", year: 2010, publication: "Weidenfeld & Nicolson" },
+  ],
+  "julius-caesar": [
+    { author: "Ronald Syme", title: "The Roman Revolution", year: 1939, publication: "Oxford University Press" },
+    { author: "Christian Meier", title: "Caesar", year: 1982, publication: "Severin und Siedler" },
+    { author: "Adrian Goldsworthy", title: "Caesar: Life of a Colossus", year: 2006, publication: "Yale University Press" },
+    { author: "Barry Strauss", title: "The Death of Caesar: The Story of History's Most Famous Assassination", year: 2015, publication: "Simon & Schuster" },
+  ],
+  "genghis-khan": [
+    { author: "Paul Ratchnevsky", title: "Činggis-Khan: Sein Leben und Wirken", year: 1983, publication: "Franz Steiner" },
+    { author: "Tatiana Zerjal et al.", title: "The Genetic Legacy of the Mongols", year: 2003, publication: "American Journal of Human Genetics" },
+    { author: "Igor de Rachewiltz (trans.)", title: "The Secret History of the Mongols: A Mongolian Epic Chronicle of the Thirteenth Century", year: 2004, publication: "Brill" },
+    { author: "Timothy May", title: "The Mongol Conquests in World History", year: 2012, publication: "Reaktion Books" },
+    { author: "Neil Pederson et al.", title: "Pluvials, droughts, the Mongol Empire, and modern Mongolia", year: 2014, publication: "Proceedings of the National Academy of Sciences" },
+  ],
+  "mansa-musa": [
+    { author: "Nehemia Levtzion", title: "Ancient Ghana and Mali", year: 1973, publication: "Methuen" },
+    { author: "N. Levtzion and J. F. P. Hopkins (eds)", title: "Corpus of Early Arabic Sources for West African History", year: 1981, publication: "Cambridge University Press" },
+    { author: "Michael A. Gomez", title: "African Dominion: A New History of Empire in Early and Medieval West Africa", year: 2018, publication: "Princeton University Press" },
+  ],
+  vikings: [
+    { author: "Peter Sawyer", title: "The Age of the Vikings", year: 1962, publication: "Edward Arnold" },
+    { author: "Gwyn Jones", title: "A History of the Vikings", year: 1968, publication: "Oxford University Press" },
+    { author: "Charlotte Hedenstierna-Jonson et al.", title: "A female Viking warrior confirmed by genomics", year: 2017, publication: "American Journal of Physical Anthropology" },
+    { author: "Neil Price", title: "Children of Ash and Elm: A History of the Vikings", year: 2020, publication: "Basic Books" },
+    { author: "Margot Kuitems et al.", title: "Evidence for European presence in the Americas in AD 1021", year: 2021, publication: "Nature" },
+  ],
+  "bayeux-tapestry": [
+    { author: "F. M. Stenton (ed.)", title: "The Bayeux Tapestry: A Comprehensive Survey", year: 1957, publication: "Phaidon" },
+    { author: "David M. Wilson", title: "The Bayeux Tapestry", year: 1985, publication: "Thames & Hudson" },
+    { author: "Carola Hicks", title: "The Bayeux Tapestry: The Life Story of a Masterpiece", year: 2006, publication: "Chatto & Windus" },
+  ],
+  "hundred-years-war": [
+    { author: "Édouard Perroy", title: "La Guerre de Cent Ans", year: 1945, publication: "Gallimard" },
+    { author: "Christopher Allmand", title: "The Hundred Years War: England and France at War, c.1300–c.1450", year: 1988, publication: "Cambridge University Press" },
+    { author: "Jonathan Sumption", title: "The Hundred Years War, Volume I: Trial by Battle", year: 1990, publication: "Faber & Faber" },
+    { author: "Anne Curry", title: "Agincourt: A New History", year: 2005, publication: "Tempus" },
+  ],
+  "joan-of-arc": [
+    { author: "Jules Quicherat (ed.)", title: "Procès de condamnation et de réhabilitation de Jeanne d'Arc", year: 1841 },
+    { author: "Régine Pernoud", title: "Jeanne d'Arc par elle-même et par ses témoins", year: 1962, publication: "Éditions du Seuil" },
+    { author: "Marina Warner", title: "Joan of Arc: The Image of Female Heroism", year: 1981, publication: "Weidenfeld & Nicolson" },
+    { author: "Helen Castor", title: "Joan of Arc: A History", year: 2014, publication: "Faber & Faber" },
+  ],
+  "fall-of-constantinople": [
+    { author: "Nicolò Barbaro", title: "Giornale dell'assedio di Costantinopoli 1453", year: 1453 },
+    { author: "Steven Runciman", title: "The Fall of Constantinople 1453", year: 1965, publication: "Cambridge University Press" },
+    { author: "Roger Crowley", title: "Constantinople: The Last Great Siege, 1453", year: 2005, publication: "Faber & Faber" },
+    { author: "Marios Philippides and Walter K. Hanak", title: "The Siege and the Fall of Constantinople in 1453: Historiography, Topography, and Military Studies", year: 2011, publication: "Ashgate" },
+  ],
 };

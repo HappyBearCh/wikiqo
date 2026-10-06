@@ -1,0 +1,38 @@
+import type { RewrittenArticle } from "./types";
+
+export const alexanderTheGreat: RewrittenArticle = {
+  slug: "alexander-the-great",
+  title: "Alexander the Great: an empire that lasted exactly as long as he did",
+  sourceTitle: "Alexander the Great",
+  dek: "He conquered from Greece to the Indus before he was thirty-three and never lost a pitched battle. His empire broke apart within a few years of his death; the world it opened up lasted for centuries.",
+  standfirst:
+    "Alexander III of Macedon is the standard against which military ambition has been measured for more than two thousand years. Caesar is said to have wept on reading about him, because at the age Alexander died he had achieved nothing comparable. Yet the man himself is hard to see. No account written in his lifetime survives, and every picture of him — the visionary who dreamed of uniting mankind, the brilliant butcher, the drunk — is assembled from sources written centuries later.",
+  readingMinutes: 7,
+  published: "2026-10-06",
+  html: `
+<h2 id="Inheritance">What he inherited</h2>
+<p>Alexander was born in 356 BC at Pella, the capital of Macedon, a kingdom on the northern edge of the Greek world that southern Greeks tended to regard as half-barbarian. His father, Philip II, had transformed it. Philip rebuilt the army around a phalanx of infantry carrying pikes about six metres long, far longer than the spears of their opponents, supported by a heavy cavalry of noble Companions. With that army he made Macedon the dominant power in Greece, defeating Athens and Thebes at Chaeronea in 338 BC, a battle in which the eighteen-year-old Alexander commanded the cavalry.</p>
+<p>For three years of his adolescence Alexander was taught by Aristotle, whom Philip had hired as a tutor. How much the philosopher shaped the conqueror is unknowable, though Alexander was said to sleep with a copy of the Iliad annotated by his teacher under his pillow, and modelled himself on Achilles.</p>
+<p>Philip was preparing an invasion of the Persian Empire when, in 336 BC, he was stabbed to death by one of his own bodyguards during his daughter's wedding celebrations. Whether Alexander or his mother Olympias had any part in it has been suspected ever since and never shown. Alexander, aged twenty, secured the throne by eliminating rivals, and when Thebes rebelled he destroyed the city and sold its people into slavery as a warning to the rest of Greece.</p>
+
+<h2 id="Persia">Persia in four years</h2>
+<p>In 334 BC he crossed into Asia with an army of perhaps forty thousand men. The Persian Empire was the largest state the world had yet seen, stretching from the Aegean to Afghanistan, and its king, Darius III, could draw on resources vastly greater than Macedon's. Alexander beat a Persian force at the river Granicus that year, defeated Darius himself at Issus in 333 BC, and spent seven months besieging the island city of Tyre, building a causeway out to it, so that the Persian fleet would have no ports left on the Mediterranean coast.</p>
+<p>Egypt, which resented Persian rule, surrendered without a fight. There Alexander founded the first and greatest of the many cities named after him, Alexandria, and travelled into the desert to the oracle of Ammon at Siwa, where he seems to have been greeted as the son of the god. In 331 BC, at Gaugamela in northern Iraq, he defeated Darius for the second time, on ground the Persians had chosen and levelled for their chariots. Babylon, Susa and Persepolis fell. The palace at Persepolis was burned, whether as deliberate revenge for the Persian burning of Athens a century and a half earlier or after a drunken feast, depending on which ancient writer one believes. Darius was murdered by his own nobles while fleeing.</p>
+
+<h2 id="East">Beyond the map</h2>
+<p>Alexander did not stop. He spent three hard years subduing the northeastern provinces of the empire, in what are now Afghanistan, Uzbekistan and Tajikistan, against a guerrilla resistance far more effective than the Persian army had been, and married Roxana, the daughter of a local noble. In 326 BC he crossed into the Indus valley and defeated the Indian king Porus, whose army included war elephants, at the river Hydaspes.</p>
+<p>There his own army stopped him. At the river Hyphasis, after eight years of marching, the soldiers refused to go further east. Alexander turned back, sailed down the Indus, and led part of the army west across the Gedrosian desert in southern Iran, a march in which a great many of them died of thirst and heat.</p>
+
+<h2 id="Ruler">Becoming a Persian king</h2>
+<p>The longer Alexander ruled Persia, the more he behaved like a Persian king, and the more his Macedonians resented it. He adopted elements of Persian court dress, appointed Persian nobles as governors, trained Persian youths to fight in the Macedonian manner, and tried to introduce the Persian custom of prostration before the king, which Greeks regarded as fit only for gods. At Susa in 324 BC he and around ninety of his officers married Persian noblewomen in a single mass ceremony.</p>
+<p>Older historians read these policies as a vision of uniting peoples. More recent ones, such as A. B. Bosworth, see the practical needs of a tiny conquering elite governing an enormous empire, and emphasise the other side of the record: the massacres of cities that resisted, the execution of his general Parmenion on suspicion alone, and the killing of his friend Cleitus with a spear during a drunken argument.</p>
+
+<h2 id="Death">Death at thirty-two</h2>
+<p>Alexander died at Babylon in June 323 BC, after about ten days of fever, a month short of his thirty-third birthday. The cause is unknown. Malaria, typhoid and other infections have been suggested, as have the effects of heavy drinking and old wounds. Rumours that he was poisoned circulated almost at once.</p>
+<p>Asked on his deathbed, according to one tradition, to whom he left his kingdom, he said: "to the strongest". He had no adult heir. His half-brother was mentally impaired and his son by Roxana was born after his death, and both were eventually murdered. His generals fought each other for forty years, and the empire divided into kingdoms ruled by their dynasties: the Seleucids in Asia, the Antigonids in Macedon, and the Ptolemies in Egypt, who seized Alexander's body on its way to burial and displayed it in Alexandria. Its tomb was a tourist attraction in Roman times and has since been lost.</p>
+
+<h2 id="Legacy">What lasted</h2>
+<p>The political unit did not survive Alexander, but the world it created did. For three centuries after him, Greek-speaking kingdoms ruled from the Mediterranean to Central Asia, and a common form of Greek became the language of trade, government and learning across that space. Alexandria grew into the largest city of the Mediterranean, with a library and a research institution that made it the intellectual centre of the age. Greek and Indian art met in Gandhara, where some of the earliest images of the Buddha show Greek influence. Historians call this period the Hellenistic age. It ended only when the last of the Ptolemies, Cleopatra, died in 30 BC.</p>
+<p>The sources make every judgement provisional. The fullest surviving account, by Arrian, was written more than four hundred years after Alexander's death, though it drew on memoirs by men who had been with him, including Ptolemy. Each generation since has found in those texts the Alexander it wanted. The facts that do not depend on interpretation are remarkable enough: in eleven years he defeated the largest empire in the world and marched an army further than any before it.</p>
+`,
+};
