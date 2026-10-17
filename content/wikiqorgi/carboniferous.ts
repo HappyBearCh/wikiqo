@@ -1,0 +1,37 @@
+import type { RewrittenArticle } from "./types";
+
+export const carboniferous: RewrittenArticle = {
+  slug: "carboniferous",
+  title: "The Carboniferous: the swamp forests that became coal",
+  sourceTitle: "Carboniferous",
+  dek: "For sixty million years, tropical swamps full of giant club mosses buried more carbon than at any time before or since. Dragonfly-like insects grew the width of a hawk, the first reptiles appeared, and the coal that powered the Industrial Revolution was laid down.",
+  standfirst:
+    "The Carboniferous period, roughly 359 to 299 million years ago, is the only span of geological time named after something people burn. Its rocks hold most of the coal of Europe and eastern North America, laid down in vast tropical swamps of trees unlike anything alive today. Why it produced so much coal, and what it did to the planet's atmosphere and climate, are still argued over — and the answers have an uncomfortable relevance now that we have spent two centuries putting the carbon back.",
+  readingMinutes: 7,
+  published: "2026-10-17",
+  html: `
+<h2 id="Name">A period named for coal</h2>
+<p>In 1822 the English geologists William Conybeare and William Phillips grouped together the coal-bearing strata of England and Wales, and the limestones beneath them, under the name Carboniferous, from the Latin for "coal-bearing". It was one of the first geological systems to be named, and its rocks were among the most closely studied, because they were the ones mines were sunk into. In North America the period is commonly split into two, the Mississippian and the Pennsylvanian, after the states where their rocks are well exposed.</p>
+<p>During the Carboniferous the continents were drifting together into the supercontinent Pangaea. The landmasses that are now Europe and North America lay near the equator, and as they collided with the southern continent of Gondwana they raised a mountain chain whose worn-down remnants include the Appalachians. Low-lying basins along the flanks of these mountains, warm, wet and constantly sinking, were where the coal swamps grew.</p>
+
+<h2 id="Forests">Forests of giant club mosses</h2>
+<p>The dominant trees of the coal swamps were lycopsids, relatives of the small club mosses and quillworts that still grow today. The largest, such as <em>Lepidodendron</em> and <em>Sigillaria</em>, reached thirty metres or more. They were strange trees. Their trunks were covered in a pattern of diamond-shaped leaf scars like reptile skin, which is why they are often called scale trees. Much of their bulk was bark rather than wood. They grew fast, branched only near the end of their lives, and reproduced by spores rather than seeds. Their roots spread across the swamp floor in shallow, branching systems called <em>Stigmaria</em>, which are among the most common fossils in coal-bearing rocks.</p>
+<p>Alongside them grew giant horsetails, tree ferns and seed ferns, and on drier ground the early relatives of conifers. When the trees died they fell into the waterlogged swamp, where the lack of oxygen prevented them from rotting completely. Layer upon layer of plant matter built up as peat, and as the basins subsided and were buried by sediment, heat and pressure turned the peat into coal over millions of years. A metre of coal represents several metres of compressed peat, and many centuries of forest growth.</p>
+
+<h2 id="Oxygen">Giant insects and a high-oxygen air</h2>
+<p>All this burial of plant carbon had a consequence for the atmosphere. Plants release oxygen as they grow; if their carbon is buried rather than decaying, that oxygen stays in the air. Geochemical models, notably those developed by the American geologist Robert Berner, suggest that oxygen levels rose during the late Carboniferous and early Permian to perhaps 30 per cent or more of the atmosphere, compared with 21 per cent today, though the estimates are uncertain.</p>
+<p>The period is famous for its giant arthropods. Griffinflies such as <em>Meganeura</em>, distant relatives of dragonflies, had wingspans of around seventy centimetres. <em>Arthropleura</em>, a relative of the millipedes, grew to more than two metres long and was the largest land invertebrate known. A popular explanation links their size to the oxygen-rich air, since insects breathe through a network of tubes that limits how large they can grow when oxygen is scarce. It is plausible, but not proven; other factors, such as the absence of flying vertebrate predators, may also have mattered.</p>
+
+<h2 id="WhyCoal">Why so much coal?</h2>
+<p>One influential explanation for the Carboniferous coal boom was that wood was a new and indigestible material. Lignin, the tough polymer that stiffens wood, can be broken down efficiently only by certain fungi, the white rots. In 2012 a team led by Dimitrios Floudas compared the genomes of dozens of fungi and estimated that the enzymes white rots use to break down lignin evolved at around the end of the Carboniferous. If dead wood could not be digested until then, it would have piled up.</p>
+<p>In 2016, though, Matthew Nelsen and colleagues argued that this could not be the main cause. Much of the Carboniferous coal came from lycopsids, which contained relatively little lignin; lignin-digesting organisms probably existed before then; and coal continued to form in quantity whenever conditions allowed in later periods. They pointed instead to geography and climate: the combination of wet tropical conditions with large, steadily sinking basins during the assembly of Pangaea, a set of circumstances never matched on the same scale.</p>
+
+<h2 id="Ice">Ice, collapse and the first reptiles</h2>
+<p>The Carboniferous swamps grew during an ice age. Ice sheets spread across Gondwana in the south, and as they waxed and waned, sea levels rose and fell repeatedly, flooding the coastal swamps and then exposing them again. The result in the rock is a repeating sequence of coal, shale, sandstone and marine limestone that geologists call cyclothems.</p>
+<p>The same period saw a decisive step in the history of animals. The earliest known reptiles — the first amniotes, animals whose eggs could develop on dry land — appeared during the Carboniferous. Among the oldest is <em>Hylonomus</em>, found inside the fossilised stumps of lycopsid trees in the sea cliffs of Joggins, Nova Scotia, about 312 million years old.</p>
+<p>Around 305 million years ago, the climate became drier and more variable and the coal forests of the tropics broke up into scattered islands of rainforest, an event called the Carboniferous rainforest collapse. A 2010 study by Sarda Sahney, Michael Benton and Howard Falcon-Lang argued that the fragmentation hit amphibians hard but favoured the reptiles, which were less tied to water and diversified in its wake.</p>
+
+<h2 id="Legacy">The carbon comes back</h2>
+<p>The coal of the Carboniferous was the fuel of the Industrial Revolution. The coalfields of Britain, the Ruhr, northern France, Belgium and the Appalachians, all of Carboniferous age, powered the steam engine, the iron works and the railway. In two centuries humanity has burned a large part of the carbon that took tens of millions of years to bury, returning it to the atmosphere as carbon dioxide. The Carboniferous showed how much the burial of carbon could change the composition of the air. The present is a test of what happens when the process runs in reverse, and fast.</p>
+`,
+};

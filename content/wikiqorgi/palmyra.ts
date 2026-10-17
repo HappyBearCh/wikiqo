@@ -1,0 +1,35 @@
+import type { RewrittenArticle } from "./types";
+
+export const palmyra: RewrittenArticle = {
+  slug: "palmyra",
+  title: "Palmyra: the caravan city, its queen, and its guardian",
+  sourceTitle: "Palmyra",
+  dek: "An oasis in the Syrian desert grew rich on the trade between Rome and the East, produced a queen who seized Egypt from the Romans, and became one of the most admired ruins on earth. In 2015 the Islamic State blew up its temples and murdered the archaeologist who had spent his life protecting them.",
+  standfirst:
+    "Palmyra stood halfway between the Mediterranean and the Euphrates, at an oasis that made a desert crossing possible. In the first three centuries AD its merchants organised the caravans that carried silk, spices and pearls from the Persian Gulf to the Roman Empire, and its citizens built a city that mixed Greek, Roman, Aramaic and Persian traditions into something entirely its own. Its ruins, rediscovered by Europeans in the eighteenth century, shaped the architecture of the West. Its destruction in the twenty-first was broadcast to the world.",
+  readingMinutes: 7,
+  published: "2026-10-17",
+  html: `
+<h2 id="Oasis">An oasis in the desert</h2>
+<p>The site of Palmyra had been settled for thousands of years around the Efqa spring, whose water made it an island of palm groves in the Syrian steppe. It appears in cuneiform texts of the early second millennium BC under the name Tadmor, which is still the name of the modern town beside the ruins. Palmyra, "city of palms", is its Greek and Latin name.</p>
+<p>Its great age began in the first century BC, as Rome took over Syria and the Parthian Empire held Mesopotamia beyond the Euphrates. The two powers were frequently at war, but trade between them was too valuable to stop. Palmyra, which was absorbed into the Roman province of Syria while keeping a large measure of independence, became the indispensable middleman. Its merchants financed and protected caravans that crossed the desert to the Euphrates and on to the Persian Gulf, where goods arrived by sea from India and beyond, and its archers policed the routes.</p>
+
+<h2 id="City">The city of merchants</h2>
+<p>The wealth showed. The Temple of Bel, the city's chief god, was dedicated in AD 32 inside a vast walled courtyard, a building in Greek and Roman style adapted to the rites of a Semitic god. A colonnaded street more than a kilometre long ran through the centre, its columns carrying brackets that held statues of the citizens who had paid for the city's buildings or led its caravans.</p>
+<p>Palmyrenes spoke and wrote a dialect of Aramaic in their own script, alongside Greek. In AD 137 the city council published its customs regulations on a great stone slab in both languages. The Palmyrene Tariff, now in the Hermitage Museum in St Petersburg, lists the duties to be paid on slaves, perfumed oil, olive oil, animal fat, salted fish and prostitutes, and is one of the most detailed economic documents surviving from the Roman world.</p>
+<p>Palmyra's wealthy families buried their dead in tall tower tombs on the hills outside the city, and in underground family tombs. The burial niches were sealed with limestone portrait busts of the dead, many hundreds of which survive in museums around the world, men in Greek dress or Parthian trousers, women heavy with jewellery, each with a short inscription in Aramaic. They are the faces of the city.</p>
+
+<h2 id="Zenobia">Zenobia</h2>
+<p>In the third century the Roman Empire went through a prolonged crisis of civil wars and invasions. In AD 260 the emperor Valerian was captured by the Persian king Shapur I, the only Roman emperor ever taken prisoner by a foreign enemy. A Palmyrene noble, Septimius Odaenathus, drove the Persians back, and Rome rewarded him with command of its eastern provinces. He was murdered in 267, and power passed to his widow, Zenobia, ruling in the name of their young son.</p>
+<p>Zenobia went further than her husband. Between 270 and 272 her armies took Egypt, most of Syria and much of Asia Minor, and she began issuing coins in her son's name and her own with the imperial titles. Whether she meant to break from Rome or to rule its eastern half within it is not clear. The emperor Aurelian marched east, defeated her armies at Antioch and Emesa, besieged Palmyra and captured her as she tried to escape across the Euphrates. When the city rebelled again in 273, it was sacked. Zenobia's fate is uncertain: some sources say she died on the way to Rome, others that she was paraded in Aurelian's triumph and lived out her life in a villa near Tivoli.</p>
+<p>Later writers turned her into a legend: a warrior queen who claimed descent from Cleopatra, beautiful, chaste and learned. Much of that comes from the <em>Historia Augusta</em>, a late Roman collection of imperial biographies notorious for its inventions.</p>
+
+<h2 id="Rediscovery">Rediscovery</h2>
+<p>Palmyra never recovered its old importance. It became a Roman military camp, then a smaller town under Byzantine and Islamic rule; the Temple of Bel was used as a church, and later its courtyard held a village. In 1751 two British travellers, Robert Wood and James Dawkins, spent two weeks drawing and measuring the ruins, and Wood's book <em>The Ruins of Palmyra</em>, published in 1753 with detailed engravings, became a sourcebook for architects. Ceiling designs from Palmyra appear in English country houses, and its columns and doorways were copied in buildings across Europe and North America.</p>
+
+<h2 id="Destruction">Destruction</h2>
+<p>For more than forty years the director of antiquities at Palmyra was Khaled al-Asaad, a scholar who had been born there, excavated and restored much of the city, and translated its inscriptions. In May 2015, during the Syrian civil war, forces of the Islamic State captured the town. Al-Asaad, by then retired and in his eighties, had helped move many of the museum's treasures to safety. He was detained, interrogated for weeks, and in August 2015 publicly beheaded. His body was displayed on a column.</p>
+<p>That summer and autumn the militants blew up the Temple of Baalshamin, the main sanctuary of the Temple of Bel, several of the finest tower tombs and the monumental arch on the colonnaded street, and released images of the explosions as propaganda. Syrian government forces retook Palmyra in March 2016, lost it again in December, and recaptured it in March 2017, by which time further monuments, including part of the theatre, had been damaged. In April 2016 a reconstruction of the arch, carved in Egyptian marble from 3D models based on photographs, was displayed in Trafalgar Square in London.</p>
+<p>Whether and how to rebuild what was destroyed is still debated. Archaeologists argue over how much reconstruction would restore Palmyra, and how much would replace an ancient ruin with a modern copy. The city's survival for nearly two thousand years, and its destruction in a few months, have made it a symbol of what is at stake when heritage becomes a weapon.</p>
+`,
+};

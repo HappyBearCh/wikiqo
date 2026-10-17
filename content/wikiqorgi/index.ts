@@ -222,6 +222,26 @@ import { bayeuxTapestry } from "./bayeux-tapestry";
 import { hundredYearsWar } from "./hundred-years-war";
 import { joanOfArc } from "./joan-of-arc";
 import { fallOfConstantinople } from "./fall-of-constantinople";
+import { iliad } from "./iliad";
+import { odyssey } from "./odyssey";
+import { aeneid } from "./aeneid";
+import { beowulf } from "./beowulf";
+import { ramayana } from "./ramayana";
+import { battleOfVienna } from "./battle-of-vienna";
+import { battleOfWaterloo } from "./battle-of-waterloo";
+import { battleOfGettysburg } from "./battle-of-gettysburg";
+import { battleOfTheSomme } from "./battle-of-the-somme";
+import { battleOfMidway } from "./battle-of-midway";
+import { mycenae } from "./mycenae";
+import { persepolis } from "./persepolis";
+import { palmyra } from "./palmyra";
+import { greatZimbabwe } from "./great-zimbabwe";
+import { sacsayhuaman } from "./sacsayhuaman";
+import { carboniferous } from "./carboniferous";
+import { prototaxites } from "./prototaxites";
+import { coelacanth } from "./coelacanth";
+import { neanderthals } from "./neanderthals";
+import { doggerland } from "./doggerland";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -230,7 +250,7 @@ import { fallOfConstantinople } from "./fall-of-constantinople";
  * Everything below is a compile-time constant. No database, no API, no fetch —
  * the index and every article page prerender to static HTML at build time.
  *
- * Shape: sections of 5 articles each, currently 40 (200 articles). The target has been raised
+ * Shape: sections of 5 articles each, currently 48 (240 articles). The target has been raised
  * twice — 50, then 100 at twenty sections, and the shelf is now open-ended and
  * grows a section or two at a time.
  *
@@ -626,6 +646,38 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "Moments when the medieval world changed direction: seafarers who reached both the Volga and Newfoundland, an embroidery that tells the Norman Conquest, a century of war that turned cousins into rival nations, a peasant girl who spoke for herself at her own trial, and the cannon that ended Rome.",
     hue: "var(--rb-3)",
     articles: [vikings, bayeuxTapestry, hundredYearsWar, joanOfArc, fallOfConstantinople],
+  },
+  {
+    id: "epics-that-outlived-their-worlds",
+    title: "Epics that outlived their worlds",
+    blurb:
+      "Long poems that survived the societies that made them: a few weeks of the Trojan War that never reach the fall of Troy, a homecoming that ends in a massacre, an emperor's epic its poet wanted burned, a monster story saved from a library fire, and a tale of exile told three hundred ways.",
+    hue: "var(--rb-2)",
+    articles: [iliad, odyssey, aeneid, beowulf, ramayana],
+  },
+  {
+    id: "battles-that-decided-more-than-a-war",
+    title: "Battles that decided more than a war",
+    blurb:
+      "Single engagements whose consequences outran the fighting: a siege broken by a cavalry charge down a hillside, an afternoon that turned on whether the Prussians would come, three days at a crossroads town and two minutes of speech, the British Army's worst day, and six minutes over the Pacific.",
+    hue: "var(--rb-5)",
+    articles: [battleOfVienna, battleOfWaterloo, battleOfGettysburg, battleOfTheSomme, battleOfMidway],
+  },
+  {
+    id: "cities-of-stone-and-power",
+    title: "Cities of stone and power",
+    blurb:
+      "Capitals built to impress, and what became of them: a citadel whose walls were blamed on giants, a palace whose builders' pay slips survived its burning, a desert caravan city destroyed twice, seventeen centuries apart, ruins a colonial government tried to rob of their builders, and walls too heavy for the conquerors to cart away.",
+    hue: "var(--rb-1)",
+    articles: [mycenae, persepolis, palmyra, greatZimbabwe, sacsayhuaman],
+  },
+  {
+    id: "lost-worlds-of-deep-time",
+    title: "Lost worlds of deep time",
+    blurb:
+      "Glimpses of the Earth before ours: swamp forests that buried the coal of the Industrial Revolution, a towering organism nobody can classify, a fish known only from fossils until it turned up on a trawler, the human relatives we carry inside us, and a country drowned by the North Sea.",
+    hue: "var(--rb-4)",
+    articles: [carboniferous, prototaxites, coelacanth, neanderthals, doggerland],
   },
 ];
 
