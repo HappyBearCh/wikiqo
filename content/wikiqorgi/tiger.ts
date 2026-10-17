@@ -1,0 +1,32 @@
+import type { RewrittenArticle } from "./types";
+
+export const tiger: RewrittenArticle = {
+  slug: "tiger",
+  title: "The tiger: back from the brink, for now",
+  sourceTitle: "Tiger",
+  dek: "A century ago there may have been a hundred thousand wild tigers. By 2010 there were perhaps 3,200. A pledge by thirteen governments to double the number has come closer to succeeding than almost anyone expected — though more tigers now live in captivity than in the wild.",
+  standfirst:
+    "The tiger is the largest of the cats and one of the most recognisable animals on earth, a national symbol for half a dozen countries and a mascot for countless products. For most of the twentieth century it was hunted, poisoned and squeezed out of its forests, and three of its populations vanished entirely. Its recent partial recovery is one of the more hopeful stories in conservation, and a reminder of how much depends on a few places.",
+  readingMinutes: 7,
+  published: "2026-10-17",
+  html: `
+<h2 id="Cat">The largest cat</h2>
+<p>The tiger, <em>Panthera tigris</em>, once ranged from eastern Turkey and the Caspian Sea across southern and eastern Asia to the Russian Far East and the islands of Sumatra, Java and Bali. The largest males, in the Russian Far East and parts of India, can weigh well over 250 kilograms. Tigers are mostly solitary. Each adult holds a territory, marked with scent and scratches, whose size depends on how much prey it holds: small in the rich forests of central India, vast in the snowy forests of the Amur region.</p>
+<p>They are ambush hunters, stalking deer, wild pigs and wild cattle to within a short distance and then rushing them, killing large prey with a bite to the throat or the back of the neck. They are good swimmers and, unlike most cats, often seek out water. Each tiger's stripes are unique, which allows researchers to count populations from camera-trap photographs.</p>
+<p>How many subspecies there are has long been argued. Traditionally there were nine, of which three — the Bali, Javan and Caspian tigers — are extinct. A 2017 review by the IUCN's cat specialists reduced the living tigers to just two subspecies, one on the mainland and one on the Sunda islands, while a 2018 genomic study led by Liu Yue-Chen supported six living subspecies. The difference matters for decisions about breeding and reintroduction.</p>
+
+<h2 id="Decline">A century of decline</h2>
+<p>Estimates suggest that around 1900 there may have been 100,000 wild tigers. Over the following century they were killed as trophies by colonial officers and maharajas, poisoned and shot as threats to livestock and people, and deprived of forest and prey as human populations grew. In parts of their range tigers did kill many people. The most notorious, the Champawat tigress, was blamed for more than four hundred deaths in Nepal and northern India before the hunter Jim Corbett shot her in 1907. Corbett, who later became a conservationist, wrote that most man-eaters were tigers disabled by wounds or old age that could no longer hunt their usual prey.</p>
+<p>In the second half of the twentieth century a new threat grew: demand for tiger parts, especially bones, in traditional medicine in China and elsewhere in East Asia, and for skins. China banned the domestic trade in tiger bone in 1993, but poaching for the illegal trade has continued, and was responsible for wiping out the tigers of several Indian reserves, including Sariska in 2004 and Panna by 2009, both later restocked.</p>
+<p>India launched Project Tiger in 1973, setting up a network of protected reserves, and it is credited with saving the species there. But by 2010, the worldwide count had fallen to an estimated 3,200 animals, the lowest ever recorded.</p>
+
+<h2 id="Recovery">The doubling pledge</h2>
+<p>In November 2010 the leaders of the thirteen countries with wild tigers met in St Petersburg and agreed to try to double the wild population by 2022, the next Chinese Year of the Tiger. The target, known as TX2, was widely thought unrealistic.</p>
+<p>It was not met in full, but the trend reversed. In 2022 the IUCN estimated the global wild population at between about 3,700 and 5,600, partly because counting methods had improved. Most of the increase came from a few countries. India's 2022 survey, based on tens of thousands of camera traps, counted about 3,700 tigers, around three-quarters of the world total. Nepal nearly tripled its population, to about 355. Russia's Amur tigers have also increased, and Bhutan's tigers have been recorded at high altitudes in the Himalayas. Elsewhere the picture is much bleaker: tigers are thought to have been wiped out in Cambodia, Laos and Vietnam, largely by snaring, and their numbers in Malaysia have collapsed.</p>
+<p>Tigers can recover when they are protected, because they breed relatively quickly. What limits them is space and prey, and the growing number of encounters between tigers and the people living around reserves, which kill both people and tigers every year. The success of conservation in India has made that conflict, rather than poaching, one of the main challenges for the future.</p>
+
+<h2 id="Captive">Tigers in captivity</h2>
+<p>There are far more tigers in captivity than in the wild. Thousands are kept in so-called tiger farms in China and Southeast Asia, where conservation groups say they supply the illegal trade in parts. In the United States, where until recently it was legal in many states to keep a tiger as a pet, estimates of the number of captive tigers have run to several thousand, many of them in roadside zoos and private homes, though the true figure has never been established. After the 2020 documentary series <em>Tiger King</em> drew attention to the trade in tiger cubs for paid petting sessions, Congress passed the Big Cat Public Safety Act in 2022, banning private ownership of new big cats and public contact with cubs.</p>
+<p>Captive tigers, most of mixed or unknown ancestry, are of little use for restoring wild populations. Reintroduction depends instead on moving wild tigers to empty habitat, as India did at Sariska and Panna, and as Kazakhstan has begun to do with Amur tigers in an attempt to restore tigers to the Caspian region, where they were driven extinct in the twentieth century. Whether the tiger's recovery lasts will depend less on captive breeding than on whether enough forest, deer and tolerance remain.</p>
+`,
+};

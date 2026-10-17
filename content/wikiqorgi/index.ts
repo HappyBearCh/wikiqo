@@ -242,6 +242,26 @@ import { prototaxites } from "./prototaxites";
 import { coelacanth } from "./coelacanth";
 import { neanderthals } from "./neanderthals";
 import { doggerland } from "./doggerland";
+import { rabies } from "./rabies";
+import { diphtheria } from "./diphtheria";
+import { polio } from "./polio";
+import { ebola } from "./ebola";
+import { prions } from "./prions";
+import { greatWhiteShark } from "./great-white-shark";
+import { orca } from "./orca";
+import { tiger } from "./tiger";
+import { parrots } from "./parrots";
+import { cats } from "./cats";
+import { solarEclipse } from "./solar-eclipse";
+import { solstice } from "./solstice";
+import { perseids } from "./perseids";
+import { cometHaleBopp } from "./comet-hale-bopp";
+import { greatFilter } from "./great-filter";
+import { sparta } from "./sparta";
+import { seaPeoples } from "./sea-peoples";
+import { huns } from "./huns";
+import { picts } from "./picts";
+import { amazigh } from "./amazigh";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -250,7 +270,7 @@ import { doggerland } from "./doggerland";
  * Everything below is a compile-time constant. No database, no API, no fetch —
  * the index and every article page prerender to static HTML at build time.
  *
- * Shape: sections of 5 articles each, currently 48 (240 articles). The target has been raised
+ * Shape: sections of 5 articles each, currently 52 (260 articles). The target has been raised
  * twice — 50, then 100 at twenty sections, and the shelf is now open-ended and
  * grows a section or two at a time.
  *
@@ -678,6 +698,38 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "Glimpses of the Earth before ours: swamp forests that buried the coal of the Industrial Revolution, a towering organism nobody can classify, a fish known only from fossils until it turned up on a trawler, the human relatives we carry inside us, and a country drowned by the North Sea.",
     hue: "var(--rb-4)",
     articles: [carboniferous, prototaxites, coelacanth, neanderthals, doggerland],
+  },
+  {
+    id: "infections-that-taught-medicine",
+    title: "Infections that taught medicine",
+    blurb:
+      "Diseases whose defeat, or near-defeat, changed how medicine works: a bite that kills months later and a boy treated with an untested vaccine, a toxin beaten with horse serum and a dog-sled relay, a summer plague made worse by clean water, a virus that waited forty years for a vaccine, and an infection with no genes at all.",
+    hue: "var(--rb-6)",
+    articles: [rabies, diphtheria, polio, ebola, prions],
+  },
+  {
+    id: "animals-with-reputations",
+    title: "Animals with reputations",
+    blurb:
+      "Five animals better known for their image than their lives: a shark whose novelist spent decades apologising, a killer whale led by grandmothers, a cat pledged a doubling by thirteen governments, a bird that learned to say what colour a key was, and a pet that moved in uninvited ten thousand years ago.",
+    hue: "var(--rb-3)",
+    articles: [greatWhiteShark, orca, tiger, parrots, cats],
+  },
+  {
+    id: "looking-up",
+    title: "Looking up",
+    blurb:
+      "What the sky shows to anyone who looks, and what it has taught: a coincidence of size that tested Einstein, the days the Sun stands still, sand grains from a comet burning up every August, the great comet of 1997 and the rumour that followed it, and the silence that might mean we are alone.",
+    hue: "var(--rb-2)",
+    articles: [solarEclipse, solstice, perseids, cometHaleBopp, greatFilter],
+  },
+  {
+    id: "peoples-seen-through-others-eyes",
+    title: "Peoples seen through others' eyes",
+    blurb:
+      "Peoples known mostly from what their neighbours wrote: a warrior city idealised by admirers who were not its citizens, raiders named by nineteenth-century scholars from Egyptian temple walls, horsemen with no surviving words, painted people who were renamed rather than lost, and North Africa's oldest inhabitants reclaiming their own name.",
+    hue: "var(--rb-5)",
+    articles: [sparta, seaPeoples, huns, picts, amazigh],
   },
 ];
 
