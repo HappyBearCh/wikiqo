@@ -12,7 +12,7 @@ export const malaria: RewrittenArticle = {
   html: `
 <h2 id="Parasite">Bad air, then a parasite, then a mosquito</h2>
 <p>The name comes from the Italian <em>mal'aria</em>, bad air, reflecting the old belief that the disease rose from marshes. The marshes were relevant, but for a different reason.</p>
-<p>In 1880 Alphonse Laveran, a French army doctor in Algeria, saw moving parasites in the blood of a malaria patient. In 1897 Ronald Ross, a British officer in the Indian Medical Service, showed that mosquitoes transmit malaria parasites in birds, and Italian researchers led by Giovanni Battista Grassi soon demonstrated that human malaria is transmitted by mosquitoes of the genus <em>Anopheles</em>. Both Ross and Laveran received Nobel Prizes.</p>
+<p>In 1880 Alphonse Laveran, a French army doctor in Algeria, saw moving parasites in the blood of a malaria patient. In 1897 Ronald Ross, a British officer in the Indian Medical Service, found the parasite developing inside an <em>Anopheles</em> mosquito, and in 1898 showed that mosquitoes transmit malaria parasites in birds, and Italian researchers led by Giovanni Battista Grassi soon demonstrated that human malaria is transmitted by mosquitoes of the genus <em>Anopheles</em>. Both Ross and Laveran received Nobel Prizes.</p>
 <p>The parasites belong to the genus <em>Plasmodium</em>, and several species infect humans. <em>Plasmodium falciparum</em>, dominant in Africa, causes most deaths. <em>Plasmodium vivax</em>, widespread in Asia and Latin America, is less often fatal but can hide in the liver and cause relapses months or years later. Only female mosquitoes, which need blood to develop their eggs, transmit the parasite.</p>
 
 <h2 id="Genes">The disease written into our genome</h2>

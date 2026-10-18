@@ -23,7 +23,7 @@ export const bloodTransfusion: RewrittenArticle = {
 <p>He had found the ABO system. Red cells carry molecular markers — antigens — and the plasma carries antibodies against whichever markers the person lacks. Group A cells carry the A antigen and the plasma holds anti-B antibodies. Group B is the reverse. Group AB carries both antigens and neither antibody. Group O carries neither antigen and both antibodies.</p>
 <p>The unusual feature, which distinguishes ABO from nearly every other blood group system, is that these antibodies are present without prior exposure. Most immune responses require a first encounter to sensitise; ABO antibodies develop in infancy, apparently in response to similar structures on gut bacteria. This is why the very first transfusion of mismatched blood can kill, with no warning from any previous exposure.</p>
 <p>Group O is the universal donor for red cells, having no antigens to be attacked. Group AB is the universal recipient, having no antibodies to attack with. For plasma the relationship inverts, since plasma carries the antibodies rather than the cells — AB plasma is the universal donor, which is a detail that catches people out.</p>
-<p>Landsteiner received the Nobel Prize in 1930, and identified the Rh system with Alexander Wiener in 1937.</p>
+<p>Landsteiner received the Nobel Prize in 1930, and identified the Rh system with Alexander Wiener in 1940.</p>
 
 <h2 id="Rh">The rhesus problem</h2>
 <p>The Rh system matters for a reason unrelated to transfusion, and it explains a disease that had killed newborns for as long as there were records.</p>

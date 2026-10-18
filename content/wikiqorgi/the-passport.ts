@@ -18,7 +18,7 @@ export const thePassport: RewrittenArticle = {
 <p>Notably, this open period coincided with the largest transatlantic migration in history. Tens of millions moved to the Americas, and while arrival was regulated — with health inspections and exclusions, and with explicitly racial bars such as the Chinese Exclusion Act — departure generally was not, and no document established a right to travel.</p>
 
 <h2 id="The_war">1914, and the emergency that stayed</h2>
-<p>The First World War ended it within months. States needed to identify enemy nationals, control the movement of people with useful skills, and prevent spying. Britain's Aliens Restriction Act was passed the day after war was declared, and the British Nationality and Status of Aliens Act of 1914 established the modern document.</p>
+<p>The First World War ended it within months. States needed to identify enemy nationals, control the movement of people with useful skills, and prevent spying. Britain's Aliens Restriction Act was passed the day after war was declared, and in 1915 Britain introduced the modern passport: a folded card with a photograph and a physical description.</p>
 <p>These were presented as wartime measures. They were not withdrawn.</p>
 <p>The reason is that governments found the apparatus useful for peacetime purposes — conscription records, taxation, labour market control, and the new business of restricting immigration by nationality rather than by individual characteristics.</p>
 <p>Standardisation followed at a League of Nations conference in 1920, which fixed the booklet format, the dimensions, the number of pages and the arrangement of information, largely as they remain. The familiar object is a product of an international committee.</p>

@@ -35,7 +35,7 @@ export const clouds: RewrittenArticle = {
 <p>They <strong>reflect incoming sunlight</strong> back to space, which cools the surface. This is the albedo effect, and it is strongest for thick, bright, low clouds.</p>
 <p>They <strong>absorb outgoing infrared</strong> from the surface and re-emit it, some downward, which warms. This is strongest for high, cold, thin clouds — because a cloud radiates to space at its own temperature, and a cold cloud top emits far less than the warm ground it is blocking.</p>
 <p>So the two effects sort by cloud type. Low stratocumulus over the ocean is a powerful net cooler: bright, and warm enough that it radiates nearly as much as the surface would. High cirrus is a net warmer: nearly transparent to sunlight, and very cold at the top.</p>
-<p>Globally, the cooling wins. Clouds currently cool the planet by around 20 watts per square metre and warm it by around 12, for a net cooling of roughly 8 — which is several times larger in magnitude than the entire warming from doubled carbon dioxide.</p>
+<p>Globally, the cooling wins. Clouds currently cool the planet by around 47 watts per square metre and warm it by around 28, for a net cooling of roughly 20 — which is several times larger in magnitude than the entire warming from doubled carbon dioxide.</p>
 
 <h2 id="Feedback">Why this is the biggest unknown</h2>
 <p>Because clouds have such a large net effect, a small proportional change in them matters as much as a large change in greenhouse gases. And warming changes clouds in several ways at once, pulling in different directions.</p>

@@ -2,7 +2,7 @@ import type { RewrittenArticle } from "./types";
 
 export const coffee: RewrittenArticle = {
   slug: "coffee",
-  title: "Coffee: a plant's insecticide, drunk by two billion people a day",
+  title: "Coffee: a plant's insecticide, drunk at two billion cups a day",
   sourceTitle: "Coffee",
   dek: "Caffeine evolved to poison insects and it works on us by a mechanism that explains why the effect wears off.",
   standfirst:

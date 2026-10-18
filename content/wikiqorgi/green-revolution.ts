@@ -19,7 +19,7 @@ export const greenRevolution: RewrittenArticle = {
 <h2 id="The_package">The package</h2>
 <p>The seeds alone did nothing. The Green Revolution was a package, and every element was required.</p>
 <p>The varieties needed synthetic fertiliser, which needed the Haber–Bosch industry. They needed reliable water, which meant irrigation — tube wells, canals, pumps. They needed pesticides, because dense uniform stands of a single genotype are ideal conditions for pests and disease. And they needed credit, extension services and roads, because a farmer must buy inputs before harvest and sell a surplus afterwards.</p>
-<p>Where the whole package arrived, yields transformed. India went from importing grain under emergency aid in the mid-1960s to self-sufficiency within about fifteen years, through a period when its population grew substantially. Mexico became a wheat exporter. Borlaug received the Nobel Peace Prize in 1970, and the citation's claim that he had saved a billion lives is an estimate rather than a measurement, and not an unreasonable one.</p>
+<p>Where the whole package arrived, yields transformed. India went from importing grain under emergency aid in the mid-1960s to self-sufficiency within about fifteen years, through a period when its population grew substantially. Mexico became a wheat exporter. Borlaug received the Nobel Peace Prize in 1970, and the often-repeated claim that he had saved a billion lives is an estimate rather than a measurement, and not an unreasonable one.</p>
 
 <h2 id="Where_it_did_not_reach">Where it did not reach</h2>
 <p>Africa is the conspicuous exception, and the reasons are instructive about what the revolution actually required.</p>

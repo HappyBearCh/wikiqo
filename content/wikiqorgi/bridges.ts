@@ -39,7 +39,7 @@ export const bridges: RewrittenArticle = {
 
 <h2 id="Span">What sets the maximum</h2>
 <p>The theoretical limit on a suspension span is set by the cable's own weight. A cable long enough eventually cannot carry itself, and the limit depends on the strength-to-weight ratio of the material — for high-strength steel wire it lies in the several-kilometre range, well beyond anything built.</p>
-<p>The practical limits arrive far sooner and are economic and aerodynamic. Cost rises steeply with span, the deck must be made stiff and streamlined enough to remain stable in wind, and the towers become extremely tall. The longest spans in service are a little under two kilometres, achieved by the Akashi Kaikyō Bridge in 1998 and surpassed by the Çanakkale 1915 Bridge in 2022.</p>
+<p>The practical limits arrive far sooner and are economic and aerodynamic. Cost rises steeply with span, the deck must be made stiff and streamlined enough to remain stable in wind, and the towers become extremely tall. The longest spans in service are about two kilometres, achieved by the Akashi Kaikyō Bridge in 1998 and surpassed by the Çanakkale 1915 Bridge in 2022.</p>
 <p>The interesting recent development is that the economic crossover points have moved. Cable-stayed bridges have taken over spans that would once have required suspension, because they need no anchorage and can be built by cantilevering outward from each tower without falsework in the water. That construction method — building the structure symmetrically outward so it balances itself at every stage — is often the deciding factor over deep or busy water, which is a reminder that a bridge must be stable not only when finished but at every moment while it is being built.</p>
 `,
 };

@@ -33,7 +33,7 @@ export const deepSea: RewrittenArticle = {
 
 <h2 id="How_little_we_have_seen">How little we have seen</h2>
 <p>A widely repeated claim is that we have better maps of Mars than of the ocean floor, and it is broadly accurate. Most of the seabed has been mapped only at coarse resolution inferred from satellite gravity measurements; the fraction surveyed by ship-based sonar at usable detail is still modest, though rising fast under a coordinated international effort.</p>
-<p>Direct visits are rarer still. The Mariana Trench floor has been reached a handful of times since 1960. Remotely operated and autonomous vehicles now do most of the work, and every substantial expedition returns species new to science.</p>
+<p>Direct visits are rarer still. The Mariana Trench floor has been reached only a few dozen times since 1960, most of them since 2019. Remotely operated and autonomous vehicles now do most of the work, and every substantial expedition returns species new to science.</p>
 
 <h2 id="Reaching_it_anyway">Reaching it anyway</h2>
 <p>Human impact has arrived well ahead of exploration.</p>
