@@ -1551,4 +1551,63 @@ export const WIKIQORGI_SOURCES: Record<string, Source[]> = {
     { author: "Zahi Hawass et al.", title: "Ancestry and pathology in King Tutankhamun's family", year: 2010, publication: "JAMA" },
     { author: "Mark R. Nelson", title: "The mummy's curse: historical cohort study", year: 2002, publication: "BMJ" },
   ],
+  angkor: [
+    { author: "Zhou Daguan, translated by Peter Harris", title: "A Record of Cambodia: The Land and Its People", year: 2007, publication: "Silkworm Books" },
+    { author: "Michael D. Coe and Damian Evans", title: "Angkor and the Khmer Civilization", year: 2018, publication: "Thames & Hudson" },
+    { author: "Damian Evans et al.", title: "Uncovering archaeological landscapes at Angkor using lidar", year: 2013, publication: "Proceedings of the National Academy of Sciences" },
+    { author: "Brendan M. Buckley et al.", title: "Climate as a contributing factor in the demise of Angkor, Cambodia", year: 2010, publication: "Proceedings of the National Academy of Sciences" },
+  ],
+  petra: [
+    { author: "Johann Ludwig Burckhardt", title: "Travels in Syria and the Holy Land", year: 1822, publication: "John Murray" },
+    { author: "Jane Taylor", title: "Petra and the Lost Kingdom of the Nabataeans", year: 2001, publication: "I. B. Tauris" },
+    { author: "Judith McKenzie", title: "The Architecture of Petra", year: 1990, publication: "Oxford University Press" },
+    { author: "Glen W. Bowersock", title: "Roman Arabia", year: 1983, publication: "Harvard University Press" },
+  ],
+  "machu-picchu": [
+    { author: "Hiram Bingham", title: "In the Wonderland of Peru", year: 1913, publication: "National Geographic Magazine" },
+    { author: "Richard L. Burger and Lucy C. Salazar (eds.)", title: "Machu Picchu: Unveiling the Mystery of the Incas", year: 2004, publication: "Yale University Press" },
+    { author: "Richard L. Burger et al.", title: "New AMS dates for Machu Picchu: results and implications", year: 2021, publication: "Antiquity" },
+    { author: "Donato Amado Gonzales and Brian S. Bauer", title: "The ancient Inca town named Huayna Picchu", year: 2021, publication: "Ñawpa Pacha" },
+  ],
+  teotihuacan: [
+    { author: "René Millon", title: "Urbanization at Teotihuacán, Mexico, vol. 1: The Teotihuacán Map", year: 1973, publication: "University of Texas Press" },
+    { author: "George L. Cowgill", title: "Ancient Teotihuacan: Early Urbanism in Central Mexico", year: 2015, publication: "Cambridge University Press" },
+    { author: "David Stuart", title: "The Arrival of Strangers: Teotihuacan and Tollan in Classic Maya History", year: 2000, publication: "Mesoamerica's Classic Heritage, University Press of Colorado" },
+    { author: "Matthew H. Robb (ed.)", title: "Teotihuacan: City of Water, City of Fire", year: 2017, publication: "Fine Arts Museums of San Francisco and University of California Press" },
+  ],
+  catalhoyuk: [
+    { author: "James Mellaart", title: "Çatal Hüyük: A Neolithic Town in Anatolia", year: 1967, publication: "Thames & Hudson" },
+    { author: "Ian Hodder", title: "The Leopard's Tale: Revealing the Mysteries of Çatalhöyük", year: 2006, publication: "Thames & Hudson" },
+    { author: "Ian Hodder", title: "Çatalhöyük: The Leopard Changes Its Spots", year: 2022, publication: "Princeton University Press" },
+    { author: "Eren Yüncü et al.", title: "Female lineages and changing kinship patterns in Neolithic Çatalhöyük", year: 2025, publication: "Science" },
+  ],
+  gold: [
+    { author: "Peter L. Bernstein", title: "The Power of Gold: The History of an Obsession", year: 2000, publication: "John Wiley & Sons" },
+    { author: "Barry Eichengreen", title: "Golden Fetters: The Gold Standard and the Great Depression, 1919–1939", year: 1992, publication: "Oxford University Press" },
+    { author: "B. P. Abbott et al.", title: "GW170817: Observation of Gravitational Waves from a Binary Neutron Star Inspiral", year: 2017, publication: "Physical Review Letters" },
+    { author: "United Nations Environment Programme", title: "Global Mercury Assessment 2018", year: 2019 },
+  ],
+  aluminium: [
+    { author: "Mimi Sheller", title: "Aluminum Dreams: The Making of Light Modernity", year: 2014, publication: "MIT Press" },
+    { author: "George David Smith", title: "From Monopoly to Competition: The Transformations of Alcoa, 1888–1986", year: 1988, publication: "Cambridge University Press" },
+    { author: "Norman C. Craig", title: "Charles Martin Hall: the young man, his mentor, and his metal", year: 1986, publication: "Journal of Chemical Education" },
+  ],
+  phosphorus: [
+    { author: "John Emsley", title: "The Shocking History of Phosphorus: A Biography of the Devil's Element", year: 2000, publication: "Macmillan" },
+    { author: "Isaac Asimov", title: "Life's Bottleneck", year: 1959, publication: "Fact and Fancy, Doubleday" },
+    { author: "Dana Cordell, Jan-Olof Drangert and Stuart White", title: "The story of phosphorus: global food security and food for thought", year: 2009, publication: "Global Environmental Change" },
+    { author: "Louise Raw", title: "Striking a Light: The Bryant and May Matchwomen and their Place in History", year: 2009, publication: "Continuum" },
+  ],
+  uranium: [
+    { author: "Richard Rhodes", title: "The Making of the Atomic Bomb", year: 1986, publication: "Simon & Schuster" },
+    { author: "Lise Meitner and O. R. Frisch", title: "Disintegration of uranium by neutrons: a new type of nuclear reaction", year: 1939, publication: "Nature" },
+    { author: "Tom Zoellner", title: "Uranium: War, Energy, and the Rock That Shaped the World", year: 2009, publication: "Viking" },
+    { author: "Alex P. Meshik", title: "The workings of an ancient nuclear reactor", year: 2005, publication: "Scientific American" },
+  ],
+  helium: [
+    { author: "William Ramsay", title: "The Gases of the Atmosphere: The History of Their Discovery", year: 1896, publication: "Macmillan" },
+    { author: "H. P. Cady and D. F. McFarland", title: "Helium in natural gas", year: 1907, publication: "Journal of the American Chemical Society" },
+    { author: "National Research Council", title: "Selling the Nation's Helium Reserve", year: 2010, publication: "National Academies Press" },
+    { author: "P. Kapitza", title: "Viscosity of liquid helium below the λ-point", year: 1938, publication: "Nature" },
+  ],
 };

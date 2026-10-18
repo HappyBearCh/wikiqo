@@ -272,6 +272,16 @@ import { deadSeaScrolls } from "./dead-sea-scrolls";
 import { terracottaArmy } from "./terracotta-army";
 import { suttonHoo } from "./sutton-hoo";
 import { tutankhamun } from "./tutankhamun";
+import { angkor } from "./angkor";
+import { petra } from "./petra";
+import { machuPicchu } from "./machu-picchu";
+import { teotihuacan } from "./teotihuacan";
+import { catalhoyuk } from "./catalhoyuk";
+import { gold } from "./gold";
+import { aluminium } from "./aluminium";
+import { phosphorus } from "./phosphorus";
+import { uranium } from "./uranium";
+import { helium } from "./helium";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -280,7 +290,7 @@ import { tutankhamun } from "./tutankhamun";
  * Everything below is a compile-time constant. No database, no API, no fetch —
  * the index and every article page prerender to static HTML at build time.
  *
- * Shape: sections of 5 articles each, currently 54 (270 articles). The target has been raised
+ * Shape: sections of 5 articles each, currently 56 (280 articles). The target has been raised
  * twice — 50, then 100 at twenty sections, and the shelf is now open-ended and
  * grows a section or two at a time.
  *
@@ -762,6 +772,22 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       suttonHoo,
       tutankhamun,
     ],
+  },
+  {
+    id: "cities-the-world-forgot-to-lose",
+    title: "Cities the world forgot to lose",
+    blurb:
+      "Five places called lost by people who had not been there: a temple city that was really a landscape of canals, a desert capital that lived on caught rain, an emperor's country estate the conquerors missed, a metropolis whose own name is gone, and a town where people walked on the roofs and buried their dead beneath the floor.",
+    hue: "var(--rb-1)",
+    articles: [angkor, petra, machuPicchu, teotihuacan, catalhoyuk],
+  },
+  {
+    id: "elements-with-biographies",
+    title: "Elements with biographies",
+    blurb:
+      "Chemical elements whose stories are mostly about people: a metal valued for doing nothing, forged in colliding stars, a metal once rarer than gold and now in every drinks can, the light-bearer boiled out of urine that every cell depends on, a glass tint that split the atom, and a gas found in the Sun that keeps escaping the Earth.",
+    hue: "var(--rb-3)",
+    articles: [gold, aluminium, phosphorus, uranium, helium],
   },
 ];
 
