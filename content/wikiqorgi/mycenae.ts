@@ -21,7 +21,7 @@ export const mycenae: RewrittenArticle = {
 
 <h2 id="Tombs">The beehive tombs</h2>
 <p>Outside the citadel are nine great tholos tombs, built for the rulers of Mycenae in its later centuries. Each consists of a long, stone-lined passage cut into a hillside, leading to a circular chamber roofed by a corbelled dome — courses of stone laid in rings, each slightly overlapping the one below, until they close at the top. Their shape gave them the nickname "beehive tombs".</p>
-<p>The finest is the so-called Treasury of Atreus, named after Agamemnon's father, which dates to around 1250 BC. Its chamber is about 14.5 metres across and 13 metres high, and its lintel, a single stone over the doorway, is estimated to weigh about 120 tonnes. For well over a thousand years, until the Romans built the Pantheon, it was the widest dome in the world. All the tholos tombs had been robbed long before archaeologists reached them.</p>
+<p>The finest is the so-called Treasury of Atreus, named after Agamemnon's father, which dates to around 1250 BC. Its chamber is about 14.5 metres across and 13 metres high, and its lintel, a single stone over the doorway, is estimated to weigh about 120 tonnes. For well over a thousand years it was the widest dome in the world. All the tholos tombs had been robbed long before archaeologists reached them.</p>
 
 <h2 id="LinearB">The palace accountants</h2>
 <p>Mycenae and the other palaces of the age, at Pylos, Tiryns, Thebes and Knossos on Crete, kept records on clay tablets in a script now called Linear B. The tablets were never meant to be permanent; they survived because the fires that destroyed the palaces baked them hard. For half a century after the first were found, at Knossos, nobody could read them.</p>
