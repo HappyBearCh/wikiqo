@@ -262,6 +262,16 @@ import { seaPeoples } from "./sea-peoples";
 import { huns } from "./huns";
 import { picts } from "./picts";
 import { amazigh } from "./amazigh";
+import { tea } from "./tea";
+import { cotton } from "./cotton";
+import { rubber } from "./rubber";
+import { maize } from "./maize";
+import { rice } from "./rice";
+import { antikytheraMechanism } from "./antikythera-mechanism";
+import { deadSeaScrolls } from "./dead-sea-scrolls";
+import { terracottaArmy } from "./terracotta-army";
+import { suttonHoo } from "./sutton-hoo";
+import { tutankhamun } from "./tutankhamun";
 
 /**
  * The wikiqorgi shelf: the same subjects the rest of the site mirrors from
@@ -270,7 +280,7 @@ import { amazigh } from "./amazigh";
  * Everything below is a compile-time constant. No database, no API, no fetch —
  * the index and every article page prerender to static HTML at build time.
  *
- * Shape: sections of 5 articles each, currently 52 (260 articles). The target has been raised
+ * Shape: sections of 5 articles each, currently 54 (270 articles). The target has been raised
  * twice — 50, then 100 at twenty sections, and the shelf is now open-ended and
  * grows a section or two at a time.
  *
@@ -730,6 +740,28 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
       "Peoples known mostly from what their neighbours wrote: a warrior city idealised by admirers who were not its citizens, raiders named by nineteenth-century scholars from Egyptian temple walls, horsemen with no surviving words, painted people who were renamed rather than lost, and North Africa's oldest inhabitants reclaiming their own name.",
     hue: "var(--rb-5)",
     articles: [sparta, seaPeoples, huns, picts, amazigh],
+  },
+  {
+    id: "crops-that-moved-empires",
+    title: "Crops that moved empires",
+    blurb:
+      "Five plants that rearranged the world to be grown, carried and paid for: a leaf that was smuggled, taxed and finally stolen, a fibre that tied the first factories to slavery, a sap that bounced its way into atrocity, a grass rebuilt until it cannot sow itself, and the crop that floods its own fields.",
+    hue: "var(--rb-4)",
+    articles: [tea, cotton, rubber, maize, rice],
+  },
+  {
+    id: "what-the-ground-gave-back",
+    title: "What the ground gave back",
+    blurb:
+      "Finds that changed what we thought the past could hold: a box of bronze gears from a shipwreck, a library in desert caves and the decades it waited to be read, an army of clay guarding an unopened tomb, the ghost of a king's ship in Suffolk sand, and a minor pharaoh made famous by being missed.",
+    hue: "var(--rb-2)",
+    articles: [
+      antikytheraMechanism,
+      deadSeaScrolls,
+      terracottaArmy,
+      suttonHoo,
+      tutankhamun,
+    ],
   },
 ];
 

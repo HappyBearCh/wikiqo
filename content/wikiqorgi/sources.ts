@@ -1492,4 +1492,63 @@ export const WIKIQORGI_SOURCES: Record<string, Source[]> = {
     { author: "Marieke van de Loosdrecht et al.", title: "Pleistocene North African genomes link Near Eastern and sub-Saharan African human populations", year: 2018, publication: "Science" },
     { author: "Ramzi Rouighi", title: "Inventing the Berbers: History and Ideology in the Maghrib", year: 2019, publication: "University of Pennsylvania Press" },
   ],
+  tea: [
+    { author: "Lu Yu", title: "The Classic of Tea (Cha Jing)", year: 780 },
+    { author: "Sarah Rose", title: "For All the Tea in China: How England Stole the World's Favorite Drink and Changed History", year: 2010, publication: "Viking" },
+    { author: "Erika Rappaport", title: "A Thirst for Empire: How Tea Shaped the Modern World", year: 2017, publication: "Princeton University Press" },
+    { author: "Houyuan Lu et al.", title: "Earliest tea as evidence for one branch of the Silk Road across the Tibetan Plateau", year: 2016, publication: "Scientific Reports" },
+  ],
+  cotton: [
+    { author: "Sven Beckert", title: "Empire of Cotton: A Global History", year: 2014, publication: "Alfred A. Knopf" },
+    { author: "Giorgio Riello", title: "Cotton: The Fabric that Made the Modern World", year: 2013, publication: "Cambridge University Press" },
+    { author: "Edward E. Baptist", title: "The Half Has Never Been Told: Slavery and the Making of American Capitalism", year: 2014, publication: "Basic Books" },
+    { author: "C. Moulherat, M. Tengberg, J.-F. Haquet and B. Mille", title: "First evidence of cotton at Neolithic Mehrgarh, Pakistan: analysis of mineralized fibres from a copper bead", year: 2002, publication: "Journal of Archaeological Science" },
+  ],
+  rubber: [
+    { author: "Dorothy Hosler, Sandra L. Burkett and Michael J. Tarkanian", title: "Prehistoric polymers: rubber processing in ancient Mesoamerica", year: 1999, publication: "Science" },
+    { author: "Adam Hochschild", title: "King Leopold's Ghost: A Story of Greed, Terror, and Heroism in Colonial Africa", year: 1998, publication: "Houghton Mifflin" },
+    { author: "Joe Jackson", title: "The Thief at the End of the World: Rubber, Power, and the Seeds of Empire", year: 2008, publication: "Viking" },
+    { author: "Greg Grandin", title: "Fordlandia: The Rise and Fall of Henry Ford's Forgotten Jungle City", year: 2009, publication: "Metropolitan Books" },
+  ],
+  maize: [
+    { author: "Yoshihiro Matsuoka et al.", title: "A single domestication for maize shown by multilocus microsatellite genotyping", year: 2002, publication: "Proceedings of the National Academy of Sciences" },
+    { author: "John Doebley", title: "The genetics of maize evolution", year: 2004, publication: "Annual Review of Genetics" },
+    { author: "Daphne A. Roe", title: "A Plague of Corn: The Social History of Pellagra", year: 1973, publication: "Cornell University Press" },
+    { author: "Arturo Warman", title: "Corn and Capitalism: How a Botanical Bastard Grew to Global Dominance", year: 2003, publication: "University of North Carolina Press" },
+  ],
+  rice: [
+    { author: "Dorian Q. Fuller et al.", title: "The domestication process and domestication rate in rice: spikelet bases from the Lower Yangtze", year: 2009, publication: "Science" },
+    { author: "J. Stephen Lansing", title: "Priests and Programmers: Technologies of Power in the Engineered Landscape of Bali", year: 1991, publication: "Princeton University Press" },
+    { author: "Francesca Bray", title: "The Rice Economies: Technology and Development in Asian Societies", year: 1986, publication: "Blackwell" },
+    { author: "T. Talhelm et al.", title: "Large-scale psychological differences within China explained by rice versus wheat agriculture", year: 2014, publication: "Science" },
+  ],
+  "antikythera-mechanism": [
+    { author: "Derek de Solla Price", title: "Gears from the Greeks: The Antikythera Mechanism, a Calendar Computer from ca. 80 B.C.", year: 1974, publication: "Transactions of the American Philosophical Society" },
+    { author: "T. Freeth et al.", title: "Decoding the ancient Greek astronomical calculator known as the Antikythera Mechanism", year: 2006, publication: "Nature" },
+    { author: "T. Freeth et al.", title: "A model of the cosmos in the ancient Greek Antikythera Mechanism", year: 2021, publication: "Scientific Reports" },
+    { author: "Jo Marchant", title: "Decoding the Heavens: Solving the Mystery of the World's First Computer", year: 2008, publication: "William Heinemann" },
+  ],
+  "dead-sea-scrolls": [
+    { author: "Geza Vermes", title: "The Complete Dead Sea Scrolls in English", year: 1997, publication: "Allen Lane" },
+    { author: "James C. VanderKam and Peter Flint", title: "The Meaning of the Dead Sea Scrolls", year: 2002, publication: "HarperSanFrancisco" },
+    { author: "Roland de Vaux", title: "Archaeology and the Dead Sea Scrolls", year: 1973, publication: "Oxford University Press" },
+    { author: "Jodi Magness", title: "The Archaeology of Qumran and the Dead Sea Scrolls", year: 2002, publication: "Eerdmans" },
+  ],
+  "terracotta-army": [
+    { author: "Sima Qian, translated by Burton Watson", title: "Records of the Grand Historian: Qin Dynasty", year: 1993, publication: "Columbia University Press" },
+    { author: "Jane Portal (ed.)", title: "The First Emperor: China's Terracotta Army", year: 2007, publication: "British Museum Press" },
+    { author: "Marcos Martinón-Torres et al.", title: "Surface chromium on Terracotta Army bronze weapons is neither an ancient anti-rust treatment nor the reason for their good preservation", year: 2019, publication: "Scientific Reports" },
+  ],
+  "sutton-hoo": [
+    { author: "Rupert Bruce-Mitford", title: "The Sutton Hoo Ship-Burial, vol. 1", year: 1975, publication: "British Museum Publications" },
+    { author: "Martin Carver", title: "Sutton Hoo: Burial Ground of Kings?", year: 1998, publication: "British Museum Press" },
+    { author: "Bede", title: "Ecclesiastical History of the English People", year: 731 },
+    { author: "Angela Care Evans", title: "The Sutton Hoo Ship Burial", year: 1986, publication: "British Museum Publications" },
+  ],
+  tutankhamun: [
+    { author: "Howard Carter and A. C. Mace", title: "The Tomb of Tut.ankh.Amen, vol. I", year: 1923, publication: "Cassell" },
+    { author: "Nicholas Reeves", title: "The Complete Tutankhamun", year: 1990, publication: "Thames & Hudson" },
+    { author: "Zahi Hawass et al.", title: "Ancestry and pathology in King Tutankhamun's family", year: 2010, publication: "JAMA" },
+    { author: "Mark R. Nelson", title: "The mummy's curse: historical cohort study", year: 2002, publication: "BMJ" },
+  ],
 };
