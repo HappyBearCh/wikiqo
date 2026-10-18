@@ -132,10 +132,3 @@ export function promotedArticles(now: Date = new Date()): PromotedArticle[] {
 export function latestPromoted(count: number, now: Date = new Date()): PromotedArticle[] {
   return promotedArticles(now).slice(0, count);
 }
-
-/** When the next unpromoted article is due, or null once the shelf is spent. */
-export function nextPromotionDate(now: Date = new Date()): Date | null {
-  const promotedSoFar = promotedArticles(now).length;
-  if (promotedSoFar >= WIKIQORGI_ROTATION.length) return null;
-  return promotionDateFor(promotedSoFar);
-}

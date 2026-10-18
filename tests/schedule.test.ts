@@ -3,7 +3,6 @@ import { WIKIQORGI_ARTICLES } from "@/content/wikiqorgi";
 import {
   WIKIQORGI_ROTATION,
   latestPromoted,
-  nextPromotionDate,
   promotedArticles,
   promotionDateFor,
 } from "@/content/wikiqorgi/schedule";
@@ -37,7 +36,6 @@ describe("promotion schedule", () => {
 
   it("promotes nothing before the start date", () => {
     expect(promotedArticles(new Date(START - 1))).toEqual([]);
-    expect(nextPromotionDate(new Date(START - 1))?.getTime()).toBe(START);
   });
 
   it("returns the newest promotion first", () => {
@@ -50,6 +48,5 @@ describe("promotion schedule", () => {
   it("runs out once everything is promoted", () => {
     const end = promotionDateFor(WIKIQORGI_ROTATION.length - 1);
     expect(promotedArticles(end)).toHaveLength(WIKIQORGI_ROTATION.length);
-    expect(nextPromotionDate(end)).toBeNull();
   });
 });
