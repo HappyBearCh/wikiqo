@@ -27,7 +27,7 @@ export const clouds: RewrittenArticle = {
 <p>Luke Howard, a London pharmacist and amateur meteorologist, proposed the modern classification in 1802. Before him clouds were considered too formless to classify, which was more or less the settled view.</p>
 <p>His insight was that a small number of basic forms recur, and that clouds transition between them in ways that can be described. He used Latin: <em>cirrus</em> for fibrous, <em>cumulus</em> for heaped, <em>stratus</em> for layered, <em>nimbus</em> for precipitating, combinable into compound names.</p>
 <p>The scheme survived intact for two centuries because it describes formation processes rather than appearances. Cumulus means convection; stratus means a stable layer lifted or cooled; cirrus means ice at altitude. The name carries physics.</p>
-<p>Howard's essay was admired well beyond meteorology — Goethe wrote poems addressed to him, and Constable's cloud studies were made in the light of it.</p>
+<p>Howard's essay was admired well beyond meteorology — Goethe wrote poems addressed to him, and Constable's cloud studies of the 1820s are often linked to it, though whether he knew Howard's work directly is uncertain.</p>
 <p>The modern system adds altitude as a second axis: high clouds above roughly 6 kilometres are ice, low clouds below 2 kilometres are liquid, and cumulonimbus spans the whole depth of the troposphere, topping out where it hits the tropopause and spreads sideways into the anvil shape that is visible from a very long way off.</p>
 
 <h2 id="Radiation">The two opposing effects</h2>
