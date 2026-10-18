@@ -7,7 +7,7 @@ export const iliad: RewrittenArticle = {
   dek: "The founding poem of European literature never shows the wooden horse or the fall of Troy. It is about one man's anger, what it costs his friends, and a night when an old king kisses the hands that killed his son.",
   standfirst:
     "Everyone thinks they know the story of the Iliad: Helen, the Trojan Horse, the burning city. Almost none of that is in it. The poem covers a few weeks in the tenth year of the siege of Troy and ends before the city falls. Its subject, announced in its first word, is anger — the rage of Achilles — and it has held readers for nearly three thousand years because it refuses to make war look simple.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Poem">What the poem actually covers</h2>

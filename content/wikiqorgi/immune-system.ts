@@ -7,7 +7,7 @@ export const immuneSystem: RewrittenArticle = {
   dek: "Building a receptor for a pathogen that has not evolved yet requires generating receptors at random — which means also generating the ones that attack you.",
   standfirst:
     "An immune system has to recognise threats it has never encountered, including ones that did not exist when the organism was born. The vertebrate solution is to manufacture receptors by shuffling gene segments at random, producing a repertoire large enough to bind almost anything. The unavoidable consequence is that many of those receptors bind the body itself, and most of the system's machinery is devoted to deleting, suppressing and restraining them.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Two_systems">Two systems doing different jobs</h2>

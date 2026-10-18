@@ -7,7 +7,7 @@ export const seaPeoples: RewrittenArticle = {
   dek: "Around 1200 BC Egyptian pharaohs recorded attacks by coalitions of peoples from the north who came \"from their islands\". Nineteenth-century scholars named them the Sea Peoples and blamed them for the end of the Bronze Age. The evidence now suggests a more complicated story, in which one of the groups settled down and became the Philistines.",
   standfirst:
     "The Sea Peoples are known almost entirely from what the Egyptians said about them, carved on the walls of temples by kings eager to celebrate their victories. They appear in the records at the moment when the great civilisations of the eastern Mediterranean — the Hittite empire, the Mycenaean palaces, the trading cities of the Levant — were falling apart. Whether they caused that collapse, or were driven by it, is one of the central questions of ancient history.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-17",
   html: `
 <h2 id="Name">A modern name</h2>

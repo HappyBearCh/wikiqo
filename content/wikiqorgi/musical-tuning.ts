@@ -7,7 +7,7 @@ export const musicalTuning: RewrittenArticle = {
   dek: "Twelve perfect fifths overshoot seven octaves by a small, stubborn amount. Every tuning system in Western music is a decision about where to hide it.",
   standfirst:
     "The intervals that sound purest to the ear are simple frequency ratios — an octave is 2:1, a fifth 3:2, a major third 5:4. The trouble is that these ratios cannot all be satisfied at once on an instrument with a fixed set of notes. Stack them up and they fail to meet. For two and a half thousand years, musicians have argued about how to distribute that error, and the answer modern instruments use — spreading it evenly so that nothing is quite pure — was resisted for centuries as a compromise too far.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Ratios">Simple ratios and why they please</h2>

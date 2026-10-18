@@ -7,7 +7,7 @@ export const dams: RewrittenArticle = {
   dek: "A dam stores water, makes power and stops floods. It also traps the river's sediment, blocks its fish, and occasionally fails in ways no other structure can.",
   standfirst:
     "There are tens of thousands of large dams in the world, and together they have reshaped the hydrology of most of the planet's major rivers. They are among the most consequential structures humans build — supplying irrigation, drinking water, electricity and flood protection on a scale nothing else matches. They are also among the few that change an entire landscape downstream for as long as they stand, and whose failure can kill tens of thousands of people in an afternoon.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="How_they_stand">Four ways to resist a river</h2>

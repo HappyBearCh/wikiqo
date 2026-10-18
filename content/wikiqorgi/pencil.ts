@@ -7,7 +7,7 @@ export const pencil: RewrittenArticle = {
   dek: "Pencils contain no lead. They began with a unique graphite mine in England guarded like a treasury, and became cheap when a Frenchman cut off by war learned to stretch powdered graphite with clay.",
   standfirst:
     "The pencil is one of the most refined objects in ordinary use: a cheap, precise writing tool that needs no ink, works upside down and in the cold, and can be erased. Its history runs from a single remarkable deposit of graphite in the English Lake District, through a French invention made necessary by blockade, to an American family business in which Henry David Thoreau made some of the best pencils of his day.",
-  readingMinutes: 6,
+  readingMinutes: 4,
   published: "2026-10-03",
   html: `
 <h2 id="Borrowdale">A mine guarded like a treasury</h2>

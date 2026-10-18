@@ -7,7 +7,7 @@ export const palmyra: RewrittenArticle = {
   dek: "An oasis in the Syrian desert grew rich on the trade between Rome and the East, produced a queen who seized Egypt from the Romans, and became one of the most admired ruins on earth. In 2015 the Islamic State blew up its temples and murdered the archaeologist who had spent his life protecting them.",
   standfirst:
     "Palmyra stood halfway between the Mediterranean and the Euphrates, at an oasis that made a desert crossing possible. In the first three centuries AD its merchants organised the caravans that carried silk, spices and pearls from the Persian Gulf to the Roman Empire, and its citizens built a city that mixed Greek, Roman, Aramaic and Persian traditions into something entirely its own. Its ruins, rediscovered by Europeans in the eighteenth century, shaped the architecture of the West. Its destruction in the twenty-first was broadcast to the world.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Oasis">An oasis in the desert</h2>

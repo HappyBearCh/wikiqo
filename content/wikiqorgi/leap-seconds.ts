@@ -7,7 +7,7 @@ export const leapSeconds: RewrittenArticle = {
   dek: "Civil time is tied to a caesium atom and to the rotation of a planet, and the two disagree. For fifty years the fix has been an extra second inserted by hand.",
   standfirst:
     "There are two ways to define a second: as a fraction of the Earth's rotation, which is what a day has always meant, and as a fixed number of oscillations of a caesium atom, which is what the second officially became in 1967. The planet does not rotate at a constant rate, so the two definitions drift apart, and since 1972 the gap has been closed by occasionally inserting an extra second into the last minute of a day. That practice is scheduled to end.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-19",
   html: `
 <h2 id="Two_seconds">Two incompatible definitions</h2>

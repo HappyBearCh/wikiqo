@@ -7,7 +7,7 @@ export const greatZimbabwe: RewrittenArticle = {
   dek: "The largest ancient stone structures south of the Sahara were built by the ancestors of the Shona between the eleventh and fifteenth centuries. For nearly a century, white settlers credited them to Phoenicians or the Queen of Sheba, and a Rhodesian government censored archaeologists who said otherwise.",
   standfirst:
     "On a granite hill in southeastern Zimbabwe, and in the valley below it, stand the walls of a city that at its height in the fourteenth century may have housed many thousands of people. It was the capital of a state that grew rich on cattle and on the gold trade to the Indian Ocean. It was also the subject of one of the most persistent pieces of racist pseudo-history of the colonial age, and when the country won its independence in 1980 it took its name from the ruins.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Walls">Houses of stone</h2>

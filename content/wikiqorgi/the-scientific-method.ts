@@ -7,7 +7,7 @@ export const theScientificMethod: RewrittenArticle = {
   dek: "The numbered steps taught in school describe almost no real research. What science actually has is a set of social arrangements for catching mistakes.",
   standfirst:
     "Observe, hypothesise, predict, experiment, conclude. The version on the classroom poster is tidy, memorable, and a poor description of how any significant discovery has been made. Philosophers of science spent the twentieth century failing to find a single procedure that distinguishes science from everything else, and the more useful account that emerged is not about method at all but about institutions built to make error expensive.",
-  readingMinutes: 8,
+  readingMinutes: 7,
   published: "2026-08-17",
   html: `
 <h2 id="The_textbook_version">The version on the poster</h2>

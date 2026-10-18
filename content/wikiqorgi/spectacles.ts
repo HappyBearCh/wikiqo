@@ -7,7 +7,7 @@ export const spectacles: RewrittenArticle = {
   dek: "Everyone's near vision fails in their forties. Before eyeglasses, that ended the career of anyone who worked with small things.",
   standfirst:
     "Spectacles appeared in northern Italy in the 1280s, and no name is reliably attached to them. Their effect was larger than their reputation: presbyopia arrives on schedule in middle age, and in a world without correction it removed scribes, jewellers, weavers and instrument makers from their trades at exactly the point when they had accumulated the most skill. Lenses returned those decades, and the trade of grinding them produced, three centuries later, the telescope and the microscope.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Presbyopia">The problem everyone eventually has</h2>

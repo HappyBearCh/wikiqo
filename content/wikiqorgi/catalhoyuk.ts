@@ -7,7 +7,7 @@ export const catalhoyuk: RewrittenArticle = {
   dek: "Nine thousand years ago, thousands of people in central Anatolia lived in houses packed so tightly that they walked across the roofs. Its first excavator made it famous, and may also have invented some of what he found.",
   standfirst:
     "Çatalhöyük is a pair of mounds on the Konya plain in central Turkey, built up from the remains of a settlement occupied for more than a thousand years, from around 7100 BC. It is one of the largest and best-preserved sites from the early farming period anywhere, with wall paintings, plastered bulls' horns and burials beneath the floors of houses. It has been central to arguments about early religion, the status of women and how people first lived together in large numbers.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-18",
   html: `
 <h2 id="Roofs">A town of roofs</h2>

@@ -7,7 +7,7 @@ export const theCell: RewrittenArticle = {
   dek: "Named after monastery rooms by a man looking at dead cork, and not recognised as the unit of life for another 150 years.",
   standfirst:
     "The cell is the smallest thing that is unambiguously alive, and the boundary is sharp: half a cell is not half alive, it is debris. Everything living is either a single cell or an assembly of them, they all arise from existing cells, and the machinery inside them is similar enough across all life to establish that the whole of biology descends from one population that solved the problem once.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-17",
   html: `
 <h2 id="A_slow_discovery">A slow discovery</h2>

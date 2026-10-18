@@ -7,7 +7,7 @@ export const mycorrhizalNetworks: RewrittenArticle = {
   dek: "Around nine in ten land plants trade sugar to a fungus for phosphorus. The partnership is 400 million years old and probably made land plants possible.",
   standfirst:
     "A root is bad at extracting phosphorus, because phosphate moves through soil very slowly and a root quickly exhausts the volume immediately around it. Fungal hyphae are far thinner, extend much further for the same investment, and are good at exactly this. The resulting trade — plant carbon for fungal minerals — is present in the earliest fossils of land plants, and the popular story built on top of it in recent years has run some way ahead of the evidence.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Trade">Why a root needs help</h2>

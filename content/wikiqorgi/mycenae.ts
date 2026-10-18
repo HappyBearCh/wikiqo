@@ -7,7 +7,7 @@ export const mycenae: RewrittenArticle = {
   dek: "Later Greeks thought only the one-eyed Cyclopes could have lifted the stones of its walls. Heinrich Schliemann dug there for Homer's king and found gold masks three centuries too old for him. The real Mycenae kept accounts in an early form of Greek nobody could read until 1952.",
   standfirst:
     "On a hill in the northeast Peloponnese stand the ruins of the citadel that gave its name to the first Greek civilisation. In Homer, Mycenae is the seat of Agamemnon, king of men, who led the Greeks to Troy. In the late Bronze Age it was the centre of a palace society that controlled its territory through scribes and storerooms, traded across the Mediterranean, and then, around 1200 BC, fell, along with almost every other palace in the Greek world.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Citadel">The citadel</h2>

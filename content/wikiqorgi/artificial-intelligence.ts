@@ -7,7 +7,7 @@ export const artificialIntelligence: RewrittenArticle = {
   dek: "A field defined less by what machines can do than by what we stop calling intelligent once they can do it.",
   standfirst:
     "Artificial intelligence has no stable definition, and that is not sloppiness — it is the central fact about the field. Every capability that once counted as proof of machine intelligence became, on the day it was achieved, an ordinary piece of software. Chess. Translation. Speech. The definition of AI is whatever has not been solved yet.",
-  readingMinutes: 9,
+  readingMinutes: 7,
   published: "2026-08-16",
   html: `
 <h2 id="The_founding_bet">The founding bet</h2>

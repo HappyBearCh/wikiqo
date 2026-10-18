@@ -7,7 +7,7 @@ export const originOfLife: RewrittenArticle = {
   dek: "It happened once, quickly, nearly four billion years ago, and nobody has yet made it happen again.",
   standfirst:
     "Evolution explains what happens once you have things that copy themselves imperfectly. It says nothing about how you get the first one. That problem — a chemical system crossing into biology — remains genuinely open, and it is the largest unresolved question in the natural sciences that is not merely a matter of collecting more data.",
-  readingMinutes: 8,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="The_timing_is_the_first_clue">The timing is the first clue</h2>

@@ -7,7 +7,7 @@ export const antikytheraMechanism: RewrittenArticle = {
   dek: "Sponge divers brought up a lump of corroded bronze in 1901. A century of X-rays revealed a hand-cranked model of the heavens, with nothing comparable for more than a thousand years.",
   standfirst:
     "The Antikythera mechanism is a box of bronze gears, now broken into fragments, that was made in the Greek world around two thousand years ago to predict the positions of the Sun and Moon, the phases of the Moon, eclipses and the dates of athletic games. It is often called the first known analogue computer. For most of the twentieth century it was so far beyond what anyone expected of ancient technology that few people took it seriously.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-18",
   html: `
 <h2 id="Wreck">A wreck off a small island</h2>

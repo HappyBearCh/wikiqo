@@ -7,7 +7,7 @@ export const trees: RewrittenArticle = {
   dek: "There is no such thing as a tree taxonomically. Woodiness has evolved and been lost repeatedly, and a palm is not one at all.",
   standfirst:
     "A tree is a strategy rather than a kind of organism. Being tall and woody has evolved independently in many unrelated plant lineages, been abandoned in others, and re-evolved in some — so the category groups a magnolia with a pine and excludes a bamboo that is taller than both. Understanding a tree as a solution to a specific problem, rather than as a taxon, explains most of what is peculiar about them.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-18",
   html: `
 <h2 id="Not_a_taxon">There is no tree clade</h2>

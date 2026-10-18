@@ -7,7 +7,7 @@ export const railways: RewrittenArticle = {
   dek: "Before trains, every town kept its own clock by the sun, and this was fine. A timetable made it lethal.",
   standfirst:
     "The railway's technical achievement is a very low-friction interface between steel and steel. Its social achievement is stranger: it made local time unworkable, produced the first standardised time zones, invented modern management as a discipline, and imposed a schedule on people who had never previously needed one. Almost everything about how industrial society organises itself in time can be traced to a scheduling problem on a single track.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Steel_on_steel">The physics is the whole thing</h2>

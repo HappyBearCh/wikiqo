@@ -7,7 +7,7 @@ export const probability: RewrittenArticle = {
   dek: "A discipline invented to settle a gambling dispute, now the language of physics, medicine and every claim about evidence.",
   standfirst:
     "Probability is the only branch of mathematics whose central object is disputed by the people who use it daily. Everyone agrees on the rules. What a probability actually refers to — a long-run frequency in the world, or a degree of belief in a mind — has been argued for three hundred years, and the argument has real consequences for how evidence gets weighed.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="A_late_arrival">A late arrival</h2>

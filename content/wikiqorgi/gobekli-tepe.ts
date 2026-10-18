@@ -7,7 +7,7 @@ export const gobekliTepe: RewrittenArticle = {
   dek: "Hunter-gatherers in southeastern Turkey carved and raised great stone pillars more than eleven thousand years ago. The excavator called it the first temple; the site has since become more complicated, and more interesting.",
   standfirst:
     "For most of the twentieth century the order of events seemed settled: people learned to farm, farming produced a surplus, and the surplus paid for temples, cities and kings. Göbekli Tepe, a hill near the city of Şanlıurfa in southeastern Turkey, does not fit that order. Its carved stone enclosures were built by people who still hunted wild animals and gathered wild plants. What they were for, and who lived there, is still being worked out.",
-  readingMinutes: 6,
+  readingMinutes: 5,
   published: "2026-10-06",
   html: `
 <h2 id="Discovery">A hill mistaken for a graveyard</h2>

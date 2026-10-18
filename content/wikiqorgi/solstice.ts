@@ -7,7 +7,7 @@ export const solstice: RewrittenArticle = {
   dek: "Twice a year the Sun reaches the furthest point of its swing north or south and seems to pause before turning back. Five thousand years ago people in Ireland built a tomb whose passage lights up on just a few mornings around midwinter. The festivals have never stopped.",
   standfirst:
     "The solstices are the turning points of the year: the longest day and the shortest, in June and December. They are caused by nothing more than the tilt of the Earth's axis, but they have shaped calendars, monuments and festivals in almost every culture that lives far enough from the equator to notice them. They are also widely misunderstood, starting with the idea that summer happens because the Earth is closer to the Sun.",
-  readingMinutes: 6,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Tilt">The tilted Earth</h2>

@@ -7,7 +7,7 @@ export const doggerland: RewrittenArticle = {
   dek: "At the end of the last ice age you could walk from England to Denmark. The land in between had hills, rivers, lakes and people, and over a few thousand years the rising sea swallowed all of it. Trawlers and oil surveys are now bringing it back.",
   standfirst:
     "Britain has been an island for only about eight thousand years. Before that, a broad, low landscape joined it to the continent across what is now the southern North Sea: a country of river valleys, marshes, lagoons and wooded hills, home to hunter-gatherers for thousands of years. It has a name only because an archaeologist gave it one in 1998. Most of what we know about it has been dredged up by fishermen, scraped off Dutch beaches or mapped from data collected to find oil and gas.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Land">A land between</h2>

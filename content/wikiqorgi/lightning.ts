@@ -7,7 +7,7 @@ export const lightning: RewrittenArticle = {
   dek: "The discharge is well understood. The mechanism that separates the charge in the first place is still argued over.",
   standfirst:
     "Lightning is the most familiar high-energy phenomenon on the planet and one of the least completely explained. The physics of the strike — the stepped leader, the return stroke, the thunder — has been photographed and measured in detail. The prior question of how a thundercloud manages to separate billions of coulombs of charge against the electrical force pulling them back together has a leading answer that is still not fully settled.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Charging">The part that is not settled</h2>

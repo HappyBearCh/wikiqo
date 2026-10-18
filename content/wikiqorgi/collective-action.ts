@@ -7,7 +7,7 @@ export const collectiveAction: RewrittenArticle = {
   dek: "A million people each losing a small amount will lose to a hundred people each gaining a large one, reliably and for structural reasons.",
   standfirst:
     "The intuition that a group with a shared interest will act on it is one of the most persistent and least accurate assumptions in political analysis. Mancur Olson's argument, published in 1965, is that the opposite is usually true: large groups with diffuse interests organise badly, small groups with concentrated interests organise well, and the resulting asymmetry explains a great deal about who gets what.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="The_logic">The free-rider problem</h2>

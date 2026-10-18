@@ -7,7 +7,7 @@ export const quarantine: RewrittenArticle = {
   dek: "The word comes from the forty days ships waited off Venice. Whether quarantine works depends on one property of a disease, and who bears its cost has always been a political choice.",
   standfirst:
     "Quarantine is the oldest public health measure that actually worked before anyone understood infection. Its principle is simple: separate people who may have been exposed until it is clear whether they are sick. Its effectiveness varies enormously from disease to disease, for a reason that was only formalised in this century. And because it restricts the liberty of people who are, by definition, not known to be ill, it has always been entangled with power, trade and prejudice.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-02",
   html: `
 <h2 id="Origins">Thirty days, then forty</h2>

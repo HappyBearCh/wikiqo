@@ -7,7 +7,7 @@ export const theBicycle: RewrittenArticle = {
   dek: "Nothing else — animal or vehicle — moves a mass a given distance for as little energy. And nobody fully agrees on why it stays upright.",
   standfirst:
     "A person on a bicycle is more efficient at converting energy into distance than any animal and any other machine, by a considerable margin. It arrived astonishingly late, needed better metallurgy rather than any conceptual leap, built the industrial base that made cars possible, and was central to a shift in what women were permitted to do. It is also, in its dynamics, not fully explained.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Efficiency">The number that makes it remarkable</h2>

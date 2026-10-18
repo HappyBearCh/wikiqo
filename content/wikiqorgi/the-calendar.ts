@@ -7,7 +7,7 @@ export const theCalendar: RewrittenArticle = {
   dek: "The year is not a whole number of days, the month is not a fraction of the year, and every calendar in history is a compromise about which to betray.",
   standfirst:
     "Calendars look like conventions and are really engineering. The Earth takes about 365.2422 days to orbit the Sun, and the Moon takes about 29.53 days to cycle its phases. Neither divides evenly into anything, and no arrangement can honour the day, the month and the year simultaneously. Every calendar ever built is a decision about which of the three to sacrifice.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="Three_clocks_that_do_not_agree">Three clocks that do not agree</h2>

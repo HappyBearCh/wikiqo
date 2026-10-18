@@ -7,7 +7,7 @@ export const neanderthals: RewrittenArticle = {
   dek: "For a century the Neanderthals were the stooping cavemen of cartoons, thanks largely to one badly reconstructed skeleton. Archaeology has since shown them making glue, caring for their injured and burying their dead — and genetics has shown that most living people carry a little of their DNA.",
   standfirst:
     "The Neanderthals lived across Europe and western Asia for several hundred thousand years, through repeated ice ages, and disappeared around 40,000 years ago, not long after modern humans arrived. They were the first fossil humans ever recognised, and for most of the time since they have served as a mirror for whatever their discoverers thought it meant to be human. The image in that mirror has changed more than almost any other in science.",
-  readingMinutes: 8,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Discovery">The valley of the new man</h2>

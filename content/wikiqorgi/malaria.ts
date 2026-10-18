@@ -7,7 +7,7 @@ export const malaria: RewrittenArticle = {
   dek: "Malaria still kills around six hundred thousand people a year, most of them African children. It left its mark in our DNA, financed the search for some of medicine's great drugs, and has outlasted every attempt to eradicate it.",
   standfirst:
     "Malaria is caused not by a bacterium or a virus but by a single-celled parasite with a life cycle split between mosquitoes and humans. It has probably killed more people over human history than any other disease, and it remains one of the leading causes of death in children in sub-Saharan Africa. The fight against it produced quinine, chloroquine and artemisinin, made DDT famous and then infamous, and is now being waged with bed nets, vaccines and genetically engineered mosquitoes.",
-  readingMinutes: 8,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Parasite">Bad air, then a parasite, then a mosquito</h2>

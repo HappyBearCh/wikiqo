@@ -40,6 +40,16 @@ describe("wikiqorgi shelf", () => {
     }
   });
 
+  // readingMinutes is hand-written, and before this was checked it had drifted
+  // to "7 min" for everything from 750 words to 1,650. 200 words a minute is a
+  // careful reading pace for dense prose; a minute either way is allowed.
+  it("states a reading time that matches the article's length", () => {
+    for (const article of WIKIQORGI_ARTICLES) {
+      const words = article.html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+      expect(Math.abs(article.readingMinutes - words / 200), article.slug).toBeLessThanOrEqual(1);
+    }
+  });
+
   it("has five articles per section", () => {
     for (const section of WIKIQORGI_SECTIONS) expect(section.articles).toHaveLength(5);
   });

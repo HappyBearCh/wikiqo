@@ -7,7 +7,7 @@ export const teotihuacan: RewrittenArticle = {
   dek: "One of the largest cities in the world around AD 400, built on a grid, home to migrants from across Mesoamerica, and ruled by nobody whose face or name survives. The Aztecs found it in ruins and thought gods had built it.",
   standfirst:
     "About forty kilometres northeast of Mexico City lie the remains of a planned metropolis with pyramids among the largest in the Americas. At its height, in the first half of the first millennium AD, Teotihuacan may have held a hundred thousand people or more, and its influence reached Maya kingdoms a thousand kilometres away. Yet we do not know what language its people spoke, what they called their city, or how they were governed.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-18",
   html: `
 <h2 id="Name">A name given by others</h2>

@@ -7,7 +7,7 @@ export const falseMemory: RewrittenArticle = {
   dek: "One word in a question changed what witnesses saw at a car crash. Planted childhood memories, a decade of wrongful prosecutions and DNA exonerations showed how easily confident memory goes wrong.",
   standfirst:
     "A false memory is not a lie. It is a recollection, held sincerely and often in vivid detail, of something that did not happen or happened differently. Because memory is rebuilt each time it is recalled, it can absorb suggestions, merge separate events and fill gaps with what seems plausible, and none of this feels any different from accurate remembering. The research that established this changed how police conduct line-ups and ended an era of prosecutions based on recovered memories.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Words">One word changes a memory</h2>

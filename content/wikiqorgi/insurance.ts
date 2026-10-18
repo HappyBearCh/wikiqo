@@ -7,7 +7,7 @@ export const insurance: RewrittenArticle = {
   dek: "A bet that both parties expect to lose, structured so that both are better off for making it.",
   standfirst:
     "Insurance looks like gambling and is close to its opposite. A gambler accepts a worse expected outcome in exchange for variance; an insurance buyer accepts a worse expected outcome in exchange for less of it. You pay more than your losses will average, on purpose, because the average is not what would ruin you — the tail is.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="Why_paying_too_much_is_rational">Why paying too much is rational</h2>

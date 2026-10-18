@@ -7,7 +7,7 @@ export const randomisedTrials: RewrittenArticle = {
   dek: "Randomisation does not make groups similar in the ways you thought of. It makes them similar in the ways you did not.",
   standfirst:
     "The central problem in evaluating any treatment is that people who receive it differ from people who do not, in ways that are usually unknown and frequently invisible. Randomisation is the one procedure that solves this, and it solves it completely: assigning by chance balances the groups on every characteristic, including the ones nobody has thought to measure. Almost every other feature of a modern trial exists to protect that single property from being undermined.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="The_problem_it_solves">The problem it solves</h2>

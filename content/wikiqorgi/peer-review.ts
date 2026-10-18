@@ -7,7 +7,7 @@ export const peerReview: RewrittenArticle = {
   dek: "Two or three anonymous strangers read a paper for free and guess whether it is right. This became universal only in the second half of the twentieth century.",
   standfirst:
     "Peer review is treated as the boundary between knowledge and noise, and it is routinely invoked as though a reviewed paper had been verified. It has not. Reviewers do not repeat experiments, rarely see the data, and cannot detect competent fraud. It became standard practice recently, for partly administrative reasons, and the evidence on how well it performs is considerably less flattering than its status suggests.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="It_is_recent">It is much newer than its reputation</h2>

@@ -7,7 +7,7 @@ export const writingSystems: RewrittenArticle = {
   dek: "Nobody set out to record literature. The first texts are receipts, and it took centuries for anyone to write down a sentence.",
   standfirst:
     "Writing is so bound up with civilisation that its origin story is usually told as a triumph of the human spirit. The documents say otherwise. The earliest writing we can read is inventory — barley, sheep, oil, who owes what to whom — and the systems that produced it were developed by administrators trying to keep track of a warehouse.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="Counting_before_writing">Counting before writing</h2>

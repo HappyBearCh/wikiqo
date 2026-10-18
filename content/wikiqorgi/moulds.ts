@@ -7,7 +7,7 @@ export const moulds: RewrittenArticle = {
   dek: "Cutting the fuzzy bit off a mouldy loaf does not work. The visible growth is the fruiting layer of a network already through the crumb.",
   standfirst:
     "Mould is not a taxonomic group but a growth habit — filamentous fungi producing visible colonies on a surface — and it is the principal reason food spoils, buildings decay and stored grain becomes dangerous. It is also the source of penicillin, of several cheeses, of citric acid at industrial scale, and of the compound that lowers cholesterol in tens of millions of people. The same biology underlies all of it: an organism that digests its substrate externally and defends the resulting meal with chemistry.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Growth">What is actually growing</h2>

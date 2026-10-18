@@ -7,7 +7,7 @@ export const cephalopods: RewrittenArticle = {
   dek: "Most of an octopus's neurons are in its arms. It is the closest thing available to an independent experiment in how minds can be built.",
   standfirst:
     "The last common ancestor of an octopus and a human was a small worm-like creature living some 600 million years ago, with essentially no brain. Everything sophisticated about cephalopod nervous systems evolved separately from everything sophisticated about ours. That makes them the only available comparison case for which features of intelligence are necessary and which are simply how it happened to go once.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Separate">Why they matter</h2>

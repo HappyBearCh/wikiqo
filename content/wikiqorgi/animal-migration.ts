@@ -7,7 +7,7 @@ export const animalMigration: RewrittenArticle = {
   dek: "A bird raised in a cage, that has never migrated and has no one to follow, will try to fly the right way at the right time of year.",
   standfirst:
     "Migration is not simply travelling. It is a heritable programme — direction, timing, distance and fuelling all encoded well enough that a naive juvenile can reach a wintering ground it has never seen, alone. The navigational toolkit includes a magnetic sense whose receptor has still not been definitively identified in any vertebrate, which makes this one of the largest unresolved questions in sensory biology.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Programmed">The programme is inherited</h2>

@@ -7,7 +7,7 @@ export const sanitation: RewrittenArticle = {
   dek: "Readers of the British Medical Journal voted sanitation the greatest medical advance since 1840. It beat antibiotics and vaccines.",
   standfirst:
     "The largest gains in human life expectancy came from civil engineering rather than medicine. Separating drinking water from sewage did more to reduce death than any drug, and it was accomplished largely before anyone understood why it worked — by people acting on a theory of disease that was completely wrong.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="Cities_used_to_kill_people">Cities used to kill people</h2>

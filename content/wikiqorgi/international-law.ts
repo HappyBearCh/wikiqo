@@ -7,7 +7,7 @@ export const internationalLaw: RewrittenArticle = {
   dek: "The standard objection is that it cannot be law because nothing enforces it. The standard reply is to look at how much of it is complied with.",
   standfirst:
     "There is no world legislature, no compulsory court, and no police force. By the definition of law most people carry around — commands backed by sanctions from a sovereign — international law fails immediately and should be dismissed as etiquette. The awkward fact for that view is that the overwhelming majority of international obligations are complied with routinely and unremarkably, and that states which break them spend enormous effort arguing that they have not.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Where_the_rules_come_from">Where the rules come from</h2>

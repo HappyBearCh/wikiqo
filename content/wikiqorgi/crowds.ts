@@ -7,7 +7,7 @@ export const crowds: RewrittenArticle = {
   dek: "The idea that crowds lose their minds is a nineteenth-century political theory that has been contradicted by essentially every investigation since.",
   standfirst:
     "The standard account of crowd disasters — that people panicked, stampeded, and trampled each other — has been examined repeatedly by researchers with access to footage, survivor accounts and structural data, and it is almost always wrong. What actually kills people is compressive asphyxia in densities produced by design failures, and what survivors overwhelmingly report is cooperation. The persistence of the panic story tells you something about who benefits from it.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Le_Bon">Where the myth comes from</h2>

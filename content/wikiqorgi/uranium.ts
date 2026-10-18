@@ -7,7 +7,7 @@ export const uranium: RewrittenArticle = {
   dek: "For a century after its discovery it was used to tint glass and glaze. Then it fogged a photographic plate, split in a Berlin laboratory, and destroyed a city. It had also, two billion years ago, run a nuclear reactor on its own.",
   standfirst:
     "Uranium is the heaviest element found in quantity in nature, a dense grey metal spread thinly through rocks and seawater. It was discovered in the year of the French Revolution and named after a planet found eight years earlier. For most of its history as a known element it was a curiosity. In the space of fifty years it revealed radioactivity, made possible the splitting of the atom, and became both the fuel for nuclear power and the material of the first atomic bomb used in war.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-18",
   html: `
 <h2 id="Klaproth">Named after a planet</h2>

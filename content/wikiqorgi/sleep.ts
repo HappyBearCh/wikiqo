@@ -7,7 +7,7 @@ export const sleep: RewrittenArticle = {
   dek: "Evolution does not tolerate expensive habits without reason — and it has never found a way to skip this one.",
   standfirst:
     "Sleep is the strongest evidence that the brain is doing something we do not understand. An animal that sleeps is immobile, insensible and defenceless for hours at a stretch, which is close to the worst survival strategy imaginable. Every animal examined closely does it anyway. Whatever sleep is for, the price of skipping it must be higher than being eaten.",
-  readingMinutes: 8,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="Not_the_absence_of_anything">Not the absence of anything</h2>

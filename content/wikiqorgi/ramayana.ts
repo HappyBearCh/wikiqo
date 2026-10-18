@@ -7,7 +7,7 @@ export const ramayana: RewrittenArticle = {
   dek: "A prince exiled to the forest, a wife abducted by a demon king, a monkey who leaps the sea. The Sanskrit epic attributed to Valmiki has been retold across Asia for two thousand years, and no two tellings agree on how it should end.",
   standfirst:
     "Few stories have been told as often, in as many languages, as the Ramayana. It began as a Sanskrit poem attributed to the sage Valmiki, became scripture for hundreds of millions of Hindus, and travelled into the temple carvings of Java, the royal theatre of Thailand and, in 1987, the television sets of almost every household in India. Each retelling has reshaped it, and the arguments over which version is the true one are almost as old as the story.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Valmiki">The first poem</h2>

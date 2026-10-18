@@ -7,7 +7,7 @@ export const concrete: RewrittenArticle = {
   dek: "Roman harbour walls have stood in seawater for two thousand years. Twentieth-century concrete is often designed to last fifty.",
   standfirst:
     "Concrete is the second most consumed material on the planet, and it is used at a rate that makes its problems enormous by arithmetic alone. It is also, in its modern reinforced form, a material with a built-in expiry date — one that the Romans, whose structures are still standing, managed to avoid entirely by not using the ingredient that causes it.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="What_it_is">What it is</h2>

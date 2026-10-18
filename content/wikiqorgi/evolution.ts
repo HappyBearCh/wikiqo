@@ -7,7 +7,7 @@ export const evolution: RewrittenArticle = {
   dek: "Not a theory about origins so much as a mechanism so simple it is nearly a tautology — and so powerful it built everything alive.",
   standfirst:
     "Natural selection requires only three conditions: things vary, some of that variation is inherited, and some variants leave more descendants than others. Wherever those hold, the population changes, necessarily. That is close to a logical consequence rather than an empirical claim, which is what makes evolution both hard to argue with and easy to misunderstand.",
-  readingMinutes: 9,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="What_Darwin_actually_contributed">What Darwin actually contributed</h2>

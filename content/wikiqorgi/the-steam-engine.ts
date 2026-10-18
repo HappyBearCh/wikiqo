@@ -7,7 +7,7 @@ export const theSteamEngine: RewrittenArticle = {
   dek: "The first practical engines were absurdly inefficient and it did not matter, because they sat on top of their own fuel supply.",
   standfirst:
     "The steam engine was not invented to power industry. It was invented to solve one specific problem — mines flooding faster than horses could bail them — and the earliest working version wasted well over ninety-nine per cent of its fuel. It survived that inefficiency because it was installed at the pithead, where fuel was effectively free. Everything afterwards followed from making it good enough to move.",
-  readingMinutes: 8,
+  readingMinutes: 7,
   published: "2026-08-17",
   html: `
 <h2 id="The_problem">A pumping problem</h2>

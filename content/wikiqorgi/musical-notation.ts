@@ -7,7 +7,7 @@ export const musicalNotation: RewrittenArticle = {
   dek: "The first music writing reminded singers of tunes they already knew. It took six centuries to write down rhythm, and the page still leaves most of the music out.",
   standfirst:
     "A written score looks like a complete set of instructions. It is not, and was never meant to be. Western notation grew piece by piece, each addition solving a problem the previous system could not — first how high, then how long, then how fast — and at every stage it relied on performers to supply what it did not say. The history of notation is a history of deciding which parts of music are worth writing down, and those decisions changed the music itself.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Before_writing">Music without a page</h2>

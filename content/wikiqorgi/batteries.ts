@@ -7,7 +7,7 @@ export const batteries: RewrittenArticle = {
   dek: "The chemistry wants to happen anyway. A battery's design is entirely about making the electrons take the long way round.",
   standfirst:
     "A battery is two materials that would react if allowed to touch, deliberately kept apart. The reaction can only proceed if electrons travel from one to the other, and the only path provided runs out through a terminal, through whatever you have connected, and back in the other side. Everything difficult about batteries — capacity, lifetime, charging speed, fires — follows from managing a reaction that is straining to happen the short way.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="How_it_works">The trick</h2>

@@ -7,7 +7,7 @@ export const geysers: RewrittenArticle = {
   dek: "A geyser needs heat, water and a constricted underground channel that traps boiling water under its own weight. There are only about a thousand on Earth, and drilling has killed many of them.",
   standfirst:
     "Hot springs are common wherever water meets hot rock. Geysers, which erupt in periodic fountains, are rare: a few fields in Yellowstone, Iceland, Kamchatka, Chile and New Zealand account for nearly all of them. A geyser is a delicate machine built by accident from heat, water and the geometry of cracks in the ground, and its eruptions are a demonstration of a piece of physics that also explains why pressure cookers work.",
-  readingMinutes: 6,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Mechanism">Water that cannot boil, until it all does</h2>

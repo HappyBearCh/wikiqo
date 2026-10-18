@@ -7,7 +7,7 @@ export const troy: RewrittenArticle = {
   dek: "Schliemann dug into the right hill and destroyed much of what he was looking for. The mound holds at least nine settlements stacked over three thousand years, and Hittite tablets may name the city Homer sang about.",
   standfirst:
     "By the middle of the nineteenth century most scholars thought Troy was a poet's invention. Then a businessman with a copy of Homer and very few scruples dug into a mound in northwest Turkey and proved them wrong, although not in the way he believed. A century and a half of excavation since has found a real and substantial Bronze Age city. Whether it fought the war in the Iliad is a question archaeology can come close to but cannot quite answer.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-06",
   html: `
 <h2 id="Hill">The hill by the strait</h2>

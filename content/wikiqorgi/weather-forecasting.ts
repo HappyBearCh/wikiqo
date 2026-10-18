@@ -7,7 +7,7 @@ export const weatherForecasting: RewrittenArticle = {
   dek: "The physics has been known since 1904. The problem is that the atmosphere amplifies any error in knowing where it started.",
   standfirst:
     "Forecasting is not guesswork dressed up in graphics. The equations governing the atmosphere are known, complete, and deterministic, and have been for over a century. What limits a forecast is not ignorance of the physics but the impossibility of measuring the starting state precisely enough — and the discovery, made by accident on a rounding error, that this limit is absolute rather than technological.",
-  readingMinutes: 8,
+  readingMinutes: 7,
   published: "2026-08-17",
   html: `
 <h2 id="The_equations">The physics was never the problem</h2>

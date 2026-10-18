@@ -7,7 +7,7 @@ export const desalination: RewrittenArticle = {
   dek: "Taking salt out of the sea was a ship's emergency measure for centuries. A plastic film invented in a California lab turned it into the water supply of entire countries.",
   standfirst:
     "There is no shortage of water on Earth; nearly all of it is simply too salty to drink or grow crops with. Removing the salt is chemically straightforward and energetically expensive, because the salt does not want to leave. For most of history that cost confined desalination to ships and desert outposts. Over the last half century it has fallen far enough that several countries now drink mainly the sea — leaving behind a different problem in the form of the concentrated brine.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Boiling">Boiling it off</h2>

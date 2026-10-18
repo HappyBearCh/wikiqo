@@ -7,7 +7,7 @@ export const earthsCircumference: RewrittenArticle = {
   dek: "Around 240 BC, Eratosthenes measured the planet from a shadow in Alexandria. Columbus later sailed on a smaller, wrong estimate — and the scholars who doubted him were right.",
   standfirst:
     "People did not need to wait for explorers or satellites to know the size of the Earth. A Greek scholar in Egypt worked it out more than two thousand years ago from the angle of a shadow and the distance between two cities, and his method was sound even if the precise accuracy of his answer is still debated. The later history of measuring the Earth includes a famous mistake by Columbus, a myth about medieval ignorance, and the discovery that the planet is not quite round.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Eratosthenes">A shadow in Alexandria</h2>

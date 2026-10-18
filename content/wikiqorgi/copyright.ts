@@ -7,7 +7,7 @@ export const copyright: RewrittenArticle = {
   dek: "It began as censorship machinery, was recast as a bargain with the public, and has since been extended so often that the bargain is hard to locate.",
   standfirst:
     "Copyright is not an ancient right of creators. It is a statutory monopoly, roughly three hundred years old, invented to regulate a printing industry and repurposed almost immediately as a claim about authorship. The original deal was explicit: a limited term of exclusivity in exchange for the work eventually belonging to everyone. Both halves are still in the statute; only one is still enforced with any energy.",
-  readingMinutes: 8,
+  readingMinutes: 7,
   published: "2026-08-17",
   html: `
 <h2 id="Before_authors">It started as licensing, not as rights</h2>

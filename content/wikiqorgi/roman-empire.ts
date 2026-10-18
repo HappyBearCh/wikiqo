@@ -7,7 +7,7 @@ export const romanEmpire: RewrittenArticle = {
   dek: "Rome's most successful invention was not the arch or the road but a fiction — that nothing had changed.",
   standfirst:
     "Rome never had a coronation. It had a young man named Octavian who ended a civil war, handed his powers back to the Senate in a carefully staged ceremony, and received in return, piece by piece, everything that mattered. The Republic was not abolished. It was left standing, hollow, as a set of offices an emperor could hold all at once.",
-  readingMinutes: 9,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="The_settlement_that_founded_an_empire">The settlement that founded an empire</h2>

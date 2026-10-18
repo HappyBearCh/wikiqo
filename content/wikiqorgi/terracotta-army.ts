@@ -7,7 +7,7 @@ export const terracottaArmy: RewrittenArticle = {
   dek: "Farmers digging a well in 1974 found pieces of a clay warrior. The pits held an army made like a factory product, and the emperor they guard still lies unexcavated beneath his mound.",
   standfirst:
     "The first emperor of China, Qin Shi Huang, unified the warring states in 221 BC and spent much of his reign preparing for his death. His burial complex outside the modern city of Xi'an is one of the largest ever built, and its best-known part is an army of life-size clay soldiers standing in battle formation in underground pits. Half a century after they were found, archaeologists are still digging them out, and the emperor's own tomb has not been touched.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-18",
   html: `
 <h2 id="Emperor">The first emperor</h2>

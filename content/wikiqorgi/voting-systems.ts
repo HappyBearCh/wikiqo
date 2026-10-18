@@ -7,7 +7,7 @@ export const votingSystems: RewrittenArticle = {
   dek: "Every method of turning individual rankings into a group ranking violates some condition everyone agrees is reasonable. This was proved in 1951.",
   standfirst:
     "The intuition that there must be a correct way to count votes, if only we were clever enough, is false in a specific and provable sense. Kenneth Arrow showed that a short list of entirely uncontroversial fairness conditions cannot all be satisfied at once by any ranking method. The practical question is therefore not which system is fair but which failure you prefer — and the systems in actual use differ enormously in how often and how badly they fail.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Condorcet">The paradox that starts it</h2>

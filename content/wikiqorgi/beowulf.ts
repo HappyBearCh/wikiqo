@@ -7,7 +7,7 @@ export const beowulf: RewrittenArticle = {
   dek: "The longest poem in Old English survives in one manuscript, scorched in a library fire in 1731. It was ignored for centuries as a monster story, until J. R. R. Tolkien argued that the monsters were the point.",
   standfirst:
     "Beowulf is a poem by an unknown English poet about Scandinavians who lived centuries earlier. Nobody knows when it was composed, and it reached us by a thread: a single copy, made around the year 1000, that was damaged by fire and transcribed just in time. It is now the founding text of English literature, and its monsters have outlived nearly every hero of its age.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Story">Three fights</h2>

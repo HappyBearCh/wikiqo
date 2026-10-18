@@ -7,7 +7,7 @@ export const fungi: RewrittenArticle = {
   dek: "A mushroom is a fruiting body. The organism is a network of threads in the soil that may cover several square kilometres and be thousands of years old.",
   standfirst:
     "Fungi were classified as plants for most of the history of biology, on the reasoning that they do not move. They are not plants: they cannot photosynthesise, their cell walls are chitin rather than cellulose, they store glycogen as animals do, and molecular phylogeny places them closer to animals than to plants. They constitute a kingdom whose visible portion is a small and temporary part of the organism, and whose ecological function — dismantling dead material — is what keeps the carbon cycle from stopping.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Not_plants">The reclassification</h2>

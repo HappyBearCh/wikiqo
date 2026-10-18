@@ -7,7 +7,7 @@ export const sparta: RewrittenArticle = {
   dek: "Spartans wrote almost nothing about themselves. What we know comes largely from admirers and enemies in other cities, and from writers centuries later. Behind the image of disciplined warriors stood a tiny citizen elite living off a far larger population of serfs it feared.",
   standfirst:
     "Few ancient cities have had a longer afterlife than Sparta. Its soldiers became a byword for courage, its austerity for self-discipline, its terse speech for wit — we still call it laconic, after Laconia, the Spartans' homeland. Yet the Spartans left few written records, and almost every account of them was written by outsiders. Historians call the result the Spartan mirage: an image so idealised, by ancient and modern writers alike, that the real city is hard to see through it.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-17",
   html: `
 <h2 id="Mirage">The mirage</h2>

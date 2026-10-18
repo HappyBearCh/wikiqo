@@ -7,7 +7,7 @@ export const parrots: RewrittenArticle = {
   dek: "Parrots are among the cleverest animals alive, and some of the longest-lived. An African grey named Alex learned to name colours, shapes and numbers. Cockatoos in Sydney taught each other to open rubbish bins. And the pet trade that prizes their intelligence has pushed many species towards extinction.",
   standfirst:
     "People have kept parrots for thousands of years, delighted and unsettled by birds that can imitate human speech. For most of that time the imitation was taken for mere mimicry, an empty trick. Research since the 1970s has shown that parrots are among the most intelligent of all animals, with brains that pack in neurons at extraordinary density, and some of the richest social lives of any bird. Those same qualities make them hard to keep, and valuable to trap.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Birds">The birds</h2>

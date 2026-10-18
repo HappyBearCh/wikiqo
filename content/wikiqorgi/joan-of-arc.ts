@@ -7,7 +7,7 @@ export const joanOfArc: RewrittenArticle = {
   dek: "She lifted a siege, had a king crowned and was burned at nineteen. We know her voice so well because the court that condemned her kept a transcript.",
   standfirst:
     "Joan of Arc was a peasant girl from the edge of France who, at seventeen, convinced the uncrowned heir to the French throne to give her a place with his army, and within a few months had helped turn the course of the Hundred Years' War. Two years later she was dead, burned as a relapsed heretic by a church court working for the English. Few people from the Middle Ages, and almost no peasants, can be heard as directly as she can, because both that court and the one that later overturned its verdict kept records.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-10-06",
   html: `
 <h2 id="Domremy">Domrémy</h2>

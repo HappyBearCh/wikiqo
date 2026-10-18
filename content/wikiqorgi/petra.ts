@@ -7,7 +7,7 @@ export const petra: RewrittenArticle = {
   dek: "The famous facades are tombs. The city that grew rich on the incense trade around them depended on dams, channels and cisterns that caught nearly every drop of rain.",
   standfirst:
     "Petra, in the mountains of southern Jordan, was the capital of the Nabataeans, Arab traders who controlled the caravan routes carrying incense and spices from southern Arabia to the Mediterranean. They cut monumental facades into the red sandstone cliffs, and they built a city of tens of thousands of people in a place that gets almost no rain. A Swiss traveller in disguise introduced it to Europe in 1812; the people who lived there had never lost it.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-18",
   html: `
 <h2 id="Nabataeans">The Nabataeans</h2>

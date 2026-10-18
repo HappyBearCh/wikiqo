@@ -7,7 +7,7 @@ export const money: RewrittenArticle = {
   dek: "The story where money replaced barter is in every textbook, and anthropologists have never found a society that worked that way.",
   standfirst:
     "Economics textbooks open with a village where a butcher wants shoes and a cobbler wants bread, and money is invented to solve the mismatch. It is a tidy story and there is no evidence for it. Where the record is good enough to check, credit came first: elaborate systems of who owed what to whom, with coinage arriving much later and usually to pay soldiers.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="The_barter_myth">The barter myth</h2>

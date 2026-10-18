@@ -7,7 +7,7 @@ export const camouflage: RewrittenArticle = {
   dek: "The zebra's stripes are the clearest case — and after a century of argument the best-supported explanation is not about predators at all.",
   standfirst:
     "Concealment is usually imagined as blending in, and blending in is only one of several strategies and often not the best. An animal that matches its background perfectly is still betrayed by its outline and its shadow. The techniques that actually work — disrupting edges, cancelling shading, mimicking specific objects — were worked out by a naturalist painter, adopted by navies, and are now being tested experimentally with a rigour the field lacked for most of its history.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Thayer">The painter who worked it out</h2>

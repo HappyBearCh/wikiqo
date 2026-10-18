@@ -7,7 +7,7 @@ export const maize: RewrittenArticle = {
   dek: "Its wild ancestor looks nothing like it, and for decades botanists refused to believe the connection. It is now the most produced grain on earth, and most of it is not eaten by people.",
   standfirst:
     "Maize, called corn in North America, is the world's largest crop by weight. It feeds people across the Americas and Africa, fattens much of the world's livestock, and fuels cars. It is also one of the most radical transformations people have ever made to another species: a grass from southern Mexico reshaped over thousands of years into a plant whose seeds are wrapped so tightly that it can no longer sow itself.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-18",
   html: `
 <h2 id="Teosinte">An unlikely ancestor</h2>

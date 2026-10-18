@@ -7,7 +7,7 @@ export const translation: RewrittenArticle = {
   dek: "Every translation is a series of losses chosen deliberately — and the choosing is the work.",
   standfirst:
     "There is no such thing as a neutral translation. Languages divide the world differently, carry different associations, and make different things obligatory, so no sentence maps cleanly onto another. A translator is not transferring meaning across a gap; they are deciding, hundreds of times a page, what to sacrifice.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="What_makes_it_hard">What makes it hard</h2>

@@ -7,7 +7,7 @@ export const tutankhamun: RewrittenArticle = {
   dek: "He reigned for about nine years and died at around nineteen. His tomb was the only royal burial in the Valley of the Kings found largely intact, and it took ten years to empty.",
   standfirst:
     "By the standards of ancient Egypt, Tutankhamun was not an important pharaoh. He came to the throne as a child, in the confused years after a religious revolution, and was dead before he was twenty. His fame rests almost entirely on an accident of preservation: tomb robbers and later builders missed his burial, and in November 1922 Howard Carter found it with most of its contents still inside.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-18",
   html: `
 <h2 id="Reign">A boy king after a revolution</h2>

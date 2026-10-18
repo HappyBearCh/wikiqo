@@ -7,7 +7,7 @@ export const challenger: RewrittenArticle = {
   dek: "The night before, the engineers who knew the booster seals best said it was too cold to fly. How their warning was overruled became the most studied decision in engineering.",
   standfirst:
     "On 28 January 1986 the space shuttle Challenger broke apart 73 seconds after launch, killing all seven people on board, in front of a television audience that included schoolchildren watching a teacher go to space. The physical cause was found within weeks: a rubber seal that had stiffened in the cold. The harder question was why an organisation full of capable engineers had launched in conditions some of them had warned, in writing and out loud, could kill the crew.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-10-06",
   html: `
 <h2 id="The_flight">Seventy-three seconds</h2>

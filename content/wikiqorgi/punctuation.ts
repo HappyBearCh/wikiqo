@@ -7,7 +7,7 @@ export const punctuation: RewrittenArticle = {
   dek: "Ancient texts had no spaces between words. Punctuation began as a guide to reading aloud, became a guide to grammar, and occasionally decides lawsuits.",
   standfirst:
     "Most of the conventions of written English that feel natural — spaces between words, commas, question marks, paragraphs — were invented, adopted slowly, and changed their purpose along the way. Ancient readers worked through unbroken streams of letters. Medieval scribes added spaces for readers of a foreign language; printers standardised the marks; and grammarians turned them from cues for the voice into signals of structure. Their small size belies their power: a missing comma has cost a company millions.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-03",
   html: `
 <h2 id="No_spaces">Writing without spaces</h2>

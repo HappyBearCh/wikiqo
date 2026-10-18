@@ -7,7 +7,7 @@ export const hindenburg: RewrittenArticle = {
   dek: "It burned in about thirty seconds in front of newsreel cameras. Most of the people on board survived. The airship as a way to travel did not.",
   standfirst:
     "The Hindenburg was the largest aircraft ever flown and, for one season, the most glamorous way to cross the Atlantic. It was destroyed on 6 May 1937 while landing in New Jersey, and the film of its burning is among the most famous pieces of footage of the twentieth century. The disaster is usually said to have killed the airship. It is closer to the truth to say that it ended an industry that was already losing.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-10-06",
   html: `
 <h2 id="What_it_was">A hotel held up by hydrogen</h2>

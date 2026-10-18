@@ -7,7 +7,7 @@ export const cats: RewrittenArticle = {
   dek: "Nobody set out to tame the cat. Wildcats moved in with the first farmers to hunt the mice in their grain, and stayed. Ten thousand years later there are hundreds of millions of them — and they have driven dozens of species to extinction along the way.",
   standfirst:
     "The domestic cat is the world's most popular pet in many countries and the most successful small predator people have ever spread across the globe. Unlike dogs, cattle or horses, it was never bred for a job, and it has changed remarkably little from its wild ancestor. Genetics and archaeology have recently filled in much of its story: where it came from, how it travelled, and what it has cost the wildlife it met on the way.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-17",
   html: `
 <h2 id="Origins">A wildcat moves in</h2>

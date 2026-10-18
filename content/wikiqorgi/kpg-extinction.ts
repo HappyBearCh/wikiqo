@@ -7,7 +7,7 @@ export const kpgExtinction: RewrittenArticle = {
   dek: "An asteroid arrived, three-quarters of species did not survive it, and the story was reconstructed from a thin layer of unusual clay.",
   standfirst:
     "Sixty-six million years ago an object roughly ten kilometres across struck what is now the Yucatán Peninsula at something like twenty kilometres per second. The impact itself killed almost nothing beyond the immediate region. What followed over the next months and years killed three-quarters of all species on Earth, and the reason it did is more interesting than the collision.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="A_layer_of_clay_that_should_not_exist">A layer of clay that should not exist</h2>

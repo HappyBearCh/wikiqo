@@ -7,7 +7,7 @@ export const deepSea: RewrittenArticle = {
   dek: "It makes up most of the living space on the planet, and we have mapped it worse than we have mapped Mars.",
   standfirst:
     "Below about 200 metres the sunlight runs out, and everything beneath is the deep sea — some 95 per cent of the volume in which life on Earth can exist. It is cold, dark, crushing, and mostly food-free, and it is inhabited throughout. More people have been to space than to the bottom of the Mariana Trench.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="The_conditions">The conditions</h2>

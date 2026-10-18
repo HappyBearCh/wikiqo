@@ -7,7 +7,7 @@ export const cavendishExperiment: RewrittenArticle = {
   dek: "In 1798 a reclusive aristocrat measured the pull between lead spheres in a shed, watching through a telescope from outside so his body heat would not disturb it. The result revealed the density of the planet.",
   standfirst:
     "Newton's law of gravitation describes how every mass attracts every other, but it contains a constant, G, that sets the strength of the pull, and Newton had no way to measure it. Gravity between objects of human scale is so weak that it is swamped by every other influence. A century later, Henry Cavendish measured it with a delicate apparatus in a sealed room, and in doing so determined the density, and hence the mass, of the Earth. His result was within about one per cent of the modern value — and G remains the least precisely known of the fundamental constants.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-02",
   html: `
 <h2 id="Problem">Why gravity is hard to measure</h2>

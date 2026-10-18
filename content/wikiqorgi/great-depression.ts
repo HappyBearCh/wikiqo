@@ -7,7 +7,7 @@ export const greatDepression: RewrittenArticle = {
   dek: "Stock markets fall regularly. What turned this one into ten years of mass unemployment was the response.",
   standfirst:
     "The 1929 crash is remembered as the cause, and it was closer to a trigger. Markets had fallen before without producing a decade of destitution. What made this different was a sequence of policy decisions — monetary, fiscal and trade — each defensible by the orthodoxy of the time, and each of which made things worse.",
-  readingMinutes: 8,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="Before_the_crash">Before the crash</h2>

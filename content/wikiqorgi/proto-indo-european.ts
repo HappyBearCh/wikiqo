@@ -7,7 +7,7 @@ export const protoIndoEuropean: RewrittenArticle = {
   dek: "It was spoken five thousand years ago, left no writing, and we can nonetheless say how it formed its plurals.",
   standfirst:
     "Half the world speaks a descendant of a language that vanished before writing reached the people who spoke it. Nobody wrote a word of Proto-Indo-European. It has been reconstructed entirely by working backwards from its children — and the reconstruction has been tested by prediction and passed, which is why it is science rather than speculation.",
-  readingMinutes: 8,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="The_observation_that_started_it">The observation that started it</h2>

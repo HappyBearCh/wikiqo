@@ -7,7 +7,7 @@ export const kilogram: RewrittenArticle = {
   dek: "For 130 years, a kilogram was the mass of one metal cylinder near Paris, by definition. Its copies drifted, nobody could say whether it was the original or the copies that had changed, and in 2019 it was retired.",
   standfirst:
     "Every measurement of mass on Earth, from a laboratory balance to a bag of flour, was traceable to a single cylinder of platinum-iridium kept under three glass bell jars in a vault outside Paris. Whatever its mass was, that was a kilogram, by definition. That arrangement worked well enough for commerce but became an embarrassment for science, and replacing it required measuring a fundamental constant of quantum physics more precisely than had ever been done.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-02",
   html: `
 <h2 id="Water">From a litre of water to a metal cylinder</h2>

@@ -7,7 +7,7 @@ export const quantumMechanics: RewrittenArticle = {
   dek: "The mathematics is unambiguous and predicts experiments to twelve decimal places. What the mathematics is describing has been argued about for a hundred years.",
   standfirst:
     "There is no controversy about how to use quantum mechanics. Write down the equation, solve it, calculate probabilities, compare with experiment; the agreement is the best in the history of science. The controversy is entirely about what the equation refers to — whether the wave function is a physical thing or a bookkeeping device, and what happens at the moment a measurement is made. A century of experiment has narrowed the options without settling them.",
-  readingMinutes: 9,
+  readingMinutes: 8,
   published: "2026-08-17",
   html: `
 <h2 id="Where_it_came_from">Where it came from</h2>

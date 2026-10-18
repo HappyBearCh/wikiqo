@@ -7,7 +7,7 @@ export const fisheries: RewrittenArticle = {
   dek: "A stock that regrows invites the belief that it cannot be exhausted. Newfoundland's cod proved otherwise, and did not come back.",
   standfirst:
     "Fish are renewable, which is exactly what makes them easy to destroy. A resource that replenishes itself supports the assumption that harvesting is sustainable by default, and the arithmetic of population growth means a stock can appear healthy until shortly before it is not. The collapses of the last century were not caused by ignorance of this. They were caused by institutions unable to act on it.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="The_curve_everyone_is_managing">The curve everyone is managing</h2>

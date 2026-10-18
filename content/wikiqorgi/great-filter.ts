@@ -7,7 +7,7 @@ export const greatFilter: RewrittenArticle = {
   dek: "If the galaxy is old and vast, why has no one come calling? One answer is that somewhere between dead chemistry and a civilisation that spreads across the stars, there is a step that almost nothing gets past. The unsettling question is whether we have already passed it.",
   standfirst:
     "In 1950, over lunch at Los Alamos, the physicist Enrico Fermi is said to have asked his colleagues: \"Where is everybody?\" The galaxy contains hundreds of billions of stars, many of them billions of years older than the Sun, and it would take an expanding civilisation only a few million years to cross it. Yet we see no sign of anyone. The Great Filter is one way of turning that silence into an argument — one with uncomfortable implications for our own future.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Fermi">Where is everybody?</h2>

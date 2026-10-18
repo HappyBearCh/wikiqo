@@ -7,7 +7,7 @@ export const suttonHoo: RewrittenArticle = {
   dek: "In 1939 a self-taught excavator uncovered the ghost of a 27-metre ship, and inside it the richest burial ever found in Britain. The body had vanished; the gold had not.",
   standfirst:
     "On a ridge above the river Deben in Suffolk, a group of grassy mounds turned out to be the cemetery of the early kings of East Anglia. The largest held a ship dragged up from the river and buried whole, with a chamber at its centre filled with gold, garnets and silver from across Europe and beyond. Found weeks before the Second World War, it changed what historians thought of the centuries once called the Dark Ages.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-18",
   html: `
 <h2 id="Pretty">A landowner and a local man</h2>

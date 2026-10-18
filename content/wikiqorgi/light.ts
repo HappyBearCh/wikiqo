@@ -7,7 +7,7 @@ export const light: RewrittenArticle = {
   dek: "Wave or particle was the wrong question, and finding that out cost physics its confidence in ordinary objects.",
   standfirst:
     "The history of light is a sequence of experiments each of which settled the matter permanently, until the next one. Newton established it was particles. Young established it was waves. Maxwell explained what kind of wave. Einstein established it was particles again. The resolution, when it came, was not a compromise — it was an admission that the categories were ours rather than nature's.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="Two_men_and_a_slit">Two men and a slit</h2>

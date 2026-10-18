@@ -7,7 +7,7 @@ export const timeZones: RewrittenArticle = {
   dek: "Every town once set its clocks by its own sun, which meant a train crossing England passed through hundreds of slightly different times.",
   standfirst:
     "Before the 1840s, time was local everywhere and this caused nobody any trouble, because nothing moved fast enough for the differences to matter. The railway changed that in a decade: a timetable requires that everyone on the line agree what time it is, and a signalling system that prevents collisions requires it absolutely. The zones that resulted are not geometric divisions of the globe but political ones, and their boundaries record exactly whom each country wanted to be synchronised with.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Local_time">When every town had its own time</h2>

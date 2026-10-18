@@ -7,7 +7,7 @@ export const theAtom: RewrittenArticle = {
   dek: "The solar system picture was already known to be wrong when it was drawn. Electrons do not orbit anything.",
   standfirst:
     "The atom in the logo — a nucleus with electrons circling it on neat elliptical tracks — was obsolete within about a decade of being proposed, and physicists knew it could not work even as they used it. Its replacement is harder to draw and considerably stranger: electrons occupy standing-wave patterns of probability, and asking where one is between measurements may not be a meaningful question.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Mostly_empty">Mostly empty</h2>

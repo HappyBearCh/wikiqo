@@ -7,7 +7,7 @@ export const maillardReaction: RewrittenArticle = {
   dek: "Toast, roast coffee, seared steak and beer all owe their flavour to reactions between sugars and proteins. The same chemistry happens slowly in the body, which is how diabetes is monitored.",
   standfirst:
     "When bread toasts, meat sears or coffee roasts, it browns and develops flavours it did not have before. Most of that is the Maillard reaction, a cascade of chemical reactions between sugars and amino acids, named after a French chemist who described it in 1912. It explains why boiled meat tastes so different from roasted, why a dry pan matters, and why a common blood test for diabetes works.",
-  readingMinutes: 6,
+  readingMinutes: 4,
   published: "2026-10-03",
   html: `
 <h2 id="Discovery">A chemist's side observation</h2>

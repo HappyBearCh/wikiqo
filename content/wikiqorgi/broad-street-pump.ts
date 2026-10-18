@@ -7,7 +7,7 @@ export const broadStreetPump: RewrittenArticle = {
   dek: "John Snow proved cholera travelled in water in 1854. The medical establishment rejected it for another thirty years.",
   standfirst:
     "The story is told as a triumph: a doctor plots deaths on a map, spots the cluster, removes the pump handle, and the outbreak ends. Almost every element of that is partly wrong — the outbreak was already fading, the map came after the conclusion, and Snow's argument was formally rejected by the authorities who reviewed it. What he actually did was better than the legend.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="What_cholera_does">What cholera does</h2>

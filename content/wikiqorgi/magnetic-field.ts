@@ -7,7 +7,7 @@ export const magneticField: RewrittenArticle = {
   dek: "The compass points north because molten iron churns three thousand kilometres down. The field drifts, weakens and periodically reverses, and the rocks have kept a record of every flip.",
   standfirst:
     "A compass needle behaves as though there were a giant bar magnet inside the planet. There is not; the core is far too hot for any material to stay permanently magnetised. The field is generated continuously by moving liquid metal, which makes it less like a magnet and more like weather — always changing, occasionally dramatically. It shields the atmosphere from the solar wind, guides migrating animals, and has reversed its direction hundreds of times.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Discovery">The Earth as a magnet</h2>

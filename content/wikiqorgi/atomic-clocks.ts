@@ -7,7 +7,7 @@ export const atomicClocks: RewrittenArticle = {
   dek: "The best clocks now measure gravitational time dilation across the height of a table. This stopped being a physics demonstration and became a surveying problem.",
   standfirst:
     "An atomic clock does not measure time so much as count a natural constant: the frequency at which a particular electron transition absorbs radiation, which is identical in every atom of that isotope everywhere. That property is what makes the second reproducible in a way no pendulum or planet could be. Modern optical clocks are so stable that general relativity is no longer a correction to be applied but an effect visible between two clocks in the same room.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Principle">Counting an atom instead of a swing</h2>

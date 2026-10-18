@@ -7,7 +7,7 @@ export const plastics: RewrittenArticle = {
   dek: "Every property that makes plastic useful is the same property that makes the waste a problem. That is not a design flaw.",
   standfirst:
     "The complaint about plastic is that it lasts forever, is hard to degrade, and does not react with anything. Those are the specifications. Plastics were engineered to be cheap, light, durable and chemically indifferent, and they succeeded completely — which is why they are in everything, and why they are still in everything long after the thing they were in stopped being useful.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="Long_molecules">Long molecules</h2>

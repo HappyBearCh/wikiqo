@@ -7,7 +7,7 @@ export const zoning: RewrittenArticle = {
   dek: "A technical planning instrument that determines housing costs, commute lengths, and who is permitted to live where.",
   standfirst:
     "Zoning sounds like municipal housekeeping — a map, some categories, a set of permitted uses. It is in practice one of the most consequential policy instruments any government wields, because it decides in advance what can be built and therefore how many people can live in a place. Much of the argument about housing costs is an argument about zoning conducted without naming it.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="What_it_does">What it does</h2>

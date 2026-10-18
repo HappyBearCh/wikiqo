@@ -7,7 +7,7 @@ export const battleOfMidway: RewrittenArticle = {
   dek: "Six months after Pearl Harbor, Japan set a trap for the American carriers in the central Pacific. The Americans had read enough of the plan to set one of their own, and in a single morning the Japanese navy lost three of its finest carriers in about six minutes.",
   standfirst:
     "The Battle of Midway, fought in June 1942 around a tiny atoll in the middle of the Pacific, is often called the turning point of the war against Japan. It was won by a combination of intelligence work, luck, courage and Japanese mistakes, and its central moment — dive bombers arriving over enemy carriers just as their decks filled with planes about to launch — became one of the war's great stories. Some of that story turns out to be wrong.",
-  readingMinutes: 8,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Plan">Yamamoto's plan</h2>

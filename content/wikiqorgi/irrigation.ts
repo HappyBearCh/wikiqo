@@ -7,7 +7,7 @@ export const irrigation: RewrittenArticle = {
   dek: "A fifth of the world's farmland is irrigated and it grows around two fifths of the food. The same water that makes desert fertile can leave it salted and barren.",
   standfirst:
     "Irrigated agriculture was the economic base of the first cities, and it remains the single largest human use of fresh water. It is a trade with the landscape: bring water to dry, sunny land and crops grow there spectacularly, but every litre carries dissolved salt, and the water has to go somewhere when the crops are done with it. The history of irrigation is full of civilisations that mastered the first half of that trade and were undone by the second.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Origins">Canals before cities</h2>

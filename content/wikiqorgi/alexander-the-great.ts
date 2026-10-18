@@ -7,7 +7,7 @@ export const alexanderTheGreat: RewrittenArticle = {
   dek: "He conquered from Greece to the Indus before he was thirty-three and never lost a pitched battle. His empire broke apart within a few years of his death; the world it opened up lasted for centuries.",
   standfirst:
     "Alexander III of Macedon is the standard against which military ambition has been measured for more than two thousand years. Caesar is said to have wept on reading about him, because at the age Alexander died he had achieved nothing comparable. Yet the man himself is hard to see. No account written in his lifetime survives, and every picture of him — the visionary who dreamed of uniting mankind, the brilliant butcher, the drunk — is assembled from sources written centuries later.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-06",
   html: `
 <h2 id="Inheritance">What he inherited</h2>

@@ -7,7 +7,7 @@ export const nuclearPower: RewrittenArticle = {
   dek: "Deaths per unit of energy put it alongside wind and solar. Its problem has never been the number.",
   standfirst:
     "Count deaths per terawatt-hour and nuclear power sits among the safest sources ever operated, well ahead of every fossil fuel and comparable to renewables. This is not a contested figure. Yet it is the source most people fear most, and the gap between the statistic and the perception is not simple irrationality — it reflects real features of the risk that a single number does not capture, and a history in which the industry earned a great deal of the distrust.",
-  readingMinutes: 8,
+  readingMinutes: 7,
   published: "2026-08-17",
   html: `
 <h2 id="The_reaction">What a reactor is doing</h2>

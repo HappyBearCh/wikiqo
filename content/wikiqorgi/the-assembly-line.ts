@@ -7,7 +7,7 @@ export const theAssemblyLine: RewrittenArticle = {
   dek: "Ford cut chassis assembly from twelve hours to ninety minutes. Then he had to double wages, because nobody would stay.",
   standfirst:
     "The moving assembly line is a single idea with two faces. Moving the work past stationary workers eliminates the time they spend walking, fetching and searching, which produces extraordinary gains in output. It also transfers control of the pace from the worker to the machinery, and the labour turnover that followed at Ford was so severe that the company had to hire hundreds of workers to retain a hundred.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Before">Interchangeable parts came first</h2>

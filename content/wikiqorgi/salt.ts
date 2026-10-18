@@ -7,7 +7,7 @@ export const salt: RewrittenArticle = {
   dek: "Salt preserved food for most of history, financed empires through monopolies, and set off Gandhi's most famous protest. Today most of it goes on roads, and most of what we eat is hidden in processed food.",
   standfirst:
     "Salt is the one rock humans eat. The body needs sodium to keep nerves firing and fluids balanced, and before refrigeration salt was the main way to keep food from rotting through a winter or a voyage. That combination — a necessity everyone had to buy, produced in a few places — made it one of the easiest things in history to tax, and one of the most politically explosive.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-03",
   html: `
 <h2 id="Getting_it">Sun, fire and mines</h2>

@@ -7,7 +7,7 @@ export const smallpox: RewrittenArticle = {
   dek: "Smallpox killed hundreds of millions in the twentieth century alone. It was eliminated in about a decade, not by vaccinating everyone, but by finding every case and vaccinating around it.",
   standfirst:
     "A vaccine against smallpox existed from 1796, and for most of the following century and a half it was not enough. The disease still killed millions every year in the 1950s. What finally ended it was not a better vaccine but a better strategy: a global campaign that, when it ran short of vaccine, discovered that it did not need to immunise whole populations. It needed to find every outbreak and seal it off. Smallpox is the only human disease to have been eradicated, and the reasons it could be are as instructive as the story of how.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Disease">A disease that shaped history</h2>

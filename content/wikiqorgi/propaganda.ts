@@ -7,7 +7,7 @@ export const propaganda: RewrittenArticle = {
   dek: "The effective forms select true things, set what is discussed, and work on people who already agree.",
   standfirst:
     "The popular model of propaganda is a lie told loudly enough to be believed, aimed at converting opponents. Almost none of it works that way. The techniques that survive scrutiny operate by selection rather than fabrication, by determining which questions are asked rather than which answers are given, and by mobilising and hardening existing sympathisers — which is both more effective and far harder to identify while it is happening.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-17",
   html: `
 <h2 id="The_word">The word used to be neutral</h2>

@@ -7,7 +7,7 @@ export const theSun: RewrittenArticle = {
   dek: "It is not burning. It is crushing hydrogen into helium at a rate that turns four million tonnes of matter into light every second.",
   standfirst:
     "Before nuclear physics, the Sun was an unsolved problem verging on a scandal. Any chemical fuel would have burned out in a few thousand years; even gravitational contraction, the best nineteenth-century answer, gave an age of some tens of millions of years — which geologists and Darwin both knew was far too short. The rocks said the Earth was old. Physics said the Sun could not be. Physics was wrong.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="The_energy_problem">The energy problem</h2>

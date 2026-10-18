@@ -7,7 +7,7 @@ export const cotton: RewrittenArticle = {
   dek: "Domesticated four separate times, perfected by Indian weavers, then mechanised in Lancashire and grown by enslaved people in America. The first industrial revolution ran on it.",
   standfirst:
     "Cotton is the fluff that grows around the seeds of a shrub, and it is the most widely used natural fibre in the world. For thousands of years the finest cotton cloth came from India. Then, in the space of about seventy years, British machines learned to spin and weave it faster than any hand could, and the American South supplied the raw fibre with the labour of millions of enslaved people. The most modern industry of its age and the oldest form of coercion grew up together.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-18",
   html: `
 <h2 id="Plant">Four domestications</h2>

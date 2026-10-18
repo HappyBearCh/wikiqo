@@ -7,7 +7,7 @@ export const sacsayhuaman: RewrittenArticle = {
   dek: "Above the Inca capital of Cusco stand zigzag walls of stones so large, and fitted so closely, that a knife blade will not pass between them. The conquistadors used the rest of the complex as a quarry. Archaeologists have since worked out how it was built, without iron, wheels or mystery.",
   standfirst:
     "When the Spanish reached Cusco in 1533 they found on the hill above it a complex of walls, towers and buildings that their chroniclers described with open astonishment. Within a few years it was the scene of the fiercest battle of the conquest, and within a few decades most of it had been dismantled to build churches and houses below. What is left is mostly what was too big to move: three tiers of terrace walls made of some of the largest stones ever shaped by human hands.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Cusco">Above the capital</h2>

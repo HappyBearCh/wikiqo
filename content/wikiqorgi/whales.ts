@@ -7,7 +7,7 @@ export const whales: RewrittenArticle = {
   dek: "The blue whale is the largest animal that has ever lived — larger than any dinosaur — and it eats some of the smallest.",
   standfirst:
     "Whales are the most thorough return journey in evolutionary history. Their ancestors left the water for land, spent tens of millions of years as four-legged animals, and then went back — keeping the lungs, the warm blood and the milk, and rebuilding almost everything else. The fossil sequence documenting it is one of the best transitional records we have.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="The_return">The return</h2>

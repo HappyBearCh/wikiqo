@@ -7,7 +7,7 @@ export const angkor: RewrittenArticle = {
   dek: "Angkor Wat is the largest religious monument on earth, but it was only the centre. Laser scans through the forest have revealed a low-density city of canals, ponds and roads covering a thousand square kilometres.",
   standfirst:
     "For about six centuries, from the ninth to the fifteenth, the kings of the Khmer Empire ruled much of mainland Southeast Asia from Angkor, in what is now northwest Cambodia. They left hundreds of stone temples, including Angkor Wat, which appears on the Cambodian flag. European writers liked to describe Angkor as a lost city found in the jungle. It was never lost, and recent work has shown that the temples were the smallest part of what the Khmer built.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-18",
   html: `
 <h2 id="Empire">A god-king on a mountain</h2>

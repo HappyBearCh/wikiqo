@@ -7,7 +7,7 @@ export const tiger: RewrittenArticle = {
   dek: "A century ago there may have been a hundred thousand wild tigers. By 2010 there were perhaps 3,200. A pledge by thirteen governments to double the number has come closer to succeeding than almost anyone expected — though more tigers now live in captivity than in the wild.",
   standfirst:
     "The tiger is the largest of the cats and one of the most recognisable animals on earth, a national symbol for half a dozen countries and a mascot for countless products. For most of the twentieth century it was hunted, poisoned and squeezed out of its forests, and three of its populations vanished entirely. Its recent partial recovery is one of the more hopeful stories in conservation, and a reminder of how much depends on a few places.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-17",
   html: `
 <h2 id="Cat">The largest cat</h2>

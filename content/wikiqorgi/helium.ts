@@ -7,7 +7,7 @@ export const helium: RewrittenArticle = {
   dek: "It is the second most common element in the universe and was discovered in sunlight before anyone found it on Earth. The helium we use is made slowly by radioactive decay, and once released it escapes into space.",
   standfirst:
     "Helium is the gas in party balloons, but it is also what keeps the magnets of MRI scanners cold, what lets physicists reach within a few degrees of absolute zero, and something that cannot be manufactured in any practical way. Almost all of it is a by-product of the natural gas industry, collected from a few fields where it has been building up for hundreds of millions of years. Its history runs from a solar eclipse to the airship and the strange physics of superfluids.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-18",
   html: `
 <h2 id="Sun">A line in the Sun</h2>

@@ -7,7 +7,7 @@ export const playingCards: RewrittenArticle = {
   dek: "Cups, coins, swords and polo sticks became hearts, diamonds, spades and clubs because two colours and simple shapes were cheaper to print.",
   standfirst:
     "A standard deck looks like a natural object — fifty-two cards, four suits, three court cards each — and every part of it is a decision someone made for a reason, usually a manufacturing one. The deck travelled from China through the Islamic world into Europe, was redesigned in fifteenth-century France to be cheap to stencil, acquired reversible court cards and corner indices in the nineteenth century because of how people hold them, and picked up the joker in America.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Route">The route west</h2>

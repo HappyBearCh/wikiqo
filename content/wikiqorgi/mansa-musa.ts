@@ -7,7 +7,7 @@ export const mansaMusa: RewrittenArticle = {
   dek: "When the king of Mali passed through Cairo on his way to Mecca in 1324, he spent and gave away so much gold that people remembered it for a generation. Behind the legend was an empire built on gold, salt and trade across the Sahara.",
   standfirst:
     "Mansa Musa is now often described online as the richest person who ever lived. The claim is unmeasurable and beside the point. What is well documented is that in 1324 a West African king travelled to Mecca with a caravan whose wealth astonished the Islamic world, and that within a few decades European mapmakers were drawing him on their charts holding a nugget of gold. His journey announced the Mali Empire to the rest of the world, and the sources that record it are the best window we have into it.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-06",
   html: `
 <h2 id="Mali">The empire</h2>

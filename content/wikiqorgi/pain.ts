@@ -7,7 +7,7 @@ export const pain: RewrittenArticle = {
   dek: "Damage and pain are separate things. Understanding why is the difference between treating an injury and treating a person.",
   standfirst:
     "The intuitive model is that pain is a signal travelling from an injury to the brain, with intensity proportional to damage. Almost every part of that is wrong. Soldiers have walked off catastrophic wounds feeling nothing; people have suffered agony in limbs that were amputated years earlier. Pain is not a measurement of tissue damage. It is a decision the brain makes about how much danger you are in.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="The_wire_that_is_not_a_wire">The wire that is not a wire</h2>

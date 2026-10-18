@@ -7,7 +7,7 @@ export const photography: RewrittenArticle = {
   dek: "The camera existed for centuries before anyone could make a picture stay. The invention was chemical, not optical.",
   standfirst:
     "A camera obscura projects a perfect image of the world onto a wall, and artists were tracing them in the sixteenth century. The problem was never getting the image; it was that the substances which darken in light keep darkening, so a picture continues exposing until it is a uniform black. Photography is the solution to that second problem, and everything the medium later became — evidence, memory, journalism, surveillance — followed from a fixing agent.",
-  readingMinutes: 8,
+  readingMinutes: 7,
   published: "2026-08-17",
   html: `
 <h2 id="Fixing">The actual invention</h2>

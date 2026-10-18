@@ -7,7 +7,7 @@ export const hearing: RewrittenArticle = {
   dek: "The ear converts air pressure into fluid waves, sorts them by pitch along a membrane, and amplifies the faint ones itself — so actively that healthy ears emit sound.",
   standfirst:
     "Hearing has a hard engineering problem at its centre. Sound arrives as tiny pressure changes in air, but the sensory cells that detect it sit in fluid, and almost all of the energy of a sound wave bounces off the boundary between air and water. The ear solves that with a lever system built from three of the smallest bones in the body, then hands the signal to a coiled tube that separates it into frequencies before a single nerve impulse is fired.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Air_to_water">The mismatch the middle ear exists to fix</h2>

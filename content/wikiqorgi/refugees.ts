@@ -7,7 +7,7 @@ export const refugees: RewrittenArticle = {
   dek: "The convention protects people fleeing persecution for five specific reasons. It does not cover war, famine, or a country becoming uninhabitable.",
   standfirst:
     "The 1951 Refugee Convention is a narrow instrument drafted for a specific situation — displaced Europeans after the Second World War — and its definition turns on a well-founded fear of persecution on five enumerated grounds. Most people displaced today do not fit it, and the gap between the legal category and the ordinary meaning of the word explains most of the confusion in public argument about it.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-18",
   html: `
 <h2 id="The_definition">What the convention actually says</h2>

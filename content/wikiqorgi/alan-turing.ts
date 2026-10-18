@@ -7,7 +7,7 @@ export const alanTuring: RewrittenArticle = {
   dek: "He invented the machine in 1936 as a thought experiment, and it turned out the thought experiment was buildable.",
   standfirst:
     "Turing's most important paper was not about building anything. It was an attempt to settle a question in mathematical logic, and to settle it he had to define precisely what it means to follow a procedure. The definition he produced described a machine nobody had built, and every computer since has been an instance of it.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="A_question_about_the_limits_of_mathematics">A question about the limits of mathematics</h2>

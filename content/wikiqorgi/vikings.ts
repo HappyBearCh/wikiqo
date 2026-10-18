@@ -7,7 +7,7 @@ export const vikings: RewrittenArticle = {
   dek: "The horned helmets are a nineteenth-century invention. The raids were real, but so were the river routes to the Islamic world, the assembly in Iceland and the first Europeans in North America.",
   standfirst:
     "For about two and a half centuries, from the end of the eighth century, people from Scandinavia appeared along almost every coast and river of Europe and well beyond it — as raiders, traders, mercenaries, settlers and kings. The monks who suffered their raids wrote the first accounts of them, and the image of the Viking as a pagan destroyer has never quite faded. Archaeology, coin hoards, and more recently ancient DNA have filled in a much larger picture.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-06",
   html: `
 <h2 id="Word">A job, not a people</h2>

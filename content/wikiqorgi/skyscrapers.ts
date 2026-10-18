@@ -7,7 +7,7 @@ export const skyscrapers: RewrittenArticle = {
   dek: "A tall building can carry its own mass easily. What it struggles with is being pushed sideways, and finding a way to move people up without filling the floors with lift shafts.",
   standfirst:
     "The intuitive constraint on a tall building — that the lower floors will be crushed — is not the real one. Steel and concrete carry vertical load efficiently, and gravity has never been the binding limit. Height is limited by lateral force, because wind load grows faster than height and a slender building will sway uncomfortably long before it is in danger, and by vertical transport, because past a certain height the lifts needed to serve the upper floors consume the floor area that made them worth building.",
-  readingMinutes: 8,
+  readingMinutes: 7,
   published: "2026-08-19",
   html: `
 <h2 id="Two_inventions">The two inventions that were required</h2>

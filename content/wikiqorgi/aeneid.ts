@@ -7,7 +7,7 @@ export const aeneid: RewrittenArticle = {
   dek: "Virgil wrote Rome's national epic under the patronage of Augustus, then asked on his deathbed for it to be burned. The poem celebrates empire and counts its cost in the same lines, and ends with an act of rage that readers still argue about.",
   standfirst:
     "The Aeneid tells how a refugee from burning Troy came to Italy and founded the people who would become the Romans. It was written in the 20s BC for a new regime that wanted a past worthy of its present, and for two thousand years it was the poem every educated European learned at school. It is also one of the saddest poems ever written about winning.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Virgil">Virgil and Augustus</h2>

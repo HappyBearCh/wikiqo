@@ -7,7 +7,7 @@ export const cryptography: RewrittenArticle = {
   dek: "Most of the world's secrecy rests on the assumption that factoring large numbers is difficult. No one has proved it.",
   standfirst:
     "The uncomfortable foundation of modern cryptography is that almost none of it is proven secure. It rests on mathematical problems that have resisted attack for decades and are widely believed to be hard — believed, not demonstrated. The entire edifice of online commerce is an enormous bet on the continued failure of clever people.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="Two_thousand_years_of_the_same_mistake">Two thousand years of the same mistake</h2>

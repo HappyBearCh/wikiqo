@@ -7,7 +7,7 @@ export const rubber: RewrittenArticle = {
   dek: "Mesoamericans made rubber balls three and a half thousand years ago. Industrial rubber took sulphur, a stolen tree and some of the worst atrocities of colonial rule.",
   standfirst:
     "Natural rubber is the dried sap of a tree from the Amazon. It stretches and springs back, keeps out water and grips the road, and the modern world, from car tyres to surgical gloves, still depends on it. Turning it into a reliable industrial material was a chemical accident. Supplying it, before plantations took over, was among the most violent episodes in the history of colonialism.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-18",
   html: `
 <h2 id="Latex">A milky defence</h2>

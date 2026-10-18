@@ -7,7 +7,7 @@ export const thermometer: RewrittenArticle = {
   dek: "Early thermometers disagreed with each other, and there was no way to tell which was right without already knowing the temperature. Building one that could be trusted took two centuries.",
   standfirst:
     "A thermometer seems the simplest of instruments: a liquid expands when warm, and a scale reads off how much. The difficulty, which took most of the seventeenth and eighteenth centuries to work through, is circular. To check that a thermometer reads correctly, you need to know the true temperature, which is what the thermometer is supposed to tell you. The story of how that circle was broken is a small history of how measurement itself became reliable.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-02",
   html: `
 <h2 id="Thermoscope">An instrument without a scale</h2>

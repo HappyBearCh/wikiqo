@@ -7,7 +7,7 @@ export const carboniferous: RewrittenArticle = {
   dek: "For sixty million years, tropical swamps full of giant club mosses buried more carbon than at any time before or since. Dragonfly-like insects grew the width of a hawk, the first reptiles appeared, and the coal that powered the Industrial Revolution was laid down.",
   standfirst:
     "The Carboniferous period, roughly 359 to 299 million years ago, is the only span of geological time named after something people burn. Its rocks hold most of the coal of Europe and eastern North America, laid down in vast tropical swamps of trees unlike anything alive today. Why it produced so much coal, and what it did to the planet's atmosphere and climate, are still argued over — and the answers have an uncomfortable relevance now that we have spent two centuries putting the carbon back.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Name">A period named for coal</h2>

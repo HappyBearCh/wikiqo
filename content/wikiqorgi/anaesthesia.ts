@@ -7,7 +7,7 @@ export const anaesthesia: RewrittenArticle = {
   dek: "Ether and nitrous oxide were known, synthesised and used recreationally decades before anyone thought to apply them to surgery.",
   standfirst:
     "The most striking fact about anaesthesia is not its discovery but its delay. Both ether and nitrous oxide were available, well characterised, and being inhaled at parties for entertainment for roughly half a century before anyone connected them to the problem of surgical pain. In the meantime operations were performed on conscious patients held down by assistants, and speed was the surgeon's most valued skill. Nobody has a fully satisfying explanation for the gap.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Before">What surgery was</h2>

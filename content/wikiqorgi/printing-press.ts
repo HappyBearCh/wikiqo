@@ -7,7 +7,7 @@ export const printingPress: RewrittenArticle = {
   dek: "Gutenberg set out to sell Bibles more cheaply. He ended up shattering the institution that commissioned them.",
   standfirst:
     "The printing press is the standard example of a technology whose effects ran far beyond its purpose. It was a business proposition — mechanise the copying of books people already bought — and within seventy years it had broken the Church's monopoly on interpretation, standardised half a dozen languages, and made cumulative science possible. Its inventor went bankrupt.",
-  readingMinutes: 8,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="What_Gutenberg_actually_invented">What Gutenberg actually invented</h2>

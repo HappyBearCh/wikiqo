@@ -7,7 +7,7 @@ export const tenerife: RewrittenArticle = {
   dek: "Two jumbo jets collided in fog after a bomb diverted them to an airport too small for them. The lasting fixes were not to aircraft but to how pilots talk, and listen.",
   standfirst:
     "On 27 March 1977 two Boeing 747s collided on the runway of a small airport on Tenerife, in the Canary Islands, and 583 people died. Neither aircraft had a mechanical fault. Every link in the chain was human: a diversion, a crowded apron, fog, a captain in a hurry, a junior officer who hesitated to contradict him, and a few words on the radio that meant different things to the people who said them and the people who heard them.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-06",
   html: `
 <h2 id="Diversion">The wrong airport</h2>

@@ -7,7 +7,7 @@ export const plateTectonics: RewrittenArticle = {
   dek: "The continents move, the evidence was obvious, and the man who said so was dismissed for having the wrong job.",
   standfirst:
     "Every schoolchild notices that South America fits into Africa. The observation is not subtle and had been made repeatedly since the first decent Atlantic maps. What kept continental drift out of geology for half a century was not a shortage of evidence but the absence of a mechanism — and a discipline unwilling to be corrected by a meteorologist.",
-  readingMinutes: 8,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="The_wrong_man_with_the_right_idea">The wrong man with the right idea</h2>

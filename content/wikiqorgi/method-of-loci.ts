@@ -7,7 +7,7 @@ export const methodOfLoci: RewrittenArticle = {
   dek: "Place vivid images along a route you know, then walk it in your mind. Orators used it for two thousand years, memory champions use it now, and six weeks of training changes the brain.",
   standfirst:
     "Before cheap paper and printing, a trained memory was a working tool, and the most famous technique for training it was already ancient in Cicero's time. It exploits a strength of human memory — for places and for vivid images — to compensate for a weakness, the memorisation of arbitrary lists. The world's best memorisers turn out not to have unusual brains, just this method. And it can be learned: brain imaging has shown that a few weeks of practice makes ordinary people's brains work more like theirs.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Simonides">A banquet hall collapses</h2>

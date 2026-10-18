@@ -7,7 +7,7 @@ export const zero: RewrittenArticle = {
   dek: "A placeholder, then a number, then a scandal — and the reason arithmetic stopped requiring a specialist.",
   standfirst:
     "Zero looks like the most obvious thing in mathematics and was the last basic idea to arrive. Counting numbers are natural; nobody has to be taught that three sheep are three sheep. A symbol for the absence of sheep, treated as a quantity you can add and multiply, took several thousand years and was resisted every time it appeared.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="Two_different_inventions">Two different inventions</h2>

@@ -7,7 +7,7 @@ export const aluminium: RewrittenArticle = {
   dek: "It is the most abundant metal in the Earth's crust, and for decades it was rarer than gold. Two young chemists working an ocean apart found the same cheap method in the same year.",
   standfirst:
     "Aluminium is everywhere in the ground, bound up in clay and rock, but holds on to oxygen so tightly that nobody could extract it in usable amounts until the nineteenth century. When chemists first did, it was briefly a luxury metal. Then electricity made it cheap, and it became the light, strong material of aircraft, power lines, window frames and drinks cans. Making it still takes so much power that smelters follow cheap electricity around the world.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-18",
   html: `
 <h2 id="Abundant">Abundant and hidden</h2>

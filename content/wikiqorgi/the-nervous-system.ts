@@ -7,7 +7,7 @@ export const theNervousSystem: RewrittenArticle = {
   dek: "Nerve impulses travel at a fraction of the speed of electricity in a wire, and at every gap the message stops and is retransmitted by squirting molecules across.",
   standfirst:
     "Describing nerves as electrical wiring is misleading in almost every respect. The signal is a travelling collapse of a chemical gradient, it moves at speeds comparable to a car rather than to electricity, it is regenerated at intervals because it would otherwise fade, and at each junction between cells it is converted into a puff of molecules and back again. The apparent inefficiency buys the one thing a wire cannot offer: every junction is a place where the signal can be modified.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="The_impulse">What an impulse actually is</h2>

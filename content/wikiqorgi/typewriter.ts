@@ -7,7 +7,7 @@ export const typewriter: RewrittenArticle = {
   dek: "The first commercial typewriter typed only capitals. Its keyboard layout outlived it by decades, and economists still argue about whether QWERTY is a historical accident we are stuck with.",
   standfirst:
     "The typewriter was in widespread use for only about a century, but it reshaped how offices worked, who worked in them, and how people write. Its keyboard layout, designed for a machine nobody has used for decades, is on almost every computer and phone in the Latin-alphabet world, and has become economists' favourite example in an argument about whether markets can lock in inferior technology.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-03",
   html: `
 <h2 id="Invention">From many prototypes to one machine</h2>

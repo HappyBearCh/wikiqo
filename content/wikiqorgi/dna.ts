@@ -7,7 +7,7 @@ export const dna: RewrittenArticle = {
   dek: "Two strands that each specify the other — the structure and the copying mechanism are the same discovery.",
   standfirst:
     "Most molecular structures tell you how something works only after considerable further study. DNA is the exception. The moment the double helix was drawn, with each base on one strand paired to a specific partner on the other, the mechanism of heredity was visible in it: separate the strands and each is a template for rebuilding its partner. Watson and Crick's paper noted this in a single famously coy sentence.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Nobody_thought_it_was_the_one">Nobody thought it was the one</h2>

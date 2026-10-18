@@ -7,7 +7,7 @@ export const sugar: RewrittenArticle = {
   dek: "For most of history sugar was a spice. Caribbean plantations worked by enslaved Africans made it cheap, a blockade made it from beets, and an industry-funded review helped keep it off the list of dietary villains.",
   standfirst:
     "Sugar went from rare medicine to daily staple in about three centuries, and the transformation was not driven by agriculture alone. It required a plantation system that consumed the lives of millions of enslaved Africans, a European appetite that grew with every fall in price, and later a beet industry born of war. Its modern story — of rising consumption and a long scientific argument over its effects on health — is shaped by the same commercial forces.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-03",
   html: `
 <h2 id="Origins">From New Guinea to the Mediterranean</h2>

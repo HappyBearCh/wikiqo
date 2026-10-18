@@ -7,7 +7,7 @@ export const clocks: RewrittenArticle = {
   dek: "For most of history an hour was a twelfth of daylight and got longer in summer. Mechanical clocks tick at one rate, and within a century the definition of an hour had given way.",
   standfirst:
     "The mechanical clock is one of the few inventions that rewrote the thing it was built to measure. Before it, an hour was a proportion of the day, longer in summer and shorter in winter, and every timekeeping device from the sundial to the water clock accommodated that. A gear train cannot. The clock kept equal hours because it had no alternative, and within roughly a century Europe had adopted equal hours because the clocks did.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Unequal_hours">The hour that changed length</h2>

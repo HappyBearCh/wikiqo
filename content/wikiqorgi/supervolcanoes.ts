@@ -7,7 +7,7 @@ export const supervolcanoes: RewrittenArticle = {
   dek: "The largest eruptions leave craters tens of kilometres across rather than peaks. Yellowstone is one, and the idea that it is due to blow is a misreading of three data points.",
   standfirst:
     "A supervolcano is not a volcanic mountain made larger. It is a place where an eruption was so large that the ground above the emptied magma chamber collapsed, leaving a vast depression called a caldera. These eruptions are rare enough that none has happened in recorded history, which makes them a magnet for apocalyptic speculation. The science is more interesting than the speculation, and considerably more reassuring.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-02",
   html: `
 <h2 id="Definition">What makes a volcano "super"</h2>

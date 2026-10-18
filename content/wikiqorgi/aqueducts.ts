@@ -7,7 +7,7 @@ export const aqueducts: RewrittenArticle = {
   dek: "Most of a Roman aqueduct ran underground at a slope too gentle to see. The engineering was in the surveying, and the water never stopped flowing.",
   standfirst:
     "The image of an aqueduct is a row of stone arches striding across a valley. Those arches existed, and some still stand, but they were the expensive exception — built only where the ground fell away and the channel had to be held up. The rest of the system ran quietly underground, descending a few centimetres per hundred metres over distances of tens of kilometres. Moving water by gravity alone is a problem of surveying more than of building, and the ancient solutions to it are still in service in parts of the world.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Gravity">Moving water with nothing but a slope</h2>

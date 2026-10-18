@@ -7,7 +7,7 @@ export const water: RewrittenArticle = {
   dek: "By the rules that govern comparable molecules, water should be a gas at room temperature and its ice should sink.",
   standfirst:
     "Water is so ordinary that its peculiarity is invisible. Compare it with the molecules it should resemble and nearly every property is wrong: it boils hundreds of degrees too high, it expands when it freezes, it takes an absurd amount of energy to warm, and it dissolves almost anything. Each anomaly traces to one weak bond, and life depends on all of them.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="A_molecule_bent_at_the_right_angle">A molecule bent at the right angle</h2>

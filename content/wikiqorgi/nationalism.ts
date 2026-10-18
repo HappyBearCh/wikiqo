@@ -7,7 +7,7 @@ export const nationalism: RewrittenArticle = {
   dek: "When Italy was unified, a small minority of its inhabitants spoke Italian. The state had to manufacture the nation it claimed to represent.",
   standfirst:
     "Nationalism presents itself as the political expression of an ancient people finally achieving self-determination. The historical record generally runs the other way: states and movements construct national identity, standardising a language, writing a shared history and instituting a common schooling, and the resulting sense of ancient belonging is an output of that process rather than its cause. This is not a claim that national feeling is fake — only that it is recent, and made.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-18",
   html: `
 <h2 id="Making_italians">A politician's admission</h2>

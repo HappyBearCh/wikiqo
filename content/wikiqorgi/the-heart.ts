@@ -7,7 +7,7 @@ export const theHeart: RewrittenArticle = {
   dek: "Multiply the volume of a heartbeat by the number of beats in an hour. The answer is more blood than the body contains, so it must be going round.",
   standfirst:
     "William Harvey's demonstration in 1628 that blood circulates was not an anatomical discovery — the structures had been described before him. It was a quantitative argument, the first of its kind in physiology, and it was unanswerable: the heart moves so much blood that no source could supply it and no tissue could consume it, therefore the same blood returns. The medical establishment rejected it for a generation.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Galen">What the heart was thought to do</h2>

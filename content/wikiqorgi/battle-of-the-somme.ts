@@ -7,7 +7,7 @@ export const battleOfTheSomme: RewrittenArticle = {
   dek: "On 1 July 1916 nearly 20,000 British soldiers were killed attacking German lines in northern France, most within the first hours. The offensive went on for four and a half months, and historians still argue about whether it was a futile slaughter or a costly lesson.",
   standfirst:
     "The Battle of the Somme was planned as the decisive blow of 1916 and has come to stand, for the British above all, for everything that went wrong on the Western Front: the confident generals, the shells that failed to cut the wire, the volunteers who walked forward in lines and were mown down. That memory is true as far as it goes. The full story is longer, more French, and more contested.",
-  readingMinutes: 8,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Plan">A battle planned for one purpose, fought for another</h2>

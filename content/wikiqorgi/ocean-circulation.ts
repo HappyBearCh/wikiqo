@@ -7,7 +7,7 @@ export const oceanCirculation: RewrittenArticle = {
   dek: "Water that sinks in the North Atlantic will not surface again for a thousand years — and Europe's climate depends on it.",
   standfirst:
     "The ocean is usually pictured as a basin that wind pushes around at the surface. Underneath that is a slower system driven by density: water made heavy by cold and salt sinks in a few small regions, spreads across the planet at depth, and returns. It moves about as much heat as the atmosphere does, and it takes a millennium to complete a circuit.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="Two_circulations,_stacked">Two circulations, stacked</h2>

@@ -7,7 +7,7 @@ export const blackHole: RewrittenArticle = {
   dek: "Not a hole and not made of anything — a black hole is a shape in spacetime that light cannot climb out of.",
   standfirst:
     "A black hole is usually introduced as an object so heavy that nothing escapes it. That is a serviceable half-truth. The better description is stranger and simpler: a black hole is not a thing sitting in space, it is a region where space and time have been bent so far that every road out has quietly turned into a road inward.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="What_a_black_hole_actually_is">What a black hole actually is</h2>

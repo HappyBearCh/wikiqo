@@ -7,7 +7,7 @@ export const spiceTrade: RewrittenArticle = {
   dek: "Pepper, cloves and nutmeg grew in only a few places in Asia. Controlling their supply drove Roman trade, Venetian wealth, Portuguese voyages and a Dutch monopoly enforced by violence.",
   standfirst:
     "For thousands of years, a handful of plants from South and South-East Asia were among the most valuable goods in the world. Their value came less from taste than from scarcity and distance: cloves and nutmeg grew on a few small islands, and the people who controlled their passage to Europe grew rich. The attempt to bypass those middlemen helped drive the European voyages of exploration, and the attempt to monopolise the source led to one of the most brutal episodes of early colonialism.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-03",
   html: `
 <h2 id="Geography">Where the spices grew</h2>

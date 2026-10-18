@@ -7,7 +7,7 @@ export const spores: RewrittenArticle = {
   dek: "A single large fungus releases billions of spores a day. The strategy is to make dispersal so cheap that vanishingly small odds still work.",
   standfirst:
     "A spore is a single cell built to survive transit and to start a new organism on arrival, and the organisms that use them do so in numbers that make individual survival irrelevant. The arithmetic is severe: almost every spore lands somewhere useless and dies. What makes the strategy work is that the cost per spore is negligible, and the consequences when one does land well have included the loss of entire tree species from continents and a famine that emptied a country.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Numbers">The scale of the gamble</h2>

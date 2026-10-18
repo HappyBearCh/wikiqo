@@ -7,7 +7,7 @@ export const lichens: RewrittenArticle = {
   dek: "A fungus farming an alga was the scandalous idea of 1867. In 2016 it turned out a third partner had been sitting in the tissue unnoticed the whole time.",
   standfirst:
     "Lichens were classified as plants, then shown in 1867 to be two organisms living as one — a claim rejected by most lichenologists for decades because it offended the assumption that a species is a single thing. The dual hypothesis won, entered every textbook, and was itself complicated in 2016 by the discovery of an additional fungal partner present in many lichens worldwide. They are now best understood not as a partnership but as a small ecosystem with a stable architecture.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Schwendener">The heresy of 1867</h2>

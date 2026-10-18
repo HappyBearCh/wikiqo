@@ -7,7 +7,7 @@ export const greenRevolution: RewrittenArticle = {
   dek: "The trick was not making plants grow more. It was making them shorter.",
   standfirst:
     "In the 1960s serious people predicted mass famine in South Asia within a decade, and the predictions were reasonable given the trends. They did not happen, and the main reason was a change to plant architecture so unglamorous it is hard to believe it mattered: breeding cereals with shorter stems. What followed fed a great many people and caused problems that are still being managed.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-17",
   html: `
 <h2 id="Why_short_plants">Why short plants</h2>

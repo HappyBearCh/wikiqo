@@ -587,6 +587,7 @@ export const WIKIQORGI_SOURCES: Record<string, Source[]> = {
     { author: "Sunil Amrith", title: "Unruly Waters: How Rains, Rivers, Coasts, and Seas Have Shaped Asia's History", year: 2018, publication: "Basic Books" },
   ],
   anaesthesia: [
+    { author: "Henry Jacob Bigelow", title: "Insensibility during surgical operations produced by inhalation", year: 1846, publication: "Boston Medical and Surgical Journal" },
     { author: "Julie M. Fenster", title: "Ether Day: The Strange Tale of America's Greatest Medical Discovery and the Haunted Men Who Made It", year: 2001, publication: "HarperCollins" },
     { author: "Stephanie J. Snow", title: "Blessed Days of Anaesthesia: How Anaesthetics Changed the World", year: 2008, publication: "Oxford University Press" },
   ],
@@ -690,6 +691,7 @@ export const WIKIQORGI_SOURCES: Record<string, Source[]> = {
     { author: "Jeff Ollerton", title: "Pollinators and Pollination: Nature and Society", year: 2021, publication: "Pelagic Publishing" },
   ],
   "flowering-plants": [
+    { author: "Charles Darwin", title: "Letter to J. D. Hooker, 22 July 1879", year: 1879, publication: "Darwin Correspondence Project" },
     { author: "William E. Friedman", title: "The meaning of Darwin's \"abominable mystery\"", year: 2009, publication: "American Journal of Botany" },
     { author: "Amborella Genome Project", title: "The Amborella Genome and the Evolution of Flowering Plants", year: 2013, publication: "Science" },
   ],

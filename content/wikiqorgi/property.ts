@@ -7,7 +7,7 @@ export const property: RewrittenArticle = {
   dek: "Owning land does not describe a relationship between you and the land. It describes a relationship between you and every other person.",
   standfirst:
     "The intuitive picture of property is a person and an object, joined by ownership. Lawyers abandoned that picture more than a century ago, because it explains nothing about the cases that matter. Property is better understood as a bundle of separable rights — to use, to exclude, to transfer, to destroy — held against other people, and almost every interesting dispute is about which strands of the bundle someone actually holds.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="The_bundle">The bundle</h2>

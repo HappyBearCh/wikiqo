@@ -7,7 +7,7 @@ export const ebola: RewrittenArticle = {
   dek: "For nearly forty years Ebola struck remote villages in short, terrifying bursts and burned out. Then in 2014 it reached the cities of West Africa and killed more than 11,000 people. The epidemic forced the world to do what it had never bothered to: make a vaccine and treatments that work.",
   standfirst:
     "Ebola virus disease is one of the deadliest infections known, killing on average around half of those it infects. For decades it was more famous than it was common, the subject of thrillers and nightmares rather than research budgets. The West African epidemic of 2014–2016 changed that, exposing how unprepared the world was and then, in the middle of the crisis, producing one of the most successful vaccine trials ever run.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="1976">Yambuku</h2>

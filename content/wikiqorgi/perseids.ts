@@ -7,7 +7,7 @@ export const perseids: RewrittenArticle = {
   dek: "Every August the Earth ploughs through a trail of grit shed by a comet that last passed the Sun in 1992. The grains burn up in the upper atmosphere at nearly sixty kilometres a second, and on a dark night you can see one every minute or so.",
   standfirst:
     "The Perseids are the most watched meteor shower of the year, arriving on warm northern-hemisphere nights when it is pleasant to lie outside and look up. They were known in medieval Europe as the tears of St Lawrence. Their real explanation, worked out in the 1860s, connected shooting stars to comets for the first time, and the comet responsible is one that astronomers once briefly feared might hit the Earth.",
-  readingMinutes: 6,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Shower">What a meteor shower is</h2>

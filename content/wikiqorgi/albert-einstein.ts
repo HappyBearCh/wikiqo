@@ -7,7 +7,7 @@ export const albertEinstein: RewrittenArticle = {
   dek: "Four papers in one year from a man with no academic post, and a lifetime spent arguing with what they started.",
   standfirst:
     "In 1905 a 26-year-old examiner in the Swiss patent office published four papers. One established that atoms are real. One founded quantum theory and later won him the Nobel Prize. One dismantled absolute time. The fourth, three pages long, contained E = mc². He had no university position, no laboratory, and no research group.",
-  readingMinutes: 9,
+  readingMinutes: 7,
   published: "2026-08-16",
   html: `
 <h2 id="A_useful_failure">A useful failure</h2>

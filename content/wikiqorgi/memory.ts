@@ -7,7 +7,7 @@ export const memory: RewrittenArticle = {
   dek: "A man who could form no new memories learned a new skill without knowing he had practised it. That patient showed memory is a collection of systems, and every recollection is rebuilt.",
   standfirst:
     "It is natural to think of memory as storage: experiences go in, and remembering takes them out again. Almost everything learned about memory in the last seventy years contradicts that picture. Memory is several distinct systems with different brain machinery, which can fail independently. And what is retrieved is not a stored copy but a reconstruction, assembled afresh each time and altered by the act of recalling it.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="HM">The patient who could not remember</h2>

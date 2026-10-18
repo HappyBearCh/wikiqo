@@ -7,7 +7,7 @@ export const volcanoes: RewrittenArticle = {
   dek: "There is no sea of molten rock under the crust. Magma forms only where the rock is decompressed or wetted, and whether it oozes or explodes depends on how much gas it can hold.",
   standfirst:
     "The usual picture of a volcano is a vent into a molten interior. The interior is not molten: Earth's mantle is solid rock, hot enough to flow slowly over millions of years but not liquid. Magma forms in particular places for particular reasons, and the character of an eruption — a gentle river of lava or a blast that flattens a forest — is set largely by chemistry, above all by how much silica and gas the magma carries.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Making_magma">Where melt comes from</h2>

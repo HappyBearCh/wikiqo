@@ -7,7 +7,7 @@ export const bayeuxTapestry: RewrittenArticle = {
   dek: "It is not a tapestry, was probably not made in Bayeux, and was very likely stitched by English hands. It is still the best picture of 1066 anyone made.",
   standfirst:
     "The Bayeux Tapestry tells the story of the Norman conquest of England in a continuous band of images nearly seventy metres long and half a metre high. It is the most famous image of medieval warfare, and one of the most important pieces of evidence for the events it shows. It is also a piece of propaganda made for the winners, with a few quiet details that may have been put there by the losers.",
-  readingMinutes: 6,
+  readingMinutes: 5,
   published: "2026-10-06",
   html: `
 <h2 id="Object">An embroidery, not a tapestry</h2>

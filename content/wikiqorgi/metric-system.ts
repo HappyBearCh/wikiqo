@@ -7,7 +7,7 @@ export const metricSystem: RewrittenArticle = {
   dek: "The metre was meant to be a ten-millionth of the distance from pole to equator. Two astronomers spent seven years measuring it, and one of them hid an error that haunted him to his death.",
   standfirst:
     "Before the French Revolution, France had hundreds of units of measure and thousands of local variants, and a bushel in one market was not a bushel in the next. The revolutionaries proposed to replace them with units taken from nature, divided by tens, and the same for everyone. The metric system succeeded so completely that almost the whole world now uses it — though the natural measurement it was founded on was slightly off, and the country that most conspicuously rejected it defines its own units in metric terms.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Chaos">Measures as local custom</h2>

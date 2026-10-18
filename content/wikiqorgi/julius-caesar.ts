@@ -7,7 +7,7 @@ export const juliusCaesar: RewrittenArticle = {
   dek: "Debt, daring and a gift for publicity carried him from a minor noble family to sole power. His murderers set out to save the Republic. They finished it instead.",
   standfirst:
     "Gaius Julius Caesar did not overthrow the Roman Republic in a single blow. He rose through its institutions, exploited every weakness they had, and wrote his own account of his conquests while he was still making them. When he finally crossed a small river in northern Italy with an army in January 49 BC, the system he defied had been failing for decades. His assassination five years later was meant to restore it, and made its end certain.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-06",
   html: `
 <h2 id="Republic">A republic built for a city</h2>

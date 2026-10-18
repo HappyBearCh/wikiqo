@@ -7,7 +7,7 @@ export const longitude: RewrittenArticle = {
   dek: "Latitude you can read off the sky in an afternoon. Longitude requires knowing what time it is somewhere else.",
   standfirst:
     "For most of the age of sail, navigators could establish how far north or south they were with reasonable confidence and had essentially no way to determine how far east or west. Ships were wrecked on coasts their captains believed were still days away. The solution turned out to require not better astronomy but a clock that would keep time on a rolling, damp, temperature-swinging ship — and the man who built it spent forty years being refused his prize.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Why_one_is_easy">Why one coordinate is easy and the other is not</h2>

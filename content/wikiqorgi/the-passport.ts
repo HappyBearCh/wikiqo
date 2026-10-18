@@ -7,7 +7,7 @@ export const thePassport: RewrittenArticle = {
   dek: "Before 1914 most people crossed most borders without documents. The system that replaced that was introduced as temporary.",
   standfirst:
     "For most of the nineteenth century, travelling between European states required no papers, and attempts to impose them were abandoned as commercially damaging and administratively absurd. The modern passport regime dates from the First World War, was explicitly a security measure for the duration, and was retained afterwards because states discovered they liked knowing who was entering. It is now the single largest determinant of a person's freedom of movement, and it is allocated at birth.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-18",
   html: `
 <h2 id="Before">The century without papers</h2>

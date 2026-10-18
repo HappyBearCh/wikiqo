@@ -7,7 +7,7 @@ export const chernobyl: RewrittenArticle = {
   dek: "A delayed safety test, a reactor with a flaw its operators had not been told about, and a state that kept quiet for days. The first official account blamed the operators; a later one blamed the reactor.",
   standfirst:
     "In the early hours of 26 April 1986, reactor number 4 at the Chernobyl nuclear power plant in Soviet Ukraine destroyed itself during a test of its own safety systems. The explosion and the graphite fire that followed spread radioactive material across much of Europe. Four decades on, the sequence of events is well understood. What took longer was agreeing whose failure it was — and the answer changed the way the nuclear industry talks about safety.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-10-06",
   html: `
 <h2 id="The_reactor">An unusual kind of reactor</h2>

@@ -7,7 +7,7 @@ export const medicalImaging: RewrittenArticle = {
   dek: "Röntgen photographed his wife's hand in 1895 and she said she had seen her death. The modern problem is the opposite — finding disease that would never have caused harm.",
   standfirst:
     "For all of medical history before 1895, the interior of a living body could be examined only by opening it. Within a year of Röntgen's discovery, X-ray machines were in hospitals worldwide, and the sequence of technologies that followed — computed tomography, ultrasound, magnetic resonance, functional scanning — each solved a limitation of the last. The unanticipated consequence is that imaging now finds abnormalities faster than medicine can determine which of them matter.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Rontgen">An accident in a darkened laboratory</h2>

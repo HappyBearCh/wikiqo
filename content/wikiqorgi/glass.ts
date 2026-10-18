@@ -7,7 +7,7 @@ export const glass: RewrittenArticle = {
   dek: "Transparency is not the interesting part. Being transparent, chemically inert and formable at once is what made laboratories possible.",
   standfirst:
     "Glass is easy to take for granted because it is everywhere and does nothing dramatic. Its significance is that no other cheap material combines transparency with chemical inertness and the ability to be blown into any vessel shape. Take glass away and you lose lenses, so no microscope and no telescope; you lose flasks, so no observable chemistry; you lose windows, so no reading indoors in a northern winter.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="Neither_solid_nor_liquid,_exactly">Neither solid nor liquid, exactly</h2>

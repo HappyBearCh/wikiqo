@@ -7,7 +7,7 @@ export const blackDeath: RewrittenArticle = {
   dek: "Between 1346 and 1353 plague killed perhaps half of Europe. DNA from the graves has settled what caused it; what it did to wages, serfdom and faith is the longer story.",
   standfirst:
     "The Black Death was the deadliest pandemic in recorded history relative to population. For centuries its cause was argued over, and some historians doubted that the bubonic plague described by nineteenth-century science could have spread so fast. Ancient DNA has now ended that argument and even located where the outbreak began. The more lasting debate is about consequences, because a catastrophe that removes a third to a half of a society's people changes the price of everything that remains.",
-  readingMinutes: 8,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Cause">What the graves revealed</h2>

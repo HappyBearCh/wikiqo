@@ -7,7 +7,7 @@ export const rabies: RewrittenArticle = {
   dek: "Once its symptoms begin, rabies is almost always fatal, and has been for as long as there are records. It is also almost entirely preventable. Tens of thousands of people still die of it every year, most of them children bitten by dogs.",
   standfirst:
     "Rabies has been feared for four thousand years, and with reason: no other infection is so reliably lethal once it reaches the brain. Its long, silent incubation gave Louis Pasteur the opening for one of the most famous experiments in medicine, in 1885, when he treated a bitten boy with an untested vaccine. The vaccine works. The tragedy of rabies today is how many people never get it.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Disease">A virus that travels by nerve</h2>

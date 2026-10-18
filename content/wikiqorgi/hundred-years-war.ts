@@ -7,7 +7,7 @@ export const hundredYearsWar: RewrittenArticle = {
   dek: "It lasted 116 years with long truces, began as a dispute within one French-speaking aristocracy, and was decided by artillery. By the end, England and France had become something like nations.",
   standfirst:
     "The Hundred Years' War was not one war and did not last a hundred years. The name was invented in the nineteenth century for a series of conflicts between the kings of England and France from 1337 to 1453, punctuated by truces, plague and civil wars. At the start, the English king spoke French, held land in France, and claimed its crown by inheritance. At the end, England had lost almost all of it, and both countries had begun to think of themselves differently.",
-  readingMinutes: 6,
+  readingMinutes: 5,
   published: "2026-10-06",
   html: `
 <h2 id="Causes">A succession and a duchy</h2>

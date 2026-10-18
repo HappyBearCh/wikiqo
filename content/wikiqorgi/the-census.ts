@@ -7,7 +7,7 @@ export const theCensus: RewrittenArticle = {
   dek: "Every category on the form is a decision about which groups exist, and the answers have been used to allocate money, seats, and in some cases victims.",
   standfirst:
     "A census looks like a neutral inventory and has never been one. Deciding who counts as a household, which boxes appear under ethnicity, whether prisoners are residents of the prison or of their home, and who is missed entirely are choices that determine the distribution of political representation and public money. States have also learned, more than once, that a good population register is exactly what a persecuting government needs.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Why_states_count">States count in order to extract</h2>

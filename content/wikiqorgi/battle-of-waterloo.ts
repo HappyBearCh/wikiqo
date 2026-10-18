@@ -7,7 +7,7 @@ export const battleOfWaterloo: RewrittenArticle = {
   dek: "Napoleon's last battle was fought on a few square miles of wet Belgian farmland on a single June day in 1815. Wellington held on; Blücher's Prussians arrived; and two decades of war in Europe ended by nightfall.",
   standfirst:
     "Waterloo has become a word for any final, crushing defeat. On the day itself, 18 June 1815, it was nothing like so certain. Napoleon, back from exile, attacked an army of British, Dutch and German troops under the Duke of Wellington, who stood on the defensive and waited for his Prussian allies to arrive. For most of the afternoon it was unclear whether they would come in time. Wellington's own verdict was that it had been \"the nearest-run thing you ever saw in your life\".",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-17",
   html: `
 <h2 id="HundredDays">The Hundred Days</h2>

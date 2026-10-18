@@ -7,7 +7,7 @@ export const cometHaleBopp: RewrittenArticle = {
   dek: "Found by two amateurs on the same July night in 1995, Hale–Bopp stayed visible to the naked eye for a record eighteen months and was probably seen by more people than any comet in history. It also became the centre of a rumour that ended in the deaths of thirty-nine people.",
   standfirst:
     "Most bright comets are discovered only weeks before they put on a show. Hale–Bopp was spotted almost two years before it passed closest to the Sun, while it was still beyond the orbit of Jupiter, which meant it had to be enormous. In the spring of 1997 it hung in the evening sky over cities and countryside alike, with two tails and sometimes a third. It was a triumph for amateur astronomy, a bonanza for science, and the occasion for one of the strangest tragedies of the decade.",
-  readingMinutes: 6,
+  readingMinutes: 4,
   published: "2026-10-17",
   html: `
 <h2 id="Discovery">Two discoverers</h2>

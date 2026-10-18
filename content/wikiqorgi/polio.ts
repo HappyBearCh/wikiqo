@@ -7,7 +7,7 @@ export const polio: RewrittenArticle = {
   dek: "Polio had been around for thousands of years before it became an epidemic disease, and its epidemics arrived with better hygiene, not worse. The race to beat it produced the largest medical trial in history, a disastrous batch of vaccine, and a global campaign that has come within reach of eradication.",
   standfirst:
     "In the first half of the twentieth century, polio was the disease parents feared most. Each summer, epidemics closed swimming pools and cinemas, and children who had been running about one week could be paralysed for life, or breathing inside a metal tank, the next. Two vaccines ended the epidemics in the countries that could afford them. The last stretch of the campaign to rid the world of the virus has turned out to be the hardest.",
-  readingMinutes: 8,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Virus">A gut virus that sometimes strikes the spine</h2>

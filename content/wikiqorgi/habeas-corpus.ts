@@ -7,7 +7,7 @@ export const habeasCorpus: RewrittenArticle = {
   dek: "It does not ask whether a prisoner is guilty. It asks the far narrower and more dangerous question of what legal authority is being relied on.",
   standfirst:
     "Habeas corpus is a procedural device of almost brutal simplicity: produce the person you are holding and state the lawful basis for holding them. It makes no claim about innocence and offers no opinion on the merits. Its power is that it forces detention to be justified to someone other than the person doing the detaining — and the entire history of the writ is a history of governments finding ways around exactly that.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="What_it_does">The mechanism</h2>

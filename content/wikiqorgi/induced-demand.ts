@@ -7,7 +7,7 @@ export const inducedDemand: RewrittenArticle = {
   dek: "Add a lane, and within a few years the new lane is as jammed as the old ones. This is the expected result, not a surprise.",
   standfirst:
     "The intuition that congestion is a capacity problem is almost irresistible: too many cars, not enough road, therefore build road. Sixty years of evidence says otherwise. Expanded highways fill up, on a fairly predictable schedule, and the resulting traffic volume rises roughly in proportion to the capacity added. The mistake is treating travel demand as a fixed quantity rather than something the road itself creates.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="The_measurement">The measurement</h2>

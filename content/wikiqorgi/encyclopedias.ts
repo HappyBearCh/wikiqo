@@ -7,7 +7,7 @@ export const encyclopedias: RewrittenArticle = {
   dek: "Every generation builds one, every one goes out of date, and the alphabet was a radical innovation.",
   standfirst:
     "The idea of collecting all knowledge in one work is old, persistent, and repeatedly defeated by the same two problems: knowledge grows faster than the book, and any arrangement of it embeds a claim about how the world is organised. The solutions adopted at each attempt — alphabetical order, cross-references, paid contributors, continuous revision — were each controversial when introduced and each look obvious now.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Before_alphabetical">Arrangement was the first fight</h2>

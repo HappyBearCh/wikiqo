@@ -7,7 +7,7 @@ export const potato: RewrittenArticle = {
   dek: "Domesticated in the high Andes, distrusted in Europe, then planted everywhere: the potato may account for a quarter of Old World population growth after 1700. Depending on one variety ended in catastrophe.",
   standfirst:
     "The potato grows in poor soil and cold climates, produces more calories per acre than grain, and can feed a family from a small plot. Those qualities made it one of the most important crops ever introduced to Europe and Asia. They also made it possible for whole populations to depend on it, and when a plant disease destroyed the crop in Ireland in the 1840s, the result was one of the deadliest famines of modern European history.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-03",
   html: `
 <h2 id="Andes">A crop of the high Andes</h2>

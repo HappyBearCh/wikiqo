@@ -7,7 +7,7 @@ export const deadSeaScrolls: RewrittenArticle = {
   dek: "A shepherd's find in 1947 produced the oldest known manuscripts of the Hebrew Bible by about a thousand years. Then a small team of scholars kept most of them unpublished until 1991.",
   standfirst:
     "Between 1947 and 1956, Bedouin and archaeologists found the remains of around nine hundred manuscripts in eleven caves near Qumran, on the northwest shore of the Dead Sea. They were written between the third century BC and the first century AD, and include the oldest surviving copies of almost every book of the Hebrew Bible, along with the writings of a Jewish sect that has been argued over ever since. Their story is about texts, and also about who gets to read them.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-18",
   html: `
 <h2 id="Discovery">A stone thrown into a cave</h2>

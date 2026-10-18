@@ -7,7 +7,7 @@ export const theLiver: RewrittenArticle = {
   dek: "Everything absorbed from the gut goes through the liver before reaching the rest of the body. Some drugs lose most of their dose there, which is why the tablet is bigger than the injection.",
   standfirst:
     "The liver occupies a position no other organ has: the entire blood supply from the intestines passes through it before entering the general circulation. That arrangement makes it the body's chemical processing plant and its customs post, and it explains two facts that otherwise look unrelated — why oral drug doses differ so much from injected ones, and why liver damage produces symptoms in the brain, the blood and the skin at once.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Portal">The plumbing that explains everything else</h2>

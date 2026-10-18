@@ -7,7 +7,7 @@ export const colourVision: RewrittenArticle = {
   dek: "Three receptor types cannot measure a spectrum. They take three samples and the brain reports a conclusion, which is why two different lights can look identical.",
   standfirst:
     "Light arriving at the eye carries a continuous distribution of wavelengths, and the eye samples it at three points. That is a catastrophic loss of information, and it means an unlimited number of physically different spectra produce identical sensations. Colour is not a property being measured; it is a judgement the visual system reaches about surfaces, using assumptions about illumination that are usually right and occasionally, spectacularly, are not.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Three_numbers">Three samples of a continuous signal</h2>

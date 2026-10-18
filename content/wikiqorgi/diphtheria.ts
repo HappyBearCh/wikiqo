@@ -7,7 +7,7 @@ export const diphtheria: RewrittenArticle = {
   dek: "Diphtheria once killed tens of thousands of children a year by choking them with a membrane that grew across the throat. Defeating it produced the first Nobel Prize in medicine, the first modern drug regulation, and a dog-sled relay across frozen Alaska that is still remembered.",
   standfirst:
     "Into the twentieth century, diphtheria was one of the commonest causes of death in childhood. Parents called it the strangling angel. Within a few decades it had been reduced, in countries that vaccinated, to a disease most doctors would never see. Its story is a lesson in how the first great medical victory over a bacterial toxin was won — and in how quickly diphtheria returns when vaccination lapses.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Disease">A toxin, not just a germ</h2>

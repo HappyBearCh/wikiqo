@@ -7,7 +7,7 @@ export const seeds: RewrittenArticle = {
   dek: "The innovation was not the embryo but the pause — a plant that can stop, wait years, and resume.",
   standfirst:
     "A seed contains a partly built plant, a food supply to finish the job, and a coat that keeps both intact. Its most consequential feature is dormancy: the ability to suspend metabolism almost entirely and wait, sometimes for centuries, for conditions worth germinating into. That capacity to skip bad years is what let plants colonise seasonal and arid environments, and it is what makes seed banks possible.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-18",
   html: `
 <h2 id="What_it_is">Three parts</h2>

@@ -7,7 +7,7 @@ export const fermentation: RewrittenArticle = {
   dek: "Every culture on Earth independently worked out that controlled spoilage makes food safer, and nobody knew why for ten thousand years.",
   standfirst:
     "Fermentation is deliberate decay. You invite microorganisms to consume part of your food, and in exchange they make it keep longer, digest more easily, and taste of considerably more than it did. Humans have been doing this since before agriculture, and did it successfully for the entire period in which the existence of microorganisms was unknown.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-17",
   html: `
 <h2 id="Why_it_preserves">Why it preserves</h2>

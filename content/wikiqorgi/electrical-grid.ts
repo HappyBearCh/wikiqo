@@ -7,7 +7,7 @@ export const electricalGrid: RewrittenArticle = {
   dek: "Supply must match demand every second of every day, across a continent, or the whole thing falls over.",
   standfirst:
     "A power grid is usually pictured as a distribution network — electricity made somewhere, delivered to you. The more accurate picture is a single enormous machine whose every part is mechanically synchronised, in which generation must equal consumption continuously, because there is essentially nowhere for a surplus to go and nothing to draw a shortfall from.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="The_current_war,_and_why_it_was_won">The current war, and why it was won</h2>

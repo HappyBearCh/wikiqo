@@ -7,7 +7,7 @@ export const haberBosch: RewrittenArticle = {
   dek: "Roughly half the nitrogen atoms in your body passed through an industrial catalyst. The same process made the explosives.",
   standfirst:
     "Air is 78 per cent nitrogen and almost none of it is available to living things, because the two atoms in an N₂ molecule are bound by one of the strongest bonds in chemistry. Breaking it industrially was the single most consequential chemical achievement of the twentieth century — it removed the limit on how many people the planet could feed, and it removed a limit on how long a war could last.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="The_nitrogen_bottleneck">The nitrogen bottleneck</h2>

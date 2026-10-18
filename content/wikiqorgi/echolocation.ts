@@ -7,7 +7,7 @@ export const echolocation: RewrittenArticle = {
   dek: "A bat closing on a moth calls two hundred times a second. Dolphins solved the same problem underwater with different organs — and some of the same genetic changes.",
   standfirst:
     "An animal that shouts and listens for the echo can build a picture of its surroundings in total darkness. Bats and toothed whales evolved this independently, in air and in water, and both have refined it to a precision that rivals vision: bats catch insects in flight, and dolphins tell apart objects that differ only in what they are made of. The discovery that they do it at all took a century and a half, because the sounds involved are pitched too high for any human to hear.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Discovery">The sense nobody could hear</h2>

@@ -7,7 +7,7 @@ export const antibioticResistance: RewrittenArticle = {
   dek: "Bacteria were fighting each other with antibiotics long before we found them — and had already worked out the counters.",
   standfirst:
     "The usual framing is that overuse of antibiotics created resistance. It didn't. Resistance genes are ancient, older than agriculture, older than us, recovered from permafrost sealed for thirty thousand years. What overuse did was hand an enormous evolutionary advantage to the organisms that already carried them, and then arrange for those organisms to meet each other.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="A_weapon_borrowed_from_the_soil">A weapon borrowed from the soil</h2>

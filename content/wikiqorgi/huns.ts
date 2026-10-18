@@ -7,7 +7,7 @@ export const huns: RewrittenArticle = {
   dek: "They rode out of the steppe in the 370s, set the Goths running into the Roman Empire, and under Attila extorted tons of gold from Constantinople. Within twenty years of Attila's death their empire had vanished. Nobody knows what language they spoke or exactly where they came from.",
   standfirst:
     "To the Romans, the Huns were the ultimate barbarians: nomads who seemed to live on horseback, owed nothing to civilisation and came from beyond the edge of the known world. They feature in almost every account of the fall of the Western Roman Empire, and their most famous ruler, Attila, became a byword for savagery. The Huns themselves left no writing. Everything we know comes from their enemies, from archaeology, and increasingly from ancient DNA.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-17",
   html: `
 <h2 id="Arrival">Out of the steppe</h2>

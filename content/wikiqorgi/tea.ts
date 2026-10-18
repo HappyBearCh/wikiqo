@@ -7,7 +7,7 @@ export const tea: RewrittenArticle = {
   dek: "Every kind of tea comes from one evergreen shrub. Getting it out of China, and paying for it, drove smuggling, a revolution, an opium war and an act of botanical theft.",
   standfirst:
     "After water, tea is the most widely drunk beverage in the world. Green, black, oolong and white teas all come from the leaves of a single species of camellia, and for most of history they all came from China. The effort to buy that leaf, tax it, pay for it and finally grow it somewhere else shaped the British Empire about as much as anything that was not made of iron.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-18",
   html: `
 <h2 id="Plant">One shrub, many teas</h2>

@@ -7,7 +7,7 @@ export const opticalIllusions: RewrittenArticle = {
   dek: "The image on the retina is ambiguous and the brain resolves it with assumptions. Knowing an illusion is an illusion does not switch the assumptions off.",
   standfirst:
     "The pattern of light on the retina is consistent with infinitely many arrangements of objects in the world, so vision cannot be a matter of reading it off. It is an inference: the visual system commits to the most probable interpretation given assumptions built in by evolution and experience. Illusions are the cases where those assumptions are violated, and their most instructive feature is that understanding one does not dispel it — which tells you the process is sealed off from anything you know.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Inverse">The problem vision has to solve</h2>

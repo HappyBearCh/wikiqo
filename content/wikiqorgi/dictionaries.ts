@@ -7,7 +7,7 @@ export const dictionaries: RewrittenArticle = {
   dek: "Lexicographers describe how words are used. Readers want to be told how they should be. The gap has produced some spectacular fights.",
   standfirst:
     "A dictionary looks like an authority and is in fact a survey. Its compilers gather evidence of how a word has actually been used, and record what they find — including the uses they personally dislike. That this is the job has been explained repeatedly by lexicographers and disbelieved just as repeatedly by the public, occasionally to the point of scandal.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="Word_lists_before_dictionaries">Word lists before dictionaries</h2>

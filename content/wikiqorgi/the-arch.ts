@@ -7,7 +7,7 @@ export const theArch: RewrittenArticle = {
   dek: "A stone beam snaps because its underside is in tension. Curve the same stones into an arch and every one of them is being squeezed, which is what stone is good at.",
   standfirst:
     "Stone is enormously strong in compression and feeble in tension, often by a factor of ten or twenty. That single asymmetry dictates the entire history of masonry construction: a stone lintel can only span a few metres before its lower face pulls apart, and the arch exists because a curved arrangement of blocks converts a load that would bend a beam into a load that squeezes a line of stones. Everything else — the vault, the dome, the flying buttress — is a consequence of that substitution and of the sideways push it produces.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Tension">Why a stone beam fails</h2>

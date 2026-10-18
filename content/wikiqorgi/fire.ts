@@ -7,7 +7,7 @@ export const fire: RewrittenArticle = {
   dek: "Cooking is external digestion. It let a species shrink its gut, grow its brain, and pay for the difference in the same calories.",
   standfirst:
     "Every other animal spends its energy budget as it comes. Controlling fire let one species pre-digest its food outside the body, which released enough energy and enough time to support an organ that is metabolically ruinous by any ordinary standard. The argument that cooking made us human is not a metaphor — it is a claim about calorie accounting, and the numbers behind it are unusually specific.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="What_fire_is">What is actually happening</h2>

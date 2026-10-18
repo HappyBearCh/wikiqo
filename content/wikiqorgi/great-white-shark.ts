@@ -7,7 +7,7 @@ export const greatWhiteShark: RewrittenArticle = {
   dek: "A 1975 film made the great white the most feared animal in the sea. Since then scientists have tracked one swimming from South Africa to Australia and back, found that they can live for seventy years, and watched them flee a pair of orcas that eat their livers.",
   standfirst:
     "Few animals have been shaped in the public mind by a single work of fiction as completely as the great white shark was by Jaws. The real animal is a warm-bodied, long-lived, slow-breeding ocean wanderer, the largest predatory fish on earth, and much harder to understand than its reputation suggests. Its author spent the rest of his life trying to correct the impression his book had made.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Animal">The animal</h2>

@@ -7,7 +7,7 @@ export const amazigh: RewrittenArticle = {
   dek: "Numidian kings fought for and against Rome, a Berber general gave his name to Gibraltar, and Berber dynasties founded Marrakesh and ruled Spain. For centuries outsiders called them Berbers. Since the 1980s a movement for their languages and identity has pressed for the name they use themselves: Imazighen, the free people.",
   standfirst:
     "From the Atlantic coast of Morocco to the Siwa oasis in Egypt, and deep into the Sahara, live peoples who were in North Africa before Phoenicians, Romans or Arabs arrived. Their languages, the Amazigh or Berber languages, are still spoken by tens of millions. For most of recorded history they were written about by others — Greeks, Romans, Arab historians, French colonial ethnographers — and grouped under a name that came from the Greek for foreigners. Their history is one of the longest continuous stories in the Mediterranean world.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-17",
   html: `
 <h2 id="Names">Berbers and Imazighen</h2>

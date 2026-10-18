@@ -7,7 +7,7 @@ export const rice: RewrittenArticle = {
   dek: "It feeds more people than any other crop, reshaped whole mountainsides into terraces, taught medicine about vitamins, and was rebuilt in the 1960s into a plant that could stand up to fertiliser.",
   standfirst:
     "Rice is the staple food of more than half of humanity, and about nine-tenths of it is grown and eaten in Asia. It is unusual among cereals in thriving in standing water, and the work of flooding, draining and transplanting it has shaped landscapes, villages and states for thousands of years. It has also been at the centre of some of the largest experiments in modern agriculture, and some of the most argued over.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-18",
   html: `
 <h2 id="Origins">Two continents, two rices</h2>

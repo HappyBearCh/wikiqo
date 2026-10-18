@@ -7,7 +7,7 @@ export const citizenship: RewrittenArticle = {
   dek: "Every state decides who belongs by where you were born or who your parents were. Where the two systems meet, some people get nothing.",
   standfirst:
     "Citizenship is the mechanism by which the world's population is divided among its states, and it operates on two incompatible principles: the place of birth, or descent from a citizen. Most states use a mixture. The gaps between the rules produce statelessness — people no state recognises, who consequently have no state obliged to admit them, and for whom the ordinary machinery of rights has no attachment point.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-18",
   html: `
 <h2 id="Two_rules">Soil and blood</h2>

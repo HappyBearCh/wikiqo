@@ -7,7 +7,7 @@ export const theJury: RewrittenArticle = {
   dek: "It began as a panel of local witnesses who already knew the answer, and became the opposite: strangers required to know nothing.",
   standfirst:
     "A jury is a body of untrained people, chosen essentially at random, who decide questions of fact and cannot be punished for deciding them wrongly. Almost every feature of it looks like a design flaw until you notice that the alternative is letting the state decide alone whether the state's accusation is true. Its origins are nothing like its present justification, and its use is shrinking almost everywhere it exists.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Backwards_origins">It started as the opposite of what it is now</h2>

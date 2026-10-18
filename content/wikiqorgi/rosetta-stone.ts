@@ -7,7 +7,7 @@ export const rosettaStone: RewrittenArticle = {
   dek: "The stone repeats a fairly dull decree in three scripts. Reading it took a British polymath, a French prodigy, a rivalry, and a language still heard in Egyptian churches.",
   standfirst:
     "The Rosetta Stone is so famous that its name has become a word for any key to an unknown code. The stone itself is a broken slab of dark rock carrying a decree issued by Egyptian priests in 196 BC. It did not, on its own, unlock Egyptian hieroglyphs. What it did was give two scholars a fixed point to work from, and the story of how they used it is a story about the right idea taking far longer than it should have.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-10-06",
   html: `
 <h2 id="Discovery">Found in a wall</h2>

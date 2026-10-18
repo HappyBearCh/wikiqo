@@ -7,7 +7,7 @@ export const gameTheory: RewrittenArticle = {
   dek: "Its central finding is that individually rational choices can reliably produce an outcome everyone involved would rather avoid.",
   standfirst:
     "Ordinary decision theory asks what to do given the odds. Game theory asks what to do when the odds depend on what someone else decides, and they are simultaneously working out what to do about you. The recursion has no natural stopping point, and the discipline's most durable result is that when it stops, it often stops somewhere nobody wanted — not through error, but through each participant reasoning correctly.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Nash">The equilibrium concept</h2>

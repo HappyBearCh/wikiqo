@@ -7,7 +7,7 @@ export const incompleteness: RewrittenArticle = {
   dek: "Mathematics cannot prove everything true, and cannot prove its own consistency. A 25-year-old demonstrated both in one paper.",
   standfirst:
     "In 1931 Kurt Gödel published a result that terminated the most ambitious programme in the history of mathematics — not by finding an error in it, but by proving that its goal was unreachable in principle. The proof is constructive, exact, and turns on a single trick: getting a formal system to talk about itself.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="What_was_being_attempted">What was being attempted</h2>

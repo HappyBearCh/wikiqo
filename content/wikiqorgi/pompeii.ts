@@ -7,7 +7,7 @@ export const pompeii: RewrittenArticle = {
   dek: "Vesuvius buried a Roman town of perhaps ten thousand people in under a day. What survived is less a frozen moment than an archive: election slogans, bread, and the hollow shapes of people.",
   standfirst:
     "Pompeii is the most famous archaeological site in the world because it seems to offer something no other site can: ordinary Roman life, stopped mid-sentence. That impression is partly true and partly an illusion created by nearly three centuries of excavation, restoration and storytelling. Some of the most familiar stories about the town have been revised in the last few years — including the date it died and who some of its dead actually were.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-10-06",
   html: `
 <h2 id="Town">A provincial town on the bay</h2>

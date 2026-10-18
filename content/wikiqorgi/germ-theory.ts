@@ -7,7 +7,7 @@ export const germTheory: RewrittenArticle = {
   dek: "Semmelweis cut deaths from around one in ten to under one in fifty and was dismissed, ridiculed, and died in an asylum.",
   standfirst:
     "Germ theory is the single most consequential idea in the history of medicine, and its adoption is a case study in how evidence fails to persuade. The decisive demonstration came in 1847 from a physician who could show a tenfold reduction in mortality and could not explain the mechanism. He was rejected — partly because his explanation was incomplete, and substantially because his finding accused his colleagues of killing their patients.",
-  readingMinutes: 8,
+  readingMinutes: 7,
   published: "2026-08-17",
   html: `
 <h2 id="Miasma">What it replaced</h2>

@@ -7,7 +7,7 @@ export const floweringPlants: RewrittenArticle = {
   dek: "They appear in the fossil record suddenly, diversify explosively, and take over the world's vegetation in a geological instant.",
   standfirst:
     "Darwin wrote in 1879 that the rapid development of the higher plants within recent geological times was an abominable mystery, and the phrase has stuck because the problem has not entirely gone away. Flowering plants appear in the Cretaceous, radiate faster than any comparable group, and now account for roughly nine in ten plant species. Explaining the speed, and the apparent absence of a fossil record leading up to it, remains an active argument.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-18",
   html: `
 <h2 id="The_mystery">What Darwin was complaining about</h2>

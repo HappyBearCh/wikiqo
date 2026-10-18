@@ -7,7 +7,7 @@ export const cognitiveBias: RewrittenArticle = {
   dek: "Random mistakes cancel out. These do not — everyone makes the same ones in the same direction, including the people who study them.",
   standfirst:
     "If human judgment simply failed at random there would be nothing to study; errors would scatter and average out. What Kahneman and Tversky demonstrated is that judgment fails in predictable directions, that the deviations are large, and that they persist after they are explained to you. The reason is that the shortcuts producing them are usually the right shortcuts, and the failures are the price of a system that mostly works.",
-  readingMinutes: 8,
+  readingMinutes: 7,
   published: "2026-08-17",
   html: `
 <h2 id="Heuristics">Shortcuts that usually work</h2>

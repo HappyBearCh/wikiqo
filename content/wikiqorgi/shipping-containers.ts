@@ -7,7 +7,7 @@ export const shippingContainers: RewrittenArticle = {
   dek: "The invention was not the box. It was the agreement that everyone's box would be the same box.",
   standfirst:
     "Before containers, loading a ship meant dozens of men manhandling barrels, sacks and crates into a hold for days, and the cost of moving goods between countries was high enough to make distant manufacturing uneconomic for most products. A corrugated steel box with standardised corner fittings collapsed that cost by an order of magnitude, and the global division of labour that followed is a consequence of it. The hard part was never engineering.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Break_bulk">What it replaced</h2>

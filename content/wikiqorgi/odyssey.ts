@@ -7,7 +7,7 @@ export const odyssey: RewrittenArticle = {
   dek: "The monsters take up four books out of twenty-four. Most of Homer's second epic is about a household under siege, a son growing up, a wife who outwits a hundred suitors, and a homecoming that ends in a massacre.",
   standfirst:
     "The Odyssey gave English a word for any long and eventful journey, and its Cyclops, Sirens and whirlpool are among the most retold stories in the world. Yet the wanderings that made it famous are a story-within-a-story, told by Odysseus himself at a dinner party. The poem around them is about getting home and finding out whether home is still there.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Structure">A story told backwards</h2>

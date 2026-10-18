@@ -7,7 +7,7 @@ export const titanic: RewrittenArticle = {
   dek: "The Titanic carried more lifeboats than British law required. That fact, more than the iceberg, is why its loss rewrote the regulation of the sea.",
   standfirst:
     "The Titanic is remembered as a story about arrogance: a ship called unsinkable, driven too fast through ice. Some of that is true. But the inquiries that followed found something more uncomfortable. Almost everything that killed more than fifteen hundred people on the night of 14 April 1912 was legal, customary, or both — and the response was not to punish anyone but to change the rules for every ship afloat.",
-  readingMinutes: 8,
+  readingMinutes: 7,
   published: "2026-10-06",
   html: `
 <h2 id="Two_and_a_half_hours">A collision, then two and a half hours</h2>

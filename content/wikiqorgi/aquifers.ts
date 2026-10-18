@@ -7,7 +7,7 @@ export const aquifers: RewrittenArticle = {
   dek: "There are almost no underground lakes. Groundwater sits in the pores of sand and rock, some of it for millennia, and pumping it faster than rain refills it makes the ground fall.",
   standfirst:
     "Most of the liquid fresh water on Earth is not in rivers or lakes but underground, held in the spaces between grains of sediment and in cracks in rock. It feeds springs and keeps rivers flowing in dry seasons, and in many of the world's most productive farming regions it is the only water available. Because it is invisible, it is easy to treat as inexhaustible. It is not, and the evidence of overuse is now measurable from orbit.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Not_lakes">Water in the pores</h2>

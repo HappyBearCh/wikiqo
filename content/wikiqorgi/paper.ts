@@ -7,7 +7,7 @@ export const paper: RewrittenArticle = {
   dek: "Paper is a mat of plant fibres, not a sheet of papyrus or skin. It travelled from China through Samarkand and Baghdad to Europe, ran short of rags, switched to wood — and then began destroying its own books.",
   standfirst:
     "Paper is so ordinary that its invention is easy to overlook, yet almost everything about written culture since the Middle Ages depended on it: printing would have been impractical on parchment, and bureaucracy, banking and mass literacy all ran on cheap sheets. Its history includes a myth about prisoners of war, a nineteenth-century raw material crisis, and a chemical mistake that left libraries with millions of books crumbling on their shelves.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-03",
   html: `
 <h2 id="What_it_is">What paper actually is</h2>

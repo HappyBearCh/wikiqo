@@ -7,7 +7,7 @@ export const orca: RewrittenArticle = {
   dek: "The ocean's top predator is a dolphin that lives in family groups led by post-menopausal grandmothers, speaks in dialects, and passes down hunting techniques like traditions. Capturing orcas for aquarium shows changed how people saw them — and, eventually, the aquarium industry.",
   standfirst:
     "Orcas live in every ocean, from the tropics to the edge of the polar ice, and hunt everything from herring to blue whales. For centuries sailors called them killers and feared them. Then, in the 1960s, a few were captured and put on show, and people discovered an animal that was curious, social and apparently friendly. Decades of research since have revealed something stranger still: an animal with cultures.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Dolphin">The largest dolphin</h2>

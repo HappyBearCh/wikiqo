@@ -7,7 +7,7 @@ export const theFactory: RewrittenArticle = {
   dek: "Water-powered mills existed for centuries. What was new was gathering workers under one roof where they could be watched and timed.",
   standfirst:
     "The factory is usually explained by its machines, and the machines are the less interesting half. Powered mills were medieval; what changed around 1770 was the decision to bring workers into a single building on a fixed schedule under continuous supervision. That was a change in the organisation of labour rather than in technology, and the resistance it met was not to the machines but to what the machines were being used to impose.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Putting_out">What it replaced</h2>

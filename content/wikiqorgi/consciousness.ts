@@ -7,7 +7,7 @@ export const consciousness: RewrittenArticle = {
   dek: "Science can say which brain activity accompanies experience. It has no account of why any of it is experienced at all.",
   standfirst:
     "Every other scientific problem is about something observable from the outside. Consciousness is the exception: the data are available to exactly one observer, cannot be shared, and cannot be checked. That is not a temporary shortage of instruments. It is a structural feature of the thing being studied, and it is why the field's central question has not moved in three hundred years.",
-  readingMinutes: 8,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="Two_problems,_not_one">Two problems, not one</h2>

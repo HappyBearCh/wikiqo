@@ -7,7 +7,7 @@ export const chess: RewrittenArticle = {
   dek: "Around 1475 someone gave the queen the run of the board. The older game had been slow enough to bore its own players; the new one produced opening theory, blunders and a draw problem.",
   standfirst:
     "Chess is usually described as ancient, and the board and the pieces are. The game actually played today is not: it dates from a rule change in late fifteenth-century southern Europe that transformed the weakest piece into the strongest and cut the length of a game dramatically. Almost everything characteristic of chess — memorised openings, sharp tactics, the tension between attack and the drawn endgame — follows from that one revision.",
-  readingMinutes: 8,
+  readingMinutes: 7,
   published: "2026-08-19",
   html: `
 <h2 id="The_old_game">The game before the queen</h2>

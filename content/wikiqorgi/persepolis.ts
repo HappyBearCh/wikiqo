@@ -7,7 +7,7 @@ export const persepolis: RewrittenArticle = {
   dek: "The ceremonial capital of the Persian kings was carved with processions of subject peoples bringing gifts. Alexander burned it. What survived the fire includes thousands of clay tablets recording who built it and what they were paid — including extra rations for new mothers.",
   standfirst:
     "For two centuries the Achaemenid Persian Empire was the largest state the world had yet seen, stretching from the Aegean to the Indus. Its kings built a palace city on a great stone terrace in the Iranian highlands, and filled it with sculpture showing the empire as they wished it seen: an orderly procession of peoples, each bringing its tribute, none in chains. Alexander the Great burned it in 330 BC. The ruins, and the archives buried in them, are one of the best records of how an ancient empire actually worked.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Founding">A city on a terrace</h2>

@@ -7,7 +7,7 @@ export const cleopatra: RewrittenArticle = {
   dek: "Rome's propaganda made her a seductress, Shakespeare a tragic lover, Hollywood a film star. The evidence shows a capable ruler of an indebted kingdom playing for survival against the strongest power on earth.",
   standfirst:
     "Cleopatra VII is among the most famous women who ever lived, and almost everything said about her comes from her enemies or from writers who lived generations later. The Romans who defeated her had every reason to portray her as a dangerous foreign temptress, and their version shaped two thousand years of plays, paintings and films. Read against the grain, the same sources show a politician of real ability trying to keep the last independent kingdom of Alexander's successors alive.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-06",
   html: `
 <h2 id="Dynasty">A Greek dynasty in Egypt</h2>

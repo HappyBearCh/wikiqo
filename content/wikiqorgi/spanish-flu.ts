@@ -7,7 +7,7 @@ export const spanishFlu: RewrittenArticle = {
   dek: "It probably did not start in Spain, it killed more people than the war it followed, and its strangest feature was who died: healthy adults in their twenties.",
   standfirst:
     "Between 1918 and 1920, an influenza virus infected perhaps a third of the world's population and killed tens of millions of people — more than the First World War, which was ending as it peaked. It has been studied ever since as the template for a severe pandemic, partly because it broke the usual pattern of influenza, which kills the very young and the old. In 1918, the people most at risk were young adults, and the explanation was only pieced together in the last few decades, using virus recovered from bodies buried in Arctic permafrost.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-02",
   html: `
 <h2 id="Name">A misleading name</h2>

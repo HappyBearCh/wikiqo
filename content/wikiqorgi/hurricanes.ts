@@ -7,7 +7,7 @@ export const hurricanes: RewrittenArticle = {
   dek: "They need warm water, and they need the Earth's rotation — which is zero at the equator, so the warmest water on the planet never produces one.",
   standfirst:
     "A tropical cyclone is a machine for moving heat from a warm ocean to the upper atmosphere, and it obeys the same thermodynamic limits as any other heat engine. Understanding it as an engine explains everything about it: why it needs water above a threshold temperature, why it dies over land within hours, why it spins the way it does, and why there is a computable ceiling on how strong one can get.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="The_engine">It is literally a heat engine</h2>

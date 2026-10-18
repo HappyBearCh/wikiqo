@@ -7,7 +7,7 @@ export const bureaucracy: RewrittenArticle = {
   dek: "Rules applied impersonally, records kept in writing, and appointment by examination. Every irritating feature is there to stop something worse.",
   standfirst:
     "Bureaucracy is a term of abuse and was originally a description of an achievement. The features people object to — the forms, the rules, the refusal to make exceptions, the insistence on documentation — are the mechanism by which decisions stop depending on who your family is. Weber's analysis remains the best account of why it beat the alternatives, and also of why he expected it to become a cage.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="What_it_replaced">Patrimonial administration</h2>

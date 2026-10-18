@@ -7,7 +7,7 @@ export const theMonsoon: RewrittenArticle = {
   dek: "Land heats faster than ocean. Scale that difference up to Asia and the Indian Ocean and you get a wind that reverses twice a year.",
   standfirst:
     "The monsoon is not a season of rain — it is a seasonal reversal of wind, and the rain follows from it. The mechanism is the same one that produces an afternoon breeze at any coastline, operating across thousands of kilometres and driven by the largest landmass and highest plateau on Earth. Around two billion people depend on it arriving roughly on time, and the record of failed predictions about it is long.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="The_mechanism">A sea breeze, scaled up</h2>

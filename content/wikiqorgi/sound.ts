@@ -7,7 +7,7 @@ export const sound: RewrittenArticle = {
   dek: "A voice crosses a room without any air crossing it. What moves is a pattern of squeezing, passed along molecule to molecule at a third of a kilometre a second.",
   standfirst:
     "Sound is easy to describe badly. It is not a substance, and the air that carries it barely moves: each molecule shuffles back and forth over a distance smaller than a bacterium and ends up where it started. What travels is a disturbance — a ripple of slightly higher and slightly lower pressure — and almost everything strange about sound, from why it turns corners to why Isaac Newton got its speed wrong, follows from that.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-10-02",
   html: `
 <h2 id="Nothing_travels">A disturbance, not a thing</h2>

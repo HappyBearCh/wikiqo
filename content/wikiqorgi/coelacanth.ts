@@ -7,7 +7,7 @@ export const coelacanth: RewrittenArticle = {
   dek: "Scientists knew coelacanths only as fossils, and thought the last had died with the dinosaurs. Then in 1938 a museum curator in South Africa spotted one in a pile of fish on a trawler. A second species turned up in an Indonesian market sixty years later.",
   standfirst:
     "Just before Christmas 1938, a young museum curator went down to the docks of East London, South Africa, to look over a trawler's catch for anything worth preserving. Among the sharks she found a large, steel-blue fish with limb-like fins that she could not identify. It belonged to a group that palaeontologists thought had been extinct for 66 million years. The coelacanth became the most famous \"living fossil\" in the world — a description that is half true and largely misleading.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-17",
   html: `
 <h2 id="Discovery">A fish on the dock</h2>

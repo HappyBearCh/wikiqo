@@ -7,7 +7,7 @@ export const stonehenge: RewrittenArticle = {
   dek: "The big stones came from twenty-five kilometres away, the small ones from Wales, and the altar from the far north of Scotland. Who moved them, and why, is clearer now than at any time since the builders died.",
   standfirst:
     "Stonehenge is often treated as an unanswerable mystery, and some questions about it will stay open. But the last twenty years of fieldwork, geochemistry and ancient DNA have answered a surprising number of the old ones: where the stones came from, when they were raised, who was buried among them and how the people who built it lived. The answers make Stonehenge less mysterious and more impressive.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-06",
   html: `
 <h2 id="Stages">Not one monument but many</h2>

@@ -7,7 +7,7 @@ export const battleOfGettysburg: RewrittenArticle = {
   dek: "Robert E. Lee's second invasion of the North ended in the bloodiest battle of the American Civil War, fought around a Pennsylvania crossroads town neither side had planned to fight for. Four months later Lincoln explained in two minutes what it had been for.",
   standfirst:
     "In the first days of July 1863 the two main armies of the American Civil War collided at Gettysburg, a small market town in southern Pennsylvania where a dozen roads met. Over three days some 160,000 men fought across its ridges, orchards and wheat fields, and more than 50,000 of them were killed, wounded, captured or missing. The battle has been called the turning point of the war, a claim that is at best half true. What happened there afterwards, at the dedication of a cemetery, has had an even longer life.",
-  readingMinutes: 8,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Invasion">The road north</h2>

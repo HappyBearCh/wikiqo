@@ -7,7 +7,7 @@ export const mountEverest: RewrittenArticle = {
   dek: "The highest point on Earth is a collision zone, a wind tunnel, an economy, and a graveyard — usually in that order.",
   standfirst:
     "Everest is not the hardest mountain to climb, nor the most beautiful, nor even the farthest point from the centre of the Earth. It is simply the highest, and that single superlative has shaped everything that has happened on it — the surveying, the nationalism, the record-chasing, and the traffic jam at 8,700 metres.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="How_a_seabed_ended_up_in_the_sky">How a seabed ended up in the sky</h2>

@@ -7,7 +7,7 @@ export const forgetting: RewrittenArticle = {
   dek: "Most forgetting happens in the first hours after learning. Much of what seems lost is still stored and merely hard to reach, and people who cannot forget find it a burden.",
   standfirst:
     "Forgetting is usually treated as memory going wrong. The research of the last century and a half suggests something closer to the opposite. Forgetting follows a predictable course, is often a failure to find rather than a loss of what is stored, and appears to be partly an active process the brain carries out on purpose. The rare people whose memories do not fade show why: a mind that kept everything would struggle to think.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Ebbinghaus">The curve</h2>

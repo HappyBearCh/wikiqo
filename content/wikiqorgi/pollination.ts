@@ -7,7 +7,7 @@ export const pollination: RewrittenArticle = {
   dek: "Wind pollination wastes enormous quantities of pollen. Hiring a courier is expensive and vastly more accurate.",
   standfirst:
     "A plant cannot move, so its gametes must. Releasing pollen to the wind works and is profligate — a pine produces pollen by the kilogram and almost none of it arrives anywhere useful. Recruiting an animal to carry pollen directly from one flower to another of the same species is far more precise, and paying for that service with nectar, oil, scent or outright deception is what flowers are for.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-18",
   html: `
 <h2 id="Wind">The wasteful option</h2>

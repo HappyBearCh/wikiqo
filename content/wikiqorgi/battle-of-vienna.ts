@@ -7,7 +7,7 @@ export const battleOfVienna: RewrittenArticle = {
   dek: "For two months an Ottoman army dug towards the walls of the Habsburg capital. A relief army led by the king of Poland broke the siege in a single afternoon, and the empire that had been advancing into Europe for three centuries began to retreat.",
   standfirst:
     "In the summer of 1683 one of the largest armies the Ottoman Empire had ever sent west laid siege to Vienna. The city's emperor had fled, its walls were being mined from below, and its defenders were down to a few thousand fit men when, on 12 September, a relief army came down the wooded hills above the city. The battle that followed is remembered as the moment the Ottoman advance into central Europe ended — and, less reliably, as the origin of the croissant.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-17",
   html: `
 <h2 id="Background">Two empires on the Danube</h2>

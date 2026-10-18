@@ -7,7 +7,7 @@ export const theEye: RewrittenArticle = {
   dek: "Light in the vertebrate retina passes through the nerves and blood vessels before reaching the cells that detect it, and the wiring exits through a gap in the sensor.",
   standfirst:
     "The vertebrate eye is regularly offered as the model of exquisite design, and its central arrangement is one no engineer would choose: the photoreceptors face away from the light, so every photon crosses a layer of neurons and capillaries first, and the nerve fibres those receptors feed have to pass back through the retina to leave, producing a blind spot. Octopuses have the same camera eye built the sensible way round, which shows the arrangement is not a physical necessity. It is a historical accident that the rest of the system compensates for.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Inverted">The retina is inside out</h2>

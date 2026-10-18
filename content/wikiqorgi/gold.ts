@@ -7,7 +7,7 @@ export const gold: RewrittenArticle = {
   dek: "Gold is valuable partly because it does almost nothing: it does not rust, tarnish or dissolve. All the gold ever mined would fit in a cube about twenty-two metres on a side, and most of it is still above ground.",
   standfirst:
     "Gold has been worked for more than six thousand years, hoarded by every civilisation that found it, and used as money for most of recorded history. Its appeal is easy to see and hard to explain: a soft, heavy, yellow metal that is nearly useless for tools. What it has instead is permanence. A gold coin pulled from a shipwreck after three centuries comes up looking as it did when it sank.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-18",
   html: `
 <h2 id="Stars">Made in stellar collisions</h2>

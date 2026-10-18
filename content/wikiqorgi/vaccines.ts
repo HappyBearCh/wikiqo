@@ -7,7 +7,7 @@ export const vaccines: RewrittenArticle = {
   dek: "The only medical technology that has ever driven a human disease to extinction — and the only one whose success makes it look unnecessary.",
   standfirst:
     "A vaccine does nothing to a virus. It works entirely on you: it shows your immune system a convincing forgery of a pathogen, lets it mount a response with no disease attached, and leaves behind a cellular memory that recognises the real thing years later. The entire technology is a training exercise.",
-  readingMinutes: 8,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="The_memory_the_body_already_had">The memory the body already had</h2>

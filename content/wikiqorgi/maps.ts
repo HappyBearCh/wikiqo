@@ -7,7 +7,7 @@ export const maps: RewrittenArticle = {
   dek: "A sphere cannot be flattened without distortion. Choosing a map is choosing which lie you can live with.",
   standfirst:
     "There is a theorem behind every world map. A curved surface cannot be represented on a flat one without distorting something — area, shape, distance, or direction — and no projection preserves all of them. This is not a limitation of technique that better cartography might overcome; it is a proof, and it means every flat map of the Earth misrepresents it in a way its maker selected.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="The_theorem">Why it cannot be done</h2>

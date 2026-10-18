@@ -7,7 +7,7 @@ export const phosphorus: RewrittenArticle = {
   dek: "An alchemist boiling urine discovered it in 1669. It holds DNA together, powers every cell, poisoned match workers, and is mined for fertiliser from a few deposits concentrated in one corner of Africa.",
   standfirst:
     "Phosphorus was the first chemical element whose discoverer is known by name, and it was found in about the most unpromising place possible. It is also one that life cannot do without: there is no substitute for it in DNA, in the molecule that carries energy around cells, or in bone. Modern farming moves it from a handful of mines into fields and from fields into rivers and seas, with consequences at both ends.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-18",
   html: `
 <h2 id="Brand">An alchemist's glow</h2>

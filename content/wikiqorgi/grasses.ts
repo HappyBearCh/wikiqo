@@ -7,7 +7,7 @@ export const grasses: RewrittenArticle = {
   dek: "Every other plant grows from its tips. Grasses grow from the base — an adaptation to being eaten that accidentally made agriculture possible.",
   standfirst:
     "Most plants extend from growing points at the ends of their shoots, so removing the top removes the ability to grow. Grasses put their growth zone at the base, near or below ground, which means the part an animal bites off is the part the plant has already finished with. That single structural difference explains lawns, grazing, the world's grain supply, and why grasses came to cover roughly a quarter of the land surface.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-18",
   html: `
 <h2 id="Growing_from_the_base">The meristem is in the wrong place, deliberately</h2>

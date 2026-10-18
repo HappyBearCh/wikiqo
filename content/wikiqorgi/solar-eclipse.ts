@@ -7,7 +7,7 @@ export const solarEclipse: RewrittenArticle = {
   dek: "The Moon is about four hundred times smaller than the Sun and about four hundred times closer, so for a few minutes it can cover it exactly. That accident has frightened empires, revealed a new element, tested Einstein, and measured the slowing of the Earth's spin.",
   standfirst:
     "A total solar eclipse is one of the most overwhelming sights in nature: the light fails in the middle of the day, the temperature drops, birds fall silent, and the Sun's pearly outer atmosphere appears around a black disc. It happens because of a coincidence of size and distance that will not last forever. For thousands of years people have recorded eclipses, and those records have turned out to be scientific instruments in their own right.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Geometry">A matter of geometry</h2>

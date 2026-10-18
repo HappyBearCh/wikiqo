@@ -7,7 +7,7 @@ export const pigmentsAndDyes: RewrittenArticle = {
   dek: "Ultramarine was ground from a stone mined in one Afghan valley. Tyrian purple took thousands of molluscs per garment. Then in 1856 a student made a colour by accident.",
   standfirst:
     "For most of history colour was a commodity with a supply chain, and the price of a pigment determined where it appeared in a painting and who was permitted to wear it. The economics were transformed twice: once by chemistry in the nineteenth century, which made every colour cheap and founded the modern chemical industry as a side effect, and once by the discovery that several of the most beautiful pigments were quietly poisoning the people who used them.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-19",
   html: `
 <h2 id="Expensive">Colours you had to buy</h2>

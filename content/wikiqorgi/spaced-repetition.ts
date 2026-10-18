@@ -7,7 +7,7 @@ export const spacedRepetition: RewrittenArticle = {
   dek: "Reviewing material at growing intervals, and testing rather than rereading, is among the most reliable findings in psychology. Most students still cram, because cramming feels like learning.",
   standfirst:
     "If there is one result from the science of learning that almost everyone could use, it is this: spreading study out over time, with each review coming just before the material would be forgotten, produces far more durable memory than the same amount of study packed into one session. It was first measured in the 1880s and has been replicated hundreds of times. The puzzle is why it is not universal, and the answer says something about how badly people judge their own learning.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-02",
   html: `
 <h2 id="Spacing">The spacing effect</h2>

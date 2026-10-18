@@ -7,7 +7,7 @@ export const theKidney: RewrittenArticle = {
   dek: "Filtering everything indiscriminately and then reclaiming what you want looks absurd. It is also the only design that lets one organ regulate a dozen quantities at once.",
   standfirst:
     "Human kidneys filter roughly 180 litres of fluid a day and excrete around one and a half. Every gram of glucose, nearly all the sodium, and almost all the water is pushed out and then pulled back in. The apparent waste is the point: by discarding the blood's contents wholesale and then adjusting recovery substance by substance, the kidney can control volume, sodium, potassium, acidity, calcium and several hormones with one mechanism.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-19",
   html: `
 <h2 id="Filter_first">Filter everything, then decide</h2>

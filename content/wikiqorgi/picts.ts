@@ -7,7 +7,7 @@ export const picts: RewrittenArticle = {
   dek: "The Romans gave them a nickname, their neighbours wrote their history, and their symbol stones still cannot be read. For centuries the Picts were treated as a lost race that mysteriously disappeared. Archaeology and genetics now show them as the ancestors of much of Scotland, who were simply renamed.",
   standfirst:
     "The Picts ruled most of what is now Scotland north of the Firth of Forth for the better part of six centuries, defeated a powerful Anglo-Saxon kingdom, and carved some of the finest stone sculpture in early medieval Europe. Then, in the ninth century, their name disappears from the records. Their supposed disappearance has generated a great deal of romantic nonsense — about painted savages, pygmies and a lost language — and the reality turns out to be both less mysterious and more interesting.",
-  readingMinutes: 7,
+  readingMinutes: 4,
   published: "2026-10-17",
   html: `
 <h2 id="Name">A Roman nickname</h2>

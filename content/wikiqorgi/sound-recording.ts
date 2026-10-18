@@ -7,7 +7,7 @@ export const soundRecording: RewrittenArticle = {
   dek: "Everything before 1877 is silent. There is no recording of any voice from the whole of human history until then, and then there is every voice.",
   standfirst:
     "Writing preserved what people said; nothing preserved how they said it. The break is absolute and it happens in a single decade — before it, no sound made by any person who ever lived survives, and after it, essentially all of them do. The device that did this was mechanically trivial, was invented for a purpose it turned out to be bad at, and its inventor spent years arguing that music was not what it was for.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="The_mechanism">A needle and a sheet of tinfoil</h2>

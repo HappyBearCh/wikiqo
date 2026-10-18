@@ -7,7 +7,7 @@ export const coffee: RewrittenArticle = {
   dek: "Caffeine evolved to poison insects and it works on us by a mechanism that explains why the effect wears off.",
   standfirst:
     "Caffeine is a defensive compound. Coffee plants produce it to paralyse insects that eat their leaves and to poison competing seedlings around them. In humans at ordinary doses it does something more subtle than stimulate: it does not add energy, it blocks the signal that tells you that you are tired — which is a different thing, and explains most of what is confusing about it.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-17",
   html: `
 <h2 id="How_it_actually_works">How it actually works</h2>

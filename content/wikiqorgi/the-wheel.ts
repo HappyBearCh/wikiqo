@@ -7,7 +7,7 @@ export const theWheel: RewrittenArticle = {
   dek: "It arrives thousands of years after agriculture, weaving and metalworking, and entire advanced civilisations did without it on purpose.",
   standfirst:
     "The wheel is the standard shorthand for a primitive breakthrough, which gets almost everything about it wrong. It appears very late — after farming, pottery, writing and bronze — because the difficult part is not the disc but the fitted axle it must turn on, and because a wheel is worthless without a prepared surface to run it over. Several sophisticated civilisations knew of it and declined to use it for transport, for reasons that were entirely sound.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Why_so_late">Why it took so long</h2>

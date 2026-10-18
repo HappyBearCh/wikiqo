@@ -7,7 +7,7 @@ export const refrigeration: RewrittenArticle = {
   dek: "A fridge does not make cold. It pumps heat out of a box and dumps it in your kitchen, and the whole global food system now depends on doing that continuously.",
   standfirst:
     "Cold is not a substance and cannot be added to anything. A refrigerator works by moving heat in the direction it does not want to go — out of a cold interior into a warmer room — which costs energy and requires a working fluid that boils at a convenient temperature. Getting that fluid right took a century and produced two of the largest environmental problems of the modern era.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-17",
   html: `
 <h2 id="The_cycle">The cycle</h2>

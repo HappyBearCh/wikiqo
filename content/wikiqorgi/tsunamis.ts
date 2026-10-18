@@ -7,7 +7,7 @@ export const tsunamis: RewrittenArticle = {
   dek: "In deep water a tsunami is less than a metre high and hundreds of kilometres long. It only becomes a wall of water in the last few minutes, as the sea floor rises to meet it.",
   standfirst:
     "A tsunami is not a big version of an ordinary wave. Wind waves move only the top of the sea; a tsunami moves the entire water column from the sea floor to the surface, because it begins with the sea floor itself moving. That is why it crosses oceans almost without losing energy, why ships at sea barely notice it, and why it arrives at the coast not as a breaking wave but as a rapidly rising tide that keeps coming.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-02",
   html: `
 <h2 id="Causes">Lifting an ocean</h2>

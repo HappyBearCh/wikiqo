@@ -7,7 +7,7 @@ export const fallOfConstantinople: RewrittenArticle = {
   dek: "In 1453 a twenty-one-year-old sultan brought down walls that had stood for a thousand years. The city's fall ended the last remnant of the Roman Empire and made it the capital of a new one.",
   standfirst:
     "On 29 May 1453 the Ottoman army stormed Constantinople after a siege of nearly eight weeks, and the last Roman emperor died somewhere in the fighting at its walls. The city had resisted sieges for a millennium, and by then it ruled little beyond itself. Its capture is one of the conventional end points of the Middle Ages. It is also the moment at which Istanbul, the capital of one of the great empires of the early modern world, began.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-06",
   html: `
 <h2 id="City">The city and its walls</h2>

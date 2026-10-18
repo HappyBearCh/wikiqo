@@ -7,7 +7,7 @@ export const prions: RewrittenArticle = {
   dek: "A laughing sickness in the highlands of New Guinea, a scratching disease of sheep, and a cattle epidemic that shook British politics turned out to share a cause that broke a rule of biology: an infectious agent made of nothing but misfolded protein.",
   standfirst:
     "Every infection known until the twentieth century — bacteria, fungi, parasites, viruses — carried its instructions in genes. Prions do not. They are proteins that have folded into the wrong shape and that can force normal copies of the same protein to fold the same way. The idea was resisted for decades. It explains a group of rare, invariably fatal brain diseases, and one of the worst food scares in modern history.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-17",
   html: `
 <h2 id="Kuru">Kuru</h2>

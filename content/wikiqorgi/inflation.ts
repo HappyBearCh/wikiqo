@@ -7,7 +7,7 @@ export const inflation: RewrittenArticle = {
   dek: "Prices rising is the symptom. What causes it is one of the least settled arguments in economics.",
   standfirst:
     "Inflation is reported as a fact about the economy — a percentage, monthly, to one decimal place. It is really a weighted average of price changes across a basket of goods that no actual household buys in those proportions, which is why the official figure so often disagrees with what people feel. Both can be right at once, and the gap between them explains a great deal of political anger.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="Measuring_it_is_already_a_judgement">Measuring it is already a judgement</h2>

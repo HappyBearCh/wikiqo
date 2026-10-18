@@ -7,7 +7,7 @@ export const gutMicrobiome: RewrittenArticle = {
   dek: "Trillions of bacteria that digest what you cannot, train your immune system, and are the subject of an enormous amount of overclaiming.",
   standfirst:
     "You are carrying roughly as many bacterial cells as human ones, most of them in the large intestine, collectively holding several hundred times more genes than your own genome. That much is solid. Almost everything downstream of it — what those microbes do, and what changing them can achieve — is a field where genuine discoveries and commercial nonsense have become difficult to separate.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-08-16",
   html: `
 <h2 id="Correcting_the_numbers">Correcting the numbers</h2>

@@ -7,7 +7,7 @@ export const infinity: RewrittenArticle = {
   dek: "Cantor proved it in the 1870s, was attacked for it by the leading mathematicians of his day, and was right.",
   standfirst:
     "For two thousand years infinity was handled by not handling it — treated as a direction rather than a quantity, something a process tends toward but never reaches. Then Georg Cantor took it seriously as an object you could count with, and found that the infinite comes in different sizes. The result is one of the few mathematical proofs that genuinely offends intuition, and it is not difficult.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-16",
   html: `
 <h2 id="The_ancient_refusal">The ancient refusal</h2>

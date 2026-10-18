@@ -7,7 +7,7 @@ export const replicationCrisis: RewrittenArticle = {
   dek: "When researchers systematically repeated well-known experiments, roughly half of them failed to produce the original result.",
   standfirst:
     "Beginning around 2011, several fields discovered that a substantial share of their published findings could not be reproduced when the experiments were run again carefully. The immediate cause was not fraud, which is rare. It was a set of ordinary practices that everybody used, that nobody considered dishonest, and that reliably manufacture statistically significant results from data containing nothing at all.",
-  readingMinutes: 8,
+  readingMinutes: 7,
   published: "2026-08-17",
   html: `
 <h2 id="The_numbers">What the audits found</h2>

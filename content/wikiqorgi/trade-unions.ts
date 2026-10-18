@@ -7,7 +7,7 @@ export const tradeUnions: RewrittenArticle = {
   dek: "Agreeing with a colleague to ask for more money was prosecutable in Britain and America well into the industrial era.",
   standfirst:
     "The legal history of trade unions is not a story of rights slowly extended but of a specific prohibition slowly dismantled. Combining to raise wages was treated as criminal conspiracy, and later as an illegal restraint of trade — the same doctrine used against price-fixing cartels, applied to workers. Almost everything unions are now credited with came after that prohibition was lifted, and the current decline has causes that are structural as well as political.",
-  readingMinutes: 7,
+  readingMinutes: 6,
   published: "2026-08-17",
   html: `
 <h2 id="Illegal">Combination as a crime</h2>

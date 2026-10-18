@@ -7,7 +7,7 @@ export const genghisKhan: RewrittenArticle = {
   dek: "Abandoned by his clan as a boy, he built the largest land empire in history by dismantling the tribal order that had rejected him. The cost in lives was immense, and so were the connections it made.",
   standfirst:
     "Temüjin was born on the Mongolian steppe in the middle of the twelfth century into a world of feuding clans, and grew up as an outcast in it. By his death in 1227 he had united the steppe peoples, taken northern China's capital and destroyed the most powerful state in Central Asia. His sons and grandsons extended the empire from Korea to Hungary. He is remembered in the West as a destroyer and in Mongolia as the founder of the nation, and both memories are accurate.",
-  readingMinutes: 7,
+  readingMinutes: 5,
   published: "2026-10-06",
   html: `
 <h2 id="Childhood">A hard childhood</h2>
