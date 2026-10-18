@@ -4,7 +4,7 @@ export const cryptography: RewrittenArticle = {
   slug: "cryptography",
   title: "Cryptography: security built on problems nobody can prove are hard",
   sourceTitle: "Cryptography",
-  dek: "Most of the world's secrecy rests on the assumption that factoring large numbers is difficult. No one has proved it.",
+  dek: "Most of the world's secrecy rests on the assumption that a few mathematical problems, such as factoring large numbers, are hard to solve. No one has proved it.",
   standfirst:
     "The uncomfortable foundation of modern cryptography is that almost none of it is proven secure. It rests on mathematical problems that have resisted attack for decades and are widely believed to be hard — believed, not demonstrated. The entire edifice of online commerce is an enormous bet on the continued failure of clever people.",
   readingMinutes: 6,
