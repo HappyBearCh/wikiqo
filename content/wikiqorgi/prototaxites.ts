@@ -6,7 +6,7 @@ export const prototaxites: RewrittenArticle = {
   sourceTitle: "Prototaxites",
   dek: "Four hundred million years ago, when most land plants were ankle-high, trunks up to eight metres tall stood over the landscape. In a century and a half they have been identified as a rotting conifer, a giant seaweed, a fungus, a lichen and rolled-up mats of liverwort. The newest proposal is that they belonged to a kind of life that no longer exists.",
   standfirst:
-    "In the Devonian period, about 420 to 370 million years ago, life on land was still young. The plants were mostly small, leafless stems a few centimetres tall. Rising above them, scattered across the landscape, were columns of something else: trunks up to a metre wide and perhaps eight metres high, without branches, leaves or roots that anyone has found. They are called Prototaxites, and they are one of the longest-running puzzles in palaeontology.",
+    "Between about 420 and 370 million years ago, in the late Silurian and Devonian periods, life on land was still young. The plants were mostly small, leafless stems a few centimetres tall. Rising above them, scattered across the landscape, were columns of something else: trunks up to a metre wide and perhaps eight metres high, without branches, leaves or roots that anyone has found. They are called Prototaxites, and they are one of the longest-running puzzles in palaeontology.",
   readingMinutes: 4,
   published: "2026-10-17",
   html: `

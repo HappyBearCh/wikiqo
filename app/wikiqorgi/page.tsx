@@ -9,7 +9,7 @@ import { OG_BASE, SITE_NAME, SITE_URL } from "@/lib/site";
 import { ORGANIZATION, ORGANIZATION_REF, breadcrumbList } from "@/lib/structured-data";
 
 const DESCRIPTION =
-  "wikiqorgi — Wikipedia's subjects, rewritten from scratch. Same facts, different prose: original articles written to be read end to end rather than assembled by committee.";
+  "wikiqorgi — original articles on Wikipedia's best subjects, researched from published sources and written from scratch to be read end to end. Every article lists its sources.";
 
 export const metadata: Metadata = {
   // "wikiqorgi" alone means nothing to someone scanning search results; say
@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     ...OG_BASE,
     type: "website",
     url: "/wikiqorgi",
-    title: "wikiqorgi — Wikipedia, rewritten",
+    title: "wikiqorgi — the encyclopedia's best subjects, written from scratch",
     description: DESCRIPTION,
   },
 };
 
 /**
- * The shelf's front page lists sections only — ten cards, no article titles.
+ * The shelf's front page lists sections only — one card each, no article titles.
  * Each section's own page (see wikiqorgi/[slug]) carries its five articles.
  *
  * Everything under /wikiqorgi is authored in-repo (see content/wikiqorgi), so
@@ -84,8 +84,8 @@ export default function WikiqorgiPage() {
         <h1 className="font-serif text-4xl font-bold tracking-tight sm:text-5xl">All articles</h1>
         <p className="mt-4 text-lg leading-relaxed text-muted">
           {articleCount}{" "}of the encyclopedia&rsquo;s best subjects, researched again
-          and written from scratch — same facts, new prose, built to be read from
-          top to bottom.
+          and written from scratch — new prose, its own sources, built to be read
+          from top to bottom.
         </p>
         <p className="mt-3 text-sm text-muted">
           {sectionCount} sections ·{" "}

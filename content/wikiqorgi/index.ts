@@ -413,7 +413,7 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
     id: "the-ocean",
     title: "The ocean",
     blurb:
-      "A conveyor belt driven by salt and cold, a city built by animals farming plants inside their cells, the largest creatures that have ever lived, a resource that collapses because it recovers, and the biggest habitat on the planet.",
+      "A conveyor belt driven by salt and cold, a city built by animals farming algae inside their cells, the largest creatures that have ever lived, a resource that collapses because it recovers, and the biggest habitat on the planet.",
     hue: "var(--rb-5)",
     articles: [oceanCirculation, deepSea, coralReefs, whales, fisheries],
   },
@@ -515,7 +515,7 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
     id: "animal-strategies",
     title: "Animal strategies",
     blurb:
-      "Five solutions arrived at without anyone designing them: a magnetic sense nobody can locate, concealment that works by breaking an outline rather than matching a background, sterile workers that broke Darwin's theory, a chemical weapon that keeps becoming medicine, and a mind built a second time from a mollusc.",
+      "Five solutions arrived at without anyone designing them: a magnetic sense nobody can locate, concealment that works by breaking an outline rather than matching a background, sterile workers Darwin feared would sink his theory, a chemical weapon that keeps becoming medicine, and a mind built a second time from a mollusc.",
     hue: "var(--rb-4)",
     articles: [animalMigration, camouflage, eusocialInsects, venom, cephalopods],
   },
@@ -555,7 +555,7 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
     id: "the-bodys-systems",
     title: "The body's systems",
     blurb:
-      "Five organs and the problem each one solves: an immune system whose hard job is restraint, a pump proved by arithmetic, a filter that discards everything and takes almost all of it back, a chemical plant that decides your dose, and a signalling network slower than a car.",
+      "Five organs and the problem each one solves: an immune system whose hard job is restraint, a pump proved by arithmetic, a filter that discards everything and takes almost all of it back, a chemical plant that decides your dose, and a signalling network that stops and restarts every message at each junction.",
     hue: "var(--rb-1)",
     articles: [immuneSystem, theHeart, theKidney, theLiver, theNervousSystem],
   },
@@ -785,7 +785,7 @@ export const WIKIQORGI_SECTIONS: WikiqorgiSection[] = [
     id: "elements-with-biographies",
     title: "Elements with biographies",
     blurb:
-      "Chemical elements whose stories are mostly about people: a metal valued for doing nothing, forged in colliding stars, a metal once rarer than gold and now in every drinks can, the light-bearer boiled out of urine that every cell depends on, a glass tint that split the atom, and a gas found in the Sun that keeps escaping the Earth.",
+      "Chemical elements whose stories are mostly about people: a metal valued for doing nothing, forged in colliding stars, a metal once rarer than gold and now in every drinks can, the light-bearer boiled out of urine that every cell depends on, a glass tint whose atoms turned out to split, and a gas found in the Sun that keeps escaping the Earth.",
     hue: "var(--rb-3)",
     articles: [gold, aluminium, phosphorus, uranium, helium],
   },

@@ -6,7 +6,7 @@ export const renaissance: RewrittenArticle = {
   sourceTitle: "Renaissance",
   dek: "A rebirth announced by the people living through it, and questioned by nearly every historian since.",
   standfirst:
-    "The Renaissance is the only historical period that named itself in advance. Fourteenth-century Italian writers declared that a thousand years of darkness had ended and that antiquity was returning through them — a piece of self-promotion so effective that it organised European history for the next six hundred years.",
+    "The Renaissance is the only historical period that announced itself while it was happening. Fourteenth-century Italian writers declared that a thousand years of darkness had ended and that antiquity was returning through them — a piece of self-promotion so effective that it organised European history for the next six hundred years.",
   readingMinutes: 6,
   published: "2026-08-16",
   html: `

@@ -27,9 +27,9 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
   // so any result URL that does get crawled consolidates onto the one page
   // that's actually worth indexing.
   return {
-    title: query ? `Search results for “${query}”` : "Search Wikipedia",
+    title: query ? `Search results for “${query}”` : "Search wikiqo and Wikipedia",
     description: query
-      ? `Wikipedia articles matching “${query}”, read on wikiqo.`
+      ? `Articles matching “${query}” on wikiqo and Wikipedia.`
       : DESCRIPTION,
     alternates: { canonical: "/search" },
     // Spread conditionally: setting `robots: undefined` would *replace* the
@@ -40,7 +40,7 @@ export async function generateMetadata({ searchParams }: SearchPageProps): Promi
       ...OG_BASE,
       type: "website",
       url: "/search",
-      title: query ? `Search results for “${query}”` : "Search Wikipedia",
+      title: query ? `Search results for “${query}”` : "Search wikiqo and Wikipedia",
       description: DESCRIPTION,
     },
   };

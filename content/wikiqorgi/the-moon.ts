@@ -6,7 +6,7 @@ export const theMoon: RewrittenArticle = {
   sourceTitle: "Moon",
   dek: "Absurdly large for a planet our size, made of the wrong material, and slowly leaving.",
   standfirst:
-    "Every other rocky planet has either no moon or captured asteroids a few kilometres across. Ours is a quarter of Earth's diameter, which by planetary standards is not a satellite but a companion. Explaining how it got there took until the 1980s, and the answer is that something the size of Mars hit us.",
+    "Every other rocky planet has either no moon or, in the case of Mars, two small irregular ones. Ours is a quarter of Earth's diameter, which by planetary standards is not a satellite but a companion. Explaining how it got there took until the 1980s, and the answer is that something the size of Mars hit us.",
   readingMinutes: 5,
   published: "2026-08-16",
   html: `

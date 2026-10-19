@@ -46,14 +46,14 @@ const SUBJECTS = [
   "Reading",
   "Accessibility",
   "Queer joy",
-  "Public-domain ethos",
+  "Open access",
 ];
 
 // One principle per stripe of the rainbow. Colour index lines up with HUES.
 const PRINCIPLES = [
   {
     title: "Written to be read",
-    body: "The wikiqorgi shelf takes the encyclopedia's best subjects and writes them again from scratch — same facts, new prose, built to be read from top to bottom.",
+    body: "The wikiqorgi shelf takes the encyclopedia's best subjects and writes them again from scratch — new prose, checked against its own sources, built to be read from top to bottom.",
   },
   {
     title: "Clean reading",
@@ -148,8 +148,8 @@ export default function AboutPage() {
               <Link href="/wikiqorgi">wikiqorgi</Link>: the encyclopedia&rsquo;s
               best subjects — black holes, money, the jury, fungi — researched
               again and written from scratch, each one with its sources listed
-              at the foot of the page. Same facts as the encyclopedia, entirely
-              different prose, built to be read from start to finish.
+              at the foot of the page. Entirely different prose, checked against
+              published sources, and built to be read from start to finish.
             </p>
             <p>
               The second is a reader for Wikipedia itself. Its most-read articles

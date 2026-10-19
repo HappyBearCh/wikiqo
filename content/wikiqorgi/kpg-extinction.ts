@@ -6,7 +6,7 @@ export const kpgExtinction: RewrittenArticle = {
   sourceTitle: "Cretaceous–Paleogene extinction event",
   dek: "An asteroid arrived, three-quarters of species did not survive it, and the story was reconstructed from a thin layer of unusual clay.",
   standfirst:
-    "Sixty-six million years ago an object roughly ten kilometres across struck what is now the Yucatán Peninsula at something like twenty kilometres per second. The impact itself killed almost nothing beyond the immediate region. What followed over the next months and years killed three-quarters of all species on Earth, and the reason it did is more interesting than the collision.",
+    "Sixty-six million years ago an object roughly ten kilometres across struck what is now the Yucatán Peninsula at something like twenty kilometres per second. The blast itself devastated only the surrounding region. What followed over the next hours, months and years killed three-quarters of all species on Earth, and the reason it did is more interesting than the collision.",
   readingMinutes: 6,
   published: "2026-08-16",
   html: `

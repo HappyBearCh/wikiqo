@@ -6,7 +6,7 @@ export const machuPicchu: RewrittenArticle = {
   sourceTitle: "Machu Picchu",
   dek: "It was neither lost nor a city. It was a royal retreat built for the Inca ruler Pachacuti, occupied earlier than the textbooks said, and possibly not even called Machu Picchu.",
   standfirst:
-    "Machu Picchu sits on a narrow ridge high above the Urubamba river in the Peruvian Andes, between two peaks, with the river looping around it far below. Built by the Inca in the fifteenth century and left within about a hundred years, it escaped the Spanish conquest so completely that no colonial document clearly mentions it. It became world-famous in 1911, when a Yale lecturer was guided there by a local farmer, and it now receives more visitors than its fragile setting can comfortably hold.",
+    "Machu Picchu sits on a narrow ridge high above the Urubamba river in the Peruvian Andes, between two peaks, with the river looping around it far below. Built by the Inca in the fifteenth century and left within about a hundred years, it escaped the Spanish conquest so completely that the conquerors never found it. It became world-famous in 1911, when a Yale lecturer was guided there by a local farmer, and it now receives more visitors than its fragile setting can comfortably hold.",
   readingMinutes: 4,
   published: "2026-10-18",
   html: `

@@ -6,7 +6,7 @@ export const braille: RewrittenArticle = {
   sourceTitle: "Braille",
   dek: "Louis Braille adapted an army officer's night-writing system into a code that fits under a fingertip. It was resisted by sighted teachers, fought a 'war of the dots' in America, and is now challenged by text-to-speech.",
   standfirst:
-    "Before braille, blind people who could read did so slowly, by tracing the outlines of large embossed letters made to look like print. Louis Braille, blind from the age of three, devised a better system while still a teenager, based not on the shapes of letters but on patterns of raised dots designed for the fingertip. It took decades to be accepted, even at his own school. Today it faces a different challenge: the ease of having a computer read text aloud.",
+    "Before braille, blind people who could read did so slowly, by tracing the outlines of large embossed letters made to look like print. Louis Braille, blinded by an accident in early childhood, devised a better system while still a teenager, based not on the shapes of letters but on patterns of raised dots designed for the fingertip. It took decades to be accepted, even at his own school. Today it faces a different challenge: the ease of having a computer read text aloud.",
   readingMinutes: 4,
   published: "2026-10-03",
   html: `

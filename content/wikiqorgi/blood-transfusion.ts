@@ -6,7 +6,7 @@ export const bloodTransfusion: RewrittenArticle = {
   sourceTitle: "Blood transfusion",
   dek: "Some patients recovered and some died within minutes, with no way to tell which in advance. The answer was four groups.",
   standfirst:
-    "Transfusion was attempted from the seventeenth century and produced results so erratic that it was banned in several countries and abandoned as reckless. The pattern made no sense until 1901, when Karl Landsteiner mixed samples from his own laboratory staff and found that some combinations clumped and others did not. Everything about modern transfusion — the letters, the cards, the cross-matching — follows from that one observation.",
+    "Transfusion was attempted from the seventeenth century and produced results so erratic that it was banned in several countries and abandoned as reckless. The pattern made no sense until 1900, when Karl Landsteiner mixed samples from his own laboratory staff and found that some combinations clumped and others did not. Everything about modern transfusion — the letters, the cards, the cross-matching — follows from that one observation.",
   readingMinutes: 6,
   published: "2026-08-17",
   html: `
