@@ -1114,6 +1114,7 @@ export const WIKIQORGI_SOURCES: Record<string, Source[]> = {
   pencil: [
     { author: "Supreme Court of the United States", title: "Reckendorfer v. Faber, 92 U.S. 347", year: 1875 },
     { author: "Henry Petroski", title: "The Pencil: A History of Design and Circumstance", year: 1990, publication: "Knopf" },
+    { author: "Caroline Weaver", title: "The Pencil Perfect: The Untold Story of a Cultural Icon", year: 2017, publication: "Gestalten" },
   ],
   typewriter: [
     { author: "Margery W. Davies", title: "Woman's Place Is at the Typewriter: Office Work and Office Workers, 1870–1930", year: 1982, publication: "Temple University Press" },
@@ -1161,6 +1162,7 @@ export const WIKIQORGI_SOURCES: Record<string, Source[]> = {
     { author: "Columbia Accident Investigation Board", title: "Report, Volume I", year: 2003 },
   ],
   tenerife: [
+    { author: "G. E. Cooper, M. D. White and J. K. Lauber (eds)", title: "Resource Management on the Flightdeck: Proceedings of a NASA/Industry Workshop", year: 1980, publication: "NASA Conference Publication 2120" },
     { author: "Karl E. Weick", title: "The Vulnerable System: An Analysis of the Tenerife Air Disaster", year: 1990, publication: "Journal of Management" },
     { author: "Earl L. Wiener, Barbara G. Kanki and Robert L. Helmreich (eds)", title: "Cockpit Resource Management", year: 1993, publication: "Academic Press" },
   ],

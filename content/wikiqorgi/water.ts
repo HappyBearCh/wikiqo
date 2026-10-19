@@ -23,9 +23,9 @@ export const water: RewrittenArticle = {
 <p><strong>It sticks to itself and climbs.</strong> Surface tension is the strongest of any common liquid except mercury, strong enough to support insects and to pull water up a narrow tube against gravity.</p>
 
 <h2 id="Why_that_matters_for_being_alive">Why that matters for being alive</h2>
-<p>Each anomaly turns out to be load-bearing.</p>
+<p>Each anomaly turns out to matter for life.</p>
 <p>Floating ice insulates. A lake freezes from the top and the layer of ice, being a poor conductor, protects the water beneath — so fish survive the winter. Were ice denser, lakes and eventually oceans would freeze from the bottom up and largely stay frozen, since summer sun could not reach the depths.</p>
-<p>High heat capacity stabilises climate. Oceans absorb enormous quantities of solar energy for a small temperature change, which is why coastal places have mild winters and continental interiors do not, and why the sea moderates the entire planet. The same property, at the scale of a body, is why blood can carry heat from working muscle to the skin without cooking anything on the way.</p>
+<p>High heat capacity stabilises climate. Oceans absorb enormous quantities of solar energy for a small temperature change. Coastal places therefore have mild winters and continental interiors do not, and the sea moderates the entire planet. The same property, at the scale of a body, is why blood can carry heat from working muscle to the skin without cooking anything on the way.</p>
 <p>High heat of vaporisation makes sweating work. Evaporating a small amount of water removes a large amount of heat, which is the mechanism behind human endurance — persistence hunting is possible for a hairless, sweating animal in conditions that force furred predators to stop and pant.</p>
 <p>Surface tension and capillary action move water up trees. There is no pump; water evaporating from leaves pulls a continuous cohesive column up from the roots, under tension, to heights above a hundred metres. That only works because water molecules cling to one another strongly enough not to break the thread.</p>
 

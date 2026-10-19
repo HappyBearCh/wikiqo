@@ -34,7 +34,7 @@ export const electricalGrid: RewrittenArticle = {
 
 <h2 id="What_has_to_change">What has to change</h2>
 <p>Grids were designed for a one-way flow from a few hundred large plants to millions of passive consumers. What is being built instead is bidirectional, with millions of rooftop installations exporting power, batteries both storing and supplying, and electric vehicles capable of either depending on the hour.</p>
-<p>The engineering challenges are real and mostly unglamorous. Distribution networks were not designed for reverse flow. Transmission capacity is the binding constraint on connecting new generation in many countries, and building a high-voltage line takes a decade, most of it in planning and objection rather than construction. Interconnection queues in several markets now hold more proposed generation than the existing system's total capacity.</p>
+<p>The engineering challenges are real and mostly mundane. Distribution networks were not designed for reverse flow. Transmission capacity is the binding constraint on connecting new generation in many countries, and building a high-voltage line takes a decade, most of it in planning and objection rather than construction. Interconnection queues in several markets now hold more proposed generation than the existing system's total capacity.</p>
 <p>The largest single asset in most electricity systems is not any power station but the network itself, and its useful life is measured in decades. Which means the decisions constraining a grid in 2050 are being made — or postponed — now.</p>
 `,
 };

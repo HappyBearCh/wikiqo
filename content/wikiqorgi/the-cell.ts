@@ -33,7 +33,7 @@ export const theCell: RewrittenArticle = {
 <p>Embedded in the membrane are proteins doing the traffic control: channels that let specific ions through when opened, pumps that move substances against their concentration gradient at the cost of energy, and receptors that detect molecules outside and trigger responses within. Roughly a third of the proteins encoded by a typical genome are membrane proteins, and a large share of pharmaceuticals target them.</p>
 
 <h2 id="Inside">Inside</h2>
-<p>The organelles form a production system whose logic is genuinely industrial.</p>
+<p>The organelles form a production system whose logic is industrial.</p>
 <p>The nucleus stores DNA and is where it is transcribed into RNA. Ribosomes read that RNA and build proteins. The endoplasmic reticulum, a maze of membrane continuous with the nuclear envelope, folds and modifies proteins destined for export or for membranes. The Golgi apparatus, a stack of flattened sacs, sorts and labels them for their destinations. Lysosomes are acidic compartments containing digestive enzymes that break down waste and worn-out components.</p>
 <p>The cytoskeleton is the part usually left out of diagrams and does more than its name suggests. It is not a static frame but a dynamic network that gives shape, moves organelles along its filaments using motor proteins that literally walk, drives cell division by pulling chromosomes apart, and enables movement and shape change. It assembles and disassembles continuously, and several anticancer drugs work by interfering with it during division.</p>
 

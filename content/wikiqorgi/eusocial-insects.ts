@@ -36,7 +36,7 @@ export const eusocialInsects: RewrittenArticle = {
 <p>The response was extraordinary. Over a hundred researchers signed a rebuttal, and the exchange was unusually pointed for a technical journal.</p>
 <p>The substance is partly a disagreement about bookkeeping. Inclusive fitness and multilevel selection can be shown to be mathematically equivalent under many conditions — the same evolutionary outcome partitioned differently. Whether a colony is best modelled as a group of related individuals or as a single superorganism whose workers are analogous to somatic cells is, in those cases, a question of which framing is more useful rather than which is true.</p>
 <p>The superorganism framing has real appeal for the most derived species. A leafcutter colony has castes differing enormously in size and function, a single reproductive individual, and workers that cannot survive independently — which is a fair description of a body with cells.</p>
-<p>Where the framings genuinely diverge is in predicting conflict, and this is where inclusive fitness earns its place: it forecasts that colonies should show specific internal conflicts, and they do.</p>
+<p>Where the framings really diverge is in predicting conflict, and this is where inclusive fitness earns its place: it forecasts that colonies should show specific internal conflicts, and they do.</p>
 
 <h2 id="Conflict">Colonies are not harmonious</h2>
 <p>The most striking confirmation of relatedness-based reasoning is that colonies contain exactly the disputes the arithmetic predicts.</p>

@@ -17,7 +17,7 @@ export const hurricanes: RewrittenArticle = {
 <p>This framing yields the concept of potential intensity — the maximum wind speed thermodynamically available given the sea surface temperature and the temperature aloft. Real storms usually fall short because of friction, dry air intrusion and wind shear, but almost none exceed it, which is a strong confirmation that the engine model is right.</p>
 
 <h2 id="Ingredients">What has to be true for one to form</h2>
-<p>Tropical cyclogenesis needs several conditions simultaneously, which is why the world sees perhaps eighty a year rather than thousands.</p>
+<p>Tropical cyclogenesis needs several conditions at once. As a result the world sees perhaps eighty a year rather than thousands.</p>
 <p><strong>Warm water, deep.</strong> Roughly 26.5°C or above, through a layer tens of metres thick. Surface warmth alone is insufficient, because the storm's own winds churn cooler water up from below — a storm that stalls over a shallow warm layer chills its own fuel supply and weakens. Ocean heat content matters more than surface temperature, which is why the same reading over a deep warm eddy supports a far stronger storm.</p>
 <p><strong>Low wind shear.</strong> If winds at altitude differ much from winds at the surface, the vertical column of the storm is tilted and torn apart, and the heat released aloft is displaced from the circulation below. Shear is the single most common reason a promising disturbance fails.</p>
 <p><strong>Moist mid-levels.</strong> Dry air entrained into the storm kills convection. The Saharan Air Layer, a mass of dry dusty air drifting off Africa, routinely suppresses Atlantic storms.</p>
@@ -49,6 +49,6 @@ export const hurricanes: RewrittenArticle = {
 <p><strong>Rainfall</strong> increases with high confidence, for basic thermodynamic reasons: warmer air holds around seven per cent more moisture per degree, and what a storm gathers it eventually drops.</p>
 <p><strong>Rapid intensification</strong> — a large jump in wind speed within 24 hours — appears to be becoming more common, which is the most operationally alarming trend, because it compresses the warning time available to evacuate.</p>
 <p><strong>Storm surge</strong> worsens regardless of any change in the storms themselves, because it starts from a higher sea level.</p>
-<p>Detecting trends is genuinely hard, and the reason is worth stating: the satellite record is only a few decades long, and earlier counts undercount storms that never approached land or shipping. Some apparent increases are improvements in observation. This is a real limitation, not a rhetorical dodge, and it is why the frequency question remains less settled than the intensity one.</p>
+<p>Detecting trends is hard for a simple reason: the satellite record is only a few decades long, and earlier counts undercount storms that never approached land or shipping. Some apparent increases are improvements in observation. This is a real limitation, not a rhetorical dodge, and it is why the frequency question remains less settled than the intensity one.</p>
 `,
 };

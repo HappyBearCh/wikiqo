@@ -41,7 +41,7 @@ export const greenRevolution: RewrittenArticle = {
 
 <h2 id="What_comes_next">What comes next</h2>
 <p>Yield growth in the major cereals has slowed since the 1990s, while demand continues rising, which is the central problem in agricultural research now.</p>
-<p>The approaches under way are less amenable to a single dramatic breakthrough. Improving photosynthetic efficiency — the leaf's conversion of sunlight into biomass is only a few per cent, and rubisco's inefficiency is a known target — could raise the ceiling substantially and is a long project. Engineering cereals to fix their own nitrogen, in partnership with bacteria as legumes do, would remove the fertiliser dependency and is genuinely hard. Precision application, using sensors and variable-rate machinery, reduces input use without reducing yield and is being adopted where it is affordable.</p>
+<p>The approaches under way are less amenable to a single dramatic breakthrough. Improving photosynthetic efficiency — the leaf's conversion of sunlight into biomass is only a few per cent, and rubisco's inefficiency is a known target — could raise the ceiling substantially and is a long project. Engineering cereals to fix their own nitrogen, in partnership with bacteria as legumes do, would remove the fertiliser dependency and is hard. Precision application, using sensors and variable-rate machinery, reduces input use without reducing yield and is being adopted where it is affordable.</p>
 <p>The lesson most worth carrying forward from Borlaug's work is not about genetics. It is that the binding constraint was not the one everyone was looking at. Nobody expected the answer to a food crisis to be stem length.</p>
 `,
 };

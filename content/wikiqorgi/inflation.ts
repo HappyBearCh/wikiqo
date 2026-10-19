@@ -26,7 +26,7 @@ export const inflation: RewrittenArticle = {
 <p>Inflation is usually described as everyone getting poorer, which is not accurate. It is a redistribution, and it has predictable winners.</p>
 <p><strong>Borrowers gain.</strong> A debt fixed in nominal terms shrinks in real terms as prices rise. The largest borrower in most economies is the government, which is why inflation is sometimes described as a tax nobody has to legislate.</p>
 <p><strong>Lenders and savers lose</strong> symmetrically, as does anyone holding cash.</p>
-<p><strong>People with fixed nominal incomes lose</strong> — pensioners on unindexed pensions, workers on multi-year contracts. Whether wages keep up depends heavily on bargaining power, which is why the same inflation rate is experienced very differently across the labour market.</p>
+<p><strong>People with fixed nominal incomes lose</strong> — pensioners on unindexed pensions, workers on multi-year contracts. Whether wages keep up depends heavily on bargaining power, so the same inflation rate is experienced very differently across the labour market.</p>
 <p><strong>Holders of real assets are broadly protected.</strong> Property, equities and commodities tend to rise with the price level, so inflation typically widens the gap between those who own assets and those who do not.</p>
 <p>There is also a floor problem. Persistently falling prices are worse: they raise the real burden of debt, and they encourage households to postpone purchases in the expectation of lower prices later, which reduces demand and can lower prices further. That trap is why central banks target a small positive rate — usually around two per cent — rather than zero. The target is a buffer, not an ideal.</p>
 
@@ -38,7 +38,7 @@ export const inflation: RewrittenArticle = {
 <h2 id="The_recent_episode">The recent episode</h2>
 <p>The inflation of 2021 to 2023 across most advanced economies is instructive because it did not fit any single account cleanly.</p>
 <p>The supply side clearly mattered: pandemic disruption to production and shipping, then an energy shock following the invasion of Ukraine. The demand side clearly mattered too: substantial fiscal support met an economy that could not immediately expand output, and household spending shifted toward goods in ways supply chains were not configured for.</p>
-<p>Central banks initially judged it transitory, a word that came to be used against them, and were slow to raise rates. The subsequent tightening was rapid, and inflation fell — though how much of the fall was caused by monetary policy and how much by supply chains simply healing is genuinely disputed, and the disagreement is not close to resolved.</p>
+<p>Central banks initially judged it transitory, a word that came to be used against them, and were slow to raise rates. The subsequent tightening was rapid, and inflation fell — though how much of the fall was caused by monetary policy and how much by supply chains simply healing is disputed, and the disagreement is not close to resolved.</p>
 <p>One thing the episode demonstrated clearly is the gap between the statistic and the experience. Headline inflation fell steadily while price <em>levels</em> stayed high, and the public reaction to falling inflation was widespread anger — because a lower rate of increase is not a reduction, and nothing in the reported figure captures the fact that the previous prices are not coming back.</p>
 `,
 };

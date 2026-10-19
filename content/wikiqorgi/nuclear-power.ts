@@ -50,6 +50,6 @@ export const nuclearPower: RewrittenArticle = {
 <p>Small modular reactors are the main hope, and the reasoning is about manufacturing rather than physics. Building reactors in a factory in repeated units, and shipping them, replaces bespoke site construction with production learning. Several designs are licensed or under construction, and none has yet demonstrated the cost claims, which will only be settled by building a lot of them.</p>
 <p>Alternative fuel cycles — thorium, fast reactors that consume long-lived waste, molten salt designs — have real technical merits and a long history of remaining ten years away.</p>
 <p>Fusion is a different technology entirely, with no meltdown mechanism and no long-lived waste, and remains unproven at net power on any commercial timescale.</p>
-<p>The honest summary is that nuclear power is a demonstrated, low-carbon, low-mortality source that most rich countries have found themselves unable to build affordably, for reasons that are institutional rather than physical — and that this is a harder problem to fix than a technical one would be.</p>
+<p>Taken together, nuclear power is a demonstrated, low-carbon, low-mortality source that most rich countries have found themselves unable to build affordably, for reasons that are institutional rather than physical — and that this is a harder problem to fix than a technical one would be.</p>
 `,
 };

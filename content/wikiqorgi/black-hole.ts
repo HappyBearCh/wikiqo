@@ -21,7 +21,7 @@ export const blackHole: RewrittenArticle = {
 
 <h2 id="Three_numbers_and_nothing_else">Three numbers and nothing else</h2>
 <p>A black hole formed from a collapsing star retains almost none of the star's biography. Classical relativity says the finished object is fully specified by mass, angular momentum, and electric charge — a result physicists summarised, with unusual flair, as the no-hair theorem. Real astrophysical black holes carry essentially no charge, which leaves two numbers. Two numbers to describe an object built from a lifetime of nuclear fusion, a particular chemistry, a particular history. Everything else is gone from the exterior description.</p>
-<p>Spin turns out to matter enormously. A rotating black hole drags spacetime around with it, creating a zone outside the horizon — the ergosphere — where standing still is not an option, because the frame you would stand still in is itself being swept along. That dragging is not a curiosity. It is the machinery behind some of the most energetic phenomena in the universe.</p>
+<p>Spin turns out to matter enormously. A rotating black hole drags spacetime around with it, creating a zone outside the horizon — the ergosphere — where standing still is not an option, because the frame you would stand still in is itself being swept along. That dragging is the machinery behind some of the most energetic phenomena in the universe.</p>
 
 <h2 id="Why_the_darkest_objects_make_the_brightest_light">Why the darkest objects make the brightest light</h2>
 <p>Black holes are invisible; the neighbourhoods around them are not. Gas spiralling inward cannot fall straight in — it carries angular momentum, so it flattens into an accretion disc and grinds against itself. Friction and magnetic turbulence heat the inner disc to millions of degrees, and it radiates ferociously in X-rays. Meanwhile, twisted magnetic fields anchored in the disc and in the spinning geometry itself can fling a fraction of the inflow back out as jets, collimated so tightly that they stay coherent across distances larger than a galaxy.</p>
@@ -36,7 +36,7 @@ export const blackHole: RewrittenArticle = {
 </ul>
 
 <h2 id="The_unfinished_part">The unfinished part</h2>
-<p>Two problems remain genuinely open, and both are signs that our theories are incomplete rather than merely unfinished.</p>
+<p>Two problems remain open, and both are signs that our theories are incomplete rather than merely unfinished.</p>
 <p>The first is the singularity. Follow the equations inward and curvature grows without bound, which is physics' way of announcing that the equations no longer apply. Something must replace them at the centre, and that something will be a theory of quantum gravity we do not yet have.</p>
 <p>The second is more subtle. Stephen Hawking showed that horizons are not perfectly black: quantum effects make them glow faintly, and over immense timescales a black hole evaporates entirely. But the radiation appears to depend only on mass, spin, and charge — carrying none of the detail of whatever fell in. If that is right, information is destroyed, which quantum mechanics forbids. Decades of work have narrowed the possibilities without settling them. The information paradox is the sharpest point of contact between our two best theories, and it is still cutting.</p>
 

@@ -18,7 +18,7 @@ export const steel: RewrittenArticle = {
 
 <h2 id="Before_it_could_be_made_in_bulk">Before it could be made in bulk</h2>
 <p>Iron's advantage over bronze was never that it is better — early iron was inferior to good bronze — but that its ore is common. Bronze requires tin, which is rare and often had to be imported across long distances, so bronze-age metalworking depended on trade networks that could be cut. Iron ore is nearly everywhere.</p>
-<p>Producing good steel, however, was slow and small-scale. Bloomery furnaces could not reach iron's melting point, so they produced a spongy mass that had to be hammered repeatedly to expel slag. Crucible steel, made in India from perhaps the first millennium BC and traded as wootz, produced a genuinely superior material — the basis of the patterned blades known in Europe as Damascus steel — in batches of a few kilograms.</p>
+<p>Producing good steel, however, was slow and small-scale. Bloomery furnaces could not reach iron's melting point, so they produced a spongy mass that had to be hammered repeatedly to expel slag. Crucible steel, made in India from perhaps the first millennium BC and traded as wootz, produced a superior material — the basis of the patterned blades known in Europe as Damascus steel — in batches of a few kilograms.</p>
 <p>Blast furnaces, developed in China by around the first century BC and in Europe much later, could melt iron fully, but the product absorbed so much carbon from the fuel that it emerged as brittle cast iron. Converting that to steel meant removing carbon, and doing so controllably at scale was the problem nobody had solved.</p>
 
 <h2 id="Bessemer">Bessemer</h2>

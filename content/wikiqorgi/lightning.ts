@@ -46,7 +46,7 @@ export const lightning: RewrittenArticle = {
 
 <h2 id="Upward">The discharges nobody knew about</h2>
 <p>Pilots reported flashes above thunderstorms for decades and were generally not believed. The first photograph was taken accidentally in 1989, during a camera test, and confirmed an entire family of upper-atmosphere discharges.</p>
-<p><strong>Sprites</strong> are large red flashes at 50 to 90 kilometres altitude, triggered by particularly powerful positive cloud-to-ground strikes. They are enormous — tens of kilometres across — and last only milliseconds, which is why they went unrecorded for so long.</p>
+<p><strong>Sprites</strong> are large red flashes at 50 to 90 kilometres altitude, triggered by particularly powerful positive cloud-to-ground strikes. They are enormous — tens of kilometres across — and last only milliseconds, so they went unrecorded for a long time.</p>
 <p><strong>Blue jets</strong> shoot upward from cloud tops into the stratosphere. <strong>ELVES</strong> are expanding rings of light in the ionosphere, produced by the electromagnetic pulse from a strike.</p>
 <p>Stranger still are <strong>terrestrial gamma-ray flashes</strong>, discovered in 1994 by a satellite built to observe cosmic gamma-ray bursts, which kept detecting them coming from below. Thunderstorms accelerate electrons to relativistic energies and produce gamma radiation, along with antimatter — positrons have been detected in association with them. Storms on this planet are, briefly, particle accelerators.</p>
 `,

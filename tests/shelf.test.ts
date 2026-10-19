@@ -24,7 +24,7 @@ describe("wikiqorgi shelf", () => {
   it("lists sources oldest first, each with an author, title and year", () => {
     for (const article of WIKIQORGI_ARTICLES) {
       const sources = getSources(article.slug);
-      expect(sources.length).toBeGreaterThanOrEqual(2);
+      expect(sources.length, article.slug).toBeGreaterThanOrEqual(3);
       for (const source of sources) {
         expect(source.author && source.title).toBeTruthy();
         expect(source.year).toBeLessThanOrEqual(new Date().getUTCFullYear());

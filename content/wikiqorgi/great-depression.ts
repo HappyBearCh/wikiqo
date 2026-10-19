@@ -11,7 +11,7 @@ export const greatDepression: RewrittenArticle = {
   published: "2026-08-16",
   html: `
 <h2 id="Before_the_crash">Before the crash</h2>
-<p>The American economy of the 1920s was genuinely productive — electrification, mass-produced cars, radio — and also carried strains that the boom concealed.</p>
+<p>The American economy of the 1920s was highly productive — electrification, mass-produced cars, radio — and also carried strains that the boom concealed.</p>
 <p>Agriculture had been depressed for most of the decade, as wartime demand vanished and mechanisation raised output into falling prices. Income inequality was high, so a large share of purchasing power sat with people who could not spend much more. Consumer durables had been sold increasingly on instalment credit, pulling future demand into the present. And stock speculation had been financed on margin, with buyers putting down a fraction of the purchase price and borrowing the rest, which magnifies gains and losses identically.</p>
 <p>The market peaked in September 1929 and broke in late October. Margin calls forced selling, which lowered prices, which forced more selling. By 1932 the index had lost about ninety per cent of its value.</p>
 <p>Only a small minority of American households owned shares directly, which is why the crash alone does not explain what followed. The transmission ran through the banks.</p>

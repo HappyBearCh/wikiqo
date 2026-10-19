@@ -18,7 +18,7 @@ export const fermentation: RewrittenArticle = {
 
 <h2 id="Bread_and_the_gas">Bread and the gas</h2>
 <p>Yeast metabolises sugar and produces carbon dioxide and ethanol. In brewing the alcohol is the point and the gas is a by-product; in baking the reverse, with the alcohol boiling off in the oven.</p>
-<p>What makes bread possible is not the gas alone but wheat's ability to trap it. Wheat contains proteins that, when hydrated and worked, link into an elastic network — gluten — strong enough to hold expanding bubbles without tearing. Kneading develops it, which is why bread dough is worked and cake batter is not. Grains lacking this network make flatbreads and porridge, which is why leavened bread is a wheat and rye phenomenon rather than a universal one.</p>
+<p>What makes bread possible is not the gas alone but wheat's ability to trap it. Wheat contains proteins that, when hydrated and worked, link into an elastic network — gluten — strong enough to hold expanding bubbles without tearing. Kneading develops it; bread dough is worked and cake batter is not. Grains lacking this network make flatbreads and porridge, which is why leavened bread is a wheat and rye phenomenon rather than a universal one.</p>
 <p>Sourdough is the older method and a more interesting organism. A starter is not a single yeast but a stable community — wild yeasts alongside lactic acid bacteria — that reaches a self-sustaining equilibrium. The bacteria produce acids that give the flavour, and the acidity also slows staling and improves the availability of minerals otherwise bound up in the grain. Commercial baker's yeast, a single selected strain, ferments faster and produces bread with much less of that.</p>
 
 <h2 id="Milk">Milk</h2>
@@ -33,7 +33,7 @@ export const fermentation: RewrittenArticle = {
 
 <h2 id="What_it_does_to_the_food">What it does to the food</h2>
 <p>Beyond preservation, fermentation changes food in ways that matter nutritionally.</p>
-<p>It breaks down antinutrients. Phytic acid in grains and legumes binds iron and zinc and prevents their absorption; fermentation degrades it substantially, which is why traditional preparations of staple grains almost always involve soaking or souring. Cassava contains cyanogenic compounds and is genuinely toxic without processing; the fermentation steps used across West Africa and South America remove them.</p>
+<p>It breaks down antinutrients. Phytic acid in grains and legumes binds iron and zinc and prevents their absorption; fermentation degrades it substantially, and traditional preparations of staple grains almost always involve soaking or souring. Cassava contains cyanogenic compounds and is toxic without processing; the fermentation steps used across West Africa and South America remove them.</p>
 <p>It predigests. Bacteria break proteins into amino acids and peptides, which is where the savoury depth of soy sauce, fish sauce and aged cheese comes from — these are all essentially controlled protein breakdown, and the compound responsible for their shared character is glutamate.</p>
 <p>It synthesises. Some fermentations produce vitamins absent from the raw ingredient, notably B vitamins, and certain bacteria produce vitamin B12, which is otherwise almost entirely absent from plant foods.</p>
 

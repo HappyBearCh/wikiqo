@@ -16,7 +16,7 @@ export const concrete: RewrittenArticle = {
 <p>Two consequences follow from this being a reaction rather than a drying. Concrete cures underwater perfectly well, which is why it can be poured into foundations and river piers. And it continues gaining strength for years, most rapidly in the first month but measurably for far longer.</p>
 
 <h2 id="The_Roman_version">The Roman version</h2>
-<p>Roman concrete was made with volcanic ash rather than the material used today, and its marine performance is genuinely superior in a way that has been investigated seriously rather than romanticised.</p>
+<p>Roman concrete was made with volcanic ash rather than the material used today, and its marine performance is superior in a way that has been investigated seriously rather than romanticised.</p>
 <p>Harbour structures poured two thousand years ago are intact in seawater that destroys modern concrete in decades. Analysis found the reason: seawater percolating through the material reacts with the volcanic ash to grow rare interlocking mineral crystals in the cracks. The structure is not merely resisting the sea. It is being strengthened by it.</p>
 <p>More recent work suggests the Romans mixed quicklime directly at high temperature, leaving small lime clasts distributed through the material. When a crack forms and water reaches a clast, it dissolves and recrystallises, sealing the crack. What was long assumed to be sloppy mixing appears to be self-healing.</p>
 <p>The Pantheon's dome, unreinforced concrete cast in 126 AD with progressively lighter aggregate toward the top, remains the largest unreinforced concrete dome in the world.</p>

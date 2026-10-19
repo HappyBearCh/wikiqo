@@ -44,6 +44,6 @@ export const fire: RewrittenArticle = {
 <h2 id="Combustion_since">Everything since is the same reaction</h2>
 <p>The industrial world runs on the same chemistry at larger scale. A steam engine burns fuel to heat water; an internal combustion engine burns it inside the cylinder; a power station burns it to spin a turbine. Smelting, glassmaking, ceramics, cement and lime all depend on sustained high temperature, and none was possible before fire was controllable enough to be concentrated and directed.</p>
 <p>The change in scale is what makes the current situation different in kind. Burning fossil fuel releases carbon that has been out of circulation for hundreds of millions of years, at a rate that has no precedent in the record, and the resulting warming is the direct downstream consequence of the technique that made the species what it is.</p>
-<p>There is a symmetry in it worth stating plainly. The same reaction that let humans occupy every climate is now altering the climate, and both effects come from the same chemistry doing the same thing at different scales.</p>
+<p>There is a symmetry in it. The same reaction that let humans occupy every climate is now altering the climate, and both effects come from the same chemistry doing the same thing at different scales.</p>
 `,
 };

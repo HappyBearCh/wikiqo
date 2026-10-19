@@ -34,7 +34,7 @@ export const incompleteness: RewrittenArticle = {
 <p>No sufficiently powerful formal system can establish, using only its own methods, that it will never produce a contradiction. Consistency can be proved from a stronger system, whose consistency then requires a stronger one still. The regress does not terminate, and Hilbert's programme, in its original form, was finished.</p>
 
 <h2 id="What_it_does_not_say">What it does not say</h2>
-<p>Few theorems have been misused as energetically, so the limits are worth stating plainly.</p>
+<p>Few theorems have been misused as energetically, so its limits need stating plainly.</p>
 <p>It does not say mathematics is inconsistent or unreliable. Arithmetic is almost universally believed consistent; the theorem says that belief cannot be established from within, not that it is doubtful. Consistency proofs for arithmetic exist, using stronger assumptions.</p>
 <p>It does not apply to every formal system. Systems too weak to encode arithmetic escape it entirely — and some rich ones do too. The first-order theory of real numbers and geometry is complete and decidable, proved by Tarski, which surprises people who assume incompleteness is universal.</p>
 <p>It does not establish that human minds surpass machines. This is the most persistent overreach, argued by Lucas and by Penrose: we can see G is true while the system cannot prove it, therefore we are not formal systems. The standard reply is that we see G is true only <em>conditionally</em> on the system's consistency, which we have not established either — a machine can perform exactly the same conditional reasoning. The argument assumes what it needs to prove.</p>

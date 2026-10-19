@@ -18,7 +18,7 @@ export const goGame: RewrittenArticle = {
 <p>Because the first player has an advantage, Black gives White a compensation of several points, called komi, typically six and a half or seven and a half depending on the ruleset. The half-point exists to prevent draws.</p>
 
 <h2 id="Handicap">The handicap system, which is the game's best feature</h2>
-<p>Go has a mechanism that most competitive games lack and would benefit from: a graduated handicap that lets players of very different strength play a genuinely interesting game against each other.</p>
+<p>Go has a mechanism that most competitive games lack and would benefit from: a graduated handicap that lets players of very different strength play an interesting game against each other.</p>
 <p>The weaker player begins with extra stones on the board, from two up to nine, placed on marked points. Each stone is worth roughly one rank of strength, and ranks are defined by exactly this relation — a player two ranks stronger is one who wins about half the games when giving two stones.</p>
 <p>This is a rating system in which the units are physical objects rather than numbers, and it means a teacher and a novice can play a real game in which both are fully extended. In chess the equivalent, giving material odds, was common in the nineteenth century and has largely died out; in Go the handicap game is a normal way to play and carries no stigma.</p>
 <p>The rank ladder runs from around 30 kyu for a beginner up to 1 kyu, then 1 dan upward for amateurs, with a separate and much steeper professional dan scale. The distance between a strong amateur and a professional is several stones, which is a large gap expressed in a way anyone can verify at the board.</p>

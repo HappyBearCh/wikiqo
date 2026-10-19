@@ -23,16 +23,16 @@ export const gutMicrobiome: RewrittenArticle = {
 <p><strong>They train the immune system.</strong> Germ-free mice, raised with no microbes at all, develop badly formed immune tissue and abnormal responses. A large part of immune development consists of learning which organisms to tolerate, and that education requires organisms to be present.</p>
 
 <h2 id="The_transplant_that_works">The transplant that works</h2>
-<p>Faecal microbiota transplantation is the field's one unambiguous therapeutic success, and it is worth dwelling on because it sets the standard the rest of the field has not met.</p>
+<p>Faecal microbiota transplantation is the field's one unambiguous therapeutic success, and it sets the standard the rest of the field has not met.</p>
 <p>For recurrent <em>C. difficile</em> infection, transferring stool from a healthy donor into the patient's colon cures the great majority of cases — better than the antibiotics that usually caused the problem, and dramatically so. The trials were stopped early because withholding it from the control group became unethical.</p>
 <p>Attempts to extend the approach have been far less impressive. Trials for inflammatory bowel disease, obesity, metabolic syndrome and various neurological conditions have produced mixed and mostly modest results. The pattern is instructive: it works spectacularly for a condition that consists of a missing community, and inconsistently for conditions where the microbiome is one contributing factor among many.</p>
 
 <h2 id="The_gut_brain_claims">The gut–brain claims</h2>
 <p>This is where the evidence and the headlines diverge most sharply.</p>
 <p>There is a real communication system. The vagus nerve carries signals from gut to brain, gut bacteria produce neuroactive compounds, and most of the body's serotonin is made in the gut — though that last fact is routinely misused, since gut serotonin does not cross into the brain and is doing something else entirely.</p>
-<p>The animal evidence is genuinely striking. Transferring gut bacteria from anxious mice to calm ones can transfer anxious behaviour, and germ-free mice show altered stress responses that are partially corrected by colonisation. These are real, replicated results.</p>
+<p>The animal evidence is striking. Transferring gut bacteria from anxious mice to calm ones can transfer anxious behaviour, and germ-free mice show altered stress responses that are partially corrected by colonisation. These are real, replicated results.</p>
 <p>The human evidence is much thinner. Most studies are observational, meaning they find that people with a condition have a different microbiome — which does not establish direction. Depression changes appetite, diet and activity, all of which change the microbiome, so finding a difference is exactly what you would expect whichever way causation runs. Intervention trials in humans, where a probiotic is given and mood measured, have produced small and inconsistent effects.</p>
-<p>The honest summary is that the gut-brain axis is real, that its importance in human psychiatric conditions is unresolved, and that the confidence of the popular coverage is not supported by the trials.</p>
+<p>In short, the gut-brain axis is real, that its importance in human psychiatric conditions is unresolved, and that the confidence of the popular coverage is not supported by the trials.</p>
 
 <h2 id="What_the_shelf_products_do">What the shelf products do</h2>
 <p>Commercial probiotics face a structural problem: for most strains sold, the organisms pass through and do not establish. They can have effects while present — some strains have decent evidence for shortening antibiotic-associated diarrhoea and for infant colic — but the notion that a capsule permanently reshapes a community of trillions is not supported.</p>

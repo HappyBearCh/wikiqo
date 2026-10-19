@@ -46,6 +46,6 @@ export const theScientificMethod: RewrittenArticle = {
 <p>Two errors run in opposite directions and are both common.</p>
 <p>The first is treating scientific results as certain because they are scientific. Nothing empirical is proved; theories are supported to varying degrees, and well-supported ones have been overturned. Confidence should track the weight of evidence in the specific case, not the label on the field.</p>
 <p>The second is concluding from the absence of a single method — or from the history of overturned theories — that science is merely one opinion among others. That inference ignores the results. The methods described above have produced a body of prediction and control that no other approach has come close to, and the fact that the machinery is fallible and social is an argument about how it works, not about whether.</p>
-<p>The honest position is that science is a fallible, self-correcting, institutionally organised effort that has been spectacularly successful, and that both its fallibility and its success are consequences of the same design.</p>
+<p>The defensible position is that science is a fallible, self-correcting, institutionally organised effort that has been spectacularly successful, and that both its fallibility and its success are consequences of the same design.</p>
 `,
 };

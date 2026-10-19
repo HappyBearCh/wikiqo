@@ -14,7 +14,7 @@ export const venom: RewrittenArticle = {
 <p>The terms are used interchangeably in ordinary speech and mean different things.</p>
 <p>A <strong>toxin</strong> is any biologically produced substance that causes harm. <strong>Venom</strong> is a toxin actively delivered into another animal through a wound — a fang, a sting, a spine, a harpoon. <strong>Poison</strong> is a toxin that causes harm on being eaten or touched, with no delivery apparatus.</p>
 <p>The distinction is about mechanism rather than severity. A venomous snake bites you; a poisonous frog is dangerous if you eat it. Most venoms are harmless swallowed, because they are proteins and the digestive system breaks them down — which is why snake handlers historically drank venom to demonstrate confidence, and why doing so with an ulcer would be a serious mistake.</p>
-<p>Delivery is the expensive part evolutionarily. Producing a toxin is comparatively easy; evolving the gland, the duct, the injection structure and the behaviour to use it is a substantial investment, which is why venom systems are relatively rare and why they tend to be elaborated once they exist.</p>
+<p>Delivery is the expensive part evolutionarily. Producing a toxin is comparatively easy; evolving the gland, the duct, the injection structure and the behaviour to use it is a substantial investment. Venom systems are therefore relatively rare, and they tend to be elaborated once they exist.</p>
 
 <h2 id="Metering">Venom is costly, so it is rationed</h2>
 <p>Regenerating a spent venom supply takes days to weeks and is metabolically expensive. Animals treat it accordingly.</p>

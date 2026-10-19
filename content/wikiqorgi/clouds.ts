@@ -6,7 +6,7 @@ export const clouds: RewrittenArticle = {
   sourceTitle: "Cloud",
   dek: "Pure water vapour in clean air will not form a cloud at all. And nobody can say whether clouds will amplify warming or damp it.",
   standfirst:
-    "A cloud is not water vapour — vapour is invisible. It is a suspension of liquid droplets or ice crystals, each formed on a speck of dust, salt or pollution, because water in genuinely clean air refuses to condense until it is supersaturated several hundred per cent. Clouds also cool the planet by reflecting sunlight and warm it by trapping heat, and which effect wins as the world warms is the single largest unresolved question in climate projection.",
+    "A cloud is not water vapour — vapour is invisible. It is a suspension of liquid droplets or ice crystals, each formed on a speck of dust, salt or pollution, because water in truly clean air refuses to condense until it is supersaturated several hundred per cent. Clouds also cool the planet by reflecting sunlight and warm it by trapping heat, and which effect wins as the world warms is the single largest unresolved question in climate projection.",
   readingMinutes: 7,
   published: "2026-08-17",
   html: `

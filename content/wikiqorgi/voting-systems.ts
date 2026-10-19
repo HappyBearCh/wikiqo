@@ -15,7 +15,7 @@ export const votingSystems: RewrittenArticle = {
 <p>Compare them in pairs. A beats B, by two votes to one. B beats C, by two to one. And C beats A, by two to one.</p>
 <p>There is no winner. The group's collective preference goes round in a circle, even though every individual has a perfectly consistent ordering. This is the Condorcet paradox, described in the 1780s, and it is not a defect of any particular counting method — it is a property of the preferences themselves.</p>
 <p>The immediate consequence is that whoever controls the agenda controls the outcome. Take any two options first, then run the winner against the third, and you can produce any of the three as the final winner by choosing which pair goes first. Nothing dishonest occurs; the votes are counted correctly each time.</p>
-<p>This is not a curiosity. It is why committee procedure, parliamentary amendment sequences and tournament seeding are contested so fiercely by people who understand them.</p>
+<p>The consequences are practical. It is why committee procedure, parliamentary amendment sequences and tournament seeding are contested so fiercely by people who understand them.</p>
 
 <h2 id="Arrow">Arrow's theorem</h2>
 <p>Kenneth Arrow asked in 1951 whether any method of aggregating individual rankings into a group ranking could satisfy a few minimal conditions.</p>
@@ -46,7 +46,7 @@ export const votingSystems: RewrittenArticle = {
 
 <h2 id="What_to_take">What follows from all this</h2>
 <p>The impossibility results are sometimes taken as showing that democracy is incoherent, which is a misreading with a poor track record of being made in good faith.</p>
-<p>What they show is that aggregating preferences is a genuinely hard problem with no perfect solution, and that any real system embeds choices about which imperfections to accept. That is an argument for examining those choices, not for abandoning them.</p>
+<p>What they show is that aggregating preferences is a hard problem with no perfect solution, and that any real system embeds choices about which imperfections to accept. That is an argument for examining those choices, not for abandoning them.</p>
 <p>It also reframes the usual debate. Arguing about which system is fairest in the abstract is a category error. The useful questions are empirical: how often does this system elect someone a majority opposes, how strongly does it punish honest voting, how much does the result depend on where lines were drawn, and how easily can a voter understand what happened to their ballot.</p>
 <p>On those questions the systems differ enormously, and plurality voting — the most widely used in the English-speaking world — comes out worst on nearly all of them. That is a considerably more actionable conclusion than the theorem it is usually buried under.</p>
 `,

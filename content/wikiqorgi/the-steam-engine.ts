@@ -12,9 +12,9 @@ export const theSteamEngine: RewrittenArticle = {
   html: `
 <h2 id="The_problem">A pumping problem</h2>
 <p>Deep mining runs into water. Below the water table a shaft fills continuously, and by the early eighteenth century British coal and tin mines had reached depths where horse-driven pumps could not keep up. Mines were being abandoned not because the seam was exhausted but because they could not be kept dry.</p>
-<p>The economic value of a solution was therefore enormous and highly localised, which is why the first engines were built where they were.</p>
+<p>The economic value of a solution was therefore enormous and highly localised, and it decided where the first engines were built.</p>
 <p>Thomas Savery's engine of 1698 had no piston at all. Steam filled a vessel, was condensed by spraying cold water on the outside, and the resulting vacuum sucked water up a pipe. It could only lift water about as high as atmospheric pressure allows, roughly ten metres, and it consumed fuel prodigiously. It was barely useful and it demonstrated the principle.</p>
-<p>Thomas Newcomen's engine of 1712 is the first that genuinely worked. Steam filled a cylinder beneath a piston, cold water was injected directly into the cylinder to condense it, and atmospheric pressure — not steam pressure — pushed the piston down. A beam transmitted the stroke to the pump rods. It is properly an atmospheric engine, and the steam's only job is to be removed.</p>
+<p>Thomas Newcomen's engine of 1712 is the first that really worked. Steam filled a cylinder beneath a piston, cold water was injected directly into the cylinder to condense it, and atmospheric pressure — not steam pressure — pushed the piston down. A beam transmitted the stroke to the pump rods. It is properly an atmospheric engine, and the steam's only job is to be removed.</p>
 <p>Its efficiency was somewhere below one per cent. Hundreds were built anyway, because a mine that produces coal does not care what a machine at the pithead burns.</p>
 
 <h2 id="Watt">What Watt actually changed</h2>
@@ -40,7 +40,7 @@ export const theSteamEngine: RewrittenArticle = {
 <p>A discipline that now describes the fate of the universe was assembled to answer a question about how good a pump could get.</p>
 
 <h2 id="What_it_did">What changed because of it</h2>
-<p>Water power dictated location: a mill went where a river fell, which meant industry was distributed along valleys and constrained by drought and freezing. Steam power detached production from geography. A factory could be built where labour, raw materials or transport were best, which is why industrial cities grew where they did.</p>
+<p>Water power dictated location: a mill went where a river fell, which meant industry was distributed along valleys and constrained by drought and freezing. Steam power detached production from geography. A factory could be built where labour, raw materials or transport were best, and industrial cities grew accordingly.</p>
 <p>It also detached work from daylight and season. A steam-driven mill runs at night, in winter, in a drought, at a rate set by management rather than by a river — which is a change in the character of employment as much as in output.</p>
 <p>And the demand for coal drove deeper mining, requiring more pumping, requiring more engines, burning more coal. The feedback is the cleanest example in industrial history of a technology creating the conditions for its own expansion.</p>
 <p>The Jevons paradox was formulated on exactly this case. William Stanley Jevons observed in 1865 that Watt's efficiency improvements had not reduced British coal consumption but increased it, because cheaper steam power made steam power worth using for far more things. Efficiency gains lower the effective price of a service, and demand responds. The observation remains the standard caution against assuming that using less energy per unit of output means using less energy.</p>

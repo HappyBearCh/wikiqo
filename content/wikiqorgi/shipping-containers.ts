@@ -41,7 +41,7 @@ export const shippingContainers: RewrittenArticle = {
 <p>Economists attempting to quantify the effect have found container adoption associated with trade growth substantially larger than that attributable to the trade agreements of the same period, which is a striking result given how much political attention the agreements received and how little the box did.</p>
 
 <h2 id="Costs">What it hid</h2>
-<p>A sealed steel box that nobody opens is efficient and opaque, and both properties are load-bearing.</p>
+<p>A sealed steel box that nobody opens is efficient and opaque, and the system depends on both.</p>
 <p>Only a small percentage of containers are physically inspected at any port, because inspecting them would destroy the economics. This is the standing problem in customs enforcement, in counterfeiting, in drug interdiction, and in the security assessments made after 2001.</p>
 <p>Boxes are lost overboard in significant numbers each year, some containing hazardous material, most simply sinking. The industry's own estimates and independent ones differ considerably.</p>
 <p>Seafarers work under flags of convenience with weak labour protection and low visibility, and the crew of a modern container ship is remarkably small for the value it carries.</p>

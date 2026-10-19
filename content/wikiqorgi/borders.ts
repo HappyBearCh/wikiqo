@@ -30,7 +30,7 @@ export const borders: RewrittenArticle = {
 <p>The Rio Grande shifted enough to create the Chamizal dispute between the United States and Mexico, which took a century to settle and ended with the river being confined to a concrete channel.</p>
 <p>Rivers also unite rather than divide. A river valley is typically a single economic and cultural zone, with both banks trading, intermarrying and speaking the same language, and settlements sited on rivers precisely because they connect. Running a border down the middle of one splits a community and hands both halves a customs post.</p>
 <p>And the precise line has to be specified anyway — bank, midpoint, or the deepest channel, which is the usual convention and which also moves.</p>
-<p>Watersheds are better in principle, being stable and genuinely separating drainage basins, and worse in practice for anyone who has to find one on the ground in a flat or complex landscape.</p>
+<p>Watersheds are better in principle, being stable and actually separating drainage basins, and worse in practice for anyone who has to find one on the ground in a flat or complex landscape.</p>
 
 <h2 id="Partition">Drawing lines through populations</h2>
 <p>Where a border is drawn to separate populations rather than territories, the results have been consistently catastrophic, and the mechanism is well understood.</p>
