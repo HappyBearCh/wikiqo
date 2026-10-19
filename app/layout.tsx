@@ -37,8 +37,7 @@ export const metadata: Metadata = {
   authors: [{ name: SITE_NAME, url: SITE_URL }],
   creator: SITE_NAME,
   publisher: SITE_NAME,
-  // Opt into full-size image previews and untruncated snippets. Without these
-  // Google defaults to a small thumbnail, which wastes the article lead images.
+  // Opt into full-size image previews and untruncated snippets.
   robots: {
     index: true,
     follow: true,

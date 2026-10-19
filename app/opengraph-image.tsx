@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { SITE_DESCRIPTION, SITE_NAME } from "@/lib/site";
 
-export const alt = `${SITE_NAME} — the encyclopedia's best subjects, rewritten`;
+export const alt = `${SITE_NAME} — Wikipedia citation generator`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -11,11 +11,7 @@ export const contentType = "image/png";
 const STRIPES = ["#e40303", "#ff8c00", "#ffb800", "#008026", "#004dff", "#750787"];
 
 /**
- * Social card for every route that doesn't supply its own image. Mirrored
- * articles override it with the Wikipedia lead image (see
- * wiki/[slug]/generateMetadata) and wikiqorgi pages with their own card (see
- * wikiqorgi/[slug]/opengraph-image.tsx), so in practice this covers the home,
- * search, about and /wikiqorgi index pages.
+ * Social card for every page.
  *
  * Rendered at build time for the static routes, so it costs nothing per request.
  */
@@ -57,7 +53,7 @@ export default function OpengraphImage() {
               color: "#5f5f5f",
             }}
           >
-            Original writing · Wikipedia reader
+            Wikipedia citation generator
           </div>
           <div
             style={{

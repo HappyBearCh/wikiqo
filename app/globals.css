@@ -16,6 +16,8 @@
   --accent-foreground: #ffffff;
   --accent-soft: #eef3ff;
   --muted: #5b6070;
+  --danger: #c0262d;
+  --danger-soft: #fdf0f0;
 
   /* Six-stripe pride spectrum. Amber is lifted off pure yellow so it stays
      legible on white. */
@@ -48,6 +50,8 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-accent-soft: var(--accent-soft);
   --color-muted: var(--muted);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-source-serif), Georgia, "Times New Roman", serif;
@@ -65,6 +69,8 @@
     --accent-foreground: #101114;
     --accent-soft: #1b2436;
     --muted: #a3a7b3;
+    --danger: #ff7b7b;
+    --danger-soft: #2a1618;
 
     /* Same pride spectrum, brightened for a dark canvas. */
     --rb-1: #ff5a5a;
@@ -133,7 +139,11 @@
     background: var(--accent);
     color: var(--accent-foreground);
   }
-  .btn-primary:hover {
+  .btn-primary:disabled {
+    opacity: 0.7;
+    cursor: progress;
+  }
+  .btn-primary:hover:not(:disabled) {
     background: var(--accent-hover);
     color: var(--accent-foreground);
   }
@@ -163,6 +173,40 @@
     background: var(--surface-hover);
   }
 
+  /* Small rounded pill: example links, format jump links, recent lookups. */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--border);
+    border-radius: 9999px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8125rem;
+    color: var(--foreground);
+    text-decoration: none;
+    transition:
+      border-color 0.15s ease,
+      color 0.15s ease;
+  }
+  .chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  /* The compact "Copy" button on each citation. */
+  .copy-btn {
+    flex-shrink: 0;
+    border-radius: 0.5rem;
+    background: var(--accent-soft);
+    padding: 0.3rem 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--accent);
+    transition: background-color 0.15s ease;
+  }
+  .copy-btn:hover {
+    background: color-mix(in srgb, var(--accent) 18%, var(--accent-soft));
+  }
+
   /* Small uppercase label above titles ("Money and markets", "On this page"). */
   .eyebrow {
     font-size: 0.75rem;
@@ -186,72 +230,6 @@
   .shell {
     padding-inline: 2rem;
   }
-}
-
-/* ---- Article body ---------------------------------------------------------- */
-
-/* Article body styling, scoped so it doesn't leak into the rest of the site.
-   Pairs with the @tailwindcss/typography `prose` classes in the templates. */
-.wiki-content {
-  font-family: var(--font-serif);
-  line-height: 1.75;
-}
-
-.wiki-content a {
-  color: var(--accent);
-  text-decoration: underline;
-  text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent);
-  text-underline-offset: 2px;
-}
-.wiki-content a:hover {
-  text-decoration-color: var(--accent);
-}
-
-.wiki-content table {
-  display: block;
-  max-width: 100%;
-  overflow-x: auto;
-  font-size: 0.9em;
-}
-
-.wiki-content .infobox,
-.wiki-content table.infobox {
-  display: table;
-  width: auto;
-  max-width: 100%;
-  margin: 0 0 1.5rem 0;
-  border: 1px solid var(--border);
-  border-radius: 0.5rem;
-  background: var(--surface);
-  font-size: 0.85em;
-  float: none;
-}
-
-.wiki-content figure {
-  margin: 1.5rem 0;
-}
-
-.wiki-content img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Leave room beneath the sticky header when jumping to a section from the
-   table of contents. */
-.wiki-content :is(h2, h3, h4) {
-  scroll-margin-top: 5.5rem;
-}
-
-.wiki-content .mw-editsection,
-.wiki-content .mw-cite-backlink,
-.wiki-content sup.noprint,
-.wiki-content .reference-text .mw-cite-backlink {
-  display: none;
-}
-
-.wiki-content .reflist,
-.wiki-content .references {
-  font-size: 0.85em;
 }
 
 /* Smooth in-page jumps, unless the reader has asked for less motion. */

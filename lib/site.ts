@@ -21,19 +21,12 @@ export const SITE_URL = "https://www.wikiqo.com";
 
 export const SITE_NAME = "wikiqo";
 
-/**
- * Used as the home-page title and the `%s | wikiqo` fallback.
- *
- * The site leads with wikiqorgi, its original writing, and describes the
- * Wikipedia mirror second. The mirror renders only Wikipedia's most-read
- * articles (content/popular-titles.ts) and canonicals to en.wikipedia.org, so
- * it can't be what the site is found for or known for; the shelf can.
- */
-export const SITE_TITLE = "wikiqo — the encyclopedia's best subjects, rewritten";
+/** Used as the home-page title and the `%s | wikiqo` fallback. */
+export const SITE_TITLE = "wikiqo — Wikipedia citation generator (APA, MLA, Chicago, Harvard)";
 
 /** The first sentence doubles as the tagline on the generated social card. */
 export const SITE_DESCRIPTION =
-  "Wikipedia's best subjects, researched again and written from scratch to be read end to end. Plus a calm, uncluttered reader for Wikipedia's most-read articles — no ads, no account.";
+  "Paste a Wikipedia link and get a ready-to-copy citation. APA, MLA, Chicago, Harvard, IEEE, AMA, Vancouver, BibTeX, RIS and wiki markup, with a permanent link to the exact revision you read.";
 
 /** The generated social card served from app/opengraph-image.tsx. */
 const OG_IMAGE = "/opengraph-image";

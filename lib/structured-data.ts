@@ -29,18 +29,3 @@ export const ORGANIZATION = {
 /** A short reference to ORGANIZATION, for use inside other objects. */
 export const ORGANIZATION_REF = { "@id": ORGANIZATION["@id"] } as const;
 
-/**
- * A BreadcrumbList for a trail of pages, home first. Paths are site-relative
- * ("/wikiqorgi"); positions are numbered from 1 as schema.org requires.
- */
-export function breadcrumbList(trail: Array<{ name: string; path: string }>) {
-  return {
-    "@type": "BreadcrumbList",
-    itemListElement: [{ name: "Home", path: "/" }, ...trail].map((crumb, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: crumb.name,
-      item: `${SITE_URL}${crumb.path === "/" ? "" : crumb.path}`,
-    })),
-  };
-}

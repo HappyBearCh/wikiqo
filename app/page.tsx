@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import FeaturedGrid from "@/components/FeaturedGrid";
-import PromotedShelf from "@/components/wikiqorgi/PromotedShelf";
-import { WIKIQORGI_ARTICLES, rewrittenHref } from "@/content/wikiqorgi";
-import { latestPromoted } from "@/content/wikiqorgi/schedule";
+import CitationGenerator from "@/components/CitationGenerator";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
 import { ORGANIZATION, ORGANIZATION_REF } from "@/lib/structured-data";
 
@@ -12,30 +8,46 @@ export const metadata: Metadata = {
   // running through the "%s | wikiqo" template.
   title: { absolute: SITE_TITLE },
   description: SITE_DESCRIPTION,
-  // Self-referencing canonical, so tracking params (?utm_source=…, ?ref=…)
-  // consolidate onto the bare URL instead of splitting signals. The feed is
-  // advertised here and on /wikiqorgi so feed readers can discover it.
-  alternates: {
-    canonical: "/",
-    types: { "application/rss+xml": [{ url: "/wikiqorgi/feed.xml", title: "wikiqorgi" }] },
-  },
+  alternates: { canonical: "/" },
 };
 
-// Regenerated daily so the wikiqorgi shelf below rolls forward on its own
-// (see content/wikiqorgi/schedule.ts). Without this the page is prerendered
-// once at build time and the promotion dates never advance.
-//
-// This is one revalidation per day for one fixed path, which is the case ISR is
-// actually for — the same trade sitemap.ts already makes. It is not the pattern
-// warned against in wiki/[slug]/page.tsx: that route is an unbounded title
-// space where nearly every cached path is read once and never again.
-export const revalidate = 86400;
+const FORMATS = [
+  { name: "APA", note: "7th edition. Psychology, education and the social sciences." },
+  { name: "MLA", note: "9th edition. Literature, languages and the humanities." },
+  { name: "Chicago", note: "17th edition, as a bibliography entry and a footnote, plus author-date." },
+  { name: "Harvard", note: "Cite Them Right, the form most UK and Australian universities teach." },
+  { name: "IEEE", note: "Engineering, computer science and electronics." },
+  { name: "AMA", note: "11th edition. Medicine and the health sciences." },
+  { name: "Vancouver", note: "Numbered references for biomedical journals." },
+  { name: "BibTeX", note: "For LaTeX, Overleaf and reference managers." },
+  { name: "RIS", note: "Imports into Zotero, Mendeley and EndNote." },
+  { name: "Wiki markup", note: "A ready {{cite web}} template for editing a wiki." },
+];
 
-/**
- * Tells search engines the site's official name and preferred URL, so results
- * show "wikiqo" rather than a guess derived from the <title>.
- */
-const websiteJsonLd = {
+const FAQ = [
+  {
+    q: "Should I cite Wikipedia at all?",
+    a: "Many teachers and journals prefer that you cite the sources a Wikipedia article relies on rather than the article itself. When you do cite Wikipedia, say so honestly and point to the exact version you read.",
+  },
+  {
+    q: "What is a permanent link?",
+    a: "Anyone can edit Wikipedia, so the article you read today may say something different tomorrow. A permanent link (with ?oldid= in the address) always opens the exact revision you read. It is on by default, and APA recommends it.",
+  },
+  {
+    q: "Who is the author?",
+    a: "Wikipedia articles are written collectively, so styles use either the article title (APA, MLA, AMA) or “Wikipedia contributors” (Chicago, Harvard, Vancouver) in the author position. The generator follows each style's convention.",
+  },
+  {
+    q: "Which date is used?",
+    a: "The publication date is when the revision you are citing was saved, taken from Wikipedia itself. The access date is today in your time zone; change it if you read the article earlier.",
+  },
+  {
+    q: "Does it work for other languages?",
+    a: "Yes. Paste a link from any language edition, such as de.wikipedia.org or ja.wikipedia.org, and the citation keeps that edition's address and title.",
+  },
+];
+
+const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -48,112 +60,100 @@ const websiteJsonLd = {
       inLanguage: "en",
       publisher: ORGANIZATION_REF,
     },
-    // The organisation and its logo, which Google may show beside results.
+    {
+      "@type": "WebApplication",
+      name: `${SITE_NAME} Wikipedia citation generator`,
+      url: SITE_URL,
+      applicationCategory: "ReferenceApplication",
+      operatingSystem: "Any",
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: FAQ.map(({ q, a }) => ({
+        "@type": "Question",
+        name: q,
+        acceptedAnswer: { "@type": "Answer", text: a },
+      })),
+    },
     ORGANIZATION,
   ],
 };
 
-/** Cards in the shelf under the lead article. */
-const SHELF_COUNT = 4;
-
-/**
- * The home page leads with wikiqorgi, the site's original writing: the newest
- * article on its own, then the rest of the current rotation. The Wikipedia
- * reader comes second. It is still useful, but it only renders Wikipedia's
- * most-read articles and canonicals to Wikipedia, so it is not what the site is
- * for.
- */
 export default function Home() {
-  // Read the clock once and pass it down, so the lead, the shelf and its footer
-  // can't disagree about which articles are promoted if the render straddles
-  // midnight.
-  const now = new Date();
-  const [lead] = latestPromoted(1, now);
-
   return (
     <div className="shell py-12 sm:py-16">
       <script
         type="application/ld+json"
         // Static, developer-authored object — no user input reaches it.
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <section className="max-w-2xl">
-        <h1 className="font-serif text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
-          The encyclopedia&rsquo;s best subjects, written to be read.
+
+      <section className="mx-auto max-w-3xl">
+        <h1 className="text-center font-serif text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+          Cite any Wikipedia article in seconds.
         </h1>
-        <p className="mt-5 text-lg leading-relaxed text-muted">
-          {WIKIQORGI_ARTICLES.length} original articles, each researched again and
-          written from scratch, with its sources listed. And when you want
-          Wikipedia itself, a calm reader for its most-read articles.
+        <p className="mx-auto mt-4 max-w-2xl text-center text-lg leading-relaxed text-muted">
+          Paste the article&rsquo;s link and get it in APA, MLA, Chicago, Harvard,
+          IEEE and more, with the right dates and a permanent link to the version
+          you read.
         </p>
-        <div className="mt-7 flex flex-wrap gap-3">
-          <Link href="/wikiqorgi" className="btn-primary">
-            Browse the articles
-          </Link>
-          <Link href="/search" className="btn-secondary">
-            Search
-          </Link>
+        <div className="mt-8">
+          <CitationGenerator />
         </div>
       </section>
 
-      {lead && (
-        <section className="mt-14" aria-labelledby="newest">
-          <h2 id="newest" className="eyebrow">
-            Newest article
-          </h2>
-          <Link href={rewrittenHref(lead.article.slug)} className="card group mt-3 p-6 sm:p-8">
-            <span className="flex items-center gap-2 text-sm text-muted">
-              <span
-                aria-hidden
-                className="h-2.5 w-2.5 rounded-full"
-                style={{ background: lead.section.hue }}
-              />
-              {lead.section.title}
-            </span>
-            <span className="mt-3 font-serif text-2xl font-bold leading-snug tracking-tight text-foreground sm:text-3xl">
-              {lead.article.title}
-            </span>
-            <span className="mt-3 max-w-3xl text-base leading-relaxed text-muted sm:text-lg">
-              {lead.article.standfirst}
-            </span>
-            <span className="mt-5 text-sm">
-              <span className="font-semibold text-accent">Read the article &rarr;</span>
-              <span className="ml-3 text-muted">{lead.article.readingMinutes} min read</span>
-            </span>
-          </Link>
-        </section>
-      )}
-
-      <section className="mt-14" aria-labelledby="also-new">
-        <h2 id="also-new" className="eyebrow">
-          Also new
+      <section className="mx-auto mt-24 max-w-5xl" aria-labelledby="formats">
+        <h2 id="formats" className="font-serif text-2xl font-bold tracking-tight sm:text-3xl">
+          Ten formats from one link
         </h2>
-        <div className="mt-3">
-          <PromotedShelf now={now} offset={1} count={SHELF_COUNT} />
-        </div>
-        <p className="mt-4 text-sm text-muted">
-          New articles arrive a few times a week.{" "}
-          <Link href="/wikiqorgi" className="underline">
-            See all articles
-          </Link>{" "}
-          or{" "}
-          <a href="/wikiqorgi/feed.xml" className="underline">
-            follow the RSS feed
-          </a>
-          .
-        </p>
+        <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {FORMATS.map((f) => (
+            <li key={f.name} className="card p-4">
+              <span className="font-semibold">{f.name}</span>
+              <span className="mt-1 text-sm leading-relaxed text-muted">{f.note}</span>
+            </li>
+          ))}
+        </ul>
       </section>
 
-      <section className="mt-16" aria-labelledby="wikipedia">
-        <h2 id="wikipedia" className="eyebrow">
-          Read Wikipedia, uncluttered
+      <section className="mx-auto mt-20 max-w-5xl" aria-labelledby="how">
+        <h2 id="how" className="font-serif text-2xl font-bold tracking-tight sm:text-3xl">
+          How it works
         </h2>
-        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
-          The encyclopedia&rsquo;s most-read articles in a clean reading column.
-          Where we&rsquo;ve written our own version too, the page says so.
-        </p>
-        <div className="mt-4">
-          <FeaturedGrid />
+        <ol className="mt-6 grid gap-6 sm:grid-cols-3">
+          {[
+            ["Paste a link", "Any Wikipedia address works: desktop or mobile, any language, or a permanent link to an old revision. A plain title like “Moon” works too."],
+            ["We ask Wikipedia", "Your browser looks up the article's exact title, latest revision and when it was saved. Redirects are followed, so you cite the real article."],
+            ["Copy and paste", "Each citation copies with its italics intact for Word and Google Docs. BibTeX and RIS copy as plain text for your reference manager."],
+          ].map(([title, body], i) => (
+            <li key={title}>
+              <span className="grid h-9 w-9 place-items-center rounded-full bg-accent-soft font-semibold text-accent">
+                {i + 1}
+              </span>
+              <h3 className="mt-3 font-semibold">{title}</h3>
+              <p className="mt-1 text-sm leading-relaxed text-muted">{body}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="mx-auto mt-20 max-w-3xl" aria-labelledby="faq">
+        <h2 id="faq" className="font-serif text-2xl font-bold tracking-tight sm:text-3xl">
+          Questions
+        </h2>
+        <div className="mt-6 divide-y divide-border border-y border-border">
+          {FAQ.map(({ q, a }) => (
+            <details key={q} className="group py-4">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium">
+                {q}
+                <span aria-hidden className="text-muted transition-transform group-open:rotate-45">
+                  +
+                </span>
+              </summary>
+              <p className="mt-2 leading-relaxed text-muted">{a}</p>
+            </details>
+          ))}
         </div>
       </section>
     </div>
