@@ -25,6 +25,9 @@ export default function Header() {
           <Link href="/" className="text-sm font-medium text-foreground hover:text-accent">
             Cite
           </Link>
+          <Link href="/formats" className="text-sm font-medium text-foreground hover:text-accent">
+            Formats
+          </Link>
           <Link href="/about" className="text-sm font-medium text-foreground hover:text-accent">
             About
           </Link>

@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { articleUrl, buildCitations, parseWikipediaLink, permanentUrl, type ArticleInfo } from "@/lib/citation";
+import { GUIDES, guideForCitation } from "@/lib/formats";
 
 describe("parseWikipediaLink", () => {
   it.each([
@@ -79,5 +80,59 @@ describe("buildCitations", () => {
     expect(byId(false).wikitext.text).toBe(
       `{{cite web |title=Ada Lovelace |url=${articleUrl(info)} |website=Wikipedia |publisher=Wikimedia Foundation |date=2024-05-03 |access-date=2026-10-19}}`,
     );
+  });
+
+  it("formats ASA with a retrieval date and the URL in parentheses", () => {
+    expect(byId(false).asa.text).toBe(
+      "Wikipedia contributors. 2024. “Ada Lovelace.” Wikipedia, The Free Encyclopedia. Retrieved October 19, 2026 (https://en.wikipedia.org/wiki/Ada_Lovelace).",
+    );
+  });
+
+  it("formats ACS with an ISO access date", () => {
+    expect(byId(false).acs.text).toBe(
+      "(1) Ada Lovelace. Wikipedia, May 3, 2024. https://en.wikipedia.org/wiki/Ada_Lovelace (accessed 2026-10-19).",
+    );
+  });
+
+  it("gives CSE an access date only for the live article", () => {
+    expect(byId(false).cse.text).toBe(
+      "1. Ada Lovelace. Wikipedia, The Free Encyclopedia; [updated 2024 May 3; accessed 2026 Oct 19]. https://en.wikipedia.org/wiki/Ada_Lovelace",
+    );
+    expect(byId(true).cse.text).toContain("[updated 2024 May 3]. https://");
+  });
+
+  it("formats ISO 690", () => {
+    expect(byId(true).iso690.text).toBe(
+      `Ada Lovelace. In: Wikipedia, The Free Encyclopedia [online]. Wikimedia Foundation, 3 May 2024 [viewed 19 October 2026]. Available from: ${permanentUrl(info)}`,
+    );
+  });
+
+  it("drops the OSCOLA access date for a persistent link", () => {
+    expect(byId(true).oscola.text).toBe(`‘Ada Lovelace’ (Wikipedia, 3 May 2024) <${permanentUrl(info)}>.`);
+    expect(byId(false).oscola.text).toBe(
+      "‘Ada Lovelace’ (Wikipedia, 3 May 2024) <https://en.wikipedia.org/wiki/Ada_Lovelace> accessed 19 October 2026.",
+    );
+  });
+
+  it("dates a Bluebook revision and marks the live article last visited", () => {
+    expect(byId(true).bluebook.text).toBe(`Ada Lovelace, Wikipedia (May 3, 2024, 14:22 UTC), ${permanentUrl(info)}.`);
+    expect(byId(false).bluebook.text).toBe(
+      "Ada Lovelace, Wikipedia, https://en.wikipedia.org/wiki/Ada_Lovelace (last visited Oct. 19, 2026).",
+    );
+    expect(byId(false).bluebook.html.startsWith("<i>Ada Lovelace</i>,")).toBe(true);
+  });
+});
+
+describe("format guides", () => {
+  it("documents every citation the generator produces, once", () => {
+    const ids = buildCitations(info, { permalink: true, accessed }).map((c) => c.id);
+    for (const id of ids) expect(guideForCitation(id), id).toBeDefined();
+    const documented = GUIDES.flatMap((g) => g.citationIds);
+    expect(new Set(documented).size).toBe(documented.length);
+    expect(documented.every((id) => ids.includes(id))).toBe(true);
+  });
+
+  it("has unique slugs", () => {
+    expect(new Set(GUIDES.map((g) => g.slug)).size).toBe(GUIDES.length);
   });
 });

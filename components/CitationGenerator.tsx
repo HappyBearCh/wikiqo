@@ -9,6 +9,8 @@ import {
   type ArticleInfo,
   type Citation,
 } from "@/lib/citation";
+import Link from "next/link";
+import { guideForCitation } from "@/lib/formats";
 import { LookupError, fetchArticleInfo } from "@/lib/wikipedia-api";
 
 const EXAMPLES = [
@@ -327,43 +329,51 @@ function Results({
       </nav>
 
       <ul className="mt-4 space-y-4">
-        {citations.map((c) => (
-          <li key={c.id} id={`cite-${c.id}`} className="card scroll-mt-24 p-5">
-            <div className="flex items-baseline justify-between gap-4">
-              <h3 className="font-semibold">
-                {c.label}
-                {c.edition && <span className="ml-2 text-sm font-normal text-muted">{c.edition}</span>}
-              </h3>
-              <button type="button" className="copy-btn" onClick={() => onCopy(c.id, c)}>
-                {copied === c.id ? "Copied ✓" : "Copy"}
-              </button>
-            </div>
-            {c.code ? (
-              <pre className="mt-3 overflow-x-auto whitespace-pre-wrap break-all rounded-lg bg-surface-hover p-3 font-mono text-[0.8125rem] leading-relaxed">
-                {c.text}
-              </pre>
-            ) : (
-              <p
-                className="citation mt-3 break-words font-serif text-[1.0625rem] leading-relaxed"
-                // Built by lib/citation.ts, which escapes every value and adds only <i>.
-                dangerouslySetInnerHTML={{ __html: c.html }}
-              />
-            )}
-            {c.inText && (
-              <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-border pt-3 text-sm">
-                <span className="text-muted">{c.inTextLabel ?? "In-text"}</span>
-                <span className="break-words font-serif">{c.inText}</span>
-                <button
-                  type="button"
-                  className="copy-btn ml-auto"
-                  onClick={() => onCopy(`${c.id}-in`, { text: c.inText!, code: true })}
-                >
-                  {copied === `${c.id}-in` ? "Copied ✓" : "Copy"}
+        {citations.map((c) => {
+          const guide = guideForCitation(c.id);
+          return (
+            <li key={c.id} id={`cite-${c.id}`} className="card scroll-mt-24 p-5">
+              <div className="flex items-baseline justify-between gap-4">
+                <h3 className="font-semibold">
+                  {c.label}
+                  {c.edition && <span className="ml-2 text-sm font-normal text-muted">{c.edition}</span>}
+                </h3>
+                <button type="button" className="copy-btn" onClick={() => onCopy(c.id, c)}>
+                  {copied === c.id ? "Copied ✓" : "Copy"}
                 </button>
               </div>
-            )}
-          </li>
-        ))}
+              {c.code ? (
+                <pre className="mt-3 overflow-x-auto whitespace-pre-wrap break-all rounded-lg bg-surface-hover p-3 font-mono text-[0.8125rem] leading-relaxed">
+                  {c.text}
+                </pre>
+              ) : (
+                <p
+                  className="citation mt-3 break-words font-serif text-[1.0625rem] leading-relaxed"
+                  // Built by lib/citation.ts, which escapes every value and adds only <i>.
+                  dangerouslySetInnerHTML={{ __html: c.html }}
+                />
+              )}
+              {c.inText && (
+                <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 border-t border-border pt-3 text-sm">
+                  <span className="text-muted">{c.inTextLabel ?? "In-text"}</span>
+                  <span className="break-words font-serif">{c.inText}</span>
+                  <button
+                    type="button"
+                    className="copy-btn ml-auto"
+                    onClick={() => onCopy(`${c.id}-in`, { text: c.inText!, code: true })}
+                  >
+                    {copied === `${c.id}-in` ? "Copied ✓" : "Copy"}
+                  </button>
+                </div>
+              )}
+              {guide && (
+                <Link href={`/formats/${guide.slug}`} className="mt-3 self-start text-xs text-muted underline hover:text-accent">
+                  How {guide.name} works
+                </Link>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </section>
   );

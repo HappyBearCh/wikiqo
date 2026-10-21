@@ -26,7 +26,7 @@ export const SITE_TITLE = "wikiqo — Wikipedia citation generator (APA, MLA, Ch
 
 /** The first sentence doubles as the tagline on the generated social card. */
 export const SITE_DESCRIPTION =
-  "Paste a Wikipedia link and get a ready-to-copy citation. APA, MLA, Chicago, Harvard, IEEE, AMA, Vancouver, BibTeX, RIS and wiki markup, with a permanent link to the exact revision you read.";
+  "Paste a Wikipedia link and get a ready-to-copy citation. APA, MLA, Chicago, Harvard, IEEE, AMA, Vancouver, CSE, ACS, ASA, ISO 690, OSCOLA, Bluebook, BibTeX, RIS and wiki markup, with a permanent link to the exact revision you read.";
 
 /** The generated social card served from app/opengraph-image.tsx. */
 const OG_IMAGE = "/opengraph-image";

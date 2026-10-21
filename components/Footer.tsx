@@ -19,6 +19,9 @@ export default function Footer() {
           citation against your style guide before you submit.
         </p>
         <nav aria-label="Footer" className="flex shrink-0 flex-wrap gap-x-5 gap-y-2">
+          <Link href="/formats" className="underline hover:text-foreground">
+            Citation formats
+          </Link>
           <Link href="/about" className="underline hover:text-foreground">
             About
           </Link>

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import CitationGenerator from "@/components/CitationGenerator";
+import { GUIDES } from "@/lib/formats";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
 import { ORGANIZATION, ORGANIZATION_REF } from "@/lib/structured-data";
 
@@ -10,19 +12,6 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   alternates: { canonical: "/" },
 };
-
-const FORMATS = [
-  { name: "APA", note: "7th edition. Psychology, education and the social sciences." },
-  { name: "MLA", note: "9th edition. Literature, languages and the humanities." },
-  { name: "Chicago", note: "17th edition, as a bibliography entry and a footnote, plus author-date." },
-  { name: "Harvard", note: "Cite Them Right, the form most UK and Australian universities teach." },
-  { name: "IEEE", note: "Engineering, computer science and electronics." },
-  { name: "AMA", note: "11th edition. Medicine and the health sciences." },
-  { name: "Vancouver", note: "Numbered references for biomedical journals." },
-  { name: "BibTeX", note: "For LaTeX, Overleaf and reference managers." },
-  { name: "RIS", note: "Imports into Zotero, Mendeley and EndNote." },
-  { name: "Wiki markup", note: "A ready {{cite web}} template for editing a wiki." },
-];
 
 const FAQ = [
   {
@@ -95,7 +84,7 @@ export default function Home() {
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-center text-lg leading-relaxed text-muted">
           Paste the article&rsquo;s link and get it in APA, MLA, Chicago, Harvard,
-          IEEE and more, with the right dates and a permanent link to the version
+          IEEE, OSCOLA, the Bluebook and more, with the right dates and a permanent link to the version
           you read.
         </p>
         <div className="mt-8">
@@ -105,13 +94,21 @@ export default function Home() {
 
       <section className="mx-auto mt-24 max-w-5xl" aria-labelledby="formats">
         <h2 id="formats" className="font-serif text-2xl font-bold tracking-tight sm:text-3xl">
-          Ten formats from one link
+          {GUIDES.length} formats from one link
         </h2>
+        <p className="mt-2 text-muted">
+          Each has a guide to how it works and where it came from.{" "}
+          <Link href="/formats" className="underline">
+            All formats
+          </Link>
+        </p>
         <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {FORMATS.map((f) => (
-            <li key={f.name} className="card p-4">
-              <span className="font-semibold">{f.name}</span>
-              <span className="mt-1 text-sm leading-relaxed text-muted">{f.note}</span>
+          {GUIDES.map((f) => (
+            <li key={f.slug} className="flex">
+              <Link href={`/formats/${f.slug}`} className="card flex-1 p-4 text-foreground no-underline">
+                <span className="font-semibold">{f.name}</span>
+                <span className="mt-1 text-sm leading-relaxed text-muted">{f.note}</span>
+              </Link>
             </li>
           ))}
         </ul>

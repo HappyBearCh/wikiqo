@@ -118,6 +118,7 @@ const MONTHS = [
   "July", "August", "September", "October", "November", "December",
 ];
 // MLA abbreviates months longer than four letters; June and July stay whole.
+// The Bluebook's table T12 abbreviates them the same way.
 const MLA_MONTHS = [
   "Jan.", "Feb.", "Mar.", "Apr.", "May", "June",
   "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec.",
@@ -289,6 +290,23 @@ export function buildCitations(info: ArticleInfo, options: CitationOptions): Cit
     });
   }
 
+  // ASA 7: Chicago author-date in outline, but the retrieval date stays and
+  // the URL goes in parentheses after it.
+  {
+    const accessed = `${MONTHS[acc.m]} ${acc.d}, ${acc.y}`;
+    citations.push({
+      id: "asa",
+      label: "ASA",
+      edition: "7th edition",
+      ...cite(
+        `Wikipedia contributors. ${rev.y}. “${withPeriod(title)}” `,
+        { i: "Wikipedia, The Free Encyclopedia" },
+        `. Retrieved ${accessed} (${url}).`,
+      ),
+      inText: `(Wikipedia contributors ${rev.y})`,
+    });
+  }
+
   // IEEE.
   {
     const accessed = `${IEEE_MONTHS[acc.m]} ${acc.d}, ${acc.y}`;
@@ -302,6 +320,18 @@ export function buildCitations(info: ArticleInfo, options: CitationOptions): Cit
         `, ${date}. Accessed: ${accessed}. [Online]. Available: ${url}`,
       ),
       inText: "[1]",
+    });
+  }
+
+  // ACS (Guide to Scholarly Communication): wikis always get an ISO access date.
+  {
+    const date = `${MONTHS[rev.m]} ${rev.d}, ${rev.y}`;
+    const accessed = `${acc.y}-${pad(acc.m + 1)}-${pad(acc.d)}`;
+    citations.push({
+      id: "acs",
+      label: "ACS",
+      ...cite(`(1) ${withPeriod(title)} `, { i: "Wikipedia" }, `, ${date}. ${url} (accessed ${accessed}).`),
+      inText: "¹",
     });
   }
 
@@ -327,6 +357,62 @@ export function buildCitations(info: ArticleInfo, options: CitationOptions): Cit
       label: "Vancouver",
       ...cite(`Wikipedia contributors. ${title} [Internet]. Wikipedia, The Free Encyclopedia; ${date} [cited ${cited}]. Available from: ${url}`),
       inText: "(1)",
+    });
+  }
+
+  // CSE 9, citation-sequence. The revision date is the page's "updated" date;
+  // the access date is only needed when the link can still change.
+  {
+    const updated = `${rev.y} ${SHORT_MONTHS[rev.m]} ${rev.d}`;
+    const accessed = options.permalink ? "" : `; accessed ${acc.y} ${SHORT_MONTHS[acc.m]} ${acc.d}`;
+    citations.push({
+      id: "cse",
+      label: "CSE",
+      edition: "9th ed., citation-sequence",
+      ...cite(`1. ${withPeriod(title)} Wikipedia, The Free Encyclopedia; [updated ${updated}${accessed}]. ${url}`),
+      inText: "¹",
+    });
+  }
+
+  // ISO 690:2021, the international standard most of Europe's styles derive from.
+  {
+    const date = `${rev.d} ${MONTHS[rev.m]} ${rev.y}`;
+    const viewed = `${acc.d} ${MONTHS[acc.m]} ${acc.y}`;
+    citations.push({
+      id: "iso690",
+      label: "ISO 690",
+      edition: "2021",
+      ...cite(
+        `${withPeriod(title)} In: `,
+        { i: "Wikipedia, The Free Encyclopedia" },
+        ` [online]. Wikimedia Foundation, ${date} [viewed ${viewed}]. Available from: ${url}`,
+      ),
+    });
+  }
+
+  // OSCOLA 5 footnote. A persistent link (the oldid permalink) needs no access date.
+  {
+    const date = `${rev.d} ${MONTHS[rev.m]} ${rev.y}`;
+    const accessed = options.permalink ? "" : ` accessed ${acc.d} ${MONTHS[acc.m]} ${acc.y}`;
+    citations.push({
+      id: "oscola",
+      label: "OSCOLA",
+      edition: "5th edition, footnote",
+      ...cite(`‘${title}’ (`, { i: "Wikipedia" }, `, ${date}) <${url}>${accessed}.`),
+    });
+  }
+
+  // Bluebook 22, Bluepages form. A revision has a date and time of its own;
+  // the live article only has the day it was last visited.
+  {
+    const parts: Part[] = options.permalink
+      ? [{ i: title }, `, Wikipedia (${MLA_MONTHS[rev.m]} ${rev.d}, ${rev.y}, ${revTime} UTC), ${url}.`]
+      : [{ i: title }, `, Wikipedia, ${url} (last visited ${MLA_MONTHS[acc.m]} ${acc.d}, ${acc.y}).`];
+    citations.push({
+      id: "bluebook",
+      label: "Bluebook",
+      edition: "22nd ed., Bluepages",
+      ...cite(...parts),
     });
   }
 
