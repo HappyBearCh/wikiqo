@@ -24,7 +24,7 @@ const FAQ = [
   },
   {
     q: "Who is the author?",
-    a: "Wikipedia articles are written collectively, so styles use either the article title (APA, MLA, AMA) or “Wikipedia contributors” (Chicago, Harvard, Vancouver) in the author position. The generator follows each style's convention.",
+    a: "Wikipedia articles are written collectively, so styles use either the article title (APA, MLA, AMA) “Wikipedia” (Chicago) or “Wikipedia contributors” (Harvard, ASA, Vancouver) in the author position. The generator follows each style's convention.",
   },
   {
     q: "Which date is used?",

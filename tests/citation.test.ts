@@ -82,6 +82,15 @@ describe("buildCitations", () => {
     );
   });
 
+  it("follows Chicago 18: a note with the revision's date and time, no s.v.", () => {
+    const { chicago } = byId(true);
+    expect(chicago.text).toBe(`Wikipedia, “Ada Lovelace,” last modified May 3, 2024, 14:22 (UTC), ${permanentUrl(info)}.`);
+    expect(chicago.inText).toBe("Wikipedia, “Ada Lovelace.”");
+    expect(byId(false)["chicago-ad"].text).toBe(
+      "Wikipedia. 2024. “Ada Lovelace.” Last modified May 3, 2024, 14:22 (UTC). https://en.wikipedia.org/wiki/Ada_Lovelace.",
+    );
+  });
+
   it("formats ASA with a retrieval date and the URL in parentheses", () => {
     expect(byId(false).asa.text).toBe(
       "Wikipedia contributors. 2024. “Ada Lovelace.” Wikipedia, The Free Encyclopedia. Retrieved October 19, 2026 (https://en.wikipedia.org/wiki/Ada_Lovelace).",

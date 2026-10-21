@@ -240,37 +240,30 @@ export function buildCitations(info: ArticleInfo, options: CitationOptions): Cit
     });
   }
 
-  // Chicago 17, notes and bibliography.
+  // Chicago 18 (14.131). Online encyclopedias are cited in notes rather than
+  // the bibliography, under the entry title, with the revision's date and
+  // time standing in for an access date. The 18th edition dropped "s.v.".
   {
-    const modified = `${MONTHS[rev.m]} ${rev.d}, ${rev.y}`;
-    const accessed = `${MONTHS[acc.m]} ${acc.d}, ${acc.y}`;
+    const modified = `${MONTHS[rev.m]} ${rev.d}, ${rev.y}, ${revTime} (UTC)`;
     citations.push({
       id: "chicago",
       label: "Chicago",
-      edition: "17th ed., bibliography",
-      ...cite(
-        `Wikipedia contributors. “${withPeriod(title)}” `,
-        { i: "Wikipedia, The Free Encyclopedia" },
-        `. Last modified ${modified}, ${revTime} UTC. Accessed ${accessed}. ${url}.`,
-      ),
-      inTextLabel: "Footnote",
-      inText: `Wikipedia, s.v. “${title},” last modified ${modified}, ${url}.`,
+      edition: "18th ed., note",
+      ...cite(`Wikipedia, “${withComma(title)}” last modified ${modified}, ${url}.`),
+      inTextLabel: "Short note",
+      inText: `Wikipedia, “${withPeriod(title)}”`,
     });
   }
 
-  // Chicago author-date.
+  // Chicago author-date, with Wikipedia in the author position as in the note.
   {
-    const modified = `${MONTHS[rev.m]} ${rev.d}, ${rev.y}`;
+    const modified = `${MONTHS[rev.m]} ${rev.d}, ${rev.y}, ${revTime} (UTC)`;
     citations.push({
       id: "chicago-ad",
       label: "Chicago author-date",
-      edition: "17th edition",
-      ...cite(
-        `Wikipedia contributors. ${rev.y}. “${withPeriod(title)}” `,
-        { i: "Wikipedia, The Free Encyclopedia" },
-        `. Last modified ${modified}. ${url}.`,
-      ),
-      inText: `(Wikipedia contributors ${rev.y})`,
+      edition: "18th edition",
+      ...cite(`Wikipedia. ${rev.y}. “${withPeriod(title)}” Last modified ${modified}. ${url}.`),
+      inText: `(Wikipedia ${rev.y})`,
     });
   }
 

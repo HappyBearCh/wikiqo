@@ -153,15 +153,16 @@ export const GUIDES: FormatGuide[] = [
       "Students often meet Chicago through Kate L. Turabian's A Manual for Writers of Research Papers, Theses, and Dissertations, which adapts Chicago for student papers. “Turabian style” is Chicago style.",
     ],
     wikipedia: [
-      "Chicago treats Wikipedia as a reference work. Well-known reference works are usually cited in notes rather than the bibliography, with “s.v.” (sub verbo, “under the word”) before the entry title. wikiqo gives that note form as the footnote.",
-      "When a bibliography entry is wanted, “Wikipedia contributors” stands in the author position and the encyclopedia's full name, Wikipedia, The Free Encyclopedia, is italicised.",
-      "Chicago prefers a date of last modification to an access date, so the entry says when the cited revision was saved, with the UTC time in the bibliography form.",
-      "In author–date form the year follows “Wikipedia contributors”, and the text citation is (Wikipedia contributors 2026).",
+      "Chicago treats Wikipedia as an online reference work. These are normally cited in notes rather than the bibliography, so wikiqo gives the full note, plus the short form for later notes.",
+      "The note names Wikipedia, then the entry title in quotation marks. Earlier editions put “s.v.” (sub verbo, “under the word”) before the title; the 18th edition no longer recommends it.",
+      "For a continually updated resource, Chicago wants the date of the latest revision rather than an edition or an access date, and allows a time stamp, so the note gives the revision's date and UTC time.",
+      "If your instructor wants Wikipedia in the bibliography as well, use the same elements separated by full stops instead of commas: Wikipedia. “Moon.” Last modified ….",
+      "In author–date form Wikipedia takes the author position, followed by the year, and the text citation is (Wikipedia 2026).",
     ],
     history: [
       "In the 1890s a proofreader at the University of Chicago Press prepared a single sheet of typographic rules for the university community. The sheet grew into a pamphlet, and in 1906 the press published it as a book: Manual of Style: Being a Compilation of the Typographical Rules in Force at the University of Chicago Press, to Which Are Appended Specimens of Type in Use. It ran to 203 pages, close to half of them type specimens.",
       "The 12th edition of 1969 was the most thorough revision in the manual's history, and the 13th, in 1982, was the first to carry the title The Chicago Manual of Style. The 16th edition in 2010 was the first published in print and online at the same time.",
-      "The 17th edition appeared in 2017 and the 18th in September 2024. The 18th dropped the place of publication from book citations and lists up to six authors before switching to “et al.”",
+      "The 17th edition appeared in 2017 and the 18th in September 2024. The 18th dropped the place of publication from book citations, lists up to six authors before switching to “et al.”, and retired the Latin “s.v.” for dictionary and encyclopedia entries.",
     ],
     anecdotes: [
       {
@@ -178,6 +179,8 @@ export const GUIDES: FormatGuide[] = [
       { label: "CMOS Shop Talk: Chicago style then and now", url: "https://cmosshoptalk.com/2023/06/20/chicago-style-then-and-now/" },
       { label: "Wikipedia: The Chicago Manual of Style", url: "https://en.wikipedia.org/wiki/The_Chicago_Manual_of_Style" },
       { label: "Wikipedia: Kate L. Turabian", url: "https://en.wikipedia.org/wiki/Kate_L._Turabian" },
+      { label: "Douglas College Library: Chicago 18th ed., reference works", url: "https://guides.douglascollege.ca/Chicago18/ReferenceWorks" },
+      { label: "Red Deer Polytechnic: Chicago 18th ed., encyclopedias and dictionaries", url: "https://guides.rdpolytech.ca/chicago18/citation/referencework" },
     ],
   },
   {
