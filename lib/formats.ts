@@ -13,6 +13,8 @@ export type FormatGuide = {
   slug: string;
   /** Short name, as on the generator's tabs. */
   name: string;
+  /** How the name reads after "in", where it differs: "in the Bluebook". */
+  inName?: string;
   /** What the initials stand for, or a fuller title. */
   fullName: string;
   /** Ids from buildCitations() this guide covers, in display order. */
@@ -582,6 +584,7 @@ export const GUIDES: FormatGuide[] = [
   {
     slug: "bluebook",
     name: "Bluebook",
+    inName: "the Bluebook",
     fullName: "The Bluebook: A Uniform System of Citation",
     citationIds: ["bluebook"],
     note: "22nd edition. Law in the United States.",
@@ -788,6 +791,9 @@ const BY_CITATION = new Map(GUIDES.flatMap((g) => g.citationIds.map((id) => [id,
 export function getGuide(slug: string): FormatGuide | undefined {
   return BY_SLUG.get(slug);
 }
+
+/** The guide's name as it reads after "in", as in "cite Wikipedia in the Bluebook". */
+export const inName = (guide: FormatGuide) => guide.inName ?? guide.name;
 
 /** The guide that documents a citation id from buildCitations(). */
 export function guideForCitation(id: string): FormatGuide | undefined {

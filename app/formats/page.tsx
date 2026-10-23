@@ -4,17 +4,17 @@ import { GUIDES, OTHER_STYLES } from "@/lib/formats";
 import { OG_BASE } from "@/lib/site";
 
 const DESCRIPTION =
-  "A guide to every citation format wikiqo produces, from APA, MLA and Chicago to OSCOLA, the Bluebook and BibTeX: how each one works, how it cites Wikipedia, and how it came to be.";
+  "How to cite Wikipedia in APA, MLA, Chicago, Harvard, IEEE, OSCOLA, the Bluebook, BibTeX and more: a worked example and a short history for every format.";
 
 export const metadata: Metadata = {
-  title: "Citation formats",
+  title: "Citation formats: how to cite Wikipedia in every style",
   description: DESCRIPTION,
   alternates: { canonical: "/formats" },
   openGraph: {
     ...OG_BASE,
     type: "website",
     url: "/formats",
-    title: "Citation formats explained",
+    title: "How to cite Wikipedia in every citation style",
     description: DESCRIPTION,
   },
 };

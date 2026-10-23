@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import CitationExample from "@/components/CitationExample";
 import CitationGenerator from "@/components/CitationGenerator";
-import { GUIDES } from "@/lib/formats";
+import { GUIDES, getGuide, inName } from "@/lib/formats";
+import { sampleCitations } from "@/lib/sample";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_TITLE, SITE_URL } from "@/lib/site";
 import { ORGANIZATION, ORGANIZATION_REF } from "@/lib/structured-data";
 
@@ -19,22 +21,37 @@ const FAQ = [
     a: "Many teachers and journals prefer that you cite the sources a Wikipedia article relies on rather than the article itself. When you do cite Wikipedia, say so honestly and point to the exact version you read.",
   },
   {
+    q: "Which citation style should I use?",
+    a: "Whichever your teacher, department or journal asks for. Without a rule, the usual choices are APA in psychology and the social sciences, MLA in literature and languages, Chicago in history, Harvard at most UK and Australian universities, IEEE in engineering, AMA or Vancouver in medicine, and OSCOLA or the Bluebook in law.",
+  },
+  {
     q: "What is a permanent link?",
     a: "Anyone can edit Wikipedia, so the article you read today may say something different tomorrow. A permanent link (with ?oldid= in the address) always opens the exact revision you read. It is on by default, and APA recommends it.",
   },
   {
     q: "Who is the author?",
-    a: "Wikipedia articles are written collectively, so styles use either the article title (APA, MLA, AMA) “Wikipedia” (Chicago) or “Wikipedia contributors” (Harvard, ASA, Vancouver) in the author position. The generator follows each style's convention.",
+    a: "Wikipedia articles are written collectively, so styles use the article title (APA, MLA, AMA), “Wikipedia” (Chicago) or “Wikipedia contributors” (Harvard, ASA, Vancouver) in the author position. The generator follows each style's convention.",
   },
   {
     q: "Which date is used?",
     a: "The publication date is when the revision you are citing was saved, taken from Wikipedia itself. The access date is today in your time zone; change it if you read the article earlier.",
   },
   {
+    q: "How do I find a permanent link on Wikipedia myself?",
+    a: "Open the article's Tools menu and choose “Permanent link”, or open “View history” and click the date of the revision you read. Either gives an address ending in ?oldid= followed by the revision number. wikiqo looks this up for you.",
+  },
+  {
     q: "Does it work for other languages?",
     a: "Yes. Paste a link from any language edition, such as de.wikipedia.org or ja.wikipedia.org, and the citation keeps that edition's address and title.",
   },
+  {
+    q: "Is it free?",
+    a: "Yes. There are no accounts and no limits, and the lookup happens in your own browser, straight from Wikipedia.",
+  },
 ];
+
+/** The styles most people arrive looking for, shown as worked examples. */
+const SHOWCASE = ["apa", "mla", "chicago", "harvard"];
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -53,9 +70,14 @@ const jsonLd = {
       "@type": "WebApplication",
       name: `${SITE_NAME} Wikipedia citation generator`,
       url: SITE_URL,
+      description: SITE_DESCRIPTION,
       applicationCategory: "ReferenceApplication",
       operatingSystem: "Any",
+      browserRequirements: "Requires JavaScript",
+      isAccessibleForFree: true,
+      featureList: GUIDES.map((g) => `${g.name} citations`),
       offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+      publisher: ORGANIZATION_REF,
     },
     {
       "@type": "FAQPage",
@@ -80,6 +102,7 @@ export default function Home() {
 
       <section className="mx-auto max-w-3xl">
         <h1 className="text-center font-serif text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+          <span className="eyebrow mb-3 block font-sans">Wikipedia citation generator</span>
           Cite any Wikipedia article in seconds.
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-center text-lg leading-relaxed text-muted">
@@ -133,6 +156,28 @@ export default function Home() {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section className="mx-auto mt-20 max-w-3xl" aria-labelledby="examples">
+        <h2 id="examples" className="font-serif text-2xl font-bold tracking-tight sm:text-3xl">
+          Wikipedia citation examples
+        </h2>
+        <p className="mt-2 text-muted">
+          The article &ldquo;Moon&rdquo;, cited with a permanent link to the revision saved on 31 December 2024.
+        </p>
+        <div className="mt-6 space-y-4">
+          {SHOWCASE.map((id) => {
+            const guide = getGuide(id)!;
+            return (
+              <div key={id}>
+                <CitationExample {...sampleCitations([id])[0]} />
+                <Link href={`/formats/${guide.slug}`} className="mt-2 inline-block text-sm underline">
+                  How to cite Wikipedia in {inName(guide)}
+                </Link>
+              </div>
+            );
+          })}
+        </div>
       </section>
 
       <section className="mx-auto mt-20 max-w-3xl" aria-labelledby="faq">

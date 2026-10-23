@@ -77,7 +77,11 @@ type State =
   | { status: "error"; message: string }
   | { status: "done"; info: ArticleInfo };
 
-export default function CitationGenerator() {
+/**
+ * `formats` limits the results to some citation ids, for a format guide; the
+ * home page shows every format.
+ */
+export default function CitationGenerator({ formats }: { formats?: string[] }) {
   const [input, setInput] = useState("");
   const [state, setState] = useState<State>({ status: "idle" });
   const [permalink, setPermalink] = useState(true);
@@ -137,11 +141,12 @@ export default function CitationGenerator() {
 
   const citations = useMemo(() => {
     if (state.status !== "done") return [];
-    return buildCitations(state.info, {
+    const all = buildCitations(state.info, {
       permalink,
       accessed: fromDateInput(accessed) ?? new Date(),
     });
-  }, [state, permalink, accessed]);
+    return formats ? all.filter((c) => formats.includes(c.id)) : all;
+  }, [state, permalink, accessed, formats]);
 
   async function handleCopy(id: string, citation: Parameters<typeof copyCitation>[0]) {
     try {
@@ -221,6 +226,7 @@ export default function CitationGenerator() {
             onAccessed={setAccessed}
             copied={copied}
             onCopy={handleCopy}
+            allFormatsHref={formats && `/?url=${encodeURIComponent(input.trim())}`}
           />
         )}
       </div>
@@ -253,6 +259,7 @@ function Results({
   onAccessed,
   copied,
   onCopy,
+  allFormatsHref,
 }: {
   info: ArticleInfo;
   citations: Citation[];
@@ -262,6 +269,8 @@ function Results({
   onAccessed: (value: string) => void;
   copied: string | null;
   onCopy: (id: string, citation: Parameters<typeof copyCitation>[0]) => void;
+  /** Set when only some formats are shown: the home page with the same article. */
+  allFormatsHref?: string;
 }) {
   const revised = new Date(info.revisionTimestamp).toLocaleString(undefined, {
     dateStyle: "long",
@@ -310,23 +319,31 @@ function Results({
               className="rounded-lg border border-border bg-background px-2.5 py-1.5 text-sm text-foreground"
             />
           </label>
-          <button
-            type="button"
-            className="btn-secondary sm:ml-auto"
-            onClick={() => onCopy("all", { text: allText, code: true })}
-          >
-            {copied === "all" ? "Copied all" : "Copy all formats"}
-          </button>
+          {allFormatsHref ? (
+            <Link href={allFormatsHref} className="btn-secondary sm:ml-auto">
+              See every format
+            </Link>
+          ) : (
+            <button
+              type="button"
+              className="btn-secondary sm:ml-auto"
+              onClick={() => onCopy("all", { text: allText, code: true })}
+            >
+              {copied === "all" ? "Copied all" : "Copy all formats"}
+            </button>
+          )}
         </div>
       </div>
 
-      <nav aria-label="Citation formats" className="mt-6 flex flex-wrap gap-2">
-        {citations.map((c) => (
-          <a key={c.id} href={`#cite-${c.id}`} className="chip">
-            {c.label}
-          </a>
-        ))}
-      </nav>
+      {!allFormatsHref && (
+        <nav aria-label="Citation formats" className="mt-6 flex flex-wrap gap-2">
+          {citations.map((c) => (
+            <a key={c.id} href={`#cite-${c.id}`} className="chip">
+              {c.label}
+            </a>
+          ))}
+        </nav>
+      )}
 
       <ul className="mt-4 space-y-4">
         {citations.map((c) => {
@@ -366,7 +383,7 @@ function Results({
                   </button>
                 </div>
               )}
-              {guide && (
+              {guide && !allFormatsHref && (
                 <Link href={`/formats/${guide.slug}`} className="mt-3 self-start text-xs text-muted underline hover:text-accent">
                   How {guide.name} works
                 </Link>
